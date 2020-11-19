@@ -1,0 +1,65 @@
+On System#Boot do
+  Let,10,25						// Sample Switch GPIO
+  Let,11,12						// Red LED
+  Let,12,13						// Green
+  Let,13,14						// Blue
+  Let,14,23						// IR
+  Pulse,[INT#11],1,1000
+  Pulse,[INT#12],1,1000
+  Pulse,[INT#13],1,1000
+endon
+
+on ResetReadings do
+  TaskValueSet,%eventvalue1%,1,0
+  TaskValueSet,%eventvalue1%,2,0
+  TaskValueSet,%eventvalue1%,3,0
+  TaskValueSet,%eventvalue1%,4,0
+endon
+
+on UpdateReadings do
+  TaskValueSet,2,%eventvalue1%,%eventvalue2%		// Intensity
+  if %eventvalue1%=4
+    GPIO,[INT#10],0					// Sample finished
+  endif
+endon
+
+on Sample#State=1 do
+  GPIO,[INT#11],1					// Red on
+  GPIO,[INT#12],0
+  GPIO,[INT#13],0
+  GPIO,[INT#14],0
+  asyncevent,ResetReadings=2
+  Let,3,1
+  TaskRun,1
+endon
+
+on TSL2591#Lux do
+  if [INT#3]>0
+    Let,1,[INT#1]+1					// Loop counter
+    if [INT#1]=2 or [INT#1]=3				// Skip value 1
+      Let,2,[VAR#2]+[TSL2591#Lux]
+    elseif [INT#1]=4
+      Let,2,([VAR#2]+[TSL2591#Lux])/3			// Average for value 2,3,4
+      asyncevent,UpdateReadings=[INT#3],[VAR#2]
+      if [INT#3]=1
+        GPIO,[INT#11],0					// Red off
+        GPIO,[INT#12],1					// Green on
+        Let,3,2
+      elseif [INT#3]=2
+        GPIO,[INT#12],0					// Green off
+        GPIO,[INT#13],1					// Blue on
+        Let,3,3
+      elseif [INT#3]=3
+        GPIO,[INT#13],0					// Blue off
+        GPIO,[INT#14],1					// IR on
+        Let,3,4
+      elseif [INT#3]=4
+        GPIO,[INT#14],0					// IR off
+        Let,3,0						// Exit
+      endif
+      Let,1,0						// Loop counter reset
+      Let,2,0						// Average value
+    endif
+    TaskRun,1						// Loop
+  endif
+endon
