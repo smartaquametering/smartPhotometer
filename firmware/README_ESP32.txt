@@ -84,9 +84,6 @@ Flash procedure for an ESP32 with an WIN 10 PC
 
 2. Open cmd box and change into the firmware directory
 3. Connect your ESP32 to your PC with a micro USB-B-cable
-4. Execute the batch "ESPEasy_ESP32_mega-initial-flashing.cmd"
-5. Open WIN 10 WLAN overview and connect with "TEST-ESP32" SSID
-6. A browser windows will open and you will redirect to ESPEsay Wifi setup page
-7. Connect your new ESPEasy node to your internal WLAN
-8. You will redirect to the new assign ESPEasy IP address
-9. Document this IP and consider to assign a static IP for ESP via DHCP/DNS services
+4. Adapt COM port within 'esp32tool-initial-flashing.cmd' batch
+5. Execute the batch 'ESPEasy_ESP32_mega-initial-flashing.cmd'
+
