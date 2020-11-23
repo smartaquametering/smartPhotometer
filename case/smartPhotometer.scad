@@ -37,13 +37,13 @@ Version history
 // smart-UV-Photometer
 // -------------------------------------------------------------------------
 // - UV-LED beam angle		: 180 Degree (Absorbance measurement)
-// - UV-Sensor				: VEML6070
+// - UV-Sensor			: VEML6070
 
 //sysmode = 1;									// UV-LED Photometer
 	sys11 = "UV-LED";							// Labeling back side
 	sys12 = "Photometer";
 	sys13 = "Transmitted light";
-	sys14 = "";									// Labeling left side
+	sys14 = "";								// Labeling left side
 	sys15 = "";
 	sys16 = "";
 
@@ -51,13 +51,13 @@ Version history
 // smart-Colorimeter
 // -------------------------------------------------------------------------
 // - RGB-LED beam angle		: 180 Degree (Absorbance measurement)
-// - RGB-Sensor				: Adafruit TCS34725
+// - RGB-Sensor			: Adafruit TCS34725
 
 //sysmode = 2;									// Colorimeter
 	sys21 = "RGB-LED";							// Labeling back side
 	sys22 = "Photometer";
 	sys23 = "Transmitted light";
-	sys24 = "";									// Labeling left side
+	sys24 = "";								// Labeling left side
 	sys25 = "";
 	sys26 = "";
 
@@ -81,7 +81,7 @@ sysmode = 3;									// RGB-LED Photometer
 // -------------------------------------------------------------------------
 // - IR-LED beam angle		: 180 Degree (Absorbance measurement)
 // - IR-LED beam angle		:  90 Degree (Nephelometric turbidity measurement)
-// - IR Sensor				: Adafruit TSL2591
+// - IR Sensor			: Adafruit TSL2591
 
 //sysmode = 4;									// IR-LED Turbidimeter
 	sys41 = "IR-LED";							// Labeling back side
@@ -95,34 +95,34 @@ sysmode = 3;									// RGB-LED Photometer
 // Microcontroller        : Az-Delivery ESP32-WROOM-32 NodeMCU
 // -------------------------------------------------------------------------
 
-mcbs	= "ESP32-WROOM-32 NodeMCU WLAN/WiFi";	// Labeling front side
-mcip	= "192.168.4.1";						// Labeling case lid
+mcbs	= "ESP32-WROOM-32 NodeMCU WLAN/WiFi";					// Labeling front side
+mcip	= "192.168.4.1";							// Labeling case lid
 
 // -------------------------------------------------------------------------
 // Copyright
 // -------------------------------------------------------------------------
 
-cr1		= "Open Source";						// Labeling right side
-cr2		= "Smart, simple and easy";
-cr3		= "Made in Germany";
+cr1	= "Open Source";							// Labeling right side
+cr2	= "Smart, simple and easy";
+cr3	= "Made in Germany";
 
 // -------------------------------------------------------------------------
 
 // Cuvette
 cvmode	= 1;				// 0:= Square cuvette , 1:= Round cuvette
-//cvow	= 12.5;				// Outer edge length	(X,Y)
-//cvh	= 45.0;				// Height				(Z)
+//cvow	= 12.5;				// Outer edge length		(X,Y)
+//cvh	= 45.0;				// Height			(Z)
 cvow	= 16.0;				// Outer diameter		(X,Y)
-cvh		= 160.0;			// Height				(Z)
+cvh	= 160.0;			// Height			(Z)
 cvoe	=  0.6;				// Extra outer edge length / diameter
 
-cvw		= cvow+cvoe;		// Total outer edge length / diameter
+cvw	= cvow+cvoe;			// Total outer edge length / diameter
 
 // Microcomputer
-mch		= 50.0;				// Height (board, plugs and cables)	(X)
-mcl		= 55.0;				// Length							(Y)
-mcw		= 28.0;				// Width							(Z)
-mcbh	=  5.0;				// Height (MC board only)			(Y)
+mch	= 50.0;				// Height (board, plugs and cables)	(X)
+mcl	= 55.0;				// Length				(Y)
+mcw	= 28.0;				// Width				(Z)
+mcbh	=  5.0;				// Height (MC board only)		(Y)
 
 // USB port
 usbw	=  8.0;				// Width	(X)
@@ -130,12 +130,12 @@ usbh	= 11.0;				// Height	(Z)
 usbd	=  0.4;				// Depth	(Y)
 
 // Sensors
-sbid	= 20.0;				// Installation depth of sensor board (incl. board, plugs and cables) (Y)
+sbid	= 20.0;				// Installation depth of sensor board (incl. board, plugs and cables)	(Y)
 
 // Sensor - Adafruit TSL2591
-sbh1	= 16.5;				// Height of sensor board - measured from bottom edge	(X)
-sbw1	= 19.0;				// Width of sensor board - measured from side edge		(Z)
-sbd1	=  3.5;				// Depth of sensor board								(Y)
+sbh1	= 16.5;				// Height of sensor board - measured from bottom edge			(X)
+sbw1	= 19.0;				// Width of sensor board - measured from side edge			(Z)
+sbd1	=  3.5;				// Depth of sensor board						(Y)
 scb1	=  9.4;				// Distance between center of sensor chip and board bottom edge		(X)
 scr1	=  9.4;				// Distance between center of sensor chip and board right side edge	(Z)
 scd1	=  4.0;				// Pinhole diameter for sensor chip
@@ -144,9 +144,9 @@ sb11	= "Sensor";			// Labeling front side
 sb12	= "TSL2591";
 
 // Sensor - Adafruit TCS34725
-sbh2	= 20.3;				// Height of sensor board - measured from bottom edge	(X)
-sbw2	= 20.3;				// Width of sensor board - measured from side edge		(Z)
-sbd2	=  3.0;				// Depth of sensor board								(Y)
+sbh2	= 20.3;				// Height of sensor board - measured from bottom edge			(X)
+sbw2	= 20.3;				// Width of sensor board - measured from side edge			(Z)
+sbd2	=  3.0;				// Depth of sensor board						(Y)
 scb2	=  9.4;				// Distance between center of sensor chip and board bottom edge		(X)
 scr2	= 11.5;				// Distance between center of sensor chip and board right side edge	(Z)
 scd2	=  4.0;				// Pinhole diameter for sensor chip
@@ -155,9 +155,9 @@ sb21	= "Sensor";			// Labeling front side
 sb22	= "TCS34725";
 
 // Sensor - VEML6070
-sbh3	= 12.0;				// Height of sensor board - measured from bottom edge	(X)
-sbw3	= 13.0;				// Width of sensor board - measured from side edge		(Z)
-sbd3	=  2.9;				// Depth of sensor board								(Y)
+sbh3	= 12.0;				// Height of sensor board - measured from bottom edge			(X)
+sbw3	= 13.0;				// Width of sensor board - measured from side edge			(Z)
+sbd3	=  2.9;				// Depth of sensor board						(Y)
 scb3	=  5.0;				// Distance between center of sensor chip and board bottom edge		(X)
 scr3	=  6.5;				// Distance between center of sensor chip and board right side edge	(Z)
 scd3	=  4.0;				// Pinhole diameter for sensor chip
@@ -171,26 +171,26 @@ ledh	= 20.0;				// Installation height
 led1l	=  8.5;				// Length
 led1w	=  5.4;				// Width (Diameter)
 led1p	= 13.5;				// Length plugs
-led1t	= led1l+led1p;		// Length total (incl. plugs)
-led1m	= led1l+led1t;		// Mounting depth
+led1t	= led1l+led1p;			// Length total (incl. plugs)
+led1m	= led1l+led1t;			// Mounting depth
 
 led2l	=  8.5;				// Length
 led2w	=  5.6;				// Width (Diameter)
 led2p	= 13.5;				// Length plugs
-led2t	= led2l+led2p;		// Length total (incl. plugs)
-led2m	= led2l+led2t;		// Mounting depth
+led2t	= led2l+led2p;			// Length total (incl. plugs)
+led2m	= led2l+led2t;			// Mounting depth
 
 // Case dimensions
-wo		=  1.6;				// Wall thickness outside
-wi		=  0.8;				// Wall thickness inside
-wr		=  1.6;				// Wall rounding - Edge radius
-cw		= mch+wi+cvw+led2m;	// Width inside		(X)
-cl		= sbid+wi+cvw+led1m;// Length inside	(Y)
-ch		= 31.6;				// Height inside	(Z)
+wo	=  1.6;				// Wall thickness outside
+wi	=  0.8;				// Wall thickness inside
+wr	=  1.6;				// Wall rounding - Edge radius
+cw	= mch+wi+cvw+led2m;		// Width inside		(X)
+cl	= sbid+wi+cvw+led1m;// Length inside			(Y)
+ch	= 31.6;				// Height inside	(Z)
 
-cvx		= wo+led2m+wi+cvw/2;// Cuvette holder position	(X)
-cvy		= wo+sbid+wi+cvw/2;	//							(Y)
-cvz		= wo+ch-ledh;		//							(Z)
+cvx	= wo+led2m+wi+cvw/2;		// Cuvette holder position	(X)
+cvy	= wo+sbid+wi+cvw/2;		//				(Y)
+cvz	= wo+ch-ledh;			//				(Z)
 
 // Case - MC board holder
 mcbhl	=  2.0;				// Length of board holder
@@ -199,20 +199,20 @@ mcbbh	= ch-mcw;			// Height of board base (height adjustment)
 // Case - Cover for square cuvette
 cctw	=  1.2;				// Thickness wall
 ccwi	= cvw+1.0;			// Width inside
-cchi	= cvh-wo-ch+15.0;	// Height inside
+cchi	= cvh-wo-ch+15.0;		// Height inside
 
 // Case - Lid
-clh		=  2.0;				// Height / Thickness (Z)
-clg		=  0.8;				// Guide groove
-cle		=  0.2;				// Extra guide groove
+clh	=  2.0;				// Height / Thickness (Z)
+clg	=  0.8;				// Guide groove
+cle	=  0.2;				// Extra guide groove
 
 // Case - Snapper
-csd		=  1.2;				// Depth
-csl		=  8.0;				// Length
+csd	=  1.2;				// Depth
+csl	=  8.0;				// Length
 
 // Case - Imprints / Labelings
-cid		=  0.4;				// Depth
-ciw		=  0.8;				// Width
+cid	=  0.4;				// Depth
+ciw	=  0.8;				// Width
 ciaw	=  4.0;				// Arrow width
 cial	= 10.0;				// Arrow length
 ciad	=  1.0;				// Distance between arrow and cuvette holder
@@ -329,7 +329,7 @@ module outercase(cib1,cib2,cib3,cif1,cif2,cif3,cil1,cil2,cil3,cir1,cir2,cir3){
 		translate([cvx-ciaw,cvy+cvw/2+wi+ciad,0]) linear_extrude(height = cid){difference(){
 			polygon(points=[[ciaw,0],[0,ciaw],[1/2*ciaw,ciaw],[ciaw/2,ciaw+cial],[3*ciaw/2,ciaw+cial],[3*ciaw/2,ciaw],[2*ciaw,ciaw]]);
 			polygon(points=[[ciaw,sqrt(2)*ciw],[sqrt(2)*ciw+ciw,ciaw-ciw],[1/2*ciaw+ciw,ciaw-ciw],[ciaw/2+ciw,ciaw+cial-ciw],
-							[3*ciaw/2-ciw,ciaw+cial-ciw],[3*ciaw/2-ciw,ciaw-ciw],[2*ciaw-sqrt(2)*ciw-ciw,ciaw-ciw]]);}
+					[3*ciaw/2-ciw,ciaw+cial-ciw],[3*ciaw/2-ciw,ciaw-ciw],[2*ciaw-sqrt(2)*ciw-ciw,ciaw-ciw]]);}
 		}
 		labelings(cib1,cib2,cib3,cif1,cif2,cif3,cil1,cil2,cil3,cir1,cir2,cir3);
 	}
