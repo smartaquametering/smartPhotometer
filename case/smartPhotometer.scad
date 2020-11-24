@@ -113,7 +113,7 @@ sysmode = 1;									// UV-LED Photometer
 casemode = 2;                                 // Cuvette holder only
 
 // -------------------------------------------------------------------------
-// Microcontroller        : Az-Delivery ESP32-WROOM-32 NodeMCU
+// Microcontroller
 // -------------------------------------------------------------------------
 
 mcbs	= "ESP32-WROOM-32 NodeMCU WLAN/WiFi";					// Labeling front side
@@ -139,7 +139,7 @@ cvoe	=  0.6;				// Extra outer edge length / diameter
 
 cvw	= cvow+cvoe;			// Total outer edge length / diameter
 
-// Microcomputer
+// Microcontroller
 mch	= 50.0;				// Height (board, plugs and cables)	(X)
 mcl	= 55.0;				// Length				(Y)
 mcw	= 28.0;				// Width				(Z)
