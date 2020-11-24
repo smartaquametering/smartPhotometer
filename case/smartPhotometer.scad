@@ -39,7 +39,7 @@ Version history
 // - UV-LED beam angle		: 180 Degree (Absorbance measurement)
 // - UV-Sensor			: VEML6070
 
-//sysmode = 1;									// UV-LED Photometer
+sysmode = 1;									// UV-LED Photometer
 	sys11 = "UV-LED";							// Labeling back side
 	sys12 = "Photometer";
 	sys13 = "Transmitted light";
@@ -68,7 +68,7 @@ Version history
 // - IR-LED beam angle		:  90 Degree (Nephelometric turbidity measurement)
 // - VIS and IR Sensor		: Adafruit TSL2591
 
-sysmode = 3;									// RGB-LED Photometer
+//sysmode = 3;									// RGB-LED Photometer
 	sys31 = "RGB-LED";							// Labeling back side
 	sys32 = "Photometer";
 	sys33 = "Transmitted light";
@@ -90,6 +90,27 @@ sysmode = 3;									// RGB-LED Photometer
 	sys44 = "IR-LED";							// Labeling left side
 	sys45 = "Turbidimeter";
 	sys46 = "Scattered light";
+
+// -------------------------------------------------------------------------
+// smartPhotometer-Case-Lid
+// -------------------------------------------------------------------------
+//sysmode = 11;									// Case lid
+
+// -------------------------------------------------------------------------
+// smartPhotometer-Cover-for-square-Cuvette
+// -------------------------------------------------------------------------
+//sysmode = 12;									// Cover for square cuvette
+
+// -------------------------------------------------------------------------
+// smartPhotometer-Cover-for-round-Cuvette
+// -------------------------------------------------------------------------
+//sysmode = 13;								    // Cover for round cuvette
+
+// -------------------------------------------------------------------------
+// smartPhotometer-Case
+// -------------------------------------------------------------------------
+//casemode = 1;                                   // Case + Cuvette holder
+casemode = 2;                                 // Cuvette holder only
 
 // -------------------------------------------------------------------------
 // Microcontroller        : Az-Delivery ESP32-WROOM-32 NodeMCU
@@ -427,10 +448,12 @@ module cuvetteholder(sbid,sbd,sbh,sbw,scb,scr,scd){
 					font = "Liberation Sans:style=Bold", size = 4, valign = "center", halign = "center");
 			}
 		}
-		// LED 2 holder - drilling hole
-		translate([cvx-cvw/2-wi-led2l,cvy,cvz]) rotate ([0,90,0]) cylinder(h=led2l+3*wi, d=led2w-2*wi  );
-		translate([cvx-cvw/2-wi-led2l,cvy,cvz]) rotate ([0,90,0]) cylinder(h=led2l     , d=led2w       );
-		translate([cvx-cvw/2-wi-led2l,cvy,cvz]) rotate ([0,90,0]) cylinder(h=wi        , d=led2w+2.1*wi);
+        if ((sysmode==3) || (sysmode==4)) {
+            // LED 2 holder - drilling hole
+            translate([cvx-cvw/2-wi-led2l,cvy,cvz]) rotate ([0,90,0]) cylinder(h=led2l+3*wi, d=led2w-2*wi  );
+            translate([cvx-cvw/2-wi-led2l,cvy,cvz]) rotate ([0,90,0]) cylinder(h=led2l     , d=led2w       );
+            translate([cvx-cvw/2-wi-led2l,cvy,cvz]) rotate ([0,90,0]) cylinder(h=wi        , d=led2w+2.1*wi);
+        }
 		// LED 2 labeling
 		translate([cvx-cvw/2-wi-led2l,cvy,wo+ch-cid]) rotate([0,0,90]) {
 			linear_extrude(height = cid){
@@ -453,10 +476,12 @@ module cuvetteholder(sbid,sbd,sbh,sbw,scb,scr,scd){
 
 // Case
 module case(sbid,sbd,sbh,sbw,scb,scr,scd,cib1,cib2,cib3,cif1,cif2,cif3,cil1,cil2,cil3,cir1,cir2,cir3){
-	outercase(cib1,cib2,cib3,cif1,cif2,cif3,cil1,cil2,cil3,cir1,cir2,cir3);
-
-	cuvetteholder(sbid,sbd,sbh,sbw,scb,scr,scd);
-	boardholder();
+	if (casemode==1) {
+		// Case + board holder
+        outercase(cib1,cib2,cib3,cif1,cif2,cif3,cil1,cil2,cil3,cir1,cir2,cir3);
+        boardholder();
+	}
+    cuvetteholder(sbid,sbd,sbh,sbw,scb,scr,scd);
 }
 
 // Case - Lid
@@ -546,6 +571,16 @@ for (i = [0:number-1]) {
 		// Sensor - Adafruit TSL2591
 		translate([i*(wo+cw+wo+3),0*(wo+cl+wo+3),0]) case(sbid,sbd1,sbh1,sbw1,scb1,scr1,scd1,sys41,sys42,sys43,sb11,sb12,mcbs,sys44,sys45,sys46,cr1,cr2,cr3);
 	}
-	translate([i*(wo+cw+wo+3),1*(wo+cl+wo+3),0]) lid(mcip);
-	translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoversquare(cctw, ccwi, cchi);
+	if (sysmode==11) {
+		// smartPhotometer - Case lid
+        translate([i*(wo+cw+wo+3),1*(wo+cl+wo+3),0]) lid(mcip);
+	}
+	if (sysmode==12) {
+		// smartPhotometer - Cover for square cuvette
+        translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoversquare(cctw, ccwi, cchi);
+	}
+	if (sysmode==13) {
+		// smartPhotometer - Cover for round cuvette
+        //translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoverround(cctw, ccwi, cchi);
+	}
 }
