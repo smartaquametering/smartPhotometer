@@ -1,7 +1,9 @@
 # smartPhotometer
 
 ## Datasheet
-
+<!--
+<sub>...</sub> is used to make font size small
+-->
 <table>
 <tr>
   <td colspan=2><b>Parameter</b>
