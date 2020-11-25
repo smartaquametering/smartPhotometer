@@ -1,15 +1,16 @@
 # smartPhotometer
 
+## Datasheet
 <table>
 <tr>
-  <th colspan=2>Parameter
-  <th colspan=4>VIS SAC / Trübung
-  <th>UV SAC
-  <th colspan=2>Trübung
-  <th>Coloring
+  <td colspan=2><b>Parameter</b>
+  <td colspan=4><b>VIS SAC / Trübung</b>
+  <td><b>UV SAC</b>
+  <td colspan=2><b>Trübung</b>
+  <td><b>Coloring</b>
 </tr>
 <tr>
-  <td colspan=2>Measuring range
+  <td colspan=2><b>Measuring range</b>
   <td colspan=4>VIS, IR
   <td>UVA, UVB, UV
   <td colspan=2>IR
@@ -24,14 +25,14 @@
   <td>VIS
 </tr>
 <tr>
-  <td colspan=2>Device
+  <td colspan=2><b>Device</b>
   <td colspan=4>smart-RGB-Photometer
   <td>smart-UV-Photometer
   <td colspan=2>smart-IR-Turbidimeter
   <td>smart-Colorimeter
 </tr>
 <tr>
-  <td colspan=2>LED
+  <td colspan=2><b>LED</b>
   <td colspan=4>RGB, IR
   <td>UV
   <td colspan=2>2 x IR
@@ -73,7 +74,7 @@
   <td>12
 </tr>
 <tr>
-  <td colspan=2>Sensor
+  <td colspan=2><b>Sensor</b>
   <td colspan=4><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
   <td><a href='https://www.vishay.com/docs/84277/veml6070.pdf'>VEML6070</a>
   <td colspan=2><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
@@ -111,7 +112,7 @@
   <td colspan=8>20.0 mm
 </tr>
 <tr>
-  <td colspan=2>Microcontroller
+  <td colspan=2><b>Microcontroller</b>
   <td colspan=8><a href='https://cdn.shopify.com/s/files/1/1509/1638/files/ESP_-_32_NodeMCU_Developmentboard_Datenblatt_AZ-Delivery_Vertriebs_GmbH_10f68f6c-a9bb-49c6-a825-07979441739f.pdf?v=1598356497'>ESP32-WROOM-32 NodeMCU WLAN/WiFi</a>
 </tr>
 <tr>
@@ -125,7 +126,7 @@
   <td colspan=8><a href='/firmware/bin/ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin'>ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin</a>
 </tr>
 <tr>
-  <td>Case
+  <td><b>Case</b>
   <td>3D Print
     <td colspan=8>PLA: Black</br>Layer height: 0.2 mm
 </tr>
