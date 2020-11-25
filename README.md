@@ -98,7 +98,7 @@
   <td>
   <td><sub>I2C address
   <td colspan=4><sub>0x29
-  <td>0x10
+  <td><sub>0x10
   <td colspan=2><sub>0x29
   <td><sub>0x29
 </tr>
