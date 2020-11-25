@@ -1,7 +1,7 @@
 # smartPhotometer
 
 ## Datasheet
-<font size='5'>AAA</font>
+
 <table>
 <tr>
   <td colspan=2><b>Parameter</b>
@@ -37,8 +37,7 @@
   <td colspan=3><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>LL-509RGBC2E-006</a>
   <td><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
   <td><a href='https://www.nichia.co.jp/specification/products/led/NSPU510CS-E.pdf'>NSPU510CS</a>
-  <td><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
-  <td><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
+  <td colspan=2>2 x <a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
   <td><a href='https://cdn.luckylight.cn/media/component/data-sheet/504WC2E-W6-3PC.pdf'>504WC2E-W6-3PC</a>
 </tr>
 <tr>
