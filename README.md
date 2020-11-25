@@ -61,6 +61,18 @@
   <td>410-780 nm
 </tr>
 <tr>
+  <td>
+  <td>GPIO
+  <td>12
+  <td>13
+  <td>14
+  <td>23
+  <td>12
+  <td>12
+  <td>23
+  <td>12
+</tr>
+<tr>
   <td colspan=2>Sensor
   <td colspan=4><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
   <td><a href='https://www.vishay.com/docs/84277/veml6070.pdf'>VEML6070</a>
@@ -71,6 +83,11 @@
   <td>
   <td>Voltage
   <td colspan=8>3.3-5.0 V
+</tr>
+<tr>
+  <td>
+  <td>I2C GPIO
+  <td colspan=8>SCL: 5</br>SDA: 4
 </tr>
 <tr>
   <td>
@@ -106,23 +123,6 @@
   <td>
   <td>Firmware
   <td colspan=8><a href='/firmware/bin/ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin'>ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin</a>
-</tr>
-<tr>
-  <td>
-  <td>I2C GPIO
-  <td colspan=8>SCL: 5</br>SDA: 4
-</tr>
-<tr>
-  <td>
-  <td>LED GPIO
-  <td>12
-  <td>13
-  <td>14
-  <td>23
-  <td>12
-  <td>12
-  <td>23
-  <td>12
 </tr>
 <tr>
   <td>Case
