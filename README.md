@@ -9,13 +9,6 @@
   <th>Coloring
 </tr>
 <tr>
-  <td>Device
-  <td>smart-RGB-Photometer
-  <td>smart-UV-Photometer
-  <td>smart-IR-Turbidimeter
-  <td>smart-Colorimeter
-</tr>
-<tr>
   <td>Measuring range
   <td>VIS, IR
   <td>UVA, UVB, UV
@@ -28,6 +21,13 @@
   <td>254 nm
   <td>850 nm
   <td>VIS
+</tr>
+<tr>
+  <td>Device
+  <td>smart-RGB-Photometer
+  <td>smart-UV-Photometer
+  <td>smart-IR-Turbidimeter
+  <td>smart-Colorimeter
 </tr>
 <tr>
   <td>Sensor
