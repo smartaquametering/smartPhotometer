@@ -129,9 +129,8 @@
   <td colspan=8><a href='/firmware/bin/ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin'>ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin</a>
 </tr>
 <tr>
-  <td><b>Case</b>
-  <td>3D Print
-    <td colspan=8>PLA: Black</br>Layer height: 0.2 mm
+  <td colspan=2><b>Case</b>
+  <td colspan=8>3D Print: Black PLA</br>Layer height: 0.2 mm
 </tr>
 <tr>
   <td>
