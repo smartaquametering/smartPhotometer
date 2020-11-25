@@ -26,17 +26,19 @@
 </tr>
 <tr>
   <td colspan=2><b>Device</b>
-  <td colspan=4>smart-RGB-Photometer
-  <td>smart-UV-Photometer
-  <td colspan=2>smart-IR-Turbidimeter
-  <td>smart-Colorimeter
+  <td colspan=4><b>smart-RGB-Photometer</b>
+  <td><b>smart-UV-Photometer</b>
+  <td colspan=2><b>smart-IR-Turbidimeter</b>
+  <td><b>smart-Colorimeter</b>
 </tr>
 <tr>
-  <td colspan=2><b>LED</b>
-  <td colspan=4>RGB, IR
-  <td>UV
-  <td colspan=2>2 x IR
-  <td>White (warm)
+  <td colspan=2><b>LED(s)</b>
+  <td colspan=3><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>LL-509RGBC2E-006</a>
+  <td><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
+  <td><a href='https://www.nichia.co.jp/specification/products/led/NSPU510CS-E.pdf'>NSPU510CS</a>
+  <td><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
+  <td><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C/L289</a>
+  <td><a href='https://cdn.luckylight.cn/media/component/data-sheet/504WC2E-W6-3PC.pdf'>504WC2E-W6-3PC</a>
 </tr>
 <tr>
   <td>
@@ -46,8 +48,9 @@
   <td>Blue
   <td>IR
   <td>UV
-  <td colspan=2>IR
-  <td>White (warm)
+  <td>IR
+  <td>IR
+  <td>Warm White
 </tr>
 <tr>
   <td>
