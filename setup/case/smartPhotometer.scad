@@ -39,7 +39,7 @@ Version history
 // - UV-LED beam angle		: 180 Degree (Absorbance measurement)
 // - UV-Sensor			: VEML6070
 
-//sysmode = 1;									// UV-LED Photometer
+sysmode = 1;									// UV-LED Photometer
 	sys11 = "UV-LED";							// Labeling back side
 	sys12 = "Photometer";
 	sys13 = "Transmitted light";
@@ -50,12 +50,12 @@ Version history
 // -------------------------------------------------------------------------
 // smart-Colorimeter
 // -------------------------------------------------------------------------
-// - Warm white-LED beam angle	: 180 Degree (Absorbance measurement)
+// - RGB-LED beam angle		: 180 Degree (Absorbance measurement)
 // - RGB-Sensor			: Adafruit TCS34725
 
 //sysmode = 2;									// Colorimeter
-	sys21 = "White-LED";						// Labeling back side
-	sys22 = "Colorimeter";
+	sys21 = "RGB-LED";							// Labeling back side
+	sys22 = "Photometer";
 	sys23 = "Transmitted light";
 	sys24 = "";								// Labeling left side
 	sys25 = "";
@@ -68,7 +68,7 @@ Version history
 // - IR-LED beam angle		:  90 Degree (Nephelometric turbidity measurement)
 // - VIS and IR Sensor		: Adafruit TSL2591
 
-sysmode = 3;									// RGB-LED Photometer
+//sysmode = 3;									// RGB-LED Photometer
 	sys31 = "RGB-LED";							// Labeling back side
 	sys32 = "Photometer";
 	sys33 = "Transmitted light";
@@ -109,11 +109,11 @@ sysmode = 3;									// RGB-LED Photometer
 // -------------------------------------------------------------------------
 // smartPhotometer-Case
 // -------------------------------------------------------------------------
-casemode = 1;                                   // Case + Cuvette holder
-//casemode = 2;                                 // Cuvette holder only
+//casemode = 1;                                   // Case + Cuvette holder
+casemode = 2;                                 // Cuvette holder only
 
 // -------------------------------------------------------------------------
-// Microcontroller        : Az-Delivery ESP32-WROOM-32 NodeMCU
+// Microcontroller
 // -------------------------------------------------------------------------
 
 mcbs	= "ESP32-WROOM-32 NodeMCU WLAN/WiFi";					// Labeling front side
@@ -139,7 +139,7 @@ cvoe	=  0.6;				// Extra outer edge length / diameter
 
 cvw	= cvow+cvoe;			// Total outer edge length / diameter
 
-// Microcomputer
+// Microcontroller
 mch	= 50.0;				// Height (board, plugs and cables)	(X)
 mcl	= 55.0;				// Length				(Y)
 mcw	= 28.0;				// Width				(Z)
