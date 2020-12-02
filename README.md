@@ -135,17 +135,17 @@
 </tr>
 <tr>
   <td>
-  <td><sub><b>3D printing</b>
+  <td><sub>3D printing
   <td colspan=8><sub>via STL export
 </tr>
 <tr>
   <td>
-  <td><sub><b>Filament</b>
+  <td><sub>Filament
   <td colspan=8><sub>Black PLA
 </tr>
 <tr>
   <td>
-  <td><sub><b>Layer height</b>
+  <td><sub>Layer height
   <td colspan=8><sub>0.2 mm
 </tr>
 <tr>

@@ -22,21 +22,21 @@ This provides full control over the 3D modelling process and enables the change 
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
-  <td colspan=8><sub>OpenSCAD 3D model (<a href='./setup/case/smartPhotometer.scad'>smartPhotometer.scad</a>)
+  <td colspan=8><sub>OpenSCAD 3D model (<a href='./smartPhotometer.scad'>smartPhotometer.scad</a>)
 </tr>
 <tr>
   <td>
-  <td><sub><b>3D printing</b>
+  <td><sub>3D printing
   <td colspan=8><sub>via STL export
 </tr>
 <tr>
   <td>
-  <td><sub><b>Filament</b>
+  <td><sub>Filament
   <td colspan=8><sub>Black PLA
 </tr>
 <tr>
   <td>
-  <td><sub><b>Layer height</b>
+  <td><sub>Layer height
   <td colspan=8><sub>0.2 mm
 </tr>
 <tr>
