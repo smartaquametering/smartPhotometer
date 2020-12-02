@@ -2,15 +2,15 @@
 
 ## Case
 
-smartPhotometer cases are designed by OpenSCAD https://www.openscad.org/ .
+smartPhotometer **cases are designed by OpenSCAD** https://www.openscad.org/ .
 
 OpenSCAD is a software for creating solid 3D CAD models.  
 It is free software and available for Linux/UNIX, Windows and Mac OS X.
 
 OpenSCAD is a 3D compiler that reads in a script file that describes the 3D object and renders the 3D model from this script file.  
-This provides full control over the 3D modelling process and enables the change of any step in the modelling process by configurable parameters.
+This provides full control over the 3D modelling process and enables the change of any step in the modelling process **by configurable parameters**.
 
-3D printing is supported via OpenSCAD STL exports, the most common file format used for 3D printing.
+**3D printing is supported via OpenSCAD STL exports**, the most common file format used for 3D printing.
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ This provides full control over the 3D modelling process and enables the change 
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
-  <td colspan=8><sub>OpenSCAD 3D model (<a href='./smartPhotometer.scad'>smartPhotometer.scad</a>)
+  <td colspan=8><sub>OpenSCAD 3D model (<a href='./smartPhotometer-3d-model.scad'>smartPhotometer-3d-model.scad</a>)
 </tr>
 <tr>
   <td>
@@ -41,25 +41,25 @@ This provides full control over the 3D modelling process and enables the change 
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=4><sub><a href='./stl-exports/smart-RGB-Photometer.stl'>smart-RGB-Photometer.stl</a>
-  <td><sub><a href='./stl-exports/smart-UV-Photometer.stl'>smart-UV-Photometer.stl</a>
-  <td colspan=2><sub><a href='./stl-exports/smart-IR-Turbidimeter.stl'>smart-IR-Turbidimeter.stl</a>
-  <td><sub><a href='./stl-exports/smart-Colorimeter.stl'>smart-Colorimeter.stl</a>
+  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
+  <td><sub><a href='./3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
+  <td colspan=2><sub><a href='./3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
+  <td><sub><a href='./3d-printing/smart-Colorimeter-Case.stl'>smart-Colorimeter-Case.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./stl-exports/smartPhotometer-Case-Lid.stl'>smartPhotometer-Case-Lid.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smartPhotometer-Case-Lid.stl'>smartPhotometer-Case-Lid.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./stl-exports/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=4><sub><a href='./stl-exports/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
-  <td><sub><a href='./stl-exports/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
-  <td colspan=2><sub><a href='./stl-exports/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
-  <td><sub><a href='./stl-exports/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
+  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td><sub><a href='./3d-printing/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=2><sub><a href='./3d-printing/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
+  <td><sub><a href='./3d-printing/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
 </tr>
 </table>
 </font>

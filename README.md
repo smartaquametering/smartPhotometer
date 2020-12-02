@@ -131,7 +131,7 @@
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
-  <td colspan=8><sub>OpenSCAD 3D model (<a href='./setup/case/smartPhotometer.scad'>smartPhotometer.scad</a>)
+  <td colspan=8><sub>OpenSCAD 3D model (<a href='./setup/case/smartPhotometer-3d-model.scad'>smartPhotometer-3d-model.scad</a>)
 </tr>
 <tr>
   <td>
@@ -150,25 +150,25 @@
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=4><sub><a href='./setup/case/stl-exports/smart-RGB-Photometer.stl'>smart-RGB-Photometer.stl</a>
-  <td><sub><a href='./setup/case/stl-exports/smart-UV-Photometer.stl'>smart-UV-Photometer.stl</a>
-  <td colspan=2><sub><a href='./setup/case/stl-exports/smart-IR-Turbidimeter.stl'>smart-IR-Turbidimeter.stl</a>
-  <td><sub><a href='./setup/case/stl-exports/smart-Colorimeter.stl'>smart-Colorimeter.stl</a>
+  <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
+  <td><sub><a href='./setup/case/3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
+  <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
+  <td><sub><a href='./setup/case/3d-printing/smart-Colorimeter-Case.stl'>smart-Colorimeter-Case.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./setup/case/stl-exports/smartPhotometer-Case-Lid.stl'>smartPhotometer-Case-Lid.stl</a>
+  <td colspan=8><sub><a href='./setup/case/3d-printing/smartPhotometer-Case-Lid.stl'>smartPhotometer-Case-Lid.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./setup/case/stl-exports/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
+  <td colspan=8><sub><a href='./setup/case/3d-printing/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=4><sub><a href='./setup/case/stl-exports/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
-  <td><sub><a href='./setup/case/stl-exports/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
-  <td colspan=2><sub><a href='./setup/case/stl-exports/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
-  <td><sub><a href='./setup/case/stl-exports/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
+  <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td><sub><a href='./setup/case/3d-printing/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
+  <td><sub><a href='./setup/case/3d-printing/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
 </tr>
 </table>
 </font>
