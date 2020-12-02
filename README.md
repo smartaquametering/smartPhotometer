@@ -131,29 +131,29 @@
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
-  <td colspan=8><sub>3D Print: Black PLA</br>Layer height: 0.2 mm
+  <td colspan=8><sub>3D Printing: via STL export</br>Filament: Black PLA</br>Layer height: 0.2 mm
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=4><sub><a href='./setup/case/smart-RGB-Photometer.stl'>smart-RGB-Photometer-Case.stl</a>
-  <td><sub><a href='./setup/case/smart-UV-Photometer.stl'>smart-UV-Photometer-Case.stl</a>
-  <td colspan=2><sub><a href='./setup/case/smart-IR-Turbidimeter.stl'>smart-IR-Turbidimeter-Case.stl</a>
-  <td><sub><a href='./setup/case/smart-Colorimeter'>smart-Colorimeter-Case.stl</a>
+  <td colspan=4><sub><a href='./setup/case/stl-exports/smart-RGB-Photometer.stl'>smart-RGB-Photometer-Case.stl</a>
+  <td><sub><a href='./setup/case/stl-exports/smart-UV-Photometer.stl'>smart-UV-Photometer-Case.stl</a>
+  <td colspan=2><sub><a href='./setup/case/stl-exports/smart-IR-Turbidimeter.stl'>smart-IR-Turbidimeter-Case.stl</a>
+  <td><sub><a href='./setup/case/stl-exports/smart-Colorimeter'>smart-Colorimeter-Case.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./setup/case/smartPhotometer-Case-Lid.stll'>smartPhotometer-Case-Lid.stl</a>
+  <td colspan=8><sub><a href='./setup/case/stl-exports/smartPhotometer-Case-Lid.stll'>smartPhotometer-Case-Lid.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./setup/case/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
+  <td colspan=8><sub><a href='./setup/case/stl-exports/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=4><sub><a href='./setup/case/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
-  <td><sub><a href='./setup/case/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
-  <td colspan=2><sub><a href='./setup/case/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
-  <td><sub><a href='./setup/case/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
+  <td colspan=4><sub><a href='./setup/case/stl-exports/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td><sub><a href='./setup/case/stl-exports/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=2><sub><a href='./setup/case/stl-exports/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
+  <td><sub><a href='./setup/case/stl-exports/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
 </tr>
 </table>
 </font>

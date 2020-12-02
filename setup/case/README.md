@@ -22,7 +22,7 @@ This provides full control over the 3D modelling process and enables the change 
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
-  <td colspan=8><sub>3D Print: Black PLA</br>Layer height: 0.2 mm
+  <td colspan=8><sub>3D Printing: via STL export</br>Filament: Black PLA</br>Layer height: 0.2 mm
 </tr>
 <tr>
   <td colspan=2>
