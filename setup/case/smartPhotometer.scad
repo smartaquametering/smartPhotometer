@@ -5,7 +5,8 @@ smart-Colorimeter
 smart-RGB-Photometer
 smart-IR-Turbidimeter
 
-version 0.2
+OpenSCAD 3D model
+Version 0.2
 
 smart-UV-Photometer © Copyright 2020 by smartAquaMetering. All Rights Reserved.
 smart-Colorimeter © Copyright 2020 by smartAquaMetering. All Rights Reserved.
