@@ -2,18 +2,16 @@
 
 ## Case
 
-smartPhotometer cases are designed by OpenSCAD.
-https://www.openscad.org/
+smartPhotometer cases are designed by OpenSCAD https://www.openscad.org/ .
 
 OpenSCAD is a software for creating solid 3D CAD models.
-It is free software and available for Linux/UNIX, Windows and Mac OS X.
+>It is free software and available for Linux/UNIX, Windows and Mac OS X.
 
 OpenSCAD is a 3D compiler that reads in a script file that describes the 3D object and renders the 3D model from this script file.
-This provides full control over the 3D modelling process and enables the change of any step in the modelling process by configurable parameters.
+>This provides full control over the 3D modelling process and enables the change of any step in the modelling process by configurable parameters.
 
 3D printing via OpenSCAD STL exports.
-The STL file format is the most commonly used file format for 3D printing.
-
+>The STL file format is the most commonly used file format for 3D printing.
 
 <table>
 <tr>
