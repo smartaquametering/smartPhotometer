@@ -1,5 +1,5 @@
 /*****************************************************************************************************************************\
- * smartPhotometer © Copyright 2020 by github.com/smartaquametering. All Rights Reserved.
+ * smartPhotometer © Copyright 2020 github.com/smartaquametering
  *
  * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -10,54 +10,26 @@
  * Additional information about licensing can be found at : http://www.gnu.org/licenses
 \*****************************************************************************************************************************/
 
-// This file incorporates work covered by the following copyrights and permission notices:  
+ // This project incorporates work covered by the following copyrights and permission notices:
+ //
+ // Notes:
+ // - Parts of the source files in this repository are made available under different licenses.
+ //   Refer to each individual source file/directory for more details.
+ // - Your copy of this product may not contain code covered by one or more of the licenses listed here,
+ //   depending on the exact product and version you choose.
 
-/*****************************************************************************************************************************\
- * Arduino project "ESP Easy" © Copyright www.esp8266.nu
+*****************************************************************************************************************************\
+ * Arduino project "ESP Easy" © Copyright 2018-2020 github.com/letscontrolit
+ * is licensed under the GNU General Public License v3.0
  *
- * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
- * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
- * You received a copy of the GNU General Public License along with this program in file 'License.txt'.
- *
- * Additional information about licensing can be found at : http://www.gnu.org/licenses
+ * Additional information about licensing can be found at : https://github.com/letscontrolit/ESPEasy/blob/mega/License.txt
 \*****************************************************************************************************************************/
 
 /*****************************************************************************************************************************\
  * espressif/esptool is licensed under the
- *
  * GNU General Public License v2.0
- * The GNU GPL is the most widely used free software license and has a strong copyleft requirement.
- * When distributing derived works, the source code of the work must be made available under the same license.
- * There are multiple variants of the GNU GPL, each with different requirements.
  *
  * Additional information about licensing can be found at : https://github.com/espressif/esptool/blob/master/LICENSE
-\*****************************************************************************************************************************/
-
-/*****************************************************************************************************************************\
- * ESPRESSIF MIT License
- *
- * Copyright (c) 2018 <ESPRESSIF SYSTEMS (SHANGHAI) PTE LTD>
- *
- * Permission is hereby granted for use on all ESPRESSIF SYSTEMS products, in which case,
- * it is free of charge, to any person obtaining a copy of this software and associated
- * documentation files (the "Software"), to deal in the Software without restriction, including
- * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the Software is furnished
- * to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or
- * substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * Additional information about licensing can be found at : https://github.com/espressif/esp-at/blob/master/LICENSE
 \*****************************************************************************************************************************/
 
 /*****************************************************************************************************************************\
