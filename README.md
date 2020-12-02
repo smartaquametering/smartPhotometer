@@ -131,8 +131,28 @@
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
+  <td colspan=8><sub>OpenSCAD 3D model: <a href='./setup/case/smartPhotometer.scad'>smartPhotometer.scad</a>
+</tr>
+
+
+<tr>
+  <td>
+  <td><sub><b>Case</b>
   <td colspan=8><sub>OpenSCAD 3D model: <a href='./setup/case/smartPhotometer.scad'>smartPhotometer.scad</a></br>3D printing: via STL export</br>Filament: Black PLA</br>Layer height: 0.2 mm
 </tr>
+<tr>
+  <td>
+  <td><sub><b>Case</b>
+  <td colspan=8><sub>OpenSCAD 3D model: <a href='./setup/case/smartPhotometer.scad'>smartPhotometer.scad</a></br>3D printing: via STL export</br>Filament: Black PLA</br>Layer height: 0.2 mm
+</tr>
+<tr>
+  <td>
+  <td><sub><b>Case</b>
+  <td colspan=8><sub>OpenSCAD 3D model: <a href='./setup/case/smartPhotometer.scad'>smartPhotometer.scad</a></br>3D printing: via STL export</br>Filament: Black PLA</br>Layer height: 0.2 mm
+</tr>
+
+
+
 <tr>
   <td colspan=2>
   <td colspan=4><sub><a href='./setup/case/stl-exports/smart-RGB-Photometer.stl'>smart-RGB-Photometer.stl</a>
