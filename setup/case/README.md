@@ -27,7 +27,7 @@ This provides full control over the 3D modelling process and enables the change 
 <tr>
   <td colspan=2>
   <td colspan=4><sub><a href='./stl-exports/smart-RGB-Photometer.stl'>smart-RGB-Photometer.stl</a>
-  <td><sub><a href='./stl-exports/smart-UV-Photometer.stl'>smart-UV-Photometer-Case.stl</a>
+  <td><sub><a href='./stl-exports/smart-UV-Photometer.stl'>smart-UV-Photometer.stl</a>
   <td colspan=2><sub><a href='./stl-exports/smart-IR-Turbidimeter.stl'>smart-IR-Turbidimeter.stl</a>
   <td><sub><a href='./stl-exports/smart-Colorimeter.stl'>smart-Colorimeter.stl</a>
 </tr>
