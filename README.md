@@ -138,11 +138,11 @@
   <td colspan=4><sub><a href='./setup/case/stl-exports/smart-RGB-Photometer.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./setup/case/stl-exports/smart-UV-Photometer.stl'>smart-UV-Photometer-Case.stl</a>
   <td colspan=2><sub><a href='./setup/case/stl-exports/smart-IR-Turbidimeter.stl'>smart-IR-Turbidimeter-Case.stl</a>
-  <td><sub><a href='./setup/case/stl-exports/smart-Colorimeter'>smart-Colorimeter-Case.stl</a>
+  <td><sub><a href='./setup/case/stl-exports/smart-Colorimeter-Case.stl'>smart-Colorimeter-Case.stl</a>
 </tr>
 <tr>
   <td colspan=2>
-  <td colspan=8><sub><a href='./setup/case/stl-exports/smartPhotometer-Case-Lid.stll'>smartPhotometer-Case-Lid.stl</a>
+  <td colspan=8><sub><a href='./setup/case/stl-exports/smartPhotometer-Case-Lid.stl'>smartPhotometer-Case-Lid.stl</a>
 </tr>
 <tr>
   <td colspan=2>
