@@ -77,6 +77,65 @@
   <td><sub>23
   <td><sub>12
 </tr>
+    
+Farbe
+
+Wellenlänge
+Lichtstärke
+Lichtstrom
+Abstrahlwinkel
+Einbauhöhe
+Durchmesser
+Länge
+Langes Beinchen
+Stromaufnahme
+Betriebspannung
+Spannung bei 12 mA
+Berechneter Vorwiderstand
+Vorwiderstand
+
+
+<tr>
+  <td colspan=2><sub><b>Cuevette</b>
+  <td colspan=4><sub>Normales Glas (Natron-Kalk-Glas)
+  <td><sub>Quartz
+  <td colspan=2><sub>Normales Glas (Natron-Kalk-Glas)
+  <td><sub>Borosilikat
+</tr>
+<tr>
+  <td>
+  <td><sub>Material
+  <td colspan=4><sub>Normales Glas (Natron-Kalk-Glas)
+  <td><sub>Quartz
+  <td colspan=2><sub>Normales Glas (Natron-Kalk-Glas)
+  <td><sub>Borosilikat
+</tr>
+
+
+
+<tr>
+  <td colspan=2><sub><b>Device</b>
+  <td colspan=4><sub><b>smart-RGB-Photometer</b>
+  <td><sub><b>smart-UV-Photometer</b>
+  <td colspan=2><sub><b>smart-IR-Turbidimeter</b>
+  <td><sub><b>smart-Colorimeter</b>Borosilikat
+</tr>
+Material / Glas
+
+
+Wellenlängenbereich
+Form
+L x B x H
+Wandstärke
+Chemikalien- & Hitzebeständig
+Volumen
+Lichtweg
+polierte Seiten
+Messprinzip
+Winkel
+
+
+
 <tr>
   <td colspan=2><sub><b>Sensor</b>
   <td colspan=4><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
