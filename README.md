@@ -36,16 +36,6 @@
 </tr>
 <tr>
   <td>
-  <td><sub>Beam angle [<sup>o</sup>]
-  <td colspan=3><sub>180
-  <td><sub>90
-  <td><sub>180
-  <td><sub>180
-  <td><sub>90
-  <td><sub>180
-</tr>
-<tr>
-  <td>
   <td><sub>Measurement method
   <td colspan=3><sub>Absorbance
   <td><sub>Nephelometric turbidity
@@ -53,6 +43,16 @@
   <td><sub>Absorbance
   <td><sub>Nephelometric turbidity
   <td><sub>RGB
+</tr>
+<tr>
+  <td>
+  <td><sub>Beam angle [<sup>o</sup>]
+  <td colspan=3><sub>180
+  <td><sub>90
+  <td><sub>180
+  <td><sub>180
+  <td><sub>90
+  <td><sub>180
 </tr>
 <tr>
   <td colspan=2><sub><b>LED(s)</b>
@@ -88,6 +88,150 @@
 </tr>
 <tr>
   <td>
+  <td><sub>Lichtstärke
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Lichtstrom
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Abstrahlwinkel
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Einbauhöhe
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Durchmesser
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Länge
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Langes Beinchen
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Stromaufnahme
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Betriebspannung
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Spannung bei 12 mA
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Berechneter Vorwiderstand
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
+  <td><sub>Vorwiderstand
+  <td><sub>Red
+  <td><sub>Green
+  <td><sub>Blue
+  <td><sub>IR
+  <td><sub>UV
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
+</tr>
+<tr>
+  <td>
   <td><sub>GPIO
   <td><sub>12
   <td><sub>13
@@ -98,30 +242,20 @@
   <td><sub>23
   <td><sub>12
 </tr>
-    
-Farbe
-
-Wellenlänge
-Lichtstärke
-Lichtstrom
-Abstrahlwinkel
-Einbauhöhe
-Durchmesser
-Länge
-Langes Beinchen
-Stromaufnahme
-Betriebspannung
-Spannung bei 12 mA
-Berechneter Vorwiderstand
-Vorwiderstand
-
-
 <tr>
   <td colspan=2><sub><b>Cuevette</b>
   <td colspan=4><sub>Normal glass (soda-lime glass)
   <td><sub>Quartz
   <td colspan=2><sub>Normal glass (soda-lime glass)
   <td><sub>Borosilicate glass
+</tr>
+<tr>
+  <td>
+  <td><sub>Chemical & heat resistant
+  <td colspan=4><sub>Yes
+  <td><sub>Yes
+  <td colspan=2><sub>Yes
+  <td><sub>Yes
 </tr>
 <tr>
   <td>
@@ -141,11 +275,27 @@ Vorwiderstand
 </tr>
 <tr>
   <td>
+  <td><sub>Polished sidewall
+  <td colspan=4><sub>N/A
+  <td><sub>2
+  <td colspan=2><sub>N/A
+  <td><sub>N/A
+</tr>
+<tr>
+  <td>
   <td><sub>L x W x H [mm]
-  <td colspan=4><sub>12.5 x 12.5 x 45.0
+  <td colspan=4><sub>N/A
   <td><sub>12.5 x 12.5 x 45.0
-  <td colspan=2><sub>12.5 x 12.5 x 45.0
-  <td><sub>12.5 x 12.5 x 45.0
+  <td colspan=2><sub>N/A
+  <td><sub>N/A
+</tr>
+<tr>
+  <td>
+  <td><sub>Ø x H [mm]
+  <td colspan=4><sub>16.0 x 200.0
+  <td><sub>N/A
+  <td colspan=2><sub>16.0 x 200.0
+  <td><sub>16.0 x 200.0
 </tr>
 <tr>
   <td>
@@ -157,35 +307,19 @@ Vorwiderstand
 </tr>
 <tr>
   <td>
-  <td><sub>Chemical & heat resistant
-  <td colspan=4><sub>Yes
-  <td><sub>Yes
-  <td colspan=2><sub>Yes
-  <td><sub>Yes
+  <td><sub>Light path lenght [mm]
+  <td colspan=4><sub>14
+  <td><sub>10
+  <td colspan=2><sub>14
+  <td><sub>14
 </tr>
 <tr>
   <td>
   <td><sub>Volume [ml]
-  <td colspan=4><sub>3.5
+  <td colspan=4><sub>>5
   <td><sub>3.5
-  <td colspan=2><sub>3.5
-  <td><sub>3.5
-</tr>
-<tr>
-  <td>
-  <td><sub>Light path lenght [mm]
-  <td colspan=4><sub>10
-  <td><sub>10
-  <td colspan=2><sub>10
-  <td><sub>10
-</tr>
-<tr>
-  <td>
-  <td><sub>Polished sidewall
-  <td colspan=4><sub>2
-  <td><sub>2
-  <td colspan=2><sub>2
-  <td><sub>2
+  <td colspan=2><sub>>5
+  <td><sub>>5
 </tr>
 <tr>
   <td colspan=2><sub><b>Sensor</b>
