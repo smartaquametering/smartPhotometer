@@ -251,7 +251,15 @@
 </tr>
 <tr>
   <td>
-  <td><sub>Chemical & heat resistant
+  <td><sub>Material
+  <td colspan=4><sub>Normal glass (soda-lime glass)
+  <td><sub>Quartz
+  <td colspan=2><sub>Normal glass (soda-lime glass)
+  <td><sub>Borosilicate glass
+</tr>
+<tr>
+  <td>
+  <td><sub>Chemical and heat resistant
   <td colspan=4><sub>Yes
   <td><sub>Yes
   <td colspan=2><sub>Yes
@@ -275,7 +283,7 @@
 </tr>
 <tr>
   <td>
-  <td><sub>Polished sidewall
+  <td><sub>Polished sidewalls
   <td colspan=4><sub>N/A
   <td><sub>2
   <td colspan=2><sub>N/A
@@ -322,7 +330,7 @@
   <td><sub>>5
 </tr>
 <tr>
-  <td colspan=2><sub><b>Sensor</b>
+  <td colspan=2><sub><b>Light sensor</b>
   <td colspan=4><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
   <td><sub><a href='https://www.vishay.com/docs/84277/veml6070.pdf'>VEML6070</a>
   <td colspan=2><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
@@ -380,7 +388,7 @@
 <tr>
   <td>
   <td><sub>3D printing
-  <td colspan=8><sub>via STL export
+  <td colspan=8><sub>via STL exports
 </tr>
 <tr>
   <td>
@@ -393,7 +401,8 @@
   <td colspan=8><sub>0.2
 </tr>
 <tr>
-  <td colspan=2>
+  <td>
+  <td><sub>STL exports
   <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./setup/case/3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
   <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
