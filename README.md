@@ -12,7 +12,8 @@
   <td><sub><b>Coloring</b>
 </tr>
 <tr>
-  <td colspan=2><sub><b>Measuring range</b>
+  <td>
+  <td><sub>Measuring range
   <td colspan=4><sub>VIS, IR
   <td><sub>UVA, UVB, UV
   <td colspan=2><sub>IR
@@ -34,6 +35,26 @@
   <td><sub><b>smart-Colorimeter</b>
 </tr>
 <tr>
+  <td>
+  <td><sub>Beam angle [<sup>o</sup>]
+  <td colspan=3><sub>180
+  <td><sub>90
+  <td><sub>180
+  <td><sub>180
+  <td><sub>90
+  <td><sub>180
+</tr>
+<tr>
+  <td>
+  <td><sub>Measurement method
+  <td colspan=3><sub>Absorbance
+  <td><sub>Nephelometric turbidity
+  <td><sub>Absorbance
+  <td><sub>Absorbance
+  <td><sub>Nephelometric turbidity
+  <td><sub>RGB
+</tr>
+<tr>
   <td colspan=2><sub><b>LED(s)</b>
   <td colspan=3><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>LL-509RGBC2E-006</a>
   <td><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
@@ -43,7 +64,7 @@
 </tr>
 <tr>
   <td>
-  <td><sub>Color
+  <td><sub>Light color
   <td><sub>Red
   <td><sub>Green
   <td><sub>Blue
@@ -55,15 +76,15 @@
 </tr>
 <tr>
   <td>
-  <td><sub>Wavelength
-  <td><sub>626 nm
-  <td><sub>525 nm
-  <td><sub>470 nm
-  <td><sub>850 nm
-  <td><sub>375 nm
-  <td><sub>850 nm
-  <td><sub>850 nm
-  <td><sub>410-780 nm
+  <td><sub>Wavelength [nm]
+  <td><sub>626
+  <td><sub>525
+  <td><sub>470
+  <td><sub>850
+  <td><sub>375
+  <td><sub>850
+  <td><sub>850
+  <td><sub>410-780
 </tr>
 <tr>
   <td>
@@ -97,45 +118,75 @@ Vorwiderstand
 
 <tr>
   <td colspan=2><sub><b>Cuevette</b>
-  <td colspan=4><sub>Normales Glas (Natron-Kalk-Glas)
+  <td colspan=4><sub>Normal glass (soda-lime glass)
   <td><sub>Quartz
-  <td colspan=2><sub>Normales Glas (Natron-Kalk-Glas)
-  <td><sub>Borosilikat
+  <td colspan=2><sub>Normal glass (soda-lime glass)
+  <td><sub>Borosilicate glass
 </tr>
 <tr>
   <td>
-  <td><sub>Material
-  <td colspan=4><sub>Normales Glas (Natron-Kalk-Glas)
-  <td><sub>Quartz
-  <td colspan=2><sub>Normales Glas (Natron-Kalk-Glas)
-  <td><sub>Borosilikat
+  <td><sub>Wavelength range [nm]
+  <td colspan=4><sub>350-2500
+  <td><sub>190-2500
+  <td colspan=2><sub>350-2500
+  <td><sub>290-2500
 </tr>
-
-
-
 <tr>
-  <td colspan=2><sub><b>Device</b>
-  <td colspan=4><sub><b>smart-RGB-Photometer</b>
-  <td><sub><b>smart-UV-Photometer</b>
-  <td colspan=2><sub><b>smart-IR-Turbidimeter</b>
-  <td><sub><b>smart-Colorimeter</b>Borosilikat
+  <td>
+  <td><sub>Form
+  <td colspan=4><sub>Round
+  <td><sub>Square
+  <td colspan=2><sub>Round
+  <td><sub>Round
 </tr>
-Material / Glas
-
-
-Wellenlängenbereich
-Form
-L x B x H
-Wandstärke
-Chemikalien- & Hitzebeständig
-Volumen
-Lichtweg
-polierte Seiten
-Messprinzip
-Winkel
-
-
-
+<tr>
+  <td>
+  <td><sub>L x W x H [mm]
+  <td colspan=4><sub>12.5 x 12.5 x 45.0
+  <td><sub>12.5 x 12.5 x 45.0
+  <td colspan=2><sub>12.5 x 12.5 x 45.0
+  <td><sub>12.5 x 12.5 x 45.0
+</tr>
+<tr>
+  <td>
+  <td><sub>Wall thickness [mm]
+  <td colspan=4><sub>1.25
+  <td><sub>1.25
+  <td colspan=2><sub>1.25
+  <td><sub>1.25
+</tr>
+<tr>
+  <td>
+  <td><sub>Chemical & heat resistant
+  <td colspan=4><sub>Yes
+  <td><sub>Yes
+  <td colspan=2><sub>Yes
+  <td><sub>Yes
+</tr>
+<tr>
+  <td>
+  <td><sub>Volume [ml]
+  <td colspan=4><sub>3.5
+  <td><sub>3.5
+  <td colspan=2><sub>3.5
+  <td><sub>3.5
+</tr>
+<tr>
+  <td>
+  <td><sub>Light path lenght [mm]
+  <td colspan=4><sub>10
+  <td><sub>10
+  <td colspan=2><sub>10
+  <td><sub>10
+</tr>
+<tr>
+  <td>
+  <td><sub>Polished sidewall
+  <td colspan=4><sub>2
+  <td><sub>2
+  <td colspan=2><sub>2
+  <td><sub>2
+</tr>
 <tr>
   <td colspan=2><sub><b>Sensor</b>
   <td colspan=4><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
@@ -145,8 +196,8 @@ Winkel
 </tr>
 <tr>
   <td>
-  <td><sub>Voltage
-  <td colspan=8><sub>3.3-5.0 V
+  <td><sub>Voltage [V]
+  <td colspan=8><sub>3.3-5.0
 </tr>
 <tr>
   <td>
@@ -163,16 +214,16 @@ Winkel
 </tr>
 <tr>
   <td>
-  <td><sub>L x W x H
-  <td colspan=4><sub>19.0 x 16.5 x 2.0 mm
-  <td><sub>13.0 x 12.0 x 2.0 mm
-  <td colspan=2><sub>19.0 x 16.5 x 2.0 mm
-  <td><sub>20.3 x 20.3 x 2.0 mm
+  <td><sub>L x W x H [mm]
+  <td colspan=4><sub>19.0 x 16.5 x 2.0
+  <td><sub>13.0 x 12.0 x 2.0
+  <td colspan=2><sub>19.0 x 16.5 x 2.0
+  <td><sub>20.3 x 20.3 x 2.0
 </tr>
 <tr>
   <td>
-  <td><sub>Sensor chip mounting height
-  <td colspan=8><sub>20.0 mm
+  <td><sub>Sensor chip mounting height [mm]
+  <td colspan=8><sub>20.0
 </tr>
 <tr>
   <td colspan=2><sub><b>Microcontroller</b>
@@ -180,8 +231,8 @@ Winkel
 </tr>
 <tr>
   <td>
-  <td><sub>L x W x H
-  <td colspan=8><sub>48.3 x 25.4 x 10.0 mm
+  <td><sub>L x W x H [mm]
+  <td colspan=8><sub>48.3 x 25.4 x 10.0
 </tr>
 <tr>
   <td>
@@ -204,8 +255,8 @@ Winkel
 </tr>
 <tr>
   <td>
-  <td><sub>Layer height
-  <td colspan=8><sub>0.2 mm
+  <td><sub>Layer height [mm]
+  <td colspan=8><sub>0.2
 </tr>
 <tr>
   <td colspan=2>
