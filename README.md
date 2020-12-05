@@ -1,7 +1,45 @@
 # smartPhotometer
 
-## Datasheet
+Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured substances in solution.
 
+smartPhotometer for work in aqueous solution work in the ultraviolet, visible and infrared ranges, from wavelength around 375 nm up to 850 nm.
+
+Due to their wide range of application, their reliability and robustness, smartPhotometers **can be perfectly used as portable analytical instruments for outdoor analytics**.
+
+## How does Photometrie work?
+
+The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light detector, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Beer's law.
+
+## Reducing complexity
+
+The two most common types of absorption photometers are:
+
+- Spectrophotometer
+- Filter photometer
+
+In spectrophotometers a monochromator (with prism or with grating) is used to obtain monochromatic light of one defined wavelength. They can also be used to scan the spectrum of the absorbing substance.
+
+In filter photometers, optical filters are used to give the monochromatic light.
+
+Due to the evolution and availability of various types of LEDs it is easily possible to obtain nearly monochromatic light with an specific wavelength range, but
+without the need to setup an complex and sensitive monochromator or filter mechanismn.
+
+- By using an RGB-LED it is possible to measure the absorbance at 3 different wavelengths in parallel (Red, Green and Blue) very easily.
+- Reducing of complexity by the integration of various digital light sensors orchestrated by simple microcontrollers is not only a future vision.
+- The physical setup can be simplified considerably by distributing different analysis methods to multiple photomters.
+- Don't waste time and money for complex evaluation of measured values and their visualisation on the photometer.
+
+## Being Smart - The difference
+
+Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web-based APIs.
+Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
+A Javascript application will start within your browser which is triggering and managing all analytis, evaluation of measured values and their visualisation.
+
+smartPhotometer are in this way cheap, robust and easier to use, but very flexible and also provide multiple analysis and reporting options which normally are only available in very expensive high end solutions.
+
+Don't reinvent the wheel and rely on agile open source communities.
+
+## Datasheet
 
 <table>
 <tr>
@@ -124,7 +162,7 @@
 </tr>
 <tr>
   <td>
-  <td><sub>Einbauhöhe
+  <td><sub>Mounting height [mm]
   <td><sub>Red
   <td><sub>Green
   <td><sub>Blue
@@ -245,7 +283,7 @@
 <tr>
   <td colspan=2><sub><b>Cuevette</b>
   <td colspan=4><sub>Normal glass (soda-lime glass)
-  <td><sub>Quartz
+  <td><sub><a href='https://www.amazon.de/gp/product/B07NNGHKSC/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>UV quartz cuvette</a>
   <td colspan=2><sub>Normal glass (soda-lime glass)
   <td><sub>Borosilicate glass
 </tr>
@@ -253,21 +291,18 @@
   <td>
   <td><sub>Material
   <td colspan=4><sub>Normal glass (soda-lime glass)
-  <td><sub>Quartz
+  <td><sub>UV transmitting quartz
   <td colspan=2><sub>Normal glass (soda-lime glass)
   <td><sub>Borosilicate glass
 </tr>
 <tr>
   <td>
   <td><sub>Chemical and heat resistant
-  <td colspan=4><sub>Yes
-  <td><sub>Yes
-  <td colspan=2><sub>Yes
-  <td><sub>Yes
+  <td colspan=8><sub>Yes
 </tr>
 <tr>
   <td>
-  <td><sub>Wavelength range [nm]
+  <td><sub>Transmission range [nm]
   <td colspan=4><sub>350-2500
   <td><sub>190-2500
   <td colspan=2><sub>350-2500
@@ -308,22 +343,22 @@
 <tr>
   <td>
   <td><sub>Wall thickness [mm]
-  <td colspan=4><sub>1.25
+  <td colspan=4><sub>1.00
   <td><sub>1.25
-  <td colspan=2><sub>1.25
-  <td><sub>1.25
+  <td colspan=2><sub>1.00
+  <td><sub>1.00
 </tr>
 <tr>
   <td>
-  <td><sub>Light path lenght [mm]
-  <td colspan=4><sub>14
-  <td><sub>10
-  <td colspan=2><sub>14
-  <td><sub>14
+  <td><sub>Light path length [mm]
+  <td colspan=4><sub>14.0
+  <td><sub>10.0
+  <td colspan=2><sub>14.0
+  <td><sub>14.0
 </tr>
 <tr>
   <td>
-  <td><sub>Volume [ml]
+  <td><sub>Sample volume [ml]
   <td colspan=4><sub>>5
   <td><sub>3.5
   <td colspan=2><sub>>5
