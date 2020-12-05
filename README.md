@@ -21,13 +21,14 @@ In spectrophotometers a monochromator (with prism or with grating) is used to ob
 
 In filter photometers, optical filters are used to give the monochromatic light.
 
-Due to the evolution and availability of various types of LEDs it is easily possible to obtain nearly monochromatic light with an specific wavelength range, but
+Due to the evolution and availability of **various types of LEDs** it is easily possible **to obtain nearly monochromatic light with an specific wavelength range**, but
 without the need to setup an complex and sensitive monochromator or filter mechanismn.
 
-- By using an RGB-LED it is possible to measure the absorbance at 3 different wavelengths in parallel (Red, Green and Blue) very easily.
-- Reducing of complexity by the integration of various digital light sensors orchestrated by simple microcontrollers is not only a future vision.
-- The physical setup can be simplified considerably by distributing different analysis methods to multiple photomters.
-- Don't waste time and money for complex evaluation of measured values and their visualisation on the photometer.
+Reducing of complexity
+- by using **RGB, UV and IR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
+- by the integration of various **digital light sensors orchestrated by simple microcontrollers**.
+- by distributing different analysis methods **on multiple meshed photometers**.
+- by strict **segregation of data acquisition, transmission, analytics and their visualisation** on different layers and devices.
 
 ## Being Smart - The difference
 
