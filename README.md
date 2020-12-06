@@ -38,7 +38,7 @@ Reducing of complexity
 
 Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web-based APIs.
 
-![alt text](./network.png)
+![alt text](./setup/network.png)
 
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
 
