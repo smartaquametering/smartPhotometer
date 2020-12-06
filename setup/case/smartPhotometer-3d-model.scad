@@ -40,7 +40,7 @@ Version history
 // - UV-LED beam angle		: 180 Degree (Absorbance measurement)
 // - UV-Sensor			: VEML6070
 
-sysmode = 1;									// UV-LED Photometer
+//sysmode = 1;									// UV-LED Photometer
 	sys11 = "UV-LED";							// Labeling back side
 	sys12 = "Photometer";
 	sys13 = "Transmitted light";
@@ -69,7 +69,7 @@ sysmode = 1;									// UV-LED Photometer
 // - IR-LED beam angle		:  90 Degree (Nephelometric turbidity measurement)
 // - VIS and IR Sensor		: Adafruit TSL2591
 
-//sysmode = 3;									// RGB-LED Photometer
+sysmode = 3;									// RGB-LED Photometer
 	sys31 = "RGB-LED";							// Labeling back side
 	sys32 = "Photometer";
 	sys33 = "Transmitted light";
@@ -110,8 +110,8 @@ sysmode = 1;									// UV-LED Photometer
 // -------------------------------------------------------------------------
 // smartPhotometer-Case
 // -------------------------------------------------------------------------
-//casemode = 1;                                   // Case + Cuvette holder
-casemode = 2;                                 // Cuvette holder only
+casemode = 1;                                   // Case + Cuvette holder
+//casemode = 2;                                 // Cuvette holder only
 
 // -------------------------------------------------------------------------
 // Microcontroller
@@ -135,16 +135,18 @@ cvmode	= 1;				// 0:= Square cuvette , 1:= Round cuvette
 //cvow	= 12.5;				// Outer edge length		(X,Y)
 //cvh	= 45.0;				// Height			(Z)
 cvow	= 16.0;				// Outer diameter		(X,Y)
-cvh	= 160.0;			// Height			(Z)
+cvh	    = 160.0;			// Height			(Z)
 cvoe	=  0.6;				// Extra outer edge length / diameter
 
 cvw	= cvow+cvoe;			// Total outer edge length / diameter
 
 // Microcontroller
-mch	= 50.0;				// Height (board, plugs and cables)	(X)
-mcl	= 55.0;				// Length				(Y)
-mcw	= 28.0;				// Width				(Z)
-mcbh	=  5.0;				// Height (MC board only)		(Y)
+mch     = 50.0;				// Height (board, plugs and cables)	(X)
+mcl     = 55.0;				// Length				(Y)
+mcw     = 28.0;				// Width				(Z)
+mcbh	=  6.0;				// Height (MC board only)		(Y)
+mcbhl	=  2.0;				// Length of board holder
+mcbbh	=  4.0;			    // Height of board base (height adjustment)
 
 // USB port
 usbw	=  8.0;				// Width	(X)
@@ -208,15 +210,11 @@ wi	=  0.8;				// Wall thickness inside
 wr	=  1.6;				// Wall rounding - Edge radius
 cw	= mch+wi+cvw+led2m;		// Width inside		(X)
 cl	= sbid+wi+cvw+led1m;// Length inside			(Y)
-ch	= 31.6;				// Height inside	(Z)
+ch	= 36.0;				// Height inside	(Z)
 
 cvx	= wo+led2m+wi+cvw/2;		// Cuvette holder position	(X)
 cvy	= wo+sbid+wi+cvw/2;		//				(Y)
 cvz	= wo+ch-ledh;			//				(Z)
-
-// Case - MC board holder
-mcbhl	=  2.0;				// Length of board holder
-mcbbh	= ch-mcw;			// Height of board base (height adjustment)
 
 // Case - Cover for square cuvette
 cctw	=  1.2;				// Thickness wall
@@ -395,9 +393,9 @@ module boardholder(){
 		translate([wo+cw+wo-usbw, 0,wo+mcw/2+mcbbh-usbh/2]) cube([usbw,wo+usbd ,usbh]);
 	}
 	// Base (height adjustment)
-	translate([wo+cw-mcbh ,wo+mcl/8*1.5,wo]) cube([mcbh,wi,mcbbh-0.5]);
-	translate([wo+cw-mcbh ,wo+mcl/8*4.0,wo]) cube([mcbh,wi,mcbbh-0.5]);
-	translate([wo+cw-mcbh ,wo+mcl/8*6.5,wo]) cube([mcbh,wi,mcbbh-0.5]);
+	translate([wo+cw-mcbh ,wo+mcl/8*1.5,wo]) cube([mcbh,wi,mcbbh]);
+	translate([wo+cw-mcbh ,wo+mcl/8*4.0,wo]) cube([mcbh,wi,mcbbh]);
+	translate([wo+cw-mcbh ,wo+mcl/8*6.5,wo]) cube([mcbh,wi,mcbbh]);
 	// Right side
 	difference(){
 		translate([wo+cw-mcbh-wi,wo+mcl-mcbhl,wo]) cube([wi+mcbh,mcbhl+2*wi,ch]);
@@ -428,9 +426,9 @@ module cuvetteholder(sbid,sbd,sbh,sbw,scb,scr,scd){
 			// Round cuvette holder
 			if(cvmode==1) translate([cvx,cvy,wo]) cylinder(d=cvw+2*wi,h=ch);
 			// LED 1 holder
-			translate([cvx-(2*wi+led1w)/2,cvy+cvw/2-wi,wo]) cube([2*wi+led1w,led1l+2*wi,ch]);
+			translate([cvx-(4*wi+led1w)/2,cvy+cvw/2-wi,wo]) cube([4*wi+led1w,led1l+2*wi,ch]);
 			// LED 2 holder
-			translate([cvx-cvw/2-wi-led2l,cvy-(2*wi+led2w)/2,wo]) cube([led2l+2*wi,2*wi+led2w,ch]);
+			translate([cvx-cvw/2-wi-led2l,cvy-(4*wi+led2w)/2,wo]) cube([led2l+2*wi,4*wi+led2w,ch]);
 			// Sensor board holder
 			translate([cvx-sct-wi,cvy-cvw/2-wi-sbd-wi,wo]) cube([sbh+wi-2,sbd+2*wi,cvz+scl+0.5]);
 		}
