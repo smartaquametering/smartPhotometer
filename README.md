@@ -1,6 +1,6 @@
 # smartPhotometer
 
-Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured substances in solution.
+Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured or not coloured substances in solution.
 
 smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 up to 850 nm.
 
@@ -37,8 +37,12 @@ Reducing of complexity
 ## Being Smart - The difference
 
 Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web-based APIs.
+
+![alt text](./network.png)
+
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
-A Javascript application will start within your browser which is triggering and managing all analytis, evaluation of measured values and their visualisation.
+
+A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
 ### Color measurement
 - Conversions of color index and display in color space
@@ -55,7 +59,7 @@ A Javascript application will start within your browser which is triggering and 
 
 smartPhotometer are in this way cheap, robust and easy-to-use, but very flexible and also provide multiple analysis and reporting options which normally are only available in very expensive high end solutions.
 
-Don't reinvent the wheel and rely on agile open source communities.
+Don't reinvent the wheel and **rely on agile open source communities**.
 
 ## Datasheet
 
@@ -65,7 +69,7 @@ Don't reinvent the wheel and rely on agile open source communities.
   <td colspan=4><sub><b>VIS SAC / Turbidity</b>
   <td><sub><b>UV SAC</b>
   <td colspan=2><sub><b>Turbidity</b>
-  <td><sub><b>Coloring</b>
+  <td><sub><b>Color</b>
 </tr>
 <tr>
   <td>
