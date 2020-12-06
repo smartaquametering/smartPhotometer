@@ -2,15 +2,21 @@
 
 Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured substances in solution.
 
-smartPhotometer for work in aqueous solution work in the ultraviolet, visible and infrared ranges, from wavelength around 375 nm up to 850 nm.
+smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 nm up to 850 nm.
+An integrated turbidity control (NTU-Check) runs automatically with each measurement to ensure secure measurement results.
 
+
+## Turbidity – a source of error
+
+The turbidity of a sample is often underestimated, because often it is not possible to see it visually.
+The nephelometric turbidity of a sample is measured and displayed for every single measurement automatically.
 Due to their wide range of application, their reliability and robustness, smartPhotometers **can be perfectly used as portable analytical instruments for outdoor analytics**.
 
-## How does Photometrie work?
-
-The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light detector, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Beer's law.
+=> **Your insurance for secure measurement results!**
 
 ## Reducing complexity
+
+The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light detector, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Beer's law.
 
 The two most common types of absorption photometers are:
 
@@ -28,7 +34,7 @@ Reducing of complexity
 - by using **RGB, UV and IR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
 - by the integration of various **digital light sensors orchestrated by simple microcontrollers**.
 - by distributing different analysis methods **on multiple meshed photometers**.
-- by strict **segregation of data acquisition, transmission, analytics and their visualisation** on different layers and devices.
+- by the strict **segregation of data acquisition, transmission, analytics and their visualisation** on different layers and devices.
 
 ## Being Smart - The difference
 
@@ -36,7 +42,20 @@ Connect the smartPhotometers microcontrollers (including their connected LED fir
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
 A Javascript application will start within your browser which is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
-smartPhotometer are in this way cheap, robust and easier to use, but very flexible and also provide multiple analysis and reporting options which normally are only available in very expensive high end solutions.
+### Color measurement
+- Conversions of color index and display in color space
+- Measuring of color difference against quality control standards
+
+### Turbidity measurement
+- Absorbance measurement (transmitted light measurement) at a 180° angle from 2–400 NTU
+- Nephelometric stray light measurement from 0.1–1000 NTU
+
+### NTU-Check
+- Safely spot interfering turbidities
+- Unique for maximum measurement result safety
+- Runs automatically with each measurement
+
+smartPhotometer are in this way cheap, robust and easy-to-use, but very flexible and also provide multiple analysis and reporting options which normally are only available in very expensive high end solutions.
 
 Don't reinvent the wheel and rely on agile open source communities.
 
@@ -44,10 +63,10 @@ Don't reinvent the wheel and rely on agile open source communities.
 
 <table>
 <tr>
-  <td colspan=2><sub><b>Parameter</b>
-  <td colspan=4><sub><b>VIS SAC / Trübung</b>
+  <td colspan=2><sub><b>Measuring modes</b>
+  <td colspan=4><sub><b>VIS SAC / Turbidity</b>
   <td><sub><b>UV SAC</b>
-  <td colspan=2><sub><b>Trübung</b>
+  <td colspan=2><sub><b>Turbidity</b>
   <td><sub><b>Coloring</b>
 </tr>
 <tr>
@@ -416,6 +435,11 @@ Don't reinvent the wheel and rely on agile open source communities.
   <td>
   <td><sub>Firmware
   <td colspan=8><sub><a href='/firmware/bin/ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin'>ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin</a>
+</tr>
+<tr>
+  <td>
+  <td><sub>Update
+  <td colspan=8><sub><a href='/firmware/bin/ESP_Easy_mega_20201102_test_ESP32_4M316k-factory.bin'>Via Web-GUI by using OTA (Over the Air)</a>
 </tr>
 <tr>
   <td colspan=2><sub><b>Case</b>
