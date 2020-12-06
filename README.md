@@ -52,7 +52,7 @@ A Javascript application will start within your browser and is triggering and ma
 - Absorbance measurement (transmitted light measurement) at a 180° angle from 2–400 NTU
 - Nephelometric stray light measurement from 0.1–1000 NTU
 
-### NTU-Check
+### NTU check
 - Safely spot interfering turbidities
 - Unique for maximum measurement result safety
 - Runs automatically with each measurement
