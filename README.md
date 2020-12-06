@@ -36,9 +36,9 @@ Reducing of complexity
 
 ## Being Smart - The difference
 
-Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web-based APIs.
+Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
 
-![alt text](./setup/network.png)
+![Network](./setup/network.png)
 
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
 
