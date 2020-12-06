@@ -2,14 +2,13 @@
 
 Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured substances in solution.
 
-smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 nm up to 850 nm.
-An integrated turbidity control (NTU-Check) runs automatically with each measurement to ensure secure measurement results.
+smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 up to 850 nm.
 
+#### Turbidity – a source of error
 
-## Turbidity – a source of error
+The turbidity of a sample is often underestimated, because often it is not possible to see it visually.</br>
+**The nephelometric turbidity of a sample is measured and displayed for every single measurement automatically.**
 
-The turbidity of a sample is often underestimated, because often it is not possible to see it visually.
-The nephelometric turbidity of a sample is measured and displayed for every single measurement automatically.
 Due to their wide range of application, their reliability and robustness, smartPhotometers **can be perfectly used as portable analytical instruments for outdoor analytics**.
 
 => **Your insurance for secure measurement results!**
