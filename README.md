@@ -1,3 +1,5 @@
+![Banner](https://smartaquametering.github.io/images/banner.png)
+
 # smartPhotometer
 
 Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured or not coloured substances in solution.
