@@ -25,7 +25,7 @@ Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browse
 
 A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
-### ESPEasy P2P network
+### ESPEasy P2P network example
 
 <table>
 <tr>
@@ -36,14 +36,14 @@ A Javascript application will start within your browser and is triggering and ma
   <td colspan=3><sub><b>Data Acquisition</b>
 </tr>
 <tr>
-  <td rowspan=2><sub>ID
-  <td rowspan=2><sub>Name
-  <td colspan=2><sub>Controllers
-  <td rowspan=2><sub>Interval
+  <td rowspan=2><sub><b>ID
+  <td rowspan=2><sub><b>Name
+  <td colspan=2><sub><b>Controllers
+  <td rowspan=2><sub><b>Interval
 </tr>
 <tr>
-  <td><sub>ESPEasy P2P Networking
-  <td><sub>MQTT
+  <td><sub><b>ESPEasy P2P Networking
+  <td><sub><b>MQTT
 </tr>
 <tr>
   <td><sub>1
