@@ -50,7 +50,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>1
   <td><sub>Pond-Control
   <td><sub><b>smart-Thermometer</b>
-  <td><sub>
+  <td><sub>Water-Temperature
   <td><sub>1
   <td><sub>2
   <td><sub>60
@@ -60,7 +60,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>1
   <td><sub>Pond-Control
   <td><sub><b>smart-pH-Meter</b>
-  <td><sub>
+  <td><sub>pH
   <td><sub>1
   <td><sub>2
   <td><sub>60
@@ -70,7 +70,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>1
   <td><sub>Pond-Control
   <td><sub><b>smart-EC-Meter</b>
-  <td><sub>
+  <td><sub>EC
   <td><sub>1
   <td><sub>2
   <td><sub>60
@@ -80,7 +80,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>1
   <td><sub>Pond-Control
   <td><sub><b>smart-ORP-Meter</b>
-  <td><sub>
+  <td><sub>ORP
   <td><sub>1
   <td><sub>2
   <td><sub>60
@@ -120,7 +120,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>1
   <td><sub>Pond-Control
   <td><sub><b>Barometer</b>
-  <td><sub>
+  <td><sub>Air-Pressure</br>Air-Humidity
   <td><sub>1
   <td><sub>2
   <td><sub>60
@@ -130,7 +130,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>1
   <td><sub>Pond-Control
   <td><sub><b>Thermometer</b>
-  <td><sub>
+  <td><sub>Air-Temperature
   <td><sub>1
   <td><sub>2
   <td><sub>60
@@ -140,7 +140,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>2
   <td><sub>Lab-RGB-Photometer
   <td><sub><b>smart-RGB-Photometer</b>
-  <td><sub>
+  <td><sub><var>E<sub>λ</sub></var></br><var>SAC<sub>λ</sub></var>
   <td><sub>1
   <td><sub>2
   <td><sub>7
@@ -150,7 +150,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>3
   <td><sub>Lab-UV-Photometer
   <td><sub><b>smart-UV-Photometer</b>
-  <td><sub>
+  <td><sub><var>SAC<sub>λ</sub></var>
   <td><sub>1
   <td><sub>2
   <td><sub>7
@@ -160,7 +160,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>4
   <td><sub>Lab-Turbidimeter
   <td><sub><b>smart-IR-Turbidimeter</b>
-  <td><sub>
+  <td><sub><var>SAC<sub>λ</sub></var></br>FTU
   <td><sub>1
   <td><sub>2
   <td><sub>7
@@ -170,7 +170,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>5
   <td><sub>Lab-Colorimeter
   <td><sub><b>smart-Colorimeter</b>
-  <td><sub>
+  <td><sub>Color index
   <td><sub>1
   <td><sub>2
   <td><sub>7
