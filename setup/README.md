@@ -25,7 +25,6 @@ Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browse
 
 A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
-
 ## ESPEasy P2P network
 
 <table>
