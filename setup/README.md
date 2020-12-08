@@ -37,7 +37,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td colspan=2><sub>Controllers
   <td><sub>Interval
-  <td>
+  <td>Task
 </tr>
 <tr>
   <td>
@@ -45,6 +45,79 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>ESPEasy P2P Networking
   <td><sub>MQTT
   <td>
+  <td>
+</tr>
+<tr>
+  <td>
+  <td><sub><b>smart-Thermometer</b>
+  <td><sub>1
+  <td><sub>2
+  <td><sub>60
+  <td>1
+</tr>
+<tr>
+  <td>
+  <td><sub><b>smart-pH-Meter</b>
+  <td><sub>1
+  <td><sub>2
+  <td><sub>60
+  <td>2
+</tr>
+<tr>
+  <td>
+  <td><sub><b>smart-EC-Meter</b>
+  <td><sub>1
+  <td><sub>2
+  <td><sub>60
+  <td>3
+</tr>
+<tr>
+  <td>
+  <td><sub><b>smart-ORP-Meter</b>
+  <td><sub>1
+  <td><sub>2
+  <td><sub>60
+  <td>4
+</tr>
+<tr>
+  <td>
+  <td><sub><b></b>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td>5
+</tr>
+<tr>
+  <td>
+  <td><sub><b></b>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td>6
+</tr>
+<tr>
+  <td>
+  <td><sub><b></b>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td>7
+</tr>
+<tr>
+  <td>
+  <td><sub><b>Barometer</b>
+  <td><sub>1
+  <td><sub>2
+  <td><sub>60
+  <td>8
+</tr>
+<tr>
+  <td>
+  <td><sub><b>Thermometer</b>
+  <td><sub>1
+  <td><sub>2
+  <td><sub>60
+  <td>9
 </tr>
 <tr>
   <td>
@@ -70,34 +143,6 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td>
   <td><sub><b>smart-Colorimeter</b>
-  <td><sub>1
-  <td><sub>2
-  <td><sub>60
-</tr>
-<tr>
-  <td>
-  <td><sub><b>smart-pH-Meter</b>
-  <td><sub>1
-  <td><sub>2
-  <td><sub>60
-</tr>
-<tr>
-  <td>
-  <td><sub><b>smart-EC-Meter</b>
-  <td><sub>1
-  <td><sub>2
-  <td><sub>60
-</tr>
-<tr>
-  <td>
-  <td><sub><b>smart-ORP-Meter</b>
-  <td><sub>1
-  <td><sub>2
-  <td><sub>60
-</tr>
-<tr>
-  <td>
-  <td><sub><b>smart-Thermometer</b>
   <td><sub>1
   <td><sub>2
   <td><sub>60
