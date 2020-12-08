@@ -17,11 +17,11 @@ Reducing of complexity
 
 ## Being Smart - The difference
 
-Connect the smartAquaMeters microcontrollers (including their connected sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
+Connect the smartAquaMeter via WiFi to your internal network and orchestrate by using simple web- or MQTT-based APIs.
 
 ![Network](./network.png)
 
-Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartAquaMeters.
+Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartAquaMeter.
 
 A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
@@ -29,29 +29,62 @@ A Javascript application will start within your browser and is triggering and ma
 
 <table>
 <tr>
-  <td><sub><b>Device</b>
+  <td colspan=2><sub><b>Device</b>
+  <td colspan=2><sub><b>Controllers</b>
 </tr>
 <tr>
+  <td>
+  <td><sub>
+  <td><sub>ESPEasy P2P Networking
+  <td><sub>MQTT
+</tr>
+<tr>
+  <td>
   <td><sub><b>smart-RGB-Photometer</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
 <tr>
+  <td>
   <td><sub><b>smart-UV-Photometer</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
 <tr>
+  <td>
   <td><sub><b>smart-IR-Turbidimeter</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
 <tr>
+  <td>
   <td><sub><b>smart-Colorimeter</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
+<tr>
+  <td>
   <td><sub><b>smart-pH-Meter</b>
+  <td><sub>1
+  <td><sub>2
+</tr>
 <tr>
+  <td>
   <td><sub><b>smart-EC-Meter</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
 <tr>
+  <td>
   <td><sub><b>smart-ORP-Meter</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
 <tr>
+  <td>
   <td><sub><b>smart-Thermometer</b>
+  <td><sub>1
+  <td><sub>2
 </tr>
 </table>
 </br>
