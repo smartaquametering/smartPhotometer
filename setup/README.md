@@ -140,7 +140,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>2
   <td><sub>Lab-RGB-Photometer
   <td><sub><b>smart-RGB-Photometer</b>
-  <td><sub><var>E<sub>λ</sub></var></br><var>SAC<sub>λ</sub></var>
+  <td><sub><var>E<sub>λ</sub></var></br><var>SAC<sub>λ</sub></var></br>FTU
   <td><sub>1
   <td><sub>2
   <td><sub>7
