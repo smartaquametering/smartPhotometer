@@ -42,7 +42,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>
   <td colspan=2><sub>Controllers
-  <td><sub>Interval
+  <td rowspan=2><sub>Interval
 </tr>
 <tr>
   <td><sub>
@@ -52,7 +52,6 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>ESPEasy P2P Networking
   <td><sub>MQTT
-  <td><sub>
 </tr>
 <tr>
   <td><sub>1
