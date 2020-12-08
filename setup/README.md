@@ -25,11 +25,12 @@ Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browse
 
 A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
-## ESPEasy P2P network
+### ESPEasy P2P network
 
 <table>
 <tr>
   <td><sub><b>Task</b>
+  <td colspan=2><sub><b>Node</b>
   <td><sub><b>Device</b>
   <td><sub><b>Values</b>
   <td colspan=3><sub><b>Data Acquisition</b>
@@ -38,102 +39,115 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>
   <td><sub>
+  <td><sub>
+  <td><sub>
   <td colspan=2><sub>Controllers
   <td><sub>Interval
-  <td><sub>
 </tr>
 <tr>
+  <td><sub>
+  <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>ESPEasy P2P Networking
   <td><sub>MQTT
   <td><sub>
-  <td><sub>
 </tr>
 <tr>
   <td><sub>1
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-Thermometer</b>
   <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
-  <td>
 </tr>
 <tr>
   <td><sub>2
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-pH-Meter</b>
   <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
-  <td>
 </tr>
 <tr>
   <td><sub>3
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-EC-Meter</b>
   <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
-  <td>
 </tr>
 <tr>
   <td><sub>4
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-ORP-Meter</b>
   <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
-  <td>
 </tr>
 <tr>
   <td><sub>5
+  <td><sub>
+  <td><sub>
   <td><sub><b></b>
   <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
-  <td>
 </tr>
 <tr>
   <td><sub>6
+  <td><sub>
+  <td><sub>
   <td><sub><b></b>
   <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
-  <td>
 </tr>
 <tr>
   <td><sub>7
+  <td><sub>
+  <td><sub>
   <td><sub><b></b>
   <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
-  <td>
 </tr>
 <tr>
   <td><sub>8
+  <td><sub>
+  <td><sub>
   <td><sub><b>Barometer</b>
   <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
-  <td>
 </tr>
 <tr>
   <td><sub>9
+  <td><sub>
+  <td><sub>
   <td><sub><b>Thermometer</b>
   <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
-  <td>
 </tr>
 <tr>
   <td><sub>10
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-RGB-Photometer</b>
   <td><sub>
   <td><sub>1
@@ -142,6 +156,8 @@ A Javascript application will start within your browser and is triggering and ma
 </tr>
 <tr>
   <td><sub>11
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-UV-Photometer</b>
   <td><sub>
   <td><sub>1
@@ -150,6 +166,8 @@ A Javascript application will start within your browser and is triggering and ma
 </tr>
 <tr>
   <td><sub>12
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-IR-Turbidimeter</b>
   <td><sub>
   <td><sub>1
@@ -158,6 +176,8 @@ A Javascript application will start within your browser and is triggering and ma
 </tr>
 <tr>
   <td><sub>13
+  <td><sub>
+  <td><sub>
   <td><sub><b>smart-Colorimeter</b>
   <td><sub>
   <td><sub>1
