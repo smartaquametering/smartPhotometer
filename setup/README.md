@@ -31,8 +31,8 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td rowspan=3 valign=top><sub><b>Task</b>
   <td colspan=2><sub><b>Node</b>
-  <td rowspan=3><sub><b>Device</b>
-  <td rowspan=3><sub><b>Values</b>
+  <td rowspan=3 valign=top><sub><b>Device</b>
+  <td rowspan=3 valign=top><sub><b>Values</b>
   <td colspan=3><sub><b>Data Acquisition</b>
 </tr>
 <tr>
