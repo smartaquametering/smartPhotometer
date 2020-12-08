@@ -48,7 +48,7 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub>1
   <td><sub>1
-  <td><sub>Pond-pH-Meter
+  <td><sub>Pond-Control
   <td><sub><b>smart-Thermometer</b>
   <td><sub>
   <td><sub>1
@@ -58,7 +58,7 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub>2
   <td><sub>1
-  <td><sub>Pond-pH-Meter
+  <td><sub>Pond-Control
   <td><sub><b>smart-pH-Meter</b>
   <td><sub>
   <td><sub>1
@@ -68,7 +68,7 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub>3
   <td><sub>1
-  <td><sub>Pond-pH-Meter
+  <td><sub>Pond-Control
   <td><sub><b>smart-EC-Meter</b>
   <td><sub>
   <td><sub>1
@@ -78,7 +78,7 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub>4
   <td><sub>1
-  <td><sub>Pond-pH-Meter
+  <td><sub>Pond-Control
   <td><sub><b>smart-ORP-Meter</b>
   <td><sub>
   <td><sub>1
@@ -118,7 +118,7 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub>8
   <td><sub>1
-  <td><sub>Pond-pH-Meter
+  <td><sub>Pond-Control
   <td><sub><b>Barometer</b>
   <td><sub>
   <td><sub>1
@@ -128,7 +128,7 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub>9
   <td><sub>1
-  <td><sub>Pond-pH-Meter
+  <td><sub>Pond-Control
   <td><sub><b>Thermometer</b>
   <td><sub>
   <td><sub>1
@@ -143,7 +143,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>1
   <td><sub>2
-  <td><sub>60
+  <td><sub>7
 </tr>
 <tr>
   <td><sub>11
@@ -153,7 +153,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>1
   <td><sub>2
-  <td><sub>60
+  <td><sub>7
 </tr>
 <tr>
   <td><sub>12
@@ -163,7 +163,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>1
   <td><sub>2
-  <td><sub>60
+  <td><sub>7
 </tr>
 <tr>
   <td><sub>13
@@ -173,7 +173,7 @@ A Javascript application will start within your browser and is triggering and ma
   <td><sub>
   <td><sub>1
   <td><sub>2
-  <td><sub>60
+  <td><sub>7
 </tr>
 </table>
 </br>
