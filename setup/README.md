@@ -29,27 +29,19 @@ A Javascript application will start within your browser and is triggering and ma
 
 <table>
 <tr>
-  <td><sub><b>Task</b>
+  <td rowspan=3><sub><b>Task</b>
   <td colspan=2><sub><b>Node</b>
-  <td><sub><b>Device</b>
-  <td><sub><b>Values</b>
+  <td rowspan=3><sub><b>Device</b>
+  <td rowspan=3><sub><b>Values</b>
   <td colspan=3><sub><b>Data Acquisition</b>
 </tr>
 <tr>
-  <td><sub>
-  <td><sub>ID
-  <td><sub>Name
-  <td><sub>
-  <td><sub>
+  <td rowspan=2><sub>ID
+  <td rowspan=2><sub>Name
   <td colspan=2><sub>Controllers
   <td rowspan=2><sub>Interval
 </tr>
 <tr>
-  <td><sub>
-  <td><sub>
-  <td><sub>
-  <td><sub>
-  <td><sub>
   <td><sub>ESPEasy P2P Networking
   <td><sub>MQTT
 </tr>
