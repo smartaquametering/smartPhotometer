@@ -31,119 +31,135 @@ A Javascript application will start within your browser and is triggering and ma
 <tr>
   <td><sub><b>Task</b>
   <td><sub><b>Device</b>
+  <td><sub><b>Values</b>
   <td colspan=3><sub><b>Data Acquisition</b>
 </tr>
 <tr>
-  <td>
+  <td><sub>
+  <td><sub>
   <td><sub>
   <td colspan=2><sub>Controllers
   <td><sub>Interval
-  <td>
+  <td><sub>
 </tr>
 <tr>
-  <td>
+  <td><sub>
+  <td><sub>
   <td><sub>
   <td><sub>ESPEasy P2P Networking
   <td><sub>MQTT
-  <td>
-  <td>
+  <td><sub>
+  <td><sub>
 </tr>
 <tr>
-  <td>1
+  <td><sub>1
   <td><sub><b>smart-Thermometer</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
   <td>
 </tr>
 <tr>
-  <td>2
+  <td><sub>2
   <td><sub><b>smart-pH-Meter</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
   <td>
 </tr>
 <tr>
-  <td>3
+  <td><sub>3
   <td><sub><b>smart-EC-Meter</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
   <td>
 </tr>
 <tr>
-  <td>4
+  <td><sub>4
   <td><sub><b>smart-ORP-Meter</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
   <td>
 </tr>
 <tr>
-  <td>5
+  <td><sub>5
   <td><sub><b></b>
+  <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
   <td>
 </tr>
 <tr>
-  <td>6
+  <td><sub>6
   <td><sub><b></b>
+  <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
   <td>
 </tr>
 <tr>
-  <td>7
+  <td><sub>7
   <td><sub><b></b>
+  <td><sub>
   <td><sub>
   <td><sub>
   <td><sub>
   <td>
 </tr>
 <tr>
-  <td>8
+  <td><sub>8
   <td><sub><b>Barometer</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
   <td>
 </tr>
 <tr>
-  <td>9
+  <td><sub>9
   <td><sub><b>Thermometer</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
   <td>
 </tr>
 <tr>
-  <td>10
+  <td><sub>10
   <td><sub><b>smart-RGB-Photometer</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
 </tr>
 <tr>
-  <td>11
+  <td><sub>11
   <td><sub><b>smart-UV-Photometer</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
 </tr>
 <tr>
-  <td>12
+  <td><sub>12
   <td><sub><b>smart-IR-Turbidimeter</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
 </tr>
 <tr>
-  <td>13
+  <td><sub>13
   <td><sub><b>smart-Colorimeter</b>
+  <td><sub>
   <td><sub>1
   <td><sub>2
   <td><sub>60
