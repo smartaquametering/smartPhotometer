@@ -30,61 +30,77 @@ A Javascript application will start within your browser and is triggering and ma
 <table>
 <tr>
   <td colspan=2><sub><b>Device</b>
-  <td colspan=2><sub><b>Controllers</b>
+  <td colspan=3><sub><b>Data Acquisition</b>
+</tr>
+<tr>
+  <td>
+  <td><sub>
+  <td colspan=2><sub>Controllers
+  <td><sub>Interval
+  <td>
 </tr>
 <tr>
   <td>
   <td><sub>
   <td><sub>ESPEasy P2P Networking
   <td><sub>MQTT
+  <td>
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-RGB-Photometer</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-UV-Photometer</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-IR-Turbidimeter</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-Colorimeter</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-pH-Meter</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-EC-Meter</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-ORP-Meter</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 <tr>
   <td>
   <td><sub><b>smart-Thermometer</b>
   <td><sub>1
   <td><sub>2
+  <td><sub>60
 </tr>
 </table>
 </br>
