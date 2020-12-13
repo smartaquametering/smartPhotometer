@@ -175,8 +175,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>1200
   <td><sub>
   <td><sub>
-  <td><sub>
-  <td><sub>
+  <td colspan=2><sub>
   <td><sub>13800
 </tr>
 <tr>
@@ -187,8 +186,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>0.6
   <td><sub>
   <td><sub>
-  <td><sub>
-  <td><sub>
+  <td colspan=2><sub>
   <td><sub>
 </tr>
 <tr>
@@ -226,9 +224,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub><var>I<sub>F</sub></var> [mA]
-  <td><sub>35
-  <td><sub>35
-  <td><sub>35
+  <td colspan=3><sub>35
   <td><sub>100
   <td><sub>20
   <td colspan=2><sub>100
@@ -237,9 +233,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub><var>V<sub>R</sub></var> [V]
-  <td><sub>5
-  <td><sub>5
-  <td><sub>5
+  <td colspan=3><sub>5
   <td><sub>5
   <td><sub>4
   <td colspan=2><sub>5
