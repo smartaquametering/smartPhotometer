@@ -37,7 +37,6 @@ Reducing of complexity
 - by the strict **segregation of data acquisition, transmission, analytics and their visualisation** on different layers and devices.
 
 ## Being Smart - The difference
-
 Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
 
 ![Network](./setup/network.png)
@@ -45,6 +44,9 @@ Connect the smartPhotometers microcontrollers (including their connected LED fir
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
 
 A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
+
+### Environmental monitoring
+Monitor and secure your environment in real time with online monitoring by logging readings into a central database with MQTT-based APIs.
 
 ### Color measurement
 - Conversions of color index and display in color space
@@ -117,8 +119,13 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>180
 </tr>
 <tr>
+  <td>
+  <td><sub>LED(s) and Sensor chip mounting height [mm]
+  <td colspan=8><sub>20.0
+</tr>
+<tr>
   <td colspan=2><sub><b>LED(s)</b>
-  <td colspan=3><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>LL-509RGBC2E-006</a>
+  <td colspan=3><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A500/LL-509RGBC2E-006.pdf'>LL-509RGBC2E-006</a>
   <td><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
   <td><sub><a href='https://www.nichia.co.jp/specification/products/led/NSPU510CS-E.pdf'>NSPU510CS</a>
   <td colspan=2><sub>2 x <a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
@@ -138,7 +145,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Wavelength [nm]
+  <td><sub>Wavelength (<var>λ<sub>P</sub></var>) [nm]
   <td><sub>626
   <td><sub>525
   <td><sub>470
@@ -150,147 +157,126 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Lichtstärke
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Spectrum Half Width (Δλ) [nm]
+  <td><sub>20
+  <td><sub>40
+  <td><sub>26
+  <td><sub>45
+  <td><sub>9
+  <td><sub>45
+  <td><sub>45
+  <td><sub>
 </tr>
 <tr>
   <td>
-  <td><sub>Lichtstrom
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Luminous Intensity <var>I<sub>V</sub></var> [mcd]</br>(by I = 12 mA)
+  <td><sub>1920
+  <td><sub>2400
+  <td><sub>1200
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>13800
 </tr>
 <tr>
   <td>
-  <td><sub>Abstrahlwinkel
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Luminous Flux (<var>Φ<sub>V</sub></var>) [lm]  
+  <td><sub>1.0
+  <td><sub>1.2
+  <td><sub>0.6
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
 </tr>
 <tr>
   <td>
-  <td><sub>Mounting height [mm]
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Viewing Angle (2θ) [<sup>o</sup>]
+  <td colspan=3><sub>25
+  <td><sub>18
+  <td><sub>40
+  <td colspan=2><sub>18
+  <td><sub>15
 </tr>
 <tr>
   <td>
-  <td><sub>Durchmesser
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Ø [mm]
+  <td colspan=8><sub>5
 </tr>
 <tr>
   <td>
-  <td><sub>Länge
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Length [mm]
+  <td colspan=3><sub>8.6
+  <td><sub>8.6
+  <td><sub>8.3
+  <td colspan=2><sub>8.6
+  <td><sub>8.65
 </tr>
 <tr>
   <td>
-  <td><sub>Langes Beinchen
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Long leg
+  <td colspan=3><sub>Common Cathode -
+  <td><sub>Anode +
+  <td><sub>Anode +
+  <td colspan=2><sub>Anode +
+  <td><sub>Anode +
 </tr>
 <tr>
   <td>
-  <td><sub>Stromaufnahme
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub><var>I<sub>F</sub></var> [mA]
+  <td><sub>35
+  <td><sub>35
+  <td><sub>35
+  <td><sub>100
+  <td><sub>20
+  <td colspan=2><sub>100
+  <td><sub>25
 </tr>
 <tr>
   <td>
-  <td><sub>Betriebspannung
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub><var>V<sub>R</sub></var> [V]
+  <td><sub>5
+  <td><sub>5
+  <td><sub>5
+  <td><sub>5
+  <td><sub>4
+  <td colspan=2><sub>5
+  <td><sub>5
 </tr>
 <tr>
   <td>
-  <td><sub>Spannung bei 12 mA
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub><var>V<sub>F</sub></var> [V]</br>(by I = 12 mA)
+  <td><sub>1.93
+  <td><sub>2.9
+  <td><sub>3.4
+  <td><sub>1.3
+  <td><sub>3.4
+  <td colspan=2><sub>1.3
+  <td><sub>2.9
 </tr>
 <tr>
   <td>
-  <td><sub>Berechneter Vorwiderstand
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Calculated series resistor [Ω]
+  <td><sub>114.2
+  <td><sub>33.3
+  <td><sub>0
+  <td><sub>175
+  <td><sub>0
+  <td colspan=2><sub>175
+  <td><sub>33.3
 </tr>
 <tr>
   <td>
-  <td><sub>Vorwiderstand
-  <td><sub>Red
-  <td><sub>Green
-  <td><sub>Blue
-  <td><sub>IR
-  <td><sub>UV
-  <td><sub>IR
-  <td><sub>IR
-  <td><sub>Warm White
+  <td><sub>Series resistor [Ω]
+  <td><sub>182
+  <td><sub>62
+  <td><sub>0
+  <td><sub>182
+  <td><sub>0
+  <td colspan=2><sub>182
+  <td><sub>62
 </tr>
 <tr>
   <td>
@@ -420,11 +406,6 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>13.0 x 12.0 x 2.0
   <td colspan=2><sub>19.0 x 16.5 x 2.0
   <td><sub>20.3 x 20.3 x 2.0
-</tr>
-<tr>
-  <td>
-  <td><sub>Sensor chip mounting height [mm]
-  <td colspan=8><sub>20.0
 </tr>
 <tr>
   <td colspan=2><sub><b>Microcontroller</b>
