@@ -77,19 +77,56 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Measuring range
-  <td colspan=4><sub>VIS, IR
-  <td><sub>UVA, UVB, UV
-  <td colspan=2><sub>IR
+  <td><sub>Target wavelength
+  <td colspan=3><sub>VIS, 436 nm
+  <td><sub>850 nm
+  <td><sub>254 nm
+  <td><sub>850 nm
+  <td><sub>850 nm
   <td><sub>VIS
 </tr>
 <tr>
   <td>
-  <td><sub>Target wavelength
-  <td colspan=4><sub>VIS, 436 nm, 850 nm
-  <td><sub>254 nm
-  <td colspan=2><sub>850 nm
+  <td><sub>100 - 280 nm
+  <td colspan=4><sub>
+  <td><sub>UVC
+  <td colspan=2><sub>
+  <td><sub>
+</tr>
+<tr>
+  <td>
+  <td><sub>280 - 320 nm
+  <td colspan=4><sub>
+  <td><sub>UVB
+  <td colspan=2><sub>
+  <td><sub>
+</tr>
+<tr>
+  <td>
+  <td><sub>320 - 400 nm
+  <td colspan=4><sub>
+  <td><sub>UVA
+  <td colspan=2><sub>
+  <td><sub>
+</tr>
+<tr>
+  <td>
+  <td><sub>400 - 780 nm
+  <td colspan=3><sub>VIS
+  <td><sub>
+  <td><sub>
+  <td colspan=2><sub>
   <td><sub>VIS
+</tr>
+<tr>
+  <td>
+  <td><sub>> 780 nm
+  <td colspan=3><sub>
+  <td><sub>IR
+  <td><sub>
+  <td><sub>IR
+  <td><sub>IR
+  <td><sub>
 </tr>
 <tr>
   <td colspan=2><sub><b>Device</b>
@@ -106,7 +143,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>Absorbance
   <td><sub>Absorbance
   <td><sub>Nephelometric turbidity
-  <td><sub>RGB
+  <td><sub>Color index
 </tr>
 <tr>
   <td>
@@ -124,6 +161,46 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td colspan=8><sub>20.0
 </tr>
 <tr>
+  <td colspan=2><sub><b>Readings</b>
+  <td colspan=4>
+  <td>
+  <td colspan=2>
+  <td>
+</tr>
+
+<tr>
+  <td>
+  <td><sub>Illuminance (<var>E<sub>V</sub></var>) [lux = lm/<var>m<sup>2</sup></var>]
+  <td><sub>X
+  <td><sub>X
+  <td><sub>X
+  <td><sub>X
+  <td>
+  <td><sub>X
+  <td><sub>X
+  <td>
+</tr>
+<tr>
+  <td>
+  <td><sub>Color index
+  <td colspan=3>
+  <td>
+  <td>
+  <td>
+  <td>
+  <td><sub>RGB
+</tr>
+<tr>
+  <td>
+  <td><sub>Light color temperature [K]
+  <td colspan=3>
+  <td>
+  <td>
+  <td>
+  <td>
+  <td><sub>X
+</tr>
+<tr>
   <td colspan=2><sub><b>LED(s)</b>
   <td colspan=3><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A500/LL-509RGBC2E-006.pdf'>LL-509RGBC2E-006</a>
   <td><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
@@ -138,7 +215,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>Green
   <td><sub>Blue
   <td><sub>IR
-  <td><sub>UV
+  <td><sub>UVA
   <td><sub>IR
   <td><sub>IR
   <td><sub>Warm White
@@ -157,7 +234,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Spectrum Half Width (Δλ) [nm]
+  <td><sub>Spectrum half width (Δλ) [nm]
   <td><sub>20
   <td><sub>40
   <td><sub>26
@@ -169,7 +246,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Luminous Intensity <var>I<sub>V</sub></var> [mcd]</br>(by I = 12 mA)
+  <td><sub>Luminous intensity <var>I<sub>V</sub></var> [mcd]</br>(by I = 12 mA)
   <td><sub>1920
   <td><sub>2400
   <td><sub>1200
@@ -180,7 +257,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Luminous Flux (<var>Φ<sub>V</sub></var>) [lm]  
+  <td><sub>Luminous flux (<var>Φ<sub>V</sub></var>) [lm]  
   <td><sub>1.0
   <td><sub>1.2
   <td><sub>0.6
@@ -191,7 +268,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Viewing Angle (2θ) [<sup>o</sup>]
+  <td><sub>Viewing angle (2θ) [<sup>o</sup>]
   <td colspan=3><sub>25
   <td><sub>18
   <td><sub>40
@@ -386,7 +463,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Spectrum Half Width (Δλ) [nm]
+  <td><sub>Spectrum half width (Δλ) [nm]
   <td colspan=3><sub>150
   <td><sub>42
   <td><sub>20
@@ -395,11 +472,11 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Spectrum Range (<var>λ<sub>R</sub></var>) [nm]
-  <td colspan=3><sub>425 - 800
-  <td><sub>800 - 910
-  <td><sub>320 - 410
-  <td colspan=2><sub>800 - 910
+  <td><sub>Spectrum range (<var>λ<sub>R</sub></var>) [nm]
+  <td colspan=3><sub>400 - 780
+  <td><sub>780 - 910
+  <td><sub>320 - 400
+  <td colspan=2><sub>780 - 910
   <td><sub>400 - 780
 </tr>
 <tr>
