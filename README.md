@@ -383,6 +383,33 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
+  <td><sub>Wavelength (<var>λ<sub>P</sub></var>) [nm]
+  <td colspan=3><sub>650
+  <td><sub>850
+  <td><sub>355
+  <td colspan=2><sub>850
+  <td><sub>525
+</tr>
+<tr>
+  <td>
+  <td><sub>Spectrum Half Width (Δλ) [nm]
+  <td colspan=3><sub>150
+  <td><sub>42
+  <td><sub>20
+  <td colspan=2><sub>42
+  <td><sub>125
+</tr>
+<tr>
+  <td>
+  <td><sub>Spectrum Range (<var>λ<sub>R</sub></var>) [nm]
+  <td colspan=3><sub>425 - 800
+  <td><sub>800 - 910
+  <td><sub>320 - 410
+  <td colspan=2><sub>800 - 910
+  <td><sub>400 - 755
+</tr>
+<tr>
+  <td>
   <td><sub>Voltage [V]
   <td colspan=8><sub>3.3-5.0
 </tr>
