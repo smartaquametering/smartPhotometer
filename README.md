@@ -406,7 +406,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>800 - 910
   <td><sub>320 - 410
   <td colspan=2><sub>800 - 910
-  <td><sub>400 - 755
+  <td><sub>400 - 780
 </tr>
 <tr>
   <td>
