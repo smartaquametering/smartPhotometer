@@ -86,6 +86,9 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>VIS
 </tr>
 <tr>
+  <td colspan=12><sub><img src="./setup/light-spectrum.png" alt="Spectrum">
+</tr>
+<tr>
   <td>
   <td><sub>100 - 280 nm
   <td colspan=4><sub>
