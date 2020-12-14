@@ -106,7 +106,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>320 - 400 nm
+  <td><sub>320 - 380 nm
   <td><sub>UVA
   <td><sub>
   <td colspan=4><sub>
@@ -114,7 +114,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>400 - 780 nm
+  <td><sub>380 - 780 nm
   <td><sub>
   <td><sub>VIS
   <td colspan=3><sub>VIS
