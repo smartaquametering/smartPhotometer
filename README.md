@@ -48,15 +48,119 @@ A Javascript application will start within your browser and is triggering and ma
 ### Environmental monitoring
 Monitor and secure your environment in real time with online monitoring by logging readings into a central database with MQTT-based APIs.
 
+### Absorbance measurement
+
+<b>Electromagnetic radiation used for photometric analysis:</b>
+
+<img src="./setup/light-spectrum.png" alt="Spectrum">
+
+<table>
+<tr>
+  <td colspan=5><sub><b>Ultraviolet radiation</b>
+</tr>
+<tr>
+  <td>
+  <td><sub>10-121 nm
+  <td><sub>EUV
+  <td><sub>Extreme UV
+  <td>
+</tr>
+<tr>
+  <td>
+  <td><sub>100-200 nm
+  <td><sub>UV-C-FUV
+  <td><sub>Far UV
+  <td>
+</tr>
+<tr>
+  <td>
+  <td><sub>200-280 nm
+  <td><sub>UV-C-VUV
+  <td><sub>Vacuum UV
+  <td>
+</tr>
+<tr>
+  <td>
+  <td><sub>280-320 nm
+  <td><sub>UV-B
+  <td><sub>Middle UV
+  <td>
+</tr>
+<tr>
+  <td>
+  <td><sub>320-380 nm
+  <td><sub>UV-A
+  <td><sub>Near UV (“black light”)
+  <td>
+</tr>
+<tr>
+  <td colspan=5><sub><b>Colors of light and complementary colors</b>
+</tr>
+<tr>
+  <td>
+  <td><sub>380–435 nm
+  <td colspan=2><sub>Violet
+  <td><sub>Yellow-Green
+</tr>
+<tr>
+  <td>
+  <td><sub>435–495 nm
+  <td colspan=2><sub>Blue
+  <td><sub>Yellow
+</tr>
+<tr>
+  <td>
+  <td><sub>495–520 nm
+  <td colspan=2><sub>Cyan (Blue-Green)
+  <td><sub>Red
+</tr>
+<tr>
+  <td>
+  <td><sub>520–570 nm
+  <td colspan=2><sub>Green
+  <td><sub>Violet
+</tr>
+<tr>
+  <td>
+  <td><sub>570–600 nm
+  <td colspan=2><sub>Yellow
+  <td><sub>Blue
+</tr>
+<tr>
+  <td>
+  <td><sub>600–625 nm
+  <td colspan=2><sub>Orange
+  <td><sub>Cyan (Blue-Green)
+</tr>
+<tr>
+  <td>
+  <td><sub>625–700 nm
+  <td colspan=2><sub>Red
+  <td><sub>Cyan (Blue-Green)
+</tr>
+<tr>
+  <td>
+  <td><sub>700–780 nm
+  <td colspan=2><sub>Deep Red
+  <td><sub>Cyan (Blue-Green)
+</tr>
+<tr>
+  <td>
+  <td><sub>> 780 nm
+  <td colspan=2><sub>Infrared
+  <td><sub>Black
+</tr>
+</table>
+
 ### Color measurement
 - Conversions of color index and display in color space
 - Measuring of color difference against quality control standards
 
 ### Turbidity measurement
-- Absorbance measurement (transmitted light measurement) at a 180° angle from 2–400 NTU
-- Nephelometric stray light measurement from 0.1–1000 NTU
+- Absorbance measurement (transmitted light measurement) at a 180° angle from 2-400 NTU
+- Nephelometric stray light measurement from 0.1-1000 NTU
 
-### NTU check
+#### NTU check
 - Safely spot interfering turbidities
 - Unique for maximum measurement result safety
 - Runs automatically with each measurement
@@ -90,7 +194,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>100 - 280 nm
+  <td><sub>100-280 nm
   <td><sub>UVC
   <td><sub>
   <td colspan=4><sub>
@@ -98,7 +202,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>280 - 320 nm
+  <td><sub>280-320 nm
   <td><sub>UVB
   <td><sub>
   <td colspan=4><sub>
@@ -106,7 +210,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>320 - 380 nm
+  <td><sub>320-380 nm
   <td><sub>UVA
   <td><sub>
   <td colspan=4><sub>
@@ -114,7 +218,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>380 - 780 nm
+  <td><sub>380-780 nm
   <td><sub>
   <td><sub>VIS
   <td colspan=3><sub>VIS
@@ -291,11 +395,11 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub>Long leg
-  <td><sub>Anode +
-  <td><sub>Anode +
-  <td colspan=3><sub>Common Cathode -
-  <td><sub>Anode +
-  <td colspan=2><sub>Anode +
+  <td><sub>Anode (+)
+  <td><sub>Anode (+)
+  <td colspan=3><sub>Common Cathode (-)
+  <td><sub>Anode (+)
+  <td colspan=2><sub>Anode (+)
 </tr>
 <tr>
   <td>
@@ -472,11 +576,11 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub>Spectrum range (<var>λ<sub>R</sub></var>) [nm]
-  <td><sub>320 - 380
-  <td><sub>380 - 780
-  <td colspan=3><sub>380 - 780
-  <td><sub>780 - 910
-  <td colspan=2><sub>780 - 910
+  <td><sub>320-380
+  <td><sub>380-780
+  <td colspan=3><sub>380-780
+  <td><sub>780-910
+  <td colspan=2><sub>780-910
 </tr>
 <tr>
   <td>
