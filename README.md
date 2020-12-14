@@ -56,98 +56,78 @@ Monitor and secure your environment in real time with online monitoring by loggi
 
 <table>
 <tr>
-  <td colspan=5><sub><b>Ultraviolet radiation</b>
+  <td colspan=4><sub><b>Ultraviolet radiation</b>
 </tr>
 <tr>
   <td>
-  <td><sub>10-121 nm
-  <td><sub>EUV
-  <td><sub>Extreme UV
-  <td>
+  <td><sub>100-280 nm
+  <td colspan=2><sub>UVC
 </tr>
 <tr>
   <td>
-  <td><sub>100-200 nm
-  <td><sub>UV-C-FUV
-  <td><sub>Far UV
-  <td>
+  <td><sub>280-315 nm
+  <td colspan=2><sub>UVB
 </tr>
 <tr>
   <td>
-  <td><sub>200-280 nm
-  <td><sub>UV-C-VUV
-  <td><sub>Vacuum UV
-  <td>
+  <td><sub>315-400 nm
+  <td colspan=2><sub>UVA
+</tr>
+<tr>
+  <td colspan=4><sub><b>Colors of light and complementary colors</b>
 </tr>
 <tr>
   <td>
-  <td><sub>280-320 nm
-  <td><sub>UV-B
-  <td><sub>Middle UV
-  <td>
-</tr>
-<tr>
-  <td>
-  <td><sub>320-380 nm
-  <td><sub>UV-A
-  <td><sub>Near UV (“black light”)
-  <td>
-</tr>
-<tr>
-  <td colspan=5><sub><b>Colors of light and complementary colors</b>
-</tr>
-<tr>
-  <td>
-  <td><sub>380–435 nm
-  <td colspan=2><sub>Violet
+  <td><sub>400–435 nm
+  <td><sub>Violet
   <td><sub>Yellow-Green
 </tr>
 <tr>
   <td>
   <td><sub>435–495 nm
-  <td colspan=2><sub>Blue
+  <td><sub>Blue
   <td><sub>Yellow
 </tr>
 <tr>
   <td>
   <td><sub>495–520 nm
-  <td colspan=2><sub>Cyan (Blue-Green)
+  <td><sub>Cyan (Blue-Green)
   <td><sub>Red
 </tr>
 <tr>
   <td>
   <td><sub>520–570 nm
-  <td colspan=2><sub>Green
+  <td><sub>Green
   <td><sub>Violet
 </tr>
 <tr>
   <td>
   <td><sub>570–600 nm
-  <td colspan=2><sub>Yellow
+  <td><sub>Yellow
   <td><sub>Blue
 </tr>
 <tr>
   <td>
   <td><sub>600–625 nm
-  <td colspan=2><sub>Orange
+  <td><sub>Orange
   <td><sub>Cyan (Blue-Green)
 </tr>
 <tr>
   <td>
   <td><sub>625–700 nm
-  <td colspan=2><sub>Red
+  <td><sub>Red
   <td><sub>Cyan (Blue-Green)
 </tr>
 <tr>
   <td>
   <td><sub>700–780 nm
-  <td colspan=2><sub>Deep Red
+  <td><sub>Deep Red
   <td><sub>Cyan (Blue-Green)
 </tr>
 <tr>
   <td>
   <td><sub>> 780 nm
-  <td colspan=2><sub>Infrared
+  <td><sub>Infrared
   <td><sub>Black
 </tr>
 </table>
@@ -194,24 +174,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>100-280 nm
-  <td><sub>UVC
-  <td><sub>
-  <td colspan=4><sub>
-  <td colspan=2><sub>
-</tr>
-<tr>
-  <td>
-  <td><sub>280-320 nm
-  <td><sub>UVB
-  <td><sub>
-  <td colspan=4><sub>
-  <td colspan=2><sub>
-</tr>
-<tr>
-  <td>
-  <td><sub>320-380 nm
-  <td><sub>UVA
+  <td><sub>100-380 nm
+  <td><sub>UV
   <td><sub>
   <td colspan=4><sub>
   <td colspan=2><sub>
