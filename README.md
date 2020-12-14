@@ -70,20 +70,20 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <table>
 <tr>
   <td colspan=2><sub><b>Measuring modes</b>
-  <td colspan=4><sub><b>VIS SAC / Turbidity</b>
   <td><sub><b>UV SAC</b>
-  <td colspan=2><sub><b>Turbidity</b>
   <td><sub><b>Color</b>
+  <td colspan=4><sub><b>VIS SAC / Turbidity</b>
+  <td colspan=2><sub><b>Turbidity</b>
 </tr>
 <tr>
   <td>
   <td><sub>Target wavelength
+  <td><sub>254 nm
+  <td><sub>VIS
   <td colspan=3><sub>VIS, 436 nm
   <td><sub>850 nm
-  <td><sub>254 nm
   <td><sub>850 nm
   <td><sub>850 nm
-  <td><sub>VIS
 </tr>
 <tr>
   <td colspan=12><sub><img src="./setup/light-spectrum.png" alt="Spectrum">
@@ -91,72 +91,72 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub>100 - 280 nm
-  <td colspan=4><sub>
   <td><sub>UVC
-  <td colspan=2><sub>
   <td><sub>
+  <td colspan=4><sub>
+  <td colspan=2><sub>
 </tr>
 <tr>
   <td>
   <td><sub>280 - 320 nm
-  <td colspan=4><sub>
   <td><sub>UVB
-  <td colspan=2><sub>
   <td><sub>
+  <td colspan=4><sub>
+  <td colspan=2><sub>
 </tr>
 <tr>
   <td>
   <td><sub>320 - 400 nm
-  <td colspan=4><sub>
   <td><sub>UVA
-  <td colspan=2><sub>
   <td><sub>
+  <td colspan=4><sub>
+  <td colspan=2><sub>
 </tr>
 <tr>
   <td>
   <td><sub>400 - 780 nm
+  <td><sub>
+  <td><sub>VIS
   <td colspan=3><sub>VIS
   <td><sub>
-  <td><sub>
   <td colspan=2><sub>
-  <td><sub>VIS
 </tr>
 <tr>
   <td>
   <td><sub>> 780 nm
+  <td><sub>
+  <td><sub>
   <td colspan=3><sub>
   <td><sub>IR
-  <td><sub>
   <td><sub>IR
   <td><sub>IR
-  <td><sub>
 </tr>
 <tr>
   <td colspan=2><sub><b>Device</b>
-  <td colspan=4><sub><b>smart-RGB-Photometer</b>
   <td><sub><b>smart-UV-Photometer</b>
-  <td colspan=2><sub><b>smart-IR-Turbidimeter</b>
   <td><sub><b>smart-Colorimeter</b>
+  <td colspan=4><sub><b>smart-RGB-Photometer</b>
+  <td colspan=2><sub><b>smart-IR-Turbidimeter</b>
 </tr>
 <tr>
   <td>
   <td><sub>Measurement method
+  <td><sub>Absorbance
+  <td><sub>Color index
   <td colspan=3><sub>Absorbance
   <td><sub>Nephelometric turbidity
   <td><sub>Absorbance
-  <td><sub>Absorbance
   <td><sub>Nephelometric turbidity
-  <td><sub>Color index
 </tr>
 <tr>
   <td>
   <td><sub>Beam angle [<sup>o</sup>]
+  <td><sub>180
+  <td><sub>180
   <td colspan=3><sub>180
   <td><sub>90
   <td><sub>180
-  <td><sub>180
   <td><sub>90
-  <td><sub>180
 </tr>
 <tr>
   <td>
@@ -165,118 +165,114 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td colspan=2><sub><b>Readings</b>
+  <td>
+  <td>
   <td colspan=4>
-  <td>
   <td colspan=2>
-  <td>
 </tr>
 
 <tr>
   <td>
   <td><sub>Illuminance (<var>E<sub>V</sub></var>) [lux = lm/<var>m<sup>2</sup></var>]
   <td><sub>X
-  <td><sub>X
-  <td><sub>X
-  <td><sub>X
   <td>
   <td><sub>X
   <td><sub>X
-  <td>
+  <td><sub>X
+  <td><sub>X
+  <td><sub>X
+  <td><sub>X
 </tr>
 <tr>
   <td>
   <td><sub>Color index
-  <td colspan=3>
-  <td>
-  <td>
-  <td>
   <td>
   <td><sub>RGB
+  <td colspan=4>
+  <td colspan=2>
 </tr>
 <tr>
   <td>
   <td><sub>Light color temperature [K]
-  <td colspan=3>
-  <td>
-  <td>
-  <td>
   <td>
   <td><sub>X
+  <td colspan=4>
+  <td colspan=2>
 </tr>
 <tr>
   <td colspan=2><sub><b>LED(s)</b>
+  <td><sub><a href='https://www.nichia.co.jp/specification/products/led/NSPU510CS-E.pdf'>NSPU510CS</a>
+  <td><sub><a href='https://cdn.luckylight.cn/media/component/data-sheet/504WC2E-W6-3PC.pdf'>504WC2E-W6-3PC</a>
   <td colspan=3><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A500/LL-509RGBC2E-006.pdf'>LL-509RGBC2E-006</a>
   <td><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
-  <td><sub><a href='https://www.nichia.co.jp/specification/products/led/NSPU510CS-E.pdf'>NSPU510CS</a>
   <td colspan=2><sub>2 x <a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
-  <td><sub><a href='https://cdn.luckylight.cn/media/component/data-sheet/504WC2E-W6-3PC.pdf'>504WC2E-W6-3PC</a>
 </tr>
 <tr>
   <td>
   <td><sub>Light color
+  <td><sub>UVA
+  <td><sub>Warm White
   <td><sub>Red
   <td><sub>Green
   <td><sub>Blue
   <td><sub>IR
-  <td><sub>UVA
   <td><sub>IR
   <td><sub>IR
-  <td><sub>Warm White
 </tr>
 <tr>
   <td>
   <td><sub>Wavelength (<var>λ<sub>P</sub></var>) [nm]
+  <td><sub>375
+  <td><sub>410-780
   <td><sub>626
   <td><sub>525
   <td><sub>470
   <td><sub>850
-  <td><sub>375
   <td><sub>850
   <td><sub>850
-  <td><sub>410-780
 </tr>
 <tr>
   <td>
   <td><sub>Spectrum half width (Δλ) [nm]
+  <td><sub>9
+  <td><sub>
   <td><sub>20
   <td><sub>40
   <td><sub>26
   <td><sub>45
-  <td><sub>9
   <td><sub>45
   <td><sub>45
-  <td><sub>
 </tr>
 <tr>
   <td>
   <td><sub>Luminous intensity <var>I<sub>V</sub></var> [mcd]</br>(by I = 12 mA)
+  <td><sub>
+  <td><sub>13800
   <td><sub>1920
   <td><sub>2400
   <td><sub>1200
   <td><sub>
-  <td><sub>
   <td colspan=2><sub>
-  <td><sub>13800
 </tr>
 <tr>
   <td>
-  <td><sub>Luminous flux (<var>Φ<sub>V</sub></var>) [lm]  
+  <td><sub>Luminous flux (<var>Φ<sub>V</sub></var>) [lm]
+  <td><sub>
+  <td><sub>
   <td><sub>1.0
   <td><sub>1.2
   <td><sub>0.6
   <td><sub>
-  <td><sub>
   <td colspan=2><sub>
-  <td><sub>
 </tr>
 <tr>
   <td>
   <td><sub>Viewing angle (2θ) [<sup>o</sup>]
+  <td><sub>15
+  <td><sub>40
   <td colspan=3><sub>25
   <td><sub>18
-  <td><sub>40
   <td colspan=2><sub>18
-  <td><sub>15
 </tr>
 <tr>
   <td>
@@ -286,98 +282,98 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub>Length [mm]
+  <td><sub>8.3
+  <td><sub>8.65
   <td colspan=3><sub>8.6
   <td><sub>8.6
-  <td><sub>8.3
   <td colspan=2><sub>8.6
-  <td><sub>8.65
 </tr>
 <tr>
   <td>
   <td><sub>Long leg
+  <td><sub>Anode +
+  <td><sub>Anode +
   <td colspan=3><sub>Common Cathode -
   <td><sub>Anode +
-  <td><sub>Anode +
   <td colspan=2><sub>Anode +
-  <td><sub>Anode +
 </tr>
 <tr>
   <td>
   <td><sub><var>I<sub>F</sub></var> [mA]
+  <td><sub>20
+  <td><sub>25
   <td colspan=3><sub>35
   <td><sub>100
-  <td><sub>20
   <td colspan=2><sub>100
-  <td><sub>25
 </tr>
 <tr>
   <td>
   <td><sub><var>V<sub>R</sub></var> [V]
+  <td><sub>4
+  <td><sub>5
   <td colspan=3><sub>5
   <td><sub>5
-  <td><sub>4
   <td colspan=2><sub>5
-  <td><sub>5
 </tr>
 <tr>
   <td>
   <td><sub><var>V<sub>F</sub></var> [V]</br>(by I = 12 mA)
+  <td><sub>3.4
+  <td><sub>2.9
   <td><sub>1.93
   <td><sub>2.9
   <td><sub>3.4
   <td><sub>1.3
-  <td><sub>3.4
   <td colspan=2><sub>1.3
-  <td><sub>2.9
 </tr>
 <tr>
   <td>
   <td><sub>Calculated series resistor [Ω]
+  <td><sub>0
+  <td><sub>33.3
   <td><sub>114.2
   <td><sub>33.3
   <td><sub>0
   <td><sub>175
-  <td><sub>0
   <td colspan=2><sub>175
-  <td><sub>33.3
 </tr>
 <tr>
   <td>
   <td><sub>Series resistor [Ω]
+  <td><sub>0
+  <td><sub>62
   <td><sub>182
   <td><sub>62
   <td><sub>0
   <td><sub>182
-  <td><sub>0
   <td colspan=2><sub>182
-  <td><sub>62
 </tr>
 <tr>
   <td>
   <td><sub>GPIO
   <td><sub>12
+  <td><sub>12
+  <td><sub>12
   <td><sub>13
   <td><sub>14
   <td><sub>23
   <td><sub>12
-  <td><sub>12
   <td><sub>23
-  <td><sub>12
 </tr>
 <tr>
   <td colspan=2><sub><b>Cuevette</b>
-  <td colspan=4><sub>Normal glass (soda-lime glass)
   <td><sub><a href='https://www.amazon.de/gp/product/B07NNGHKSC/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>UV quartz cuvette</a>
-  <td colspan=2><sub>Normal glass (soda-lime glass)
   <td><sub>Borosilicate glass
+  <td colspan=4><sub>Normal glass (soda-lime glass)
+  <td colspan=2><sub>Normal glass (soda-lime glass)
 </tr>
 <tr>
   <td>
   <td><sub>Material
-  <td colspan=4><sub>Normal glass (soda-lime glass)
   <td><sub>UV transmitting quartz
-  <td colspan=2><sub>Normal glass (soda-lime glass)
   <td><sub>Borosilicate glass
+  <td colspan=4><sub>Normal glass (soda-lime glass)
+  <td colspan=2><sub>Normal glass (soda-lime glass)
 </tr>
 <tr>
   <td>
@@ -387,100 +383,100 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub>Transmission range [nm]
-  <td colspan=4><sub>350-2500
   <td><sub>190-2500
-  <td colspan=2><sub>350-2500
   <td><sub>290-2500
+  <td colspan=4><sub>350-2500
+  <td colspan=2><sub>350-2500
 </tr>
 <tr>
   <td>
   <td><sub>Form
-  <td colspan=4><sub>Round
   <td><sub>Square
-  <td colspan=2><sub>Round
   <td><sub>Round
+  <td colspan=4><sub>Round
+  <td colspan=2><sub>Round
 </tr>
 <tr>
   <td>
   <td><sub>Polished sidewalls
-  <td colspan=4><sub>N/A
   <td><sub>2
-  <td colspan=2><sub>N/A
   <td><sub>N/A
+  <td colspan=4><sub>N/A
+  <td colspan=2><sub>N/A
 </tr>
 <tr>
   <td>
   <td><sub>L x W x H [mm]
-  <td colspan=4><sub>N/A
   <td><sub>12.5 x 12.5 x 45.0
-  <td colspan=2><sub>N/A
   <td><sub>N/A
+  <td colspan=4><sub>N/A
+  <td colspan=2><sub>N/A
 </tr>
 <tr>
   <td>
   <td><sub>Ø x H [mm]
-  <td colspan=4><sub>16.0 x 200.0
   <td><sub>N/A
-  <td colspan=2><sub>16.0 x 200.0
   <td><sub>16.0 x 200.0
+  <td colspan=4><sub>16.0 x 200.0
+  <td colspan=2><sub>16.0 x 200.0
 </tr>
 <tr>
   <td>
   <td><sub>Wall thickness [mm]
-  <td colspan=4><sub>1.00
   <td><sub>1.25
-  <td colspan=2><sub>1.00
   <td><sub>1.00
+  <td colspan=4><sub>1.00
+  <td colspan=2><sub>1.00
 </tr>
 <tr>
   <td>
   <td><sub>Light path length [mm]
-  <td colspan=4><sub>14.0
   <td><sub>10.0
-  <td colspan=2><sub>14.0
   <td><sub>14.0
+  <td colspan=4><sub>14.0
+  <td colspan=2><sub>14.0
 </tr>
 <tr>
   <td>
   <td><sub>Sample volume [ml]
-  <td colspan=4><sub>>5
   <td><sub>3.5
-  <td colspan=2><sub>>5
   <td><sub>>5
+  <td colspan=4><sub>>5
+  <td colspan=2><sub>>5
 </tr>
 <tr>
   <td colspan=2><sub><b>Light sensor</b>
-  <td colspan=4><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
   <td><sub><a href='https://www.vishay.com/docs/84277/veml6070.pdf'>VEML6070</a>
-  <td colspan=2><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
   <td><sub><a href='https://cdn-shop.adafruit.com/datasheets/TCS34725.pdf'>TCS34725</a>
+  <td colspan=4><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
+  <td colspan=2><sub><a href='https://cdn-shop.adafruit.com/datasheets/TSL25911_Datasheet_EN_v1.pdf'>TSL2591</a>
 </tr>
 <tr>
   <td>
   <td><sub>Wavelength (<var>λ<sub>P</sub></var>) [nm]
+  <td><sub>355
+  <td><sub>525
   <td colspan=3><sub>650
   <td><sub>850
-  <td><sub>355
   <td colspan=2><sub>850
-  <td><sub>525
 </tr>
 <tr>
   <td>
   <td><sub>Spectrum half width (Δλ) [nm]
+  <td><sub>20
+  <td><sub>125
   <td colspan=3><sub>150
   <td><sub>42
-  <td><sub>20
   <td colspan=2><sub>42
-  <td><sub>125
 </tr>
 <tr>
   <td>
   <td><sub>Spectrum range (<var>λ<sub>R</sub></var>) [nm]
-  <td colspan=3><sub>400 - 780
+  <td><sub>320 - 380
+  <td><sub>380 - 780
+  <td colspan=3><sub>380 - 780
   <td><sub>780 - 910
-  <td><sub>320 - 400
   <td colspan=2><sub>780 - 910
-  <td><sub>400 - 780
 </tr>
 <tr>
   <td>
@@ -495,18 +491,18 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td>
   <td><sub>I2C address
-  <td colspan=4><sub>0x29
   <td><sub>0x10
-  <td colspan=2><sub>0x29
   <td><sub>0x29
+  <td colspan=4><sub>0x29
+  <td colspan=2><sub>0x29
 </tr>
 <tr>
   <td>
   <td><sub>L x W x H [mm]
-  <td colspan=4><sub>19.0 x 16.5 x 2.0
   <td><sub>13.0 x 12.0 x 2.0
-  <td colspan=2><sub>19.0 x 16.5 x 2.0
   <td><sub>20.3 x 20.3 x 2.0
+  <td colspan=4><sub>19.0 x 16.5 x 2.0
+  <td colspan=2><sub>19.0 x 16.5 x 2.0
 </tr>
 <tr>
   <td colspan=2><sub><b>Microcontroller</b>
@@ -549,10 +545,10 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td rowspan=4>
   <td rowspan=4><sub>STL exports
-  <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./setup/case/3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
-  <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
   <td><sub><a href='./setup/case/3d-printing/smart-Colorimeter-Case.stl'>smart-Colorimeter-Case.stl</a>
+  <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
+  <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
 </tr>
 <tr>
   <td colspan=8><sub><a href='./setup/case/3d-printing/smartPhotometer-Case-Lid.stl'>smartPhotometer-Case-Lid.stl</a>
@@ -562,10 +558,10 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td colspan=8><sub><a href='./setup/case/3d-printing/smartPhotometer-Cover-for-square-Cuvette.stl'>smartPhotometer-Cover-for-square-Cuvette.stl</a>
 </tr>
 <tr>
-  <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
   <td><sub><a href='./setup/case/3d-printing/smart-UV-Photometer-Cuvette-Holder.stl'>smart-UV-Photometer-Cuvette-Holder.stl</a>
-  <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
   <td><sub><a href='./setup/case/3d-printing/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
+  <td colspan=4><sub><a href='./setup/case/3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=2><sub><a href='./setup/case/3d-printing/smart-IR-Turbidimeter-Cuvette-Holder.stl'>smart-IR-Turbidimeter-Cuvette-Holder.stl</a>
 </tr>
 </table>
 </br>
