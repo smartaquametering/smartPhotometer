@@ -16,9 +16,9 @@ Due to their wide range of application, their reliability and robustness, smartP
 
 ## Reducing complexity
 
-The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
+In simple terms, photometry is a measurement method for determining the concentration of colored solutions with the aid of electromagnetic radiation (“light”).
 
-The two most common types of absorption photometers are:
+The two most common types of photometers are:
 
 - Spectrophotometer
 - Filter photometer
@@ -50,11 +50,99 @@ Monitor and secure your environment in real time with online monitoring by loggi
 
 ### Absorbance measurement
 
-<img src="./setup/transmission.png" alt="Transmission">
+The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuvette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuvette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
 
-<img src="./setup/photometrie-principles.png" alt="Principles">
+<table>
+  <tr>
+    <td><img src="./setup/transmission.png" alt="Transmission">
+    <td><img src="./setup/photometrie-principles.png" alt="Principles">
+  </tr>
+<tr>
+<td><sub>λ</td>
+<td><sub>Wavelength [nm]</td>
+</tr>
+<tr>
+<td><sub><var>B<sup>o</sup></var></td>
+<td><sub>
+	Beam (measuring) angle [<var><sup>o</sup></var>]</br>
+	<var>180 <sup>o</sup>: Transmitted light measurement (Absorbance)</var></br>
+	<var>90 <sup>o</sup>: Nephelometric turbidity (scattered light) measurement</var>
+</td>
+</tr>
+<tr>
+<td><sub><var>I<sub>0</sub></var></td>
+<td><sub>Intensity of incident light [lux]</td>
+</tr>
+<tr>
+<td><sub><var>I<sub>T</sub></var></td>
+<td><sub>Intensity of transmitted light [lux]</td>
+</tr>
+<tr>
+<td><sub>T = <var>I<sub>T</sub></var> / <var>I<sub>0</sub></var></td>
+<td><sub>
+	Transmission</br>
+	Energy passing through</br>
+	Range: 1.0 - 0.0
+</td>
+</tr>
+<tr>
+<td><sub>A = 1 - T</td>
+<td><sub>
+	Absorption</br>
+	Energy lost
+</td>
+</tr>
+<tr>
+<td><sub><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</td>
+<td><sub>
+	Absorbance</br>
+	Attenuation</br>
+	Lambert-Beer law</br>
+	Optimum range: 0.1 – 1.0
+</td>
+</tr>
+<tr>
+<td><sub><var>SAC<sub>λ</sub></var> = <var>E<sub>λ</sub></var> / d * 100</td>
+<td><sub>Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</td>
+</tr>
+<tr>
+<td><sub>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</td>
+<td><sub>Concentration of absorbing substance in the liquid [mol/l]</td>
+</tr>
+<tr>
+<td><sub>F = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
+<td><sub>
+	Factor</br>
+	Test specific
+</td>
+</tr>
+<tr>
+<td><sub><var>ε<sub>λ</sub></var></td>
+<td><sub>Molar decadic extinction coefficient [l/mol/cm]</td>
+</tr>
+<tr>
+<td><sub>d</td>
+<td><sub>Thickness of the solution layer [cm]</td>
+</tr>
+<tr>
+<td><sub>Turbidity</td>
+<td><sub>Opacity, clouding, haze</td>
+</tr>
+<tr>
+<td><sub>FNU</td>
+<td><sub>Formazine Nephelometric Unit</td>
+</tr>
+<tr>
+<td><sub>NTU</td>
+<td><sub>Nephelometric Turbidity Unit</td>
+</tr>
+<tr>
+<td><sub>FAU</td>
+<td><sub>Formazine Attenuation Unit</td>
+</tr>
+</table>
 
-<b>Electromagnetic radiation used for photometric analysis:</b>
+#### Electromagnetic radiation used for photometric analysis
 
 <img src="./setup/light-spectrum.png" alt="Spectrum">
 
@@ -433,7 +521,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>23
 </tr>
 <tr>
-  <td colspan=2><sub><b>Cuevette</b>
+  <td colspan=2><sub><b>Cuvette</b>
   <td><sub><a href='https://www.amazon.de/gp/product/B07NNGHKSC/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>UV quartz cuvette</a>
   <td><sub>Borosilicate glass
   <td colspan=4><sub>Normal glass (soda-lime glass)
