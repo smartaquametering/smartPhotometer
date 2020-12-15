@@ -16,7 +16,7 @@ Due to their wide range of application, their reliability and robustness, smartP
 
 ## Reducing complexity
 
-The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light detector, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Beer's law.
+The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
 
 The two most common types of absorption photometers are:
 
@@ -49,6 +49,10 @@ A Javascript application will start within your browser and is triggering and ma
 Monitor and secure your environment in real time with online monitoring by logging readings into a central database with MQTT-based APIs.
 
 ### Absorbance measurement
+
+<img src="./setup/transmission.png" alt="Transmission">
+
+<img src="./setup/photometrie-principles.png" alt="Principles">
 
 <b>Electromagnetic radiation used for photometric analysis:</b>
 
