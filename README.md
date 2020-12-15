@@ -16,7 +16,7 @@ Due to their wide range of application, their reliability and robustness, smartP
 
 ## Reducing complexity
 
-The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuevette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuevette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
+The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuvette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuvette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
 
 The two most common types of absorption photometers are:
 
@@ -519,7 +519,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>23
 </tr>
 <tr>
-  <td colspan=2><sub><b>Cuevette</b>
+  <td colspan=2><sub><b>Cuvette</b>
   <td><sub><a href='https://www.amazon.de/gp/product/B07NNGHKSC/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>UV quartz cuvette</a>
   <td><sub>Borosilicate glass
   <td colspan=4><sub>Normal glass (soda-lime glass)
