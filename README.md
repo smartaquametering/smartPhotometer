@@ -50,9 +50,96 @@ Monitor and secure your environment in real time with online monitoring by loggi
 
 ### Absorbance measurement
 
-<img src="./setup/transmission.png" alt="Transmission">
+<table>
+  <tr>
+    <td><img src="./setup/transmission.png" alt="Transmission">
+    <td><img src="./setup/photometrie-principles.png" alt="Principles">
+  </tr>
 
-<img src="./setup/photometrie-principles.png" alt="Principles">
+<tr>
+<td>λ</td>
+<td>Wavelength [nm]</td>
+</tr>
+<tr>
+<td><var>B<sup>o</sup></var></td>
+<td>
+	Beam (measuring) angle [<var><sup>o</sup></var>]</br>
+	<var>180 <sup>o</sup>: Transmitted light measurement (Absorbance)</var></br>
+	<var>90 <sup>o</sup>: Nephelometric turbidity (scattered light) measurement</var>
+</td>
+</tr>
+<tr>
+<td><var>I<sub>0</sub></var></td>
+<td>Intensity of incident light [lux]</td>
+</tr>
+<tr>
+<td><var>I<sub>T</sub></var></td>
+<td>Intensity of transmitted light [lux]</td>
+</tr>
+<tr>
+<td>T = <var>I<sub>T</sub></var> / <var>I<sub>0</sub></var></td>
+<td>
+	Transmission</br>
+	Energy passing through</br>
+	Range: 1.0 - 0.0
+</td>
+</tr>
+<tr>
+<td>A = 1 - T</td>
+<td>
+	Absorption</br>
+	Energy lost
+</td>
+</tr>
+<tr>
+<td><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</td>
+<td>
+	Absorbance</br>
+	Attenuation</br>
+	Lambert-Beer law</br>
+	Optimum range: 0.1 – 1.0
+</td>
+</tr>
+<tr>
+<td><var>SAC<sub>λ</sub></var> = <var>E<sub>λ</sub></var> / d * 100</td>
+<td>Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</td>
+</tr>
+<tr>
+<td>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</td>
+<td>Concentration of absorbing substance in the liquid [mol/l]</td>
+</tr>
+<tr>
+<td>F = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
+<td>
+	Factor</br>
+	Test specific
+</td>
+</tr>
+<tr>
+<td><var>ε<sub>λ</sub></var></td>
+<td>Molar decadic extinction coefficient [l/mol/cm]</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Thickness of the solution layer [cm]</td>
+</tr>
+<tr>
+<td>Turbidity</td>
+<td>Opacity, clouding, haze</td>
+</tr>
+<tr>
+<td>FNU</td>
+<td>Formazine Nephelometric Unit</td>
+</tr>
+<tr>
+<td>NTU</td>
+<td>Nephelometric Turbidity Unit</td>
+</tr>
+<tr>
+<td>FAU</td>
+<td>Formazine Attenuation Unit</td>
+</tr>
+</table>
 
 <b>Electromagnetic radiation used for photometric analysis:</b>
 
