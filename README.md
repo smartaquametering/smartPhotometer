@@ -140,7 +140,7 @@ Monitor and secure your environment in real time with online monitoring by loggi
 </tr>
 </table>
 
-<b>Electromagnetic radiation used for photometric analysis:</b>
+#### Electromagnetic radiation used for photometric analysis
 
 <img src="./setup/light-spectrum.png" alt="Spectrum">
 
