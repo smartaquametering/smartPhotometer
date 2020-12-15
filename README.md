@@ -2,7 +2,7 @@
 
 # smartPhotometer
 
-Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of coloured or not coloured substances in solution.
+Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of colored or not colored substances in solution.
 
 smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 up to 850 nm.
 
@@ -50,7 +50,7 @@ Monitor and secure your environment in real time with online monitoring by loggi
 
 ### Absorbance measurement
 
-The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuvette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuvette with the same solvent but without the coloured substance. From the ratio between the light intensities, knowing the capacity of the coloured substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
+The principle of absorption photometers is that (as far as possible) monochromatic light is allowed to pass through a cuvette containing the solution. It then reaches a light sensor, that measures the intensity of the light compared to the intensity after passing through an identical cuvette with the same solvent but without the colored substance. From the ratio between the light intensities, knowing the capacity of the colored substance to absorb light, it is possible to calculate the concentration of the substance using Lambert-Beer's law.
 
 <table>
   <tr>
