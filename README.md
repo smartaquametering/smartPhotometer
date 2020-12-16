@@ -23,11 +23,11 @@ The two most common types of photometers are:
 - Spectrophotometer
 - Filter photometer
 
-In spectrophotometers a monochromator (with prism or with grating) is used to obtain monochromatic light of one defined wavelength. They can also be used to scan the spectrum of the absorbing substance.
+In spectrophotometers a monochromator (with prism or with grating) is used to obtain monochromatic light of defined wavelengths. They can also be used to scan the spectrum of the absorbing substance.
 
 In filter photometers, optical filters are used to give the monochromatic light.
 
-Due to the evolution and availability of **various types of LEDs** it is easily possible **to obtain nearly monochromatic light with an specific wavelength range**, but
+Due to the evolution and availability of **various types of LEDs** it is easily possible **to obtain nearly monochromatic light with specific wavelength ranges**, but
 without the need to setup an complex and sensitive monochromator or filter mechanismn.
 
 Reducing of complexity
@@ -55,7 +55,7 @@ The principle of absorption photometers is that (as far as possible) monochromat
 <table>
   <tr>
     <td><img src="./setup/transmission.png" alt="Transmission">
-    <td><img src="./setup/photometrie-principles.png" alt="Principles">
+    <td><img src="./setup/photometrie-principles.png" alt="Absorbance">
   </tr>
 <tr>
 <td><sub>λ</td>
@@ -123,22 +123,6 @@ The principle of absorption photometers is that (as far as possible) monochromat
 <tr>
 <td><sub>d</td>
 <td><sub>Thickness of the solution layer [cm]</td>
-</tr>
-<tr>
-<td><sub>Turbidity</td>
-<td><sub>Opacity, clouding, haze</td>
-</tr>
-<tr>
-<td><sub>FNU</td>
-<td><sub>Formazine Nephelometric Unit</td>
-</tr>
-<tr>
-<td><sub>NTU</td>
-<td><sub>Nephelometric Turbidity Unit</td>
-</tr>
-<tr>
-<td><sub>FAU</td>
-<td><sub>Formazine Attenuation Unit</td>
 </tr>
 </table>
 
@@ -231,6 +215,96 @@ The principle of absorption photometers is that (as far as possible) monochromat
 ### Turbidity measurement
 - Absorbance measurement (transmitted light measurement) at a 180° angle from 2-400 NTU
 - Nephelometric stray light measurement from 0.1-1000 NTU
+
+<table>
+  <tr>
+    <td>
+    <td><img src="./setup/turbidity.png" alt="Turbidity">
+  </tr>
+<tr>
+<td><sub>λ</td>
+<td><sub>Wavelength [nm]</td>
+</tr>
+<tr>
+<td><sub><var>B<sup>o</sup></var></td>
+<td><sub>
+	Beam (measuring) angle [<var><sup>o</sup></var>]</br>
+	<var>180 <sup>o</sup>: Transmitted light measurement (Absorbance)</var></br>
+	<var>90 <sup>o</sup>: Nephelometric turbidity (scattered light) measurement</var>
+</td>
+</tr>
+<tr>
+<td><sub><var>I<sub>0</sub></var></td>
+<td><sub>Intensity of incident light [lux]</td>
+</tr>
+<tr>
+<td><sub><var>I<sub>T</sub></var></td>
+<td><sub>Intensity of transmitted light [lux]</td>
+</tr>
+<tr>
+<td><sub>T = <var>I<sub>T</sub></var> / <var>I<sub>0</sub></var></td>
+<td><sub>
+	Transmission</br>
+	Energy passing through</br>
+	Range: 1.0 - 0.0
+</td>
+</tr>
+<tr>
+<td><sub>A = 1 - T</td>
+<td><sub>
+	Absorption</br>
+	Energy lost
+</td>
+</tr>
+<tr>
+<td><sub><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</td>
+<td><sub>
+	Absorbance</br>
+	Attenuation</br>
+	Lambert-Beer law</br>
+	Optimum range: 0.1 – 1.0
+</td>
+</tr>
+<tr>
+<td><sub><var>SAC<sub>λ</sub></var> = <var>E<sub>λ</sub></var> / d * 100</td>
+<td><sub>Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</td>
+</tr>
+<tr>
+<td><sub>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</td>
+<td><sub>Concentration of absorbing substance in the liquid [mol/l]</td>
+</tr>
+<tr>
+<td><sub>F = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
+<td><sub>
+	Factor</br>
+	Test specific
+</td>
+</tr>
+<tr>
+<td><sub><var>ε<sub>λ</sub></var></td>
+<td><sub>Molar decadic extinction coefficient [l/mol/cm]</td>
+</tr>
+<tr>
+<td><sub>d</td>
+<td><sub>Thickness of the solution layer [cm]</td>
+</tr>
+<tr>
+<td><sub>Turbidity</td>
+<td><sub>Opacity, clouding, haze</td>
+</tr>
+<tr>
+<td><sub>FNU</td>
+<td><sub>Formazine Nephelometric Unit</td>
+</tr>
+<tr>
+<td><sub>NTU</td>
+<td><sub>Nephelometric Turbidity Unit</td>
+</tr>
+<tr>
+<td><sub>FAU</td>
+<td><sub>Formazine Attenuation Unit</td>
+</tr>
+</table>
 
 #### NTU check
 - Safely spot interfering turbidities
