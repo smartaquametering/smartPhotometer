@@ -82,7 +82,7 @@ The principle of absorption photometers is that (as far as possible) monochromat
 <td><sub>
 	Transmission</br>
 	Energy passing through</br>
-	Range: 1.0 - 0.0
+	Range: 0.0 - 1.0
 </td>
 </tr>
 <tr>
@@ -132,12 +132,14 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 <table>
 <tr>
-  <td colspan=4><sub><b>Ultraviolet radiation</b>
+  <td colspan=6><sub><b>Ultraviolet radiation</b>
 </tr>
 <tr>
   <td>
   <td><sub>100-280 nm
   <td colspan=2><sub>UVC
+  <td rowspan=2><sub>UV transmitting quartz glass cuvette</br>> 190 nm
+  <td rowspan=3><sub>Numerous inorganic and organic compounds absorb light especially in the ultraviolet and visible range.
 </tr>
 <tr>
   <td>
@@ -148,15 +150,18 @@ The principle of absorption photometers is that (as far as possible) monochromat
   <td>
   <td><sub>315-400 nm
   <td colspan=2><sub>UVA
+  <td><sub>Borosilicate glass cuvette</br>> 290 nm
 </tr>
 <tr>
-  <td colspan=4><sub><b>Colors of light and complementary colors</b>
+  <td colspan=6><sub><b>Colors of light and complementary colors</b>
 </tr>
 <tr>
   <td>
   <td><sub>400–435 nm
   <td><sub>Violet
   <td><sub>Yellow-Green
+  <td rowspan=9><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
+  <td rowspan=8><sub>Numerous inorganic and organic compounds absorb light especially in the ultraviolet and visible range.
 </tr>
 <tr>
   <td>
@@ -205,6 +210,7 @@ The principle of absorption photometers is that (as far as possible) monochromat
   <td><sub>> 780 nm
   <td><sub>Infrared
   <td><sub>Black
+  <td><sub>Nephelometric turbidity measurement
 </tr>
 </table>
 
@@ -246,7 +252,7 @@ The principle of absorption photometers is that (as far as possible) monochromat
 <td><sub>
 	Transmission</br>
 	Energy passing through</br>
-	Range: 1.0 - 0.0
+	Range: 0.0 - 1.0
 </td>
 </tr>
 <tr>
