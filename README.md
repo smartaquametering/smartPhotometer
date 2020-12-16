@@ -58,6 +58,9 @@ The principle of absorption photometers is that (as far as possible) monochromat
     <td><img src="./setup/photometrie-principles.png" alt="Absorbance">
   </tr>
 <tr>
+    <td colspan=2 align=center><img src="./setup/coefficient.png" alt="Coefficient">
+</tr>
+<tr>
 <td><sub>λ</td>
 <td><sub>Wavelength [nm]</td>
 </tr>
@@ -70,8 +73,8 @@ The principle of absorption photometers is that (as far as possible) monochromat
 </td>
 </tr>
 <tr>
-<td><sub><var>I<sub>0</sub></var></td>
-<td><sub>Intensity of incident light [lux]</td>
+  <td><sub><var>I<sub>0</sub></var></td>
+  <td><sub>Intensity of incident light [lux]</td>
 </tr>
 <tr>
 <td><sub><var>I<sub>T</sub></var></td>
