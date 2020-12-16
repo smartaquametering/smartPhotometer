@@ -141,11 +141,11 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 - In addition to round and rectangular cuvettes, there are also special cuvettes, such as flow-through cuvettes, where the sample solution is passed into and out of the cuvette by a pump.
 - The size of the cuvette is directly related to the layer thickness that is effective in the Lambert-Beer law. Generally speaking, the larger the cuvette and the sample volume, the greater the layer thickness, and the more sensitive the measurement can be.
 
-<img src="./setup/light-spectrum.png" alt="Spectrum">
-
-<img src="./setup/led-spectrum.png" alt="LED Spectrum">
-
 <table>
+<tr>
+  <td colspan=6><img src="./setup/light-spectrum.png" alt="Spectrum">
+<img src="./setup/led-spectrum.png" alt="LED Spectrum">
+</tr>
 <tr>
   <td colspan=6><sub><b>Ultraviolet radiation</b>
 </tr>
@@ -154,7 +154,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>100-280 nm
   <td colspan=2><sub>UVC
   <td rowspan=2><sub>UV transmitting quartz glass cuvette</br>> 190 nm
-	  <td rowspan=3><sub>Numerous inorganic and</br>organic compounds</br>absorb light especially in the</br>ultraviolet and visible range.
+  <td rowspan=3><sub>Numerous inorganic and</br>organic compounds</br>absorb light especially in the</br>ultraviolet and visible range.
 </tr>
 <tr>
   <td>
@@ -239,8 +239,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 
 <table>
   <tr>
-    <td>
-    <td><img src="./setup/turbidity.png" alt="Turbidity">
+    <td colspan=2><img src="./setup/turbidity.png" alt="Turbidity" width="700">
   </tr>
 <tr>
 <td><sub>λ</td>
