@@ -143,8 +143,8 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 
 <table>
 <tr>
-  <td colspan=6 align="center"><img src="./setup/light-spectrum.png" alt="Spectrum" width="99%">
-<img src="./setup/led-spectrum.png" alt="LED Spectrum">
+  <td colspan=6 align="center"><img src="./setup/light-spectrum.png" alt="Spectrum">
+                               <img src="./setup/led-spectrum.png" alt="LED Spectrum">
 </tr>
 <tr>
   <td colspan=6><sub><b>Ultraviolet radiation</b>
