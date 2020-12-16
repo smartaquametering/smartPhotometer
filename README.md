@@ -128,6 +128,19 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 #### Electromagnetic radiation used for photometric analysis
 
+Various types of LEDs are used to select the optimum wavelength range for the respective measurement.
+
+- The selection of the optimum wavelength range depends on the color of the sample solution and the associated absorption of the complementary color.
+- For a blue solution, a wavelength range near to yellow should be used (green LED), while for a yellow solution a blue LED should be used, since always the complementary color is absorbed.
+- The more closely the absorption maximum of the substance to be detected is approached, the higher the performance of the photometer will be.
+- The smaller the spectral bandwidth of the LED (the range between lower and upper wavelength), the higher the photometer resolution.
+
+The selection of an appropriate cuvette for each measurement is crucial. The material (depending on the wavelength) and size of the cuvette are the two key factors.
+
+- High-quality materials such as quartz are used in rectangular standard cuvettes for measurements in the UV range.
+- In addition to round and rectangular cuvettes, there are also special cuvettes, such as flow-through cuvettes, where the sample solution is passed into and out of the cuvette by a pump.
+- The size of the cuvette is directly related to the layer thickness that is effective in the Lambert-Beer law. Generally speaking, the larger the cuvette and the sample volume, the greater the layer thickness, and the more sensitive the measurement can be.
+
 <img src="./setup/light-spectrum.png" alt="Spectrum">
 
 <table>
