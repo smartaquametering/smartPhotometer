@@ -143,6 +143,8 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 
 <img src="./setup/light-spectrum.png" alt="Spectrum">
 
+<img src="./setup/led-spectrum.png" alt="LED Spectrum">
+
 <table>
 <tr>
   <td colspan=6><sub><b>Ultraviolet radiation</b>
@@ -152,7 +154,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>100-280 nm
   <td colspan=2><sub>UVC
   <td rowspan=2><sub>UV transmitting quartz glass cuvette</br>> 190 nm
-  <td rowspan=3><sub>Numerous inorganic and organic compounds absorb light especially in the ultraviolet and visible range.
+	  <td rowspan=3><sub>Numerous inorganic and</br>organic compounds</br>absorb light especially in the</br>ultraviolet and visible range.
 </tr>
 <tr>
   <td>
@@ -174,7 +176,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>Violet
   <td><sub>Yellow-Green
   <td rowspan=9><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
-  <td rowspan=8><sub>Numerous inorganic and organic compounds absorb light especially in the ultraviolet and visible range.
+  <td rowspan=8><sub>Numerous inorganic and</br>organic compounds</br>absorb light especially in the</br>ultraviolet and visible range.
 </tr>
 <tr>
   <td>
