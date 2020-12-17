@@ -34,7 +34,7 @@ Reducing of complexity
 - by using **RGB, UV and IR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
 - by the integration of various **digital light sensors orchestrated by simple microcontrollers**.
 - by distributing different analysis methods **on multiple meshed photometers**.
-- by the strict **segregation of data acquisition, transmission, analytics and their visualisation** on different layers and devices.
+- by the strict **segregation of data acquisition, processing, transmission, analytics and their visualisation** on different layers and devices.
 
 ## Being Smart - The difference
 Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
@@ -54,12 +54,12 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 <table>
   <tr>
-    <td><img src="./setup/transmission.png" alt="Transmission" align="center">
-    <td><img src="./setup/photometrie-principles.png" alt="Absorbance" align="center">
+    <td><img src="./setup/transmission.png" alt="Transmission">
+    <td><img src="./setup/photometrie-principles.png" alt="Absorbance">
   </tr>
 <tr>
-  <td><img src="./setup/coefficient.png" alt="Coefficient" align="center">
-  <td><img src="./setup/absorbance.png" alt="Absorbance" align="center">
+  <td><img src="./setup/coefficient.png" alt="Coefficient">
+  <td><img src="./setup/absorbance.png" alt="Absorbance">
 </tr>
 <tr>
 <td><sub>λ</td>
@@ -171,7 +171,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>100-280 nm
   <td colspan=2><sub>UVC
   <td rowspan=2><sub>UV transmitting quartz glass cuvette</br>> 190 nm
-  <td rowspan=3><sub>Numerous inorganic and</br>organic compounds</br>absorb light especially in the</br>ultraviolet and visible range.
+  <td rowspan=3><sub>Numerous anorganic and</br>especially organic compounds</br>absorb UV light
 </tr>
 <tr>
   <td>
@@ -193,7 +193,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>Violet
   <td><sub>Yellow-Green
   <td rowspan=9><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
-  <td rowspan=8><sub>Numerous inorganic and</br>organic compounds</br>absorb light especially in the</br>ultraviolet and visible range.
+  <td rowspan=8><sub>Anorganic compounds</br>by using calibrated test
 </tr>
 <tr>
   <td>
@@ -251,8 +251,10 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 - Measuring of color difference against quality control standards
 
 ### Turbidity measurement
-- Absorbance measurement (transmitted light measurement) at a 180° angle from 2-400 NTU
-- Nephelometric stray light measurement from 0.1-1000 NTU
+
+- Double-beam measurement by using two independant IR light sources and optical paths
+  - Absorbance measurement (transmitted light measurement) at a 180° beam angle from 2-400 NTU
+  - Nephelometric stray light measurement at a 90° beam angle from 0.1-1000 NTU
 
 <table>
   <tr>
