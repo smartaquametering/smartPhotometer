@@ -2,7 +2,7 @@
 
 # smartPhotometer
 
-Easy-to-use OpenSource LED photometers for measurement of the absorption of light of a given wavelength (or a given range of wavelengths) of colored or not colored substances in solution.
+Easy-to-use OpenSource LED photometers for measurement of the absorption of light at given ranges of wavelengths of colored or not colored substances in solution.
 
 smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 up to 850 nm.
 
@@ -54,11 +54,12 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 <table>
   <tr>
-    <td><img src="./setup/transmission.png" alt="Transmission">
-    <td><img src="./setup/photometrie-principles.png" alt="Absorbance">
+    <td><img src="./setup/transmission.png" alt="Transmission" align="center">
+    <td><img src="./setup/photometrie-principles.png" alt="Absorbance" align="center">
   </tr>
 <tr>
-    <td colspan=2 align=center><img src="./setup/coefficient.png" alt="Coefficient">
+  <td><img src="./setup/coefficient.png" alt="Coefficient" align="center">
+  <td><img src="./setup/absorbance.png" alt="Absorbance" align="center">
 </tr>
 <tr>
 <td><sub>λ</td>
@@ -96,7 +97,7 @@ The principle of absorption photometers is that (as far as possible) monochromat
 </td>
 </tr>
 <tr>
-<td><sub><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</td>
+<td><sub><var>E<sub>λ</sub></var> = - log ( T ) = log ( 1 / T ) = <var>ε<sub>λ</sub></var> * c * d</td>
 <td><sub>
 	Absorbance</br>
 	Attenuation</br>
@@ -109,14 +110,27 @@ The principle of absorption photometers is that (as far as possible) monochromat
 <td><sub>Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</td>
 </tr>
 <tr>
-<td><sub>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</td>
+<td><sub>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F = <var>E<sub>λ</sub></var> / m</td>
 <td><sub>Concentration of absorbing substance in the liquid [mol/l]</td>
 </tr>
 <tr>
-<td><sub>F = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
+<td><sub>F = 1 / m = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
 <td><sub>
 	Factor</br>
 	Test specific
+</td>
+</tr>
+<tr>
+<td><sub>m = ΔE / Δc = <var>ε<sub>λ</sub></var> * d 
+</td>
+<td><sub>
+   Slope
+</td>
+</tr>
+<tr>
+<td><sub>N</td>
+<td><sub>
+   Zero value
 </td>
 </tr>
 <tr>
