@@ -252,13 +252,16 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 
 ### Turbidity measurement
 
+Turbidity (opacity, clouding, haze) is an optical property of a liquid sample describing the degree of clarity. Turbidity is caused by small suspended (insoluble) particles having a refractive index different from the medium. This results in absorption, scattering and reflection of the incident light.
+
 - Double-beam measurement by using two independant IR light sources and optical paths
   - Absorbance measurement (transmitted light measurement) at a 180° beam angle from 2-400 NTU
   - Nephelometric stray light measurement at a 90° beam angle from 0.1-1000 NTU
 
 <table>
   <tr>
-    <td colspan=2><img src="./setup/turbidity.png" alt="Turbidity" width="700">
+    <td><img src="./setup/opacity.png" alt="Opacity">
+    <td><img src="./setup/turbidity.png" alt="Turbidity" width="700">
   </tr>
 <tr>
 <td><sub>λ</td>
@@ -353,6 +356,11 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 smartPhotometer are in this way cheap, robust and easy-to-use, but very flexible and also provide multiple analysis and reporting options which normally are only available in very expensive high end solutions.
 
 Don't reinvent the wheel and **rely on agile open source communities**.
+
+## Tips and tricks
+
+- The filling level of the cuvette must be at least 4 cm due to the beam path of the photometers.
+- Turbid samples have to be filtered; turbidity leads to incorrect results.
 
 ## Datasheet
 
