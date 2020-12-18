@@ -246,6 +246,11 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 </tr>
 </table>
 
+### NTU check
+- Safely spot interfering turbidities
+- Unique for maximum measurement result safety
+- Runs automatically with each measurement
+
 ### Color measurement
 - Conversions of color index and display in color space
 - Measuring of color difference against quality control standards
@@ -253,15 +258,48 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 ### Turbidity measurement
 
 Turbidity (opacity, clouding, haze) is an optical property of a liquid sample describing the degree of clarity. Turbidity is caused by small suspended (insoluble) particles having a refractive index different from the medium. This results in absorption, scattering and reflection of the incident light.
+In general, the higher the turbidity, the more intense is the resulting scattered light.
+Turbidity particles absorb at virtually all frequencies, due to their three-dimensional structure.
+
+Additional absorption of color in the visible region may be circumvented by a measurement in the infrared (IR) or near-infrared (NIR) range.
+Accordingly, the attenuation of transmission is a measure of the concentration of turbidity-causing solids.
+The photometric determination of turbidity is usually done at a wavelength of 860 nm (DIN EN ISO 7027).
+
+Factors that influence this intensity:
+- Wavelength of the incident light
+- Particle size and shape
+- Refractive index and color of the sample
+
+
+
+
+Photometry is an objective measurement that allows the comparison of different levels of turbidity:
 
 - Double-beam measurement by using two independant IR light sources and optical paths
-  - Absorbance measurement (transmitted light measurement) at a 180° beam angle from 2-400 NTU
-  - Nephelometric stray light measurement at a 90° beam angle from 0.1-1000 NTU
+  - In case of heavy turbidity
+    - Absorbance measurement (transmitted light measurement) at a 180° beam angle from 2-400 NTU
+  
+  Recommended measuring range: 40–4000 FAU (DIN EN ISO 7027) Light source and
+detector are located on the same axis (180° angle). The reduced light intensity which
+remains after passing through the sample is measured.
+
+  - In case of low turbidity
+    - Nephelometric stray light measurement at a 90° beam angle from 0.1-1000 NTU
+    The intensity of the light which is scattered by undissolved particles in the sample is measured.
+The international unit is the nephelometric turbidity unit, NTU. Other units are FTU (formazine turbidity unit), FNU (formazine nephelometric unit) and TU/F (turbidity unit formazine). 
+Recommended measuring range: 0–40 FNU (DIN EN ISO 7027)
+The international unit is FAU (formazine attenuation unit). In Germany, the spectral absorption coefficient SAK [1/m] is often used.
+
+· Transmitted light measurement at medium to high turbidity concentration (about
+40–4000 FAU); used e.g. for determination of the solid portion in activated sludge.
+· Light scattering measurement at low turbidity concentration (about 1–40 FNU); e.g. in
+treated wastewater.
+
 
 <table>
   <tr>
     <td><img src="./setup/opacity.png" alt="Opacity">
-    <td><img src="./setup/turbidity.png" alt="Turbidity" width="700">
+    <td><img src="./setup/turbidity.png" alt="Turbidity">
   </tr>
 <tr>
 <td><sub>λ</td>
@@ -347,11 +385,6 @@ Turbidity (opacity, clouding, haze) is an optical property of a liquid sample de
 <td><sub>Formazine Attenuation Unit</td>
 </tr>
 </table>
-
-### NTU check
-- Safely spot interfering turbidities
-- Unique for maximum measurement result safety
-- Runs automatically with each measurement
 
 smartPhotometer are in this way cheap, robust and easy-to-use, but very flexible and also provide multiple analysis and reporting options which normally are only available in very expensive high end solutions.
 
