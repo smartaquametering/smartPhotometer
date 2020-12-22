@@ -19,7 +19,7 @@ Reducing of complexity
 
 Connect the smartAquaMeter via WiFi to your internal network and orchestrate by using simple web- or MQTT-based APIs.
 
-![Network](./network.png)
+![Networking](../assets/networking.png)
 
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartAquaMeter.
 
