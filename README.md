@@ -39,7 +39,7 @@ Reducing of complexity
 ## Being Smart - The difference
 Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
 
-![Network](./setup/network.png)
+![Networking](./assets/networking.png)
 
 Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
 
@@ -54,12 +54,12 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 <table>
   <tr>
-    <td><img src="./setup/transmission.png" alt="Transmission">
-    <td><img src="./setup/photometrie-principles.png" alt="Absorbance">
+    <td><img src="./assets/solution-colored.png" alt="Colored solution">
+    <td><img src="./assets/photometrie-principles.png" alt="Principles of photometrie">
   </tr>
 <tr>
-  <td><img src="./setup/coefficient.png" alt="Coefficient">
-  <td><img src="./setup/absorbance.png" alt="Absorbance">
+  <td><img src="./assets/extinction-coefficient.png" alt="Extinction coefficient">
+  <td><img src="./assets/absorbance.png" alt="Absorbance">
 </tr>
 <tr>
 <td><sub>λ</td>
@@ -160,8 +160,8 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 
 <table>
 <tr>
-  <td colspan=6 align="center"><img src="./setup/light-spectrum.png" alt="Spectrum">
-                               <img src="./setup/led-spectrum.png" alt="LED Spectrum">
+  <td colspan=6 align="center"><img src="./assets/light-spectrum.png" alt="Light spectrum">
+                               <img src="./assets/photometrie-spectrum.png" alt="Photometrie spectrum">
 </tr>
 <tr>
   <td colspan=6><sub><b>Ultraviolet radiation</b>
@@ -247,13 +247,118 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 </table>
 
 ### NTU check
+
 - Safely spot interfering turbidities
 - Unique for maximum measurement result safety
 - Runs automatically with each measurement
 
 ### Color measurement
+
+A colorimeter is generally any tool that characterizes color samples to provide an objective measure of color characteristics.
+
+Color parameters:
+
+- Color Temperature - measured in Kelvin
+- Lux - or Lumens per Square Meter
+- R, G and B (filtered) values
+- Clear (unfiltered) value
+
 - Conversions of color index and display in color space
 - Measuring of color difference against quality control standards
+
+<table>
+<tr>
+    <td><img src="./assets/solution-colored.png" alt="Colored solution">
+    <td><img src="./assets/colorimetrie-principles.png" alt="Principles of colorimetrie">
+</tr>
+<tr>
+  <td><img src="./assets/extinction-coefficient.png" alt="Extinction coefficient">
+  <td><img src="./assets/absorbance.png" alt="Absorbance">
+</tr>
+<tr>
+<td><sub>λ</td>
+<td><sub>Wavelength [nm]</td>
+</tr>
+<tr>
+<td><sub><var>B<sup>o</sup></var></td>
+<td><sub>
+	Beam (measuring) angle [<var><sup>o</sup></var>]</br>
+	<var>180 <sup>o</sup>: Transmitted light measurement (Absorbance)</var></br>
+	<var>90 <sup>o</sup>: Nephelometric turbidity (scattered light) measurement</var>
+</td>
+</tr>
+<tr>
+<td><sub><var>I<sub>0</sub></var></td>
+<td><sub>Intensity of incident light [lux]</td>
+</tr>
+<tr>
+<td><sub><var>I<sub>T</sub></var></td>
+<td><sub>Intensity of transmitted light [lux]</td>
+</tr>
+<tr>
+<td><sub>T = <var>I<sub>T</sub></var> / <var>I<sub>0</sub></var></td>
+<td><sub>
+	Transmission</br>
+	Energy passing through</br>
+	Range: 0.0 - 1.0
+</td>
+</tr>
+<tr>
+<td><sub>A = 1 - T</td>
+<td><sub>
+	Absorption</br>
+	Energy lost
+</td>
+</tr>
+<tr>
+<td><sub><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</td>
+<td><sub>
+	Absorbance</br>
+	Attenuation</br>
+	Lambert-Beer law</br>
+	Optimum range: 0.1 – 1.0
+</td>
+</tr>
+<tr>
+<td><sub><var>SAC<sub>λ</sub></var> = <var>E<sub>λ</sub></var> / d * 100</td>
+<td><sub>Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</td>
+</tr>
+<tr>
+<td><sub>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</td>
+<td><sub>Concentration of absorbing substance in the liquid [mol/l]</td>
+</tr>
+<tr>
+<td><sub>F = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
+<td><sub>
+	Factor</br>
+	Test specific
+</td>
+</tr>
+<tr>
+<td><sub><var>ε<sub>λ</sub></var></td>
+<td><sub>Molar decadic extinction coefficient [l/mol/cm]</td>
+</tr>
+<tr>
+<td><sub>d</td>
+<td><sub>Thickness of the solution layer [cm]</td>
+</tr>
+<tr>
+<td><sub>Turbidity</td>
+<td><sub>Opacity, clouding, haze</td>
+</tr>
+<tr>
+<td><sub>FNU</td>
+<td><sub>Formazine Nephelometric Unit</td>
+</tr>
+<tr>
+<td><sub>NTU</td>
+<td><sub>Nephelometric Turbidity Unit</td>
+</tr>
+<tr>
+<td><sub>FAU</td>
+<td><sub>Formazine Attenuation Unit</td>
+</tr>
+</table>
 
 ### Turbidity measurement
 
@@ -298,8 +403,8 @@ treated wastewater.
 
 <table>
   <tr>
-    <td><img src="./setup/opacity.png" alt="Opacity">
-    <td><img src="./setup/turbidity.png" alt="Turbidity">
+    <td><img src="./assets/solution-turbid.png" alt="Turbid solution">
+    <td><img src="./assets/turbidimetrie-principles.png" alt="Principles of turbidimetrie">
   </tr>
 <tr>
 <td><sub>λ</td>
@@ -416,7 +521,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>850 nm
 </tr>
 <tr>
-  <td colspan=12><sub><img src="./setup/light-spectrum.png" alt="Spectrum">
+  <td colspan=12><sub><img src="./assets/light-spectrum.png" alt="Light spectrum">
 </tr>
 <tr>
   <td>
