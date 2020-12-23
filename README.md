@@ -262,6 +262,17 @@ Color parameters:
 - Conversions of color index and display in color space
 - Measuring of color difference against quality control standards
 
+Normfarbwerte oder auch Tristimulus-Werte
+X, Y, Z
+
+Normfarbwertanteile
+
+x = X / ( X + Y + Z)
+y = Y / ( X + Y + Z)
+z = Z / ( X + Y + Z)
+
+x + y + z = 1
+
 <table>
 <tr>
     <td><img src="./assets/solution-colored.png" alt="Colored solution">
