@@ -249,15 +249,16 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 ### Color measurement
 
+CIE 1931 is a Color Matching System that specify a measured color numerically by 3 functions called the RGB color matching functions.
+
+Color Matching functions have three fixed primary colors and each function outputs the amount of primary needed to create a desired color when all three are mixed.
+700nm, 546.1nm and 435.8nm are the primaries of the 1931 RGB color matching functions: r(λ), g(λ), b(λ). Plotted below.
+
+Die Werte X, Y und Z werden Normfarbwerte oder auch Tristimulus-Werte genannt. 
+
 A colorimeter is generally any tool that characterizes color samples to provide an objective measure of color characteristics.
 
 Color parameters:
-
-- Color Temperature - measured in Kelvin
-- Lux - or Lumens per Square Meter
-- R, G and B (filtered) values
-- Clear (unfiltered) value
-
 - Conversions of color index and display in color space
 - Measuring of color difference against quality control standards
 
@@ -271,88 +272,40 @@ Color parameters:
   <td><img src="./assets/absorbance.png" alt="Absorbance">
 </tr>
 <tr>
-<td><sub>λ</td>
-<td><sub>Wavelength [nm]</td>
+<td><sub>Φ</td>
+<td><sub>Luminous flux [lm]</td>
 </tr>
 <tr>
-<td><sub><var>B<sup>o</sup></var></td>
-<td><sub>
-	Beam (measuring) angle [<var><sup>o</sup></var>]</br>
-	<var>180 <sup>o</sup>: Transmitted light measurement (Absorbance)</var></br>
-	<var>90 <sup>o</sup>: Nephelometric turbidity (scattered light) measurement</var>
-</td>
+<td><sub>Ω</td>
+<td><sub>Solid angel in Steradian [sr]</td>
 </tr>
 <tr>
-<td><sub><var>I<sub>0</sub></var></td>
-<td><sub>Intensity of incident light [lux]</td>
+<td><sub>E = Φ / A</td>
+<td><sub>Illumination [lux] [lm / <var>m<sup>2</sup></var>]</td>
 </tr>
 <tr>
-<td><sub><var>I<sub>T</sub></var></td>
-<td><sub>Intensity of transmitted light [lux]</td>
+<td><sub>I = Φ / Ω</td>
+<td><sub>Luminous intensity or candelpower [mcd] [lm / sr]</td>
+</tr>
+
+<tr>
+<td><sub><var>T<sub>C</sub></var></td>
+<td><sub>Color temperature in Kelvin [K]</td>
 </tr>
 <tr>
-<td><sub>T = <var>I<sub>T</sub></var> / <var>I<sub>0</sub></var></td>
-<td><sub>
-	Transmission</br>
-	Energy passing through</br>
-	Range: 0.0 - 1.0
-</td>
+<td><sub></td>
+<td><sub>R, G and B (filtered) values</td>
 </tr>
 <tr>
-<td><sub>A = 1 - T</td>
-<td><sub>
-	Absorption</br>
-	Energy lost
-</td>
+<td><sub></td>
+<td><sub>Clear (unfiltered) value</td>
 </tr>
+
 <tr>
-<td><sub><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</td>
-<td><sub>
-	Absorbance</br>
-	Attenuation</br>
-	Lambert-Beer law</br>
-	Optimum range: 0.1 – 1.0
-</td>
+<td><sub></td>
+<td><sub>Clear (unfiltered) value</td>
 </tr>
-<tr>
-<td><sub><var>SAC<sub>λ</sub></var> = <var>E<sub>λ</sub></var> / d * 100</td>
-<td><sub>Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</td>
-</tr>
-<tr>
-<td><sub>c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</td>
-<td><sub>Concentration of absorbing substance in the liquid [mol/l]</td>
-</tr>
-<tr>
-<td><sub>F = 1 / ( <var>ε<sub>λ</sub></var> * d )</td>
-<td><sub>
-	Factor</br>
-	Test specific
-</td>
-</tr>
-<tr>
-<td><sub><var>ε<sub>λ</sub></var></td>
-<td><sub>Molar decadic extinction coefficient [l/mol/cm]</td>
-</tr>
-<tr>
-<td><sub>d</td>
-<td><sub>Thickness of the solution layer [cm]</td>
-</tr>
-<tr>
-<td><sub>Turbidity</td>
-<td><sub>Opacity, clouding, haze</td>
-</tr>
-<tr>
-<td><sub>FNU</td>
-<td><sub>Formazine Nephelometric Unit</td>
-</tr>
-<tr>
-<td><sub>NTU</td>
-<td><sub>Nephelometric Turbidity Unit</td>
-</tr>
-<tr>
-<td><sub>FAU</td>
-<td><sub>Formazine Attenuation Unit</td>
-</tr>
+
 </table>
 
 ### Turbidity measurement
