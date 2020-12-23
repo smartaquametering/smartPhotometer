@@ -14,7 +14,7 @@ Due to their wide range of application, their reliability and robustness, smartP
 
 **Your insurance for secure measurement results.**
 
-## Reducing complexity
+## Electromagnetic radiation used for photometric analysis
 
 In simple terms, photometry is a measurement method for determining the concentration of colored solutions with the aid of electromagnetic radiation (“light”).
 
@@ -27,10 +27,108 @@ In spectrophotometers a monochromator (with prism or with grating) is used to ob
 
 In filter photometers, optical filters are used to give the monochromatic light.
 
-Due to the evolution and availability of **various types of LEDs** it is easily possible **to obtain nearly monochromatic light with specific wavelength ranges**, but
-without the need to setup an complex and sensitive monochromator or filter mechanismn.
+Due to the evolution and availability of **various types of LEDs** it is easily possible **to obtain nearly monochromatic light with specific wavelength ranges** for respective measurements, but without the need to setup an complex and sensitive monochromator or filter mechanismn.
 
-Reducing of complexity
+- The selection of the optimum wavelength range depends on the color of the sample solution and the associated absorption of the complementary color.
+- For a blue solution, a wavelength range near to yellow should be used (green LED), while for a yellow solution a blue LED should be used, since always the complementary color is absorbed.
+- The more closely the absorption maximum of the substance to be detected is approached, the higher the performance of the photometer will be.
+- The smaller the spectral bandwidth of the LED (the range between lower and upper wavelength), the higher the photometer resolution.
+
+The selection of an appropriate cuvette for each measurement is crucial. The material (depending on the wavelength) and size of the cuvette are the two key factors.
+
+- High-quality materials such as quartz are used in rectangular standard cuvettes for measurements in the UV range.
+- In addition to round and rectangular cuvettes, there are also special cuvettes, such as flow-through cuvettes, where the sample solution is passed into and out of the cuvette by a pump.
+- The size of the cuvette is directly related to the layer thickness that is effective in the Lambert-Beer law. Generally speaking, the larger the cuvette and the sample volume, the greater the layer thickness, and the more sensitive the measurement can be.
+
+<table>
+<tr>
+  <td colspan=6 align="center"><img src="./assets/light-spectrum.png" alt="Light spectrum">
+                               <img src="./assets/photometrie-spectrum.png" alt="Photometrie spectrum">
+</tr>
+<tr>
+  <td colspan=6><sub><b>Ultraviolet radiation</b>
+</tr>
+<tr>
+  <td>
+  <td><sub>100-280 nm
+  <td colspan=2><sub>UVC
+  <td rowspan=2><sub>UV transmitting quartz glass cuvette</br>> 190 nm
+  <td rowspan=3><sub>Numerous anorganic and</br>especially organic compounds</br>absorb UV light
+</tr>
+<tr>
+  <td>
+  <td><sub>280-315 nm
+  <td colspan=2><sub>UVB
+</tr>
+<tr>
+  <td>
+  <td><sub>315-400 nm
+  <td colspan=2><sub>UVA
+  <td><sub>Borosilicate glass cuvette</br>> 290 nm
+</tr>
+<tr>
+  <td colspan=6><sub><b>Colors of light and complementary colors</b>
+</tr>
+<tr>
+  <td>
+  <td><sub>400–435 nm
+  <td><sub>Violet
+  <td><sub>Yellow-Green
+  <td rowspan=9><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
+  <td rowspan=8><sub>Anorganic compounds</br>by using calibrated test
+</tr>
+<tr>
+  <td>
+  <td><sub>435–495 nm
+  <td><sub>Blue
+  <td><sub>Yellow
+</tr>
+<tr>
+  <td>
+  <td><sub>495–520 nm
+  <td><sub>Cyan (Blue-Green)
+  <td><sub>Red
+</tr>
+<tr>
+  <td>
+  <td><sub>520–570 nm
+  <td><sub>Green
+  <td><sub>Violet
+</tr>
+<tr>
+  <td>
+  <td><sub>570–600 nm
+  <td><sub>Yellow
+  <td><sub>Blue
+</tr>
+<tr>
+  <td>
+  <td><sub>600–625 nm
+  <td><sub>Orange
+  <td><sub>Cyan (Blue-Green)
+</tr>
+<tr>
+  <td>
+  <td><sub>625–700 nm
+  <td><sub>Red
+  <td><sub>Cyan (Blue-Green)
+</tr>
+<tr>
+  <td>
+  <td><sub>700–780 nm
+  <td><sub>Deep Red
+  <td><sub>Cyan (Blue-Green)
+</tr>
+<tr>
+  <td>
+  <td><sub>> 780 nm
+  <td><sub>Infrared
+  <td><sub>Black
+  <td><sub>Nephelometric turbidity measurement
+</tr>
+</table>
+
+## Reducing complexity
 - by using **RGB, UV and IR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
 - by the integration of various **digital light sensors orchestrated by simple microcontrollers**.
 - by distributing different analysis methods **on multiple meshed photometers**.
@@ -140,109 +238,6 @@ The principle of absorption photometers is that (as far as possible) monochromat
 <tr>
 <td><sub>d</td>
 <td><sub>Thickness of the solution layer [cm]</td>
-</tr>
-</table>
-
-#### Electromagnetic radiation used for photometric analysis
-
-Various types of LEDs are used to select the optimum wavelength range for the respective measurement.
-
-- The selection of the optimum wavelength range depends on the color of the sample solution and the associated absorption of the complementary color.
-- For a blue solution, a wavelength range near to yellow should be used (green LED), while for a yellow solution a blue LED should be used, since always the complementary color is absorbed.
-- The more closely the absorption maximum of the substance to be detected is approached, the higher the performance of the photometer will be.
-- The smaller the spectral bandwidth of the LED (the range between lower and upper wavelength), the higher the photometer resolution.
-
-The selection of an appropriate cuvette for each measurement is crucial. The material (depending on the wavelength) and size of the cuvette are the two key factors.
-
-- High-quality materials such as quartz are used in rectangular standard cuvettes for measurements in the UV range.
-- In addition to round and rectangular cuvettes, there are also special cuvettes, such as flow-through cuvettes, where the sample solution is passed into and out of the cuvette by a pump.
-- The size of the cuvette is directly related to the layer thickness that is effective in the Lambert-Beer law. Generally speaking, the larger the cuvette and the sample volume, the greater the layer thickness, and the more sensitive the measurement can be.
-
-<table>
-<tr>
-  <td colspan=6 align="center"><img src="./assets/light-spectrum.png" alt="Light spectrum">
-                               <img src="./assets/photometrie-spectrum.png" alt="Photometrie spectrum">
-</tr>
-<tr>
-  <td colspan=6><sub><b>Ultraviolet radiation</b>
-</tr>
-<tr>
-  <td>
-  <td><sub>100-280 nm
-  <td colspan=2><sub>UVC
-  <td rowspan=2><sub>UV transmitting quartz glass cuvette</br>> 190 nm
-  <td rowspan=3><sub>Numerous anorganic and</br>especially organic compounds</br>absorb UV light
-</tr>
-<tr>
-  <td>
-  <td><sub>280-315 nm
-  <td colspan=2><sub>UVB
-</tr>
-<tr>
-  <td>
-  <td><sub>315-400 nm
-  <td colspan=2><sub>UVA
-  <td><sub>Borosilicate glass cuvette</br>> 290 nm
-</tr>
-<tr>
-  <td colspan=6><sub><b>Colors of light and complementary colors</b>
-</tr>
-<tr>
-  <td>
-  <td><sub>400–435 nm
-  <td><sub>Violet
-  <td><sub>Yellow-Green
-  <td rowspan=9><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
-  <td rowspan=8><sub>Anorganic compounds</br>by using calibrated test
-</tr>
-<tr>
-  <td>
-  <td><sub>435–495 nm
-  <td><sub>Blue
-  <td><sub>Yellow
-</tr>
-<tr>
-  <td>
-  <td><sub>495–520 nm
-  <td><sub>Cyan (Blue-Green)
-  <td><sub>Red
-</tr>
-<tr>
-  <td>
-  <td><sub>520–570 nm
-  <td><sub>Green
-  <td><sub>Violet
-</tr>
-<tr>
-  <td>
-  <td><sub>570–600 nm
-  <td><sub>Yellow
-  <td><sub>Blue
-</tr>
-<tr>
-  <td>
-  <td><sub>600–625 nm
-  <td><sub>Orange
-  <td><sub>Cyan (Blue-Green)
-</tr>
-<tr>
-  <td>
-  <td><sub>625–700 nm
-  <td><sub>Red
-  <td><sub>Cyan (Blue-Green)
-</tr>
-<tr>
-  <td>
-  <td><sub>700–780 nm
-  <td><sub>Deep Red
-  <td><sub>Cyan (Blue-Green)
-</tr>
-<tr>
-  <td>
-  <td><sub>> 780 nm
-  <td><sub>Infrared
-  <td><sub>Black
-  <td><sub>Nephelometric turbidity measurement
 </tr>
 </table>
 
