@@ -249,6 +249,14 @@ The principle of absorption photometers is that (as far as possible) monochromat
 
 ### Color measurement
 
+Color assessment focusses on the optical characteristics of the material, i.e. its ability to modify incident light waves.
+If an object is exposed to light, it reflects a certain portion of the light, absorbs another portion and transmits the rest.
+
+- *Reflectance* is the basic value for color measurement at reflecting materials (surfaces).
+- *Transmittance* is the basic value for color measurement at transparent materials (clear liquids, foils).
+
+Color perception is, like any other spatial perception, three-dimensional. This means that colors can be described by three clear measures of quantity like e.g. lightness, hue and saturation.
+
 CIE 1931 is a Color Matching System that specify a measured color numerically by 3 functions called the RGB color matching functions.
 
 Color Matching functions have three fixed primary colors and each function outputs the amount of primary needed to create a desired color when all three are mixed.
@@ -261,17 +269,6 @@ A colorimeter is generally any tool that characterizes color samples to provide 
 Color parameters:
 - Conversions of color index and display in color space
 - Measuring of color difference against quality control standards
-
-Normfarbwerte oder auch Tristimulus-Werte
-X, Y, Z
-
-Normfarbwertanteile
-
-x = X / ( X + Y + Z)
-y = Y / ( X + Y + Z)
-z = Z / ( X + Y + Z)
-
-x + y + z = 1
 
 <table>
 <tr>
@@ -298,25 +295,120 @@ x + y + z = 1
 <td><sub>I = Φ / Ω</td>
 <td><sub>Luminous intensity or candelpower [mcd] [lm / sr]</td>
 </tr>
-
-<tr>
-<td><sub><var>T<sub>C</sub></var></td>
-<td><sub>Color temperature in Kelvin [K]</td>
-</tr>
 <tr>
 <td><sub></td>
+<td><sub>Clear (unfiltered) value</td>
+</tr>
+<tr>
+<td><sub>R</br>
+G</br>
+B
+</td>
 <td><sub>R, G and B (filtered) values</td>
 </tr>
 <tr>
-<td><sub></td>
-<td><sub>Clear (unfiltered) value</td>
+<td><sub>X = (-0.14282)(R) + (1.54924)(G) + (-0.95641)(B)</br>
+Y = (-0.32466)(R) + (1.57837)(G) + (-0.73191)(B) = Illuminance</br>
+Z = (-0.68202)(R) + (0.77073)(G) + (0.56332)(B)</br>
+</br>
+X = a * Tx + b * Tz</br>
+Y = Ty</br>
+Z = c * Tz</br>
+</br>
+a, b and c depend on illuminant and observer</td>
+<td><sub>Standard tristimulus values</br>
+CIE 1931 Color Space (tristimulus system)</td>
 </tr>
-
+<tr>
+<td><sub>x = X / ( X + Y + Z)</br>
+y = Y / ( X + Y + Z)</br>
+z = Z / ( X + Y + Z)</br>
+</br>
+x + y + z = 1</td>
+<td><sub>Chromaticity coordinates in the tristimulus system</td>
+</tr>
+<tr>
+<td><sub><var>T<sub>C</sub></var> = 449 * <var>n<sup>3</sup></var> + 3525 * <var>n<sup>2</sup></var>  + 6823.3 * n + 5520.33</br>
+where n = (x − 0.3320) / (0.1858 − y)</td>
+<td><sub>Color temperature in Kelvin [K]</br>
+McCamy’s formula</td>
+</tr>
 <tr>
 <td><sub></td>
-<td><sub>Clear (unfiltered) value</td>
+<td><sub><b>CIE-Lab-system</b></td>
 </tr>
+</table>
 
+#### Visual Color Scales
+
+<table>
+<tr>
+<td><sub></td>
+<td><sub>Iodine Color Number</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>Hazen Color Number</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>Gardner Color Number</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>Lovibond Color System</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>European Pharmacopoeia 2.2.2 - Color Number Determination</br>
+Colors in CIE-L*a*b*-colorimetric system</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>US Pharmacopoeia - Color determination</br>
+Colors in CIE-L*a*b*-colorimetric system</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>Chinese Pharmacopoeia – PPRC Color determination</br>
+Colors in CIE-L*a*b*-colorimetric system</td>
+</tr>	
+<tr>
+<td><sub><var>Klett<sub>Phot</sub></var> = <var>E<sub>470</sub></var></td>
+<td><sub>Klett Color Number</br>
+Absorption of a sample liquid in a square cuvette of 4cm (or 2cm) path length measured through a blue filter</td>
+</tr>
+<tr>
+<td><sub>H-I = (R + G + B) * 6 / layerthickness</br>
+R = 43,45 * <var>E<sub>640</sub></var></br>
+G = 162,38 * <var>E<sub>560</sub></var></br>
+B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
+<td><sub>Hess-Ives Color Number</br>
+R, G and B are the color components for the red (640 nm), green (560nm) and blue (464nm) shares</td>
+</tr>
+<tr>
+<td><sub>Yi = 100 * ( Tx - Tz / Ty )</td>
+<td><sub>Yellowness-Index</br>
+For transparent liquids on the basis of CIE XYZ-tristimulus values, standard illuminant C and the 2°-standard observer.</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>ADMI Color Number</br>
+Colors in CIE-L*a*b*-colorimetric system</td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub>Acid Wash Color Determination</br>
+Colors in CIE-L*a*b*-colorimetric system</td>
+</tr>
+<tr>
+<td><sub><var>EBC<sub>Phot</sub></var> = 25 * <var>E<sub>430</sub></var></td>
+<td><sub>EBC brewery Color Number</td>
+</tr>
+<tr>
+<td><sub><var>ASBC<sub>Phot</sub></var> = 12.7 * <var>E<sub>430</sub></var></td>
+<td><sub>ASBC brewery Color Number</td>
+</tr>
 </table>
 
 ### Turbidity measurement
