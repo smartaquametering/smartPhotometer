@@ -307,9 +307,9 @@ B
 <td><sub>R, G and B (filtered) values</td>
 </tr>
 <tr>
-<td><sub>X = (-0.14282)(R) + (1.54924)(G) + (-0.95641)(B)</br>
-Y = (-0.32466)(R) + (1.57837)(G) + (-0.73191)(B) = Illuminance</br>
-Z = (-0.68202)(R) + (0.77073)(G) + (0.56332)(B)</br>
+<td><sub>X = ( -0.14282 )( R ) + ( 1.54924 )( G ) + ( -0.95641 )( B )</br>
+Y = ( -0.32466 )( R ) + ( 1.57837 )( G ) + ( -0.73191 )( B ) = Illuminance</br>
+Z = ( -0.68202 )( R ) + ( 0.77073 )( G ) + ( 0.56332 )( B )</br>
 </br>
 X = a * Tx + b * Tz</br>
 Y = Ty</br>
@@ -317,31 +317,34 @@ Z = c * Tz</br>
 </br>
 a, b and c depend on illuminant and observer</td>
 <td><sub>Standard tristimulus values</br>
-CIE 1931 Color Space (tristimulus system)</td>
+CIE-1931 color space (tristimulus system)</td>
 </tr>
 <tr>
 <td><sub>x = X / ( X + Y + Z)</br>
 y = Y / ( X + Y + Z)</br>
 z = Z / ( X + Y + Z)</br>
-</br>
-x + y + z = 1</br>
-</br>
-xyY</td>
+x + y + z = 1</td>
 <td><sub>Chromaticity coordinates in the tristimulus system</td>
 </tr>
 <tr>
 <td><sub><var>T<sub>C</sub></var> = 449 * <var>n<sup>3</sup></var> + 3525 * <var>n<sup>2</sup></var>  + 6823.3 * n + 5520.33</br>
-where n = (x − 0.3320) / (0.1858 − y)</td>
+where n = ( x − 0.3320 ) / ( 0.1858 − y )</td>
 <td><sub>Color temperature in Kelvin [K]</br>
 McCamy’s formula</td>
 </tr>
 <tr>
-<td><sub>L*a*b*C*h</td>
-<td><sub><b>CIE-Lab-system</b></td>
+<td><sub>L* = 116 * ∛( Y / <var>Y<sub>n</sub></var> ) - 16</br>
+a* = 500 * ( ∛( X / <var>X<sub>n</sub></var> ) - ∛( Y / <var>Y<sub>n</sub></var> ) )</br>
+b* = 200 * ( ∛( Y / <var>Y<sub>n</sub></var> ) - ∛( Z / <var>Z<sub>n</sub></var> ) )</br>
+C* = √( <var>a*<sup>2</sup></var> + <var>b*<sup>2</sup></var> )</br>
+<var>h<sub>ab</sub></var> = arctan( b* / a* )</br>
+</br>
+<var>X<sub>n</sub></var>, <var>Y<sub>n</sub></var> and <var>Z<sub>n</sub></var> depend on illuminant and observer</td>
+<td><sub>CIE-L*a*b* colorimetric system</td>
 </tr>
 <tr>
 <td><sub>dE*</td>
-<td><sub><b>CIE-Lab-difference values</b></td>
+<td><sub><b>CIE-L*a*b* difference values</b></td>
 </tr>
 <tr>
 <td><sub></td>
@@ -357,89 +360,107 @@ ICUMSA color index full 
 
 <table>
 <tr>
-<td><sub>0 - 120</td>
-<td><sub>Iodine Color Number</td>
+<td><sub><b>Color scale</b></td>
+<td><sub><b>Range</b></td>
+<td><sub><b>Calibration / Standard</b></td>
+<td><sub><b>Measurement</b></td>
 </tr>
 <tr>
-<td><sub>0 - 1000</br>
-<var>E<sub>430</sub></var> = 0.115</br>
+<td><sub>Iodine Color Number</td>
+<td><sub>0 - 120</td>
+<td><sub>mg of iodine per 100ml potassium iodide solution (DIN 6162)</td>
+<td><sub></td>
+</tr>
+<tr>
+<td><sub>Hazen Color Number</td>
+<td><sub>0 - 1000</td>
+<td><sub>Calibration standard with 500 mg/l Pt/Co 500 (500 Hazen)</td>
+<td><sub><var>E<sub>430</sub></var> = 0.115</br>
 <var>E<sub>455</sub></var> = 0.135</br>
 <var>E<sub>480</sub></var> = 0.115</br>
 <var>E<sub>510</sub></var> = 0.06</br>
 </br>
 (Optical path length: 10 mm)</td>
-<td><sub>Hazen Color Number</br>
-</br>
-Calibration standard with 500 mg/l Pt/Co 500 (500 Hazen)</td>
 </tr>
 <tr>
-<td><sub>0 - 18</td>
 <td><sub>Gardner Color Number</td>
+<td><sub>0 - 18</td>
 </tr>
 <tr>
+<td><sub>Lovibond Color System</td>
 <td><sub>Lovibond® 1)
 yellow/red Ly 0 - 120, Lr 0 - 20</td>
-<td><sub>Lovibond Color System</td>
 </tr>
 <tr>
+<td><sub>European Pharmacopoeia 2.2.2 - Color Number Determination</td>
 <td><sub>B, BY, Y, GY, R</td>
-<td><sub>European Pharmacopoeia 2.2.2 - Color Number Determination</br>
-Colors in CIE-L*a*b*-colorimetric system</td>
+<td><sub>Colors in CIE-L*a*b* colorimetric system</td>
 </tr>
 <tr>
+<td><sub>US Pharmacopoeia - Color determination</td>
 <td><sub>A - T</td>
-<td><sub>US Pharmacopoeia - Color determination</br>
-Colors in CIE-L*a*b*-colorimetric system</td>
+<td><sub>Colors in CIE-L*a*b* colorimetric system</td>
 </tr>
 <tr>
+<td><sub>Chinese Pharmacopoeia – PPRC Color determination</td>
 <td><sub>(PPRC) OR,OY,Y,YG,BR</td>
-<td><sub>Chinese Pharmacopoeia – PPRC Color determination</br>
-Colors in CIE-L*a*b*-colorimetric system</td>
+<td><sub>Colors in CIE-L*a*b* colorimetric system</td>
 </tr>	
 <tr>
-<td><sub>0 - 100ß</br>
-<var>Klett<sub>Phot</sub></var> = <var>E<sub>470</sub></var></td>
-<td><sub>Klett Color Number</br>
-Absorption of a sample liquid in a square cuvette of 4cm (or 2cm) path length measured through a blue filter</td>
+<td><sub>Klett Color Number</td>
+<td><sub>0 - 1000</td>
+<td><sub>Absorption of a sample liquid in a square cuvette of 4cm (or 2cm) path length measured through a blue filter</td>
+<td><sub><var>Klett<sub>Phot</sub></var> = <var>E<sub>470</sub></var></td>
 </tr>
 <tr>
+<td><sub>Hess-Ives Color Number</td>
+<td><sub></td>
+<td><sub>R, G and B are the color components for the red (640 nm), green (560nm) and blue (464nm) shares</td>
 <td><sub>H-I = (R + G + B) * 6 / layerthickness</br>
 R = 43,45 * <var>E<sub>640</sub></var></br>
 G = 162,38 * <var>E<sub>560</sub></var></br>
 B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
-<td><sub>Hess-Ives Color Number</br>
-R, G and B are the color components for the red (640 nm), green (560nm) and blue (464nm) shares</td>
 </tr>
 <tr>
+<td><sub>Yellowness-Index</td>
+<td><sub></td>
+<td><sub>For transparent liquids on the basis of CIE XYZ-tristimulus values, standard illuminant C and the 2°-standard observer.</td>
 <td><sub>Yi = 100 * ( Tx - Tz / Ty )</td>
-<td><sub>Yellowness-Index</br>
-For transparent liquids on the basis of CIE XYZ-tristimulus values, standard illuminant C and the 2°-standard observer.</td>
 </tr>
 <tr>
+<td><sub>ADMI Color Number</td>
 <td><sub>0 - 500</td>
-<td><sub>ADMI Color Number</br>
-Colors in CIE-L*a*b*-colorimetric system</td>
+<td><sub>Colors in CIE-L*a*b* colorimetric system</td>
 </tr>
 <tr>
+<td><sub>Acid Wash Color Determination</td>
 <td><sub>1 - 14</td>
-<td><sub>Acid Wash Color Determination</br>
-Colors in CIE-L*a*b*-colorimetric system</td>
+<td><sub>Colors in CIE-L*a*b* colorimetric system</td>
 </tr>
 <tr>
-<td><sub>EBC = 25 * <var>E<sub>430</sub></var></br>
-</br>
-(Optical path length: 10 mm)</td>
 <td><sub>EBC brewery Color Number</td>
+<td><sub></td>
+<td><sub>Optical path length: 10 mm</td>
+<td><sub>25 * <var>E<sub>430</sub></var></td>
 </tr>
 <tr>
-<td><sub>ASBC = 12.7 * <var>E<sub>430</sub></var></br>
-1 ASBC = 0.375 EBC color + 0.46</td>
 <td><sub>ASBC brewery Color Number</td>
+<td><sub></td>
+<td><sub>1 ASBC = 0.375 EBC color + 0.46</td>
+<td><sub>ASBC = 12.7 * <var>E<sub>430</sub></var></td>
 </tr>
 <tr>
-<td><sub><var>SAC<sub>436</sub></var> = <var>E<sub>436</sub></var></td>
+<td><sub><var>SAC<sub>436</sub></var></td>
+<td><sub></td>
 <td><sub>Spectral Absorption Coefficient describes the yellow colouring of potable-, used- or wastewater. The measuring range is indicated in m-1.
 (Extinction per meter optical path lenght [Ext/m]).</td>
+<td><sub><var>E<sub>436</sub></var></td>
+</tr>
+<tr>
+    <td colspan=4><img src="./assets/cie-lab-iodine-hazen-gardner.png.png" alt="Iodine-, Hazen- and Gardner-color scales in CIE-L*a*b* colorimetric system"></td>
+</tr>
+<tr>
+    <td colspan=4><img src="./assets/color-system-transmission-comparison.png" alt="Comparison of visual color systems with the Z-transmittances"></td>
 </tr>
 </table>
 
