@@ -324,7 +324,9 @@ CIE 1931 Color Space (tristimulus system)</td>
 y = Y / ( X + Y + Z)</br>
 z = Z / ( X + Y + Z)</br>
 </br>
-x + y + z = 1</td>
+x + y + z = 1</br>
+</br>
+xyY</td>
 <td><sub>Chromaticity coordinates in the tristimulus system</td>
 </tr>
 <tr>
@@ -334,47 +336,69 @@ where n = (x − 0.3320) / (0.1858 − y)</td>
 McCamy’s formula</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>L*a*b*C*h</td>
 <td><sub><b>CIE-Lab-system</b></td>
+</tr>
+<tr>
+<td><sub>dE*</td>
+<td><sub><b>CIE-Lab-difference values</b></td>
+</tr>
+<tr>
+<td><sub></td>
+<td><sub><b>Hunter-Lab-values</b></td>
 </tr>
 </table>
 
 #### Visual Color Scales
 
+Saybolt color number +30 ... -16      
+Mineral oil color number 0 to 8      
+ICUMSA color index full 
+
 <table>
 <tr>
-<td><sub></td>
+<td><sub>0 - 120</td>
 <td><sub>Iodine Color Number</td>
 </tr>
 <tr>
-<td><sub></td>
-<td><sub>Hazen Color Number</td>
+<td><sub>0 - 1000</br>
+<var>E<sub>430</sub></var> = 0.115</br>
+<var>E<sub>455</sub></var> = 0.135</br>
+<var>E<sub>480</sub></var> = 0.115</br>
+<var>E<sub>510</sub></var> = 0.06</br>
+</br>
+(Optical path length: 10 mm)</td>
+<td><sub>Hazen Color Number</br>
+</br>
+Calibration standard with 500 mg/l Pt/Co 500 (500 Hazen)</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>0 - 18</td>
 <td><sub>Gardner Color Number</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>Lovibond® 1)
+yellow/red Ly 0 - 120, Lr 0 - 20</td>
 <td><sub>Lovibond Color System</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>B, BY, Y, GY, R</td>
 <td><sub>European Pharmacopoeia 2.2.2 - Color Number Determination</br>
 Colors in CIE-L*a*b*-colorimetric system</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>A - T</td>
 <td><sub>US Pharmacopoeia - Color determination</br>
 Colors in CIE-L*a*b*-colorimetric system</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>(PPRC) OR,OY,Y,YG,BR</td>
 <td><sub>Chinese Pharmacopoeia – PPRC Color determination</br>
 Colors in CIE-L*a*b*-colorimetric system</td>
 </tr>	
 <tr>
-<td><sub><var>Klett<sub>Phot</sub></var> = <var>E<sub>470</sub></var></td>
+<td><sub>0 - 100ß</br>
+<var>Klett<sub>Phot</sub></var> = <var>E<sub>470</sub></var></td>
 <td><sub>Klett Color Number</br>
 Absorption of a sample liquid in a square cuvette of 4cm (or 2cm) path length measured through a blue filter</td>
 </tr>
@@ -392,22 +416,30 @@ R, G and B are the color components for the red (640 nm), green (560nm) and blue
 For transparent liquids on the basis of CIE XYZ-tristimulus values, standard illuminant C and the 2°-standard observer.</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>0 - 500</td>
 <td><sub>ADMI Color Number</br>
 Colors in CIE-L*a*b*-colorimetric system</td>
 </tr>
 <tr>
-<td><sub></td>
+<td><sub>1 - 14</td>
 <td><sub>Acid Wash Color Determination</br>
 Colors in CIE-L*a*b*-colorimetric system</td>
 </tr>
 <tr>
-<td><sub><var>EBC<sub>Phot</sub></var> = 25 * <var>E<sub>430</sub></var></td>
+<td><sub>EBC = 25 * <var>E<sub>430</sub></var></br>
+</br>
+(Optical path length: 10 mm)</td>
 <td><sub>EBC brewery Color Number</td>
 </tr>
 <tr>
-<td><sub><var>ASBC<sub>Phot</sub></var> = 12.7 * <var>E<sub>430</sub></var></td>
+<td><sub>ASBC = 12.7 * <var>E<sub>430</sub></var></br>
+1 ASBC = 0.375 EBC color + 0.46</td>
 <td><sub>ASBC brewery Color Number</td>
+</tr>
+<tr>
+<td><sub><var>SAC<sub>436</sub></var> = <var>E<sub>436</sub></var></td>
+<td><sub>Spectral Absorption Coefficient describes the yellow colouring of potable-, used- or wastewater. The measuring range is indicated in m-1.
+(Extinction per meter optical path lenght [Ext/m]).</td>
 </tr>
 </table>
 
@@ -833,7 +865,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td colspan=2><sub><b>Cuvette</b>
   <td><sub><a href='https://www.amazon.de/gp/product/B07NNGHKSC/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>UV quartz cuvette</a>
-  <td><sub>Borosilicate glass
+  <td><sub><a href='https://www.amazon.de/gp/product/B07NNGHKSC/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1'>UV quartz cuvette</a>
   <td colspan=4><sub>Normal glass (soda-lime glass)
   <td colspan=2><sub>Normal glass (soda-lime glass)
 </tr>
@@ -841,7 +873,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Material
   <td><sub>UV transmitting quartz
-  <td><sub>Borosilicate glass
+  <td><sub>UV transmitting quartz
   <td colspan=4><sub>Normal glass (soda-lime glass)
   <td colspan=2><sub>Normal glass (soda-lime glass)
 </tr>
@@ -854,7 +886,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Transmission range [nm]
   <td><sub>190-2500
-  <td><sub>290-2500
+  <td><sub>190-2500
   <td colspan=4><sub>350-2500
   <td colspan=2><sub>350-2500
 </tr>
@@ -862,7 +894,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Form
   <td><sub>Square
-  <td><sub>Round
+  <td><sub>Square
   <td colspan=4><sub>Round
   <td colspan=2><sub>Round
 </tr>
@@ -870,7 +902,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Polished sidewalls
   <td><sub>2
-  <td><sub>N/A
+  <td><sub>2
   <td colspan=4><sub>N/A
   <td colspan=2><sub>N/A
 </tr>
@@ -878,7 +910,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>L x W x H [mm]
   <td><sub>12.5 x 12.5 x 45.0
-  <td><sub>N/A
+  <td><sub>12.5 x 12.5 x 45.0
   <td colspan=4><sub>N/A
   <td colspan=2><sub>N/A
 </tr>
@@ -886,7 +918,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Ø x H [mm]
   <td><sub>N/A
-  <td><sub>16.0 x 200.0
+  <td><sub>N/A
   <td colspan=4><sub>16.0 x 200.0
   <td colspan=2><sub>16.0 x 200.0
 </tr>
@@ -894,7 +926,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Wall thickness [mm]
   <td><sub>1.25
-  <td><sub>1.00
+  <td><sub>1.25
   <td colspan=4><sub>1.00
   <td colspan=2><sub>1.00
 </tr>
@@ -902,7 +934,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Light path length [mm]
   <td><sub>10.0
-  <td><sub>14.0
+  <td><sub>10.0
   <td colspan=4><sub>14.0
   <td colspan=2><sub>14.0
 </tr>
@@ -910,7 +942,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>Sample volume [ml]
   <td><sub>3.5
-  <td><sub>>5
+  <td><sub>3.5
   <td colspan=4><sub>>5
   <td colspan=2><sub>>5
 </tr>
