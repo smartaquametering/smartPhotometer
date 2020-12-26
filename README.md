@@ -320,9 +320,9 @@ a, b and c depend on illuminant and observer</td>
 CIE-1931 color space (tristimulus system)</td>
 </tr>
 <tr>
-<td><sub>x = X / ( X + Y + Z)</br>
-y = Y / ( X + Y + Z)</br>
-z = Z / ( X + Y + Z)</br>
+<td><sub>x = X / ( X + Y + Z )</br>
+y = Y / ( X + Y + Z )</br>
+z = Z / ( X + Y + Z )</br>
 x + y + z = 1</td>
 <td><sub>Chromaticity coordinates in the tristimulus system</td>
 </tr>
