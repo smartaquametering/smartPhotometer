@@ -379,7 +379,9 @@ ICUMSA color index full 
 <tr>
 <td><sub>Hazen Color Number (APHA)</td>
 <td><sub>0 - 1000</td>
-<td><sub>Calibration standard with 500 mg/l Pt/Co 500 (500 Hazen)</td>
+<td><sub>Measure yellow hues in liquids (DIN ISO 6271)</br>
+</br>
+Calibration standard with 500 mg/l Pt/Co 500 (500 Hazen)</td>
 <td><sub><var>E<sub>430</sub></var> = 0.115</br>
 <var>E<sub>455</sub></var> = 0.135</br>
 <var>E<sub>480</sub></var> = 0.115</br>
@@ -427,7 +429,9 @@ yellow/red Ly 0 - 120, Lr 0 - 20</td>
 <tr>
 <td><sub>Hess-Ives Color Number</td>
 <td><sub></td>
-<td><sub>R, G and B are the color components for the red (640 nm), green (560nm) and blue (464nm) shares</td>
+<td><sub>Cosmetic industry, color evaluation of fat derivatives</br>
+</br>
+R, G and B are the color components for the red (640 nm), green (560nm) and blue (464nm) shares</td>
 <td><sub>H-I = (R + G + B) * 6 / layerthickness</br>
 R = 43,45 * <var>E<sub>640</sub></var></br>
 G = 162,38 * <var>E<sub>560</sub></var></br>
@@ -435,7 +439,7 @@ B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
 </tr>
 <tr>
 <td><sub>Yellowness Index</br>
-(ASTM D)</td>
+(ASTM D1925)</td>
 <td><sub></td>
 <td><sub>For transparent liquids on the basis of CIE XYZ-tristimulus values, standard illuminant C and the 2°-standard observer.</td>
 <td><sub>Yi = 100 * ( Tx - Tz / Ty )</td>
