@@ -326,7 +326,7 @@ x + y + z = 1</td>
 <tr>
 <td><sub><var>T<sub>C</sub></var> = 449 * <var>n<sup>3</sup></var> + 3525 * <var>n<sup>2</sup></var>  + 6823.3 * n + 5520.33</br>
 where n = ( x − 0.3320 ) / ( 0.1858 − y )</td>
-<td><sub>Light color temperature (CCT) in Kelvin [K]</br>
+<td><sub>Light color temperature (CCT) in Kelvin [<var><sup>o</sup></var>K]</br>
 McCamy’s formula</td>
 </tr>
 <tr>
@@ -750,7 +750,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Light color temperature [K]
+  <td><sub>Light color temperature (CCT) [<var><sup>o</sup></var>K]
   <td>
   <td><sub>X
   <td colspan=4>
@@ -778,7 +778,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
-  <td><sub>Light color temperature (CCT) [K]
+  <td><sub>Light color temperature (CCT) [<var><sup>o</sup></var>K]
   <td><sub>UVAxxxxxxxxxxxxxxxx
   <td><sub>3000
   <td><sub>Redxxxxxxxxxxxxxxxxx
