@@ -778,15 +778,52 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 </tr>
 <tr>
   <td>
+  <td><sub>Color Rendering Index (CRI) [Ra]
+  <td><sub>
+  <td><sub>80
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+</tr>
+<tr>
+  <td>
   <td><sub>Light color temperature (CCT) [<var><sup>o</sup></var>K]
-  <td><sub>UVAxxxxxxxxxxxxxxxx
+  <td><sub>
   <td><sub>3000
-  <td><sub>Redxxxxxxxxxxxxxxxxx
-  <td><sub>Greenxxxxxxxxxxxxx
-  <td><sub>Bluexxxxxxxxxxxxxxx
-  <td><sub>IRxxxxxxxxxxxxxx
-  <td><sub>IRxxxxxxxxxxxxxx
-  <td><sub>IRxxxxxxxxxxxxxx
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+</tr>
+<tr>
+  <td>
+  <td><sub>Standard illuminant (CIE 1931/<var>2<sup>o</sup></var>)
+  <td><sub>
+  <td><sub>LED-B2
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+</tr>
+<tr>
+  <td>
+  <td><sub>Chromaticity Coordinates (CIE 1931/<var>2<sup>o</sup></var>)
+  <td><sub>
+  <td><sub>x = 0.43</br>
+  y = 0.40
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
+  <td><sub>
 </tr>
 <tr>
   <td>
