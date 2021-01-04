@@ -300,10 +300,12 @@ Color parameters:
 <td><sub>Clear (unfiltered) value</td>
 </tr>
 <tr>
-<td><sub>R</br>
-G</br>
-B
-</td>
+<td><sub>
+RGB are tristimulus values</br>
+r = R/(R+G+B)</br>
+g = G/(R+G+B)</br>
+b = B/(R+G+B)</br>
+rgb are chromaticity coordinates and r + g + b = 1</td>
 <td><sub>R, G and B (filtered) values</td>
 </tr>
 <tr>
