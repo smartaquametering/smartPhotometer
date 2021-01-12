@@ -1,470 +1,919 @@
-// Useful color information, studies and mathematical equations
-// for converting among various colorimetric representations
-// found on http://www.brucelindbloom.com/
-
-// Functions are based on pseudocodes at http://www.easyrgb.com/
-
-function lab2rgb(lab){
-  var y = (lab[0] + 16) / 116,
-      x = lab[1] / 500 + y,
-      z = y - lab[2] / 200,
-      r, g, b;
-
-  x = 0.95047 * ((x * x * x > 0.008856) ? x * x * x : (x - 16/116) / 7.787);
-  y = 1.00000 * ((y * y * y > 0.008856) ? y * y * y : (y - 16/116) / 7.787);
-  z = 1.08883 * ((z * z * z > 0.008856) ? z * z * z : (z - 16/116) / 7.787);
-
-  r = x *  3.2406 + y * -1.5372 + z * -0.4986;
-  g = x * -0.9689 + y *  1.8758 + z *  0.0415;
-  b = x *  0.0557 + y * -0.2040 + z *  1.0570;
-
-  r = (r > 0.0031308) ? (1.055 * Math.pow(r, 1/2.4) - 0.055) : 12.92 * r;
-  g = (g > 0.0031308) ? (1.055 * Math.pow(g, 1/2.4) - 0.055) : 12.92 * g;
-  b = (b > 0.0031308) ? (1.055 * Math.pow(b, 1/2.4) - 0.055) : 12.92 * b;
-
-  return [Math.max(0, Math.min(1, r)) * 255, 
-          Math.max(0, Math.min(1, g)) * 255, 
-          Math.max(0, Math.min(1, b)) * 255]
-}
-
-function rgb2lab(rgb){
-  var r = rgb[0] / 255,
-      g = rgb[1] / 255,
-      b = rgb[2] / 255,
-      x, y, z;
-
-  r = (r > 0.04045) ? Math.pow((r + 0.055) / 1.055, 2.4) : r / 12.92;
-  g = (g > 0.04045) ? Math.pow((g + 0.055) / 1.055, 2.4) : g / 12.92;
-  b = (b > 0.04045) ? Math.pow((b + 0.055) / 1.055, 2.4) : b / 12.92;
-
-  x = (r * 0.4124 + g * 0.3576 + b * 0.1805) / 0.95047;
-  y = (r * 0.2126 + g * 0.7152 + b * 0.0722) / 1.00000;
-  z = (r * 0.0193 + g * 0.1192 + b * 0.9505) / 1.08883;
-
-  x = (x > 0.008856) ? Math.pow(x, 1/3) : (7.787 * x) + 16/116;
-  y = (y > 0.008856) ? Math.pow(y, 1/3) : (7.787 * y) + 16/116;
-  z = (z > 0.008856) ? Math.pow(z, 1/3) : (7.787 * z) + 16/116;
-
-  return [(116 * y) - 16, 500 * (x - y), 200 * (y - z)]
-}
-
-// calculate the perceptual distance between colors in CIELAB
-// https://github.com/THEjoezack/ColorMine/blob/master/ColorMine/ColorSpaces/Comparisons/Cie94Comparison.cs
-
-function deltaE(labA, labB){
-  var deltaL = labA[0] - labB[0];
-  var deltaA = labA[1] - labB[1];
-  var deltaB = labA[2] - labB[2];
-  var c1 = Math.sqrt(labA[1] * labA[1] + labA[2] * labA[2]);
-  var c2 = Math.sqrt(labB[1] * labB[1] + labB[2] * labB[2]);
-  var deltaC = c1 - c2;
-  var deltaH = deltaA * deltaA + deltaB * deltaB - deltaC * deltaC;
-  deltaH = deltaH < 0 ? 0 : Math.sqrt(deltaH);
-  var sc = 1.0 + 0.045 * c1;
-  var sh = 1.0 + 0.015 * c1;
-  var deltaLKlsl = deltaL / (1.0);
-  var deltaCkcsc = deltaC / (sc);
-  var deltaHkhsh = deltaH / (sh);
-  var i = deltaLKlsl * deltaLKlsl + deltaCkcsc * deltaCkcsc + deltaHkhsh * deltaHkhsh;
-  return i < 0 ? 0 : Math.sqrt(i);
-}
-
-// ---------------------------------------------------------
-
-// Standard-RGB → XYZ 
-// sR, sG and sB (Standard RGB) input range = 0 ÷ 255
-// X, Y and Z output refer to a D65/2° standard illuminant.
-
-function sRGB2XYZ(sR, sG, sB){
-var_R = ( sR / 255 );
-var_G = ( sG / 255 );
-var_B = ( sB / 255 );
-
-if ( var_R > 0.04045 ) var_R = ( ( var_R + 0.055 ) / 1.055 ) ^ 2.4
-else                   var_R = var_R / 12.92
-if ( var_G > 0.04045 ) var_G = ( ( var_G + 0.055 ) / 1.055 ) ^ 2.4
-else                   var_G = var_G / 12.92
-if ( var_B > 0.04045 ) var_B = ( ( var_B + 0.055 ) / 1.055 ) ^ 2.4
-else                   var_B = var_B / 12.92
-
-var_R = var_R * 100;
-var_G = var_G * 100;
-var_B = var_B * 100;
-
-X = var_R * 0.4124 + var_G * 0.3576 + var_B * 0.1805;
-Y = var_R * 0.2126 + var_G * 0.7152 + var_B * 0.0722;
-Z = var_R * 0.0193 + var_G * 0.1192 + var_B * 0.9505;
-}
-
-// ---------------------------------------------------------
-// XYZ → xyz → Yxy
-// Reference-X, Y and Z refer to specific illuminants and observers.
-// Common reference values are available below in this same page.
-
-function XYZ2xyz(X, Y, Z){
-x = X / ( X + Y + Z )
-y = Y / ( X + Y + Z )
-z = Z / ( X + Y + Z )
-}
-
-
-// ---------------------------------------------------------
-
-// XYZ → CIE-L*ab 
-// Reference-X, Y and Z refer to specific illuminants and observers.
-// Common reference values are available below in this same page.
-
-function XYZ2CIE-L*ab(XYZ){
-var_X = X / Reference-X
-var_Y = Y / Reference-Y
-var_Z = Z / Reference-Z
-
-if ( var_X > 0.008856 ) var_X = var_X ^ ( 1/3 )
-else                    var_X = ( 7.787 * var_X ) + ( 16 / 116 )
-if ( var_Y > 0.008856 ) var_Y = var_Y ^ ( 1/3 )
-else                    var_Y = ( 7.787 * var_Y ) + ( 16 / 116 )
-if ( var_Z > 0.008856 ) var_Z = var_Z ^ ( 1/3 )
-else                    var_Z = ( 7.787 * var_Z ) + ( 16 / 116 )
-
-CIE-L* = ( 116 * var_Y ) - 16
-CIE-a* = 500 * ( var_X - var_Y )
-CIE-b* = 200 * ( var_Y - var_Z )
-}
-
-// ---------------------------------------------------------
-
-// XYZ → Hunter-Lab 
-// Reference-X, Y and Z refer to specific illuminants and observers.
-// Common reference values are available below in this same page.
-
-function XYZ2HunterLab(XYZ){
-var_Ka = ( 175.0 / 198.04 ) * ( Reference-Y + Reference-X )
-var_Kb = (  70.0 / 218.11 ) * ( Reference-Y + Reference-Z )
-
-Hunter-L = 100.0 * sqrt( Y / Reference-Y )
-Hunter-a = var_Ka * ( ( ( X / Reference-X ) - ( Y / Reference-Y ) ) / sqrt( Y / Reference-Y ) )
-Hunter-b = var_Kb * ( ( ( Y / Reference-Y ) - ( Z / Reference-Z ) ) / sqrt( Y / Reference-Y ) )
-}
-
-
-
-
--------------------------------------------------------------------
-
-// http://www.easyrgb.com/index.php?X=MATH&H=02#text2
-#include <stdio.h>
-#include <math.h>
-
-float ref_X = 95.047;
-float ref_Y = 100.0;
-float ref_Z = 108.883;
-
-/***************************************************
- *  Name:        convertRGBtoXYZ
- *
- *  Returns:     Nothing
- *
- *  Parameters:  RGB values and XYZ references
- *
- *  Description: Given a color in RGB values converts  
- *               to the corresponding XYZ values
- *
- ***************************************************/
-void convertRGBtoXYZ(int inR, int inG, int inB, float * outX, float * outY, float * outZ) {
-
-
-	float var_R = (inR / 255.0f); //R from 0 to 255
-	float var_G = (inG / 255.0f); //G from 0 to 255
-	float var_B = (inB / 255.0f); //B from 0 to 255
-
-	if (var_R > 0.04045f)
-		var_R = powf(( (var_R + 0.055f) / 1.055f), 2.4f);
-	else 
-		var_R = var_R / 12.92f;
-
-	if (var_G > 0.04045)
-		var_G = powf(( (var_G + 0.055f) / 1.055f), 2.4f);
-	else
-		var_G = var_G / 12.92f;
-
-	if (var_B > 0.04045f)
-		var_B = powf(( (var_B + 0.055f) / 1.055f), 2.4f);
-	else
-		var_B = var_B / 12.92f;
-
-	var_R = var_R * 100;
-	var_G = var_G * 100;
-	var_B = var_B * 100;
-
-	//Observer. = 2°, Illuminant = D65
-	*outX = var_R * 0.4124f + var_G * 0.3576f + var_B * 0.1805f;
-	*outY = var_R * 0.2126f + var_G * 0.7152f + var_B * 0.0722f;
-	*outZ = var_R * 0.0193f + var_G * 0.1192f + var_B * 0.9505f;
-}
-
-
-/***************************************************
- *  Name:        convertXYZtoLab
- *
- *  Returns:     Nothing
- *
- *  Parameters:  XYZ values and Lab references
- *
- *  Description: Given a color in XYZ values converts  
- *               to the corresponding Lab values
- *
- ***************************************************/
-void convertXYZtoLab(float inX, float inY, float inZ, float * outL, float * outa, float * outb) {
-
-	float var_X = (inX / ref_X); //ref_X = 95.047
-	float var_Y = (inY / ref_Y); //ref_Y = 100.0
-	float var_Z = (inZ / ref_Z); //ref_Z = 108.883
-
-	if ( var_X > 0.008856 ) 
-		var_X = powf(var_X , ( 1.0f/3 )); 
-	else 
-		var_X = ( 7.787 * var_X ) + ( 16.0f/116 );
-
-	if ( var_Y > 0.008856 )
-		var_Y = powf(var_Y , ( 1.0f/3 )); 
-	else
-	    var_Y = ( 7.787 * var_Y ) + ( 16.0f/116 );
-
-	if ( var_Z > 0.008856 )
-		var_Z = powf(var_Z , ( 1.0f/3 )); 
-	else 
-		var_Z = ( 7.787 * var_Z ) + ( 16.0f/116 );
-
-	*outL = ( 116 * var_Y ) - 16;
-	*outa = 500 * ( var_X - var_Y );
-	*outb = 200 * ( var_Y - var_Z );
-}
-
-
-/***************************************************
- *  Name:        convertLabtoXYZ
- *
- *  Returns:     Nothing
- *
- *  Parameters:  Lab values and XYZ references
- *
- *  Description: Given a color in Lab values converts  
- *               to the corresponding XYZ values
- *
- ***************************************************/
-void convertLabtoXYZ( float inL, float ina, float  inb, float * outX, float * outY, float * outZ) {
-
-	float var_Y = ( inL + 16 ) / 116;
-	float var_X = (ina/500) + var_Y;
-	float var_Z = var_Y - (inb/200);
-
-	if ( powf(var_Y,3.f) > 0.008856 ) 
-		var_Y = powf(var_Y,3.f);
-	else
-		var_Y = ( var_Y - (16/116) ) / 7.787;
-
-	if ( powf(var_X,3.f) > 0.008856 ) 
-		var_X = powf(var_X,3.f);
-	else 
-		var_X = ( var_X - (16/116) ) / 7.787;
-	
-	if ( powf(var_Z,3.f) > 0.008856 )
-		var_Z = powf(var_Z,3.f);
-	else
-		var_Z = ( var_Z - (16/116) ) / 7.787;
-
-	*outX = ref_X * var_X;     //ref_X =  95.047     Observer= 2°, Illuminant= D65
-	*outY = ref_Y * var_Y;     //ref_Y = 100.000
-	*outZ = ref_Z * var_Z;     //ref_Z = 108.883
-}
-
-/***************************************************
- *  Name:        convertXYZtoRGB
- *
- *  Returns:     Nothing
- *
- *  Parameters:  XYZ values and RGB references
- *
- *  Description: Given a color in XYZ values converts  
- *               to the corresponding RGB values
- *
- ***************************************************/
-void convertXYZtoRGB(float inX, float inY, float inZ, int * outR, int * outG, int * outB) {
-
-
-	float var_X = inX/100;
-	float var_Y = inY/100;
-	float var_Z = inZ/100;
-
-	float var_R = var_X *  3.2406 + (var_Y * -1.5372) + var_Z * (-0.4986);
-	float var_G = var_X * (-0.9689) + var_Y *  1.8758 + var_Z *  0.0415;
-	float var_B = var_X *  0.0557 + var_Y * (-0.2040) + var_Z *  1.0570;
-
-	if ( var_R > 0.0031308 )
-		var_R = 1.055 * powf(var_R, ( 1.0f / 2.4 ) )  - 0.055;
-	else 
-		var_R = 12.92 * var_R;
-
-	if ( var_G > 0.0031308 ) 
-		var_G = 1.055 * powf(var_G, ( 1.0f / 2.4 ) ) - 0.055;
-	else 
-		var_G = 12.92 * var_G;
-
-	if ( var_B > 0.0031308 )
-		var_B = 1.055 * powf(var_B, ( 1.0f / 2.4 ) ) - 0.055;
-	else
-		var_B = 12.92 * var_B;
-
-	*outR = (int)(var_R * 255);
-	*outG = (int)(var_G * 255);
-	*outB = (int)(var_B * 255);
-
-
-}
-
-/***************************************************
- *  Name:        Lab_color_difference_CIE76
- *
- *  Returns:     float
- *
- *  Parameters:  2 Lab color values
- *
- *  Description: Calculates and returns the difference 
- *				 between 2 Lab colors based on the CIE76 formula
- *
- ***************************************************/
-float Lab_color_difference_CIE76( float inL1, float ina1, float  inb1, float inL2, float ina2, float  inb2){
-	return( sqrt( powf(inL1 - inL2, 2.f) + powf(ina1 - ina2, 2.f) + powf(inb1 - inb2, 2.f) ) );//CIE76
-}
-
-/***************************************************
- *  Name:        RGB_color_Lab_difference_CIE76
- *
- *  Returns:     float
- *
- *  Parameters:  2 RGB color values
- *
- *  Description: Converts RGB values to Lab values and returns  
- *				 the difference between 2 Lab colors based on 
- *				 the CIE76 formula
- *
- ***************************************************/
-float RGB_color_Lab_difference_CIE76( int R1, int G1, int B1, int R2, int G2, int B2){
-	float x1=0,y1=0,z1=0;
-	float x2=0,y2=0,z2=0;
-	float l1=0,a1=0,b1=0;
-	float l2=0,a2=0,b2=0;
-
-	convertRGBtoXYZ(R1, G1, B1, &x1, &x1, &z1);
-	convertRGBtoXYZ(R2, G2, B2, &x2, &x2, &z2);
-
-	convertXYZtoLab(x1, y1, z1, &l1, &a1, &b1);
-	convertXYZtoLab(x2, y2, z2, &l2, &a2, &b2); 
-
-	return( Lab_color_difference_CIE76(l1 ,a1 ,b1 ,l2 ,a2 ,b2) );
-}
-
-/***************************************************
- *  Name:        Lab_color_difference_CIE94
- *
- *  Returns:     float
- *
- *  Parameters:  2 Lab color values
- *
- *  Description: Calculates and returns the difference 
- *				 between 2 Lab colors based on the CIE94 formula
- *
- ***************************************************/
-float Lab_color_difference_CIE94( float inL1, float ina1, float  inb1, float inL2, float ina2, float  inb2){
-	// case Application.GraphicArts:
-		float Kl = 1.0;
-		float K1 = 0.045;
-		float K2 = 0.015;
-	// 	break;
-	// case Application.Textiles:
-	// 	Kl = 2.0;
-	// 	K1 = .048;
-	// 	K2 = .014;
-	// break;
-
-	float deltaL = inL1 - inL2;
-	float deltaA = ina1 - ina2;
-	float deltaB = inb1 - inb2;
-
-	float c1 = sqrt(pow(ina1, 2) + pow(inb1, 2));
-	float c2 = sqrt(pow(ina2, 2) + pow(inb2, 2));
-	float deltaC = c1 - c2;
-
-	float deltaH = pow(deltaA,2) + pow(deltaB,2) - pow(deltaC,2);
-	deltaH = deltaH < 0 ? 0 : sqrt(deltaH);
-
-	const float sl = 1.f;
-	const float kc = 1.f;
-	const float kh = 1.f;
-
-	float sc = 1.f + K1*c1;
-	float sh = 1.f + K2*c1;
-
-	float i = pow(deltaL/(Kl*sl), 2) +
-	                pow(deltaC/(kc*sc), 2) +
-	                pow(deltaH/(kh*sh), 2);
-
-	float finalResult = i < 0 ? 0 : sqrt(i);
-	return (finalResult);
-}
-
-/***************************************************
- *  Name:        RGB_color_Lab_difference_CIE94
- *
- *  Returns:     float
- *
- *  Parameters:  2 RGB color values
- *
- *  Description: Converts RGB values to Lab values and returns  
- *				 the difference between 2 Lab colors based on 
- *				 the CIE94 formula
- *
- ***************************************************/
-float RGB_color_Lab_difference_CIE94( int R1, int G1, int B1, int R2, int G2, int B2){
-	float x1=0,y1=0,z1=0;
-	float x2=0,y2=0,z2=0;
-	float l1=0,a1=0,b1=0;
-	float l2=0,a2=0,b2=0;
-
-	convertRGBtoXYZ(R1, G1, B1, &x1, &x1, &z1);
-	convertRGBtoXYZ(R2, G2, B2, &x2, &x2, &z2);
-
-	convertXYZtoLab(x1, y1, z1, &l1, &a1, &b1);
-	convertXYZtoLab(x2, y2, z2, &l2, &a2, &b2); 
-
-	return( Lab_color_difference_CIE94(l1 ,a1 ,b1 ,l2 ,a2 ,b2) );
-}
-
-
-/***************************************************
- *  Name:        main
- *
- *  Returns:     Nothing
- *
- *  Parameters:  argc, **argv
- *
- *  Description: Running some tests
- *
- ***************************************************/
-void main(int argc, char const *argv[])
-{
-	int R1,G1,B1,R2,G2,B2;
-	float x=0.f,y=0.f,z=0.f;
-	float l=0.f,a=0.f,b=0.f;
-
-	R1 = 200;
-	G1 = 2;
-	B1 = 50; 
-
-	R2 = 200;
-	G2 = 2;
-	B2 = 70; 
-
-	printf("LAB DISTANCE = %lf \n", RGB_color_Lab_difference_CIE94(R1,G1,B1,R2,G2,B2) );
-
-}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Copyright © 2020 by https://github.com/smartAquaMetering. All Rights Reserved. -->
+		<meta name="author" content="smartAquaMetering">
+		<meta name="description" content="smartColorimeter">
+		<meta name="keywords" content="Photometry, Nephelometry">
+
+		<!-- Required meta tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="text/html">
+
+		<title>smartColorimeter</title>
+
+		<!-- Bootstrap 4 and jQuery -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap 4 Toggle -->
+		<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+		<!-- Bootstrap 4 Tables -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/bootstrap-table.min.css" integrity="sha256-bRy3jXEEDZFb32UUfxldDDaeWXCiIscfWkUrJOBdcN4=" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/bootstrap-table.min.js" integrity="sha256-p8GRrkt9a/cuKDspGMLC0jhsjPKCkGC1XJmF2dYF+Gw=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/extensions/treegrid/bootstrap-table-treegrid.min.js" integrity="sha256-7/bamjJdCGcpYZP8ASh8WtgzH0TM7Rq3+rPl0CRjZYs=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/extensions/editable/bootstrap-table-editable.min.js" integrity="sha256-cjlxyGvqWqb9w1nBjTIYNP3Gy3J6j4v/lq1ujrqFIZ4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/extensions/export/bootstrap-table-export.min.js" integrity="sha256-IJbTGDnL3KrrGbYJhjEi1jT1ssBnzqPT22eCOuHyGOo=" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap 4 x-editable-->
+		<link href="https://cdn.jsdelivr.net/gh/Talv/x-editable@develop/dist/bootstrap4-editable/css/bootstrap-editable.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/gh/Talv/x-editable@develop/dist/bootstrap4-editable/js/bootstrap-editable.min.js"></script>
+
+		<!-- jQuery TimeCircles -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.css" integrity="sha512-lZ3AwSh5B+1EgCuXvjkdhFX8xU4dMDO8SPqAn71VFY4luNN8gwKpajLxaZRMSeNMghUghfodtkZAWO2rM7H6Qw==" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.js" integrity="sha512-FofOhk0jW4BYQ6CFM9iJutqL2qLk6hjZ9YrS2/OnkqkD5V4HFnhTNIFSAhzP3x//AD5OzVMO8dayImv06fq0jA==" crossorigin="anonymous"></script>
+
+		<!-- jQuery treegrid -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-treegrid@0.3.0/css/jquery.treegrid.css" integrity="sha256-gZo//QecN1byuwnUdIUIc7s2oEmAR2+mDhvUEsI0hOw=" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery-treegrid@0.3.0/js/jquery.treegrid.min.js" integrity="sha256-HgE8/BlaJxNT2fERNSTYrtrm//4U8GVpXt3czDj8EwU=" crossorigin="anonymous"></script>
+
+		<!-- jQuery tableExport -->
+		<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js" integrity="sha256-/VfFIAF4GLBN7iah7RFGi+zISoczKczfQTP4Dh4N0uw=" crossorigin="anonymous"></script>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" integrity="sha256-rx5u3IdaOCszi7Jb18XD9HSn8bNiEgAqWJbdBvIYYyU=" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/fontawesome.min.js" integrity="sha256-TMRxGf3NaZhrxTfD8y/NGiyE4UXBA3udH1l+Co8JDVU=" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/culori@0.18.0/build/culori.umd.min.js"></script>
+
+		<script defer="" type="text/JavaScript">
+
+			var VersionNumber='0.0.1';
+			var VersionDate='2020-12-29';
+			var Repository='smartColorimeter';
+			var RepositoryPath='https://github.com/smartaquametering/smartPhotometer';
+			var Owner='smartAquaMetering';
+			var OwnerPath='https://github.com/smartaquametering';
+			var Copyright='Copyright © 2020-2021'
+			var CopyrightPath='https://github.com/smartaquametering/smartPhotometer/blob/main/LICENSE';
+			var Release=Repository+' - '+VersionNumber+' ('+VersionDate+')';
+
+			$(function() {
+				document.getElementById('AboutModalBanner').href=RepositoryPath;
+				document.getElementById('AboutSupport').href=RepositoryPath;
+				document.getElementById('AboutSupport').innerHTML=RepositoryPath;
+				document.getElementById('AboutRepository').href=RepositoryPath;
+				document.getElementById('AboutRepository').innerHTML=RepositoryPath;
+				document.getElementById('AboutCopyright').href=CopyrightPath;
+				document.getElementById('AboutCopyright').innerHTML=Copyright;
+				document.getElementById('AboutOwner').href=OwnerPath;
+				document.getElementById('AboutOwner').innerHTML=Owner;
+				document.getElementById('AboutRelease').innerHTML=Release;
+				document.getElementById('HelpModalBanner').href=RepositoryPath;
+				document.getElementById('FooterRepository').href=RepositoryPath;
+				document.getElementById('FooterRepository').innerHTML=Repository+' - '+VersionNumber;
+				document.getElementById('FooterOwner').href=OwnerPath;
+				document.getElementById('FooterOwner').innerHTML=Owner;
+				var Cal_RGB = {mode:'rgb', R:null, G:null, B:null};
+				var Sample_RGB = {mode:'rgb', R:null, G:null, B:null};
+				var EmptySample_RGB = {mode:'rgb', R:null, G:null, B:null};
+				var Sample_sRGB = {mode:'rgb', r:null, g:null, b:null};
+				var EmptySample_sRGB = {mode:'rgb', r:null, g:null, b:null};
+				var Sample_sRGB_Gamma = {mode:'rgb', R:null, G:null, B:null};
+				var EmptySample_sRGB_Gamma = {mode:'rgb', R:null, G:null, B:null}
+				var Difference_sRGB = {mode:'rgb'};
+				var Difference_CIELAB = {mode:'lab65'};
+				var swaction=0;
+				var ProtocolID=0;
+				var ProtocolData=[];
+				var LogData=[];
+				var ReadingData=new Array();
+					ReadingData[0]=new Array();
+					ReadingData[1]=new Array();
+					ReadingData[2]=new Array();
+						ReadingData[2]['Switch']='Empty Sample';
+						ReadingData[2]['GPIO']='16';
+					ReadingData[3]=new Array();
+						ReadingData[3]['Switch']='Sample';
+						ReadingData[3]['GPIO']='16';
+					ReadingData[4]=new Array();
+						ReadingData[4]['ColorSpace']='RGB';
+						ReadingData[4]['ColorSpaceValue1']='';
+						ReadingData[4]['ColorSpaceValue01']='';
+						ReadingData[4]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+						ReadingData[4]['Light']='Warm White';
+						ReadingData[4]['Wavelength']='410-780';
+						ReadingData[4]['GPIO']='12';
+						ReadingData[4]['BeamAngle']='180';
+						ReadingData[4]['Thickness']='1.4';
+					ReadingData[5]=new Array();
+						ReadingData[5]['ColorSpace']='srgb';
+						ReadingData[5]['ColorSpaceValue1']='';
+						ReadingData[5]['ColorSpaceValue01']='';
+						ReadingData[5]['ColorDifference']='';
+						ReadingData[5]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+					ReadingData[6]=new Array();
+						ReadingData[6]['ColorSpace']="R'G'B'";
+						ReadingData[6]['ColorSpaceValue1']='';
+						ReadingData[6]['ColorSpaceValue01']='';
+						ReadingData[6]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+					ReadingData[7]=new Array();
+						ReadingData[7]['ColorSpace']='CIE-XYZ';
+						ReadingData[7]['ColorSpaceValue1']='';
+						ReadingData[7]['ColorSpaceValue01']='';
+						ReadingData[7]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+					ReadingData[8]=new Array();
+						ReadingData[8]['ColorSpace']='CIE-xyz';
+						ReadingData[8]['ColorSpaceValue1']='';
+						ReadingData[8]['ColorSpaceValue01']='';
+						ReadingData[8]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+					ReadingData[9]=new Array();
+						ReadingData[9]['ColorSpace']='CIE-L*a*b*';
+						ReadingData[9]['ColorSpaceValue1']='';
+						ReadingData[9]['ColorSpaceValue01']='';
+						ReadingData[9]['ColorDifference']='';
+						ReadingData[9]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+					ReadingData[10]=new Array();
+						ReadingData[10]['ColorSpace']='CCT';
+						ReadingData[10]['ColorSpaceValue1']='';
+						ReadingData[10]['ColorSpaceValue01']='';
+						ReadingData[10]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+				var SensorData=new Array();
+					SensorData[0]=new Array();
+						SensorData[0]['Parameter']='<b>R</b><var><sub>Linear</sub></var>';
+						SensorData[0]['Intensity']='';
+					SensorData[1]=new Array();
+						SensorData[1]['Parameter']='<b>G</b><var><sub>Linear</sub></var>';
+						SensorData[1]['Intensity']='';
+					SensorData[2]=new Array();
+						SensorData[2]['Parameter']='<b>B</b><var><sub>Linear</sub></var>';
+						SensorData[2]['Intensity']='';
+					SensorData[3]=new Array();
+						SensorData[3]['Parameter']='<b>CCT</b><var><sub>Correlated Color Temperature</sub></var>';
+						SensorData[3]['Intensity']='';
+				function loopDeLoop(e,s){
+					var a,l,o=0;
+					isNaN(s)&&(s=1),null==e&&(e=1e3);
+					var n=setInterval(function(){
+						o>0?clearInterval(n):++s>1?o=1:(fetch("/json?view=sensorupdate").then(function(s){
+							var o;200===s.status?s.json().then(function(s){
+								for(e=s.TTL,a=0;a<s.Sensors.length;a++)
+									if(s.Sensors[a].hasOwnProperty("TaskValues"))
+										for(l=0;l<s.Sensors[a].TaskValues.length;l++)
+											try{o=s.Sensors[a].TaskValues[l].Value}catch(e){o=e.name}finally{
+												if("TypeError"!==o){
+													tempValue=s.Sensors[a].TaskValues[l].Value;
+													if(s.Sensors[a].TaskNumber==1){
+														decimalsValue=s.Sensors[a].TaskValues[l].NrDecimals;
+														tempValue=parseFloat(tempValue).toFixed(decimalsValue);
+														SensorData[(s.Sensors[a].TaskValues[l].ValueNumber-1)]['Intensity']=tempValue;
+														if ($('#switch_2').prop('checked')===true) {
+															if (s.Sensors[a].TaskValues[l].ValueNumber==1) {
+																EmptySample_RGB.R = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==2) {
+																EmptySample_RGB.G = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==3) {
+																EmptySample_RGB.B = parseFloat(tempValue);
+															}
+														}
+														if ($('#switch_3').prop('checked')===true) {
+															if (s.Sensors[a].TaskValues[l].ValueNumber==1) {
+																Sample_RGB.R = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==2) {
+																Sample_RGB.G = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==3) {
+																Sample_RGB.B = parseFloat(tempValue);
+															}
+														}
+													} else {
+														var sw="switch_"+(s.Sensors[a].TaskNumber);
+														var swd=document.getElementById(sw);
+														if (tempValue==0 && $(swd).prop('checked')===true && swaction==0) {
+															$(swd).bootstrapToggle('enable', false);
+															$(swd).bootstrapToggle('off', false);
+														} else if (tempValue==0 && sw=="switch_3" && swaction==0 && $('#switch_2').prop('checked')===true) {
+															$('#switch_2').bootstrapToggle('enable', false);
+															$('#switch_2').bootstrapToggle('off', false);
+														} else if (tempValue==0 && $(swd).prop('checked')===true) {
+															swaction = 0;
+														} else if (tempValue==1 && $(swd).prop('checked')===false && swaction==0) {
+															$(swd).bootstrapToggle('on', false);
+														} else if (tempValue==1 && $(swd).prop('checked')===false) {
+															swaction = 0;
+														};
+													}
+												}
+											}
+											e=s.TTL,
+											clearInterval(n),
+											$('#SensorTable').bootstrapTable('load', SensorData),
+											AppendLogData(),
+											loopDeLoop(e,0)
+							}):console.log("Looks like there was a problem. Status Code: "+s.status)
+						}).catch(function(s){
+							console.log(s.message),e=5e3,clearInterval(n),loopDeLoop(e,0)
+						}),o=1
+					)},e)
+				}loopDeLoop(1e3,0);
+
+				function LedSwitches(state) {
+					for (i = 2; i < 5; i++) {
+						var switchid = "#switch_" + i;
+						$(switchid).bootstrapToggle(state);
+					}
+				};
+				// Empty Sample
+				$('#switch_2').change(function() {
+					if ($(this).prop('checked')===true) {
+						swaction = 1;
+						$.get('/control?cmd=GPIO,'+ReadingData[2]['GPIO']+',1');
+						LedSwitches('disable');
+						ResetReadingData();
+					} else {
+						LedSwitches('enable');
+						UpdateReadingData();
+					}
+				});
+				// Sample
+				$('#switch_3').change(function() {
+					if ($(this).prop('checked')===true) {
+						swaction = 1;
+						$.get('/control?cmd=GPIO,'+ReadingData[3]['GPIO']+',1');
+						LedSwitches('disable');
+						ResetTransmissionReadingData();
+					} else {
+						LedSwitches('enable');
+						UpdateReadingData();
+						AppendProtocolData();
+					}
+				});
+				// Warm White LED
+				$('#switch_4').change(function() {
+					swaction = 1;
+					if ($(this).prop('checked')===true) {
+						swaction = 1;
+						$.get('/control?cmd=GPIO,'+ReadingData[4]['GPIO']+',1');
+					} else {
+						$.get('/control?cmd=GPIO,'+ReadingData[4]['GPIO']+',0');
+					}
+				});
+				$('#SensorTable').bootstrapTable('destroy').bootstrapTable({
+					columns: [{
+						field: 'Parameter',
+						title: '<var>Sensor<sub> Color parameter</sub></var>'
+					}, {
+						field: 'Intensity',
+						title: 'Values'
+					}],
+					data: SensorData
+				});
+				$('#ReadingTable').bootstrapTable('destroy').bootstrapTable({
+					columns: [{
+						field: 'Light',
+						title: 'Light',
+						align: 'left'
+					}, {
+						field: 'Wavelength',
+						title: 'λ',
+						align: 'left'
+					}, {
+						field: 'BeamAngle',
+						title: '<var>B<sup>o</sup></var>',
+						align: 'right'
+					}, {
+						field: 'Thickness',
+						title: 'd',
+						align: 'right'
+					}, {
+						field: 'ColorSpace',
+						title: 'Color space',
+						align: 'left'
+					}, {
+						field: 'ColorSpaceReference',
+						title: 'Reference',
+						align: 'left'
+					}, {
+						field: 'ColorSpaceValue01',
+						title: '<var>I<sub>0</sub></var>',
+						align: 'left'
+					}, {
+						field: 'ColorSpaceValue1',
+						title: '<var>I<sub>T</sub></var>',
+						align: 'left'
+					}, {
+						field: 'ColorDifference',
+						title: 'Δ',
+						align: 'left'
+					}],
+					data: ReadingData,
+					toolbar: '#ReadingTableToolbar',
+					showColumns: true,
+					showToggle: true,
+					showColumnsToggleAll: true,
+					showFullscreen: true
+				});
+				$('#ReadingTable').bootstrapTable('filterBy', {
+					ColorSpace: ['RGB','srgb','CIE-XYZ','CIE-xyz','CIE-L*a*b*','CCT',"R'G'B'"]
+				});
+				$('#ReadingTableButtonReset').click(function () {
+					ResetReadingData();
+				});
+				function ResetReadingData() {
+					for (i = 4; i < 11; i++) {
+						ReadingData[i]['ColorSpaceValue1']='';
+						ReadingData[i]['ColorSpaceValue01']='';
+						ReadingData[i]['ColorDifference']='';
+					}
+					Sample_sRGB = {mode:'rgb', r:null, g:null, b:null};
+					EmptySample_sRGB = {mode:'rgb', r:null, g:null, b:null};
+					$('#ReadingTable').bootstrapTable('load', ReadingData);
+				};
+				function ResetTransmissionReadingData() {
+					for (i = 4; i < 11; i++) {
+						ReadingData[i]['ColorSpaceValue1']='';
+						ReadingData[i]['ColorDifference']='';
+					}
+					Sample_sRGB = {mode:'rgb', r:null, g:null, b:null};
+					$('#ReadingTable').bootstrapTable('load', ReadingData);
+				};
+				function UpdateReadingData() {
+
+					if (EmptySample_RGB.R !== null) {
+						ReadingData[4]['ColorSpaceValue01']=printObject(culori.rgb(EmptySample_RGB));
+
+						var EmptySample_RGB_Sum = EmptySample_RGB.R + EmptySample_RGB.G + EmptySample_RGB.B;
+						EmptySample_sRGB.r = EmptySample_RGB.R / EmptySample_RGB_Sum;
+						EmptySample_sRGB.g = EmptySample_RGB.G / EmptySample_RGB_Sum;
+						EmptySample_sRGB.b = EmptySample_RGB.B / EmptySample_RGB_Sum;
+						ReadingData[5]['ColorSpaceValue01']=printObject(culori.rgb(EmptySample_sRGB));
+
+						EmptySample_sRGB_Gamma.R = Math.pow(EmptySample_sRGB.r, 1/2.4) * 255;
+						EmptySample_sRGB_Gamma.G = Math.pow(EmptySample_sRGB.g, 1/2.4) * 255;
+						EmptySample_sRGB_Gamma.B = Math.pow(EmptySample_sRGB.b, 1/2.4) * 255;
+						ReadingData[6]['ColorSpaceValue01']=printObject(EmptySample_sRGB_Gamma);
+
+						let EmptySample_XYZ65 = culori.xyz65(EmptySample_sRGB);
+						EmptySample_XYZ65.x = EmptySample_XYZ65.x * 100;
+						EmptySample_XYZ65.y = EmptySample_XYZ65.y * 100;
+						EmptySample_XYZ65.z = EmptySample_XYZ65.z * 100;
+						ReadingData[7]['ColorSpaceValue01']=printObject(EmptySample_XYZ65);
+
+//						let EmptySample_XYZ65 = {mode:'xyz65'};
+
+//EmptySample_XYZ65.x = EmptySample_XYZ_LED_B2.x * 0.8652435 + EmptySample_XYZ_LED_B2.y * 0.0000000 + EmptySample_XYZ_LED_B2.z * 0.0000000;
+//EmptySample_XYZ65.y = EmptySample_XYZ_LED_B2.x * 0.0000000 + EmptySample_XYZ_LED_B2.y * 1.0000000 + EmptySample_XYZ_LED_B2.z * 0.0000000;
+//EmptySample_XYZ65.z = EmptySample_XYZ_LED_B2.x * 0.0000000 + EmptySample_XYZ_LED_B2.y * 0.0000000 + EmptySample_XYZ_LED_B2.z * 3.0598005;
+
+// Transformation from LED-B2 to D65 XYZ
+//EmptySample_XYZ65.x = EmptySample_sRGB.r * 0.733884076 + EmptySample_sRGB.g * 0.300467409 + EmptySample_sRGB.b * 0.051640515;
+//EmptySample_XYZ65.y = EmptySample_sRGB.r * 0.378408977 + EmptySample_sRGB.g * 0.600934817 + EmptySample_sRGB.b * 0.020656206;
+//EmptySample_XYZ65.z = EmptySample_sRGB.r * 0.034400816 + EmptySample_sRGB.g * 0.100155803 + EmptySample_sRGB.b * 0.271973381;
+
+						let EmptySample_xyz65 = {mode:'xyz65'};
+
+// Transformation from Sensor to XYZ coordinates
+//Sample_xyz65.x = Sample_sRGB.r * 0.582692 + Sample_sRGB.g * 0.283233 + Sample_sRGB.b * 0.144560;
+//Sample_xyz65.y = Sample_sRGB.r * 0.382919 + Sample_sRGB.g * 0.525670 + Sample_sRGB.b * 0.134175;
+//Sample_xyz65.z = 1 - Sample_xyz65.x - Sample_xyz65.y;
+
+						EmptySample_xyz65.x = EmptySample_XYZ65.x / (EmptySample_XYZ65.x + EmptySample_XYZ65.y + EmptySample_XYZ65.z);
+						EmptySample_xyz65.y = EmptySample_XYZ65.y / (EmptySample_XYZ65.x + EmptySample_XYZ65.y + EmptySample_XYZ65.z);
+						EmptySample_xyz65.z = EmptySample_XYZ65.z / (EmptySample_XYZ65.x + EmptySample_XYZ65.y + EmptySample_XYZ65.z);
+						ReadingData[8]['ColorSpaceValue01']=printObject(EmptySample_xyz65);
+
+						ReadingData[9]['ColorSpaceValue01']=printObject(culori.lab65(EmptySample_sRGB));
+
+						var n = (EmptySample_xyz65.x - 0.3320) / (0.1858 - EmptySample_xyz65.y);
+						var cct = (449.0 * Math.pow(n, 3)) + (3525.0 * Math.pow(n, 2)) + (6823.3 * n) + 5520.33;
+						ReadingData[10]['ColorSpaceValue01']=parseFloat(cct).toFixed(0);
+					}
+					if (Sample_RGB.R !== null) {
+
+// Calibration
+Cal_RGB.R = Sample_RGB.R * 0.998343 + Sample_RGB.G * 0.024902 + Sample_RGB.B * 0.122276;
+Cal_RGB.G = Sample_RGB.R * 0.068253  + Sample_RGB.G * 1.161278 + Sample_RGB.B * -0.120453;
+Cal_RGB.B = Sample_RGB.R * 0.093917 + Sample_RGB.G * 0.046894 + Sample_RGB.B * 0.938157;
+
+Sample_RGB.R = Cal_RGB.R;
+Sample_RGB.G = Cal_RGB.G;
+Sample_RGB.B = Cal_RGB.B;
+
+						ReadingData[4]['ColorSpaceValue1']=printObject(culori.rgb(Sample_RGB));
+
+						Sample_RGB_Sum = Sample_RGB.R + Sample_RGB.G + Sample_RGB.B;
+						Sample_sRGB.r = Sample_RGB.R / Sample_RGB_Sum;
+						Sample_sRGB.g = Sample_RGB.G / Sample_RGB_Sum;
+						Sample_sRGB.b = Sample_RGB.B / Sample_RGB_Sum;
+						ReadingData[5]['ColorSpaceValue1']=printObject(culori.rgb(Sample_sRGB));
+
+						Sample_sRGB_Gamma.R = Math.pow(Sample_sRGB.r, 1/2.4) * 255;
+						Sample_sRGB_Gamma.G = Math.pow(Sample_sRGB.g, 1/2.4) * 255;
+						Sample_sRGB_Gamma.B = Math.pow(Sample_sRGB.b, 1/2.4) * 255;
+						ReadingData[6]['ColorSpaceValue1']=printObject(Sample_sRGB_Gamma);
+
+						let Sample_XYZ65 = culori.xyz65(Sample_sRGB);
+						Sample_XYZ65.x = Sample_XYZ65.x * 100;
+						Sample_XYZ65.y = Sample_XYZ65.y * 100;
+						Sample_XYZ65.z = Sample_XYZ65.z * 100;
+						ReadingData[7]['ColorSpaceValue1']=printObject(Sample_XYZ65);
+
+						let Sample_xyz65 = {mode:'xyz65'};
+						Sample_xyz65.x = Sample_XYZ65.x / (Sample_XYZ65.x + Sample_XYZ65.y + Sample_XYZ65.z);
+						Sample_xyz65.y = Sample_XYZ65.y / (Sample_XYZ65.x + Sample_XYZ65.y + Sample_XYZ65.z);
+						Sample_xyz65.z = Sample_XYZ65.z / (Sample_XYZ65.x + Sample_XYZ65.y + Sample_XYZ65.z);
+						ReadingData[8]['ColorSpaceValue1']=printObject(Sample_xyz65);
+
+						ReadingData[9]['ColorSpaceValue1']=printObject(culori.lab65(Sample_sRGB));
+
+						ReadingData[8]['ColorSpaceValue1']=printObject(Sample_xyz65);
+
+						var n = (Sample_xyz65.x - 0.3320) / (0.1858 - Sample_xyz65.y);
+						var cct = (449.0 * Math.pow(n, 3)) + (3525.0 * Math.pow(n, 2)) + (6823.3 * n) + 5520.33;
+						ReadingData[10]['ColorSpaceValue1']=parseFloat(cct).toFixed(0);
+					}
+					if (EmptySample_sRGB.r !== null && Sample_sRGB.r !== null) {
+
+						let differencergb = culori.differenceEuclidean();
+						Difference_sRGB['ΔC'] = differencergb(EmptySample_sRGB, Sample_sRGB);
+
+						let differenceCie1976 = culori.differenceCie76();
+						Difference_CIELAB['<var>CIE1976 ΔE<sup>*</sup><sub>ab</sub></var>'] = differenceCie1976(EmptySample_sRGB, Sample_sRGB);
+
+						let differenceCie1994 = culori.differenceCie94();
+						Difference_CIELAB['<var>CIE1994 ΔE<sup>*</sup><sub>94</sub></var>'] = differenceCie1994(EmptySample_sRGB, Sample_sRGB);
+
+						let differenceCie2000 = culori.differenceCiede2000();
+						Difference_CIELAB['<var>CIE2000 ΔE<sup>*</sup><sub>00</sub></var>'] = differenceCie2000(EmptySample_sRGB, Sample_sRGB);
+
+						ReadingData[5]['ColorDifference']=printObject(Difference_sRGB);
+						ReadingData[9]['ColorDifference']=printObject(Difference_CIELAB);
+					}
+					$('#ReadingTable').bootstrapTable('load', ReadingData);
+				};
+				$('#ProtocolTable').bootstrapTable({
+					columns: [{
+						field: 'Timestamp',
+						title: 'Timestamp',
+						sortable: true,
+						align: 'left'
+					}, {
+						field: 'Parameter',
+						title: 'Parameter',
+						editable: true,
+						align: 'left'
+					}, {
+						field: 'Remark',
+						title: 'Remark',
+						editable: true,
+						align: 'left'
+					}, {
+						field: 'Light',
+						title: 'Light',
+						align: 'left'
+					}, {
+						field: 'Wavelength',
+						title: 'λ',
+						align: 'right'
+					}, {
+						field: 'BeamAngle',
+						title: '<var>B<sup>o</sup></var>',
+						align: 'right'
+					}, {
+						field: 'Thickness',
+						title: 'd',
+						align: 'right'
+					}, {
+						field: 'ColorSpace',
+						title: 'Color space',
+						align: 'left'
+					}, {
+						field: 'ColorSpaceReference',
+						title: 'Reference',
+						align: 'left'
+					}, {
+						field: 'ColorSpaceValue01',
+						title: '<var>I<sub>0</sub></var>',
+						align: 'left'
+					}, {
+						field: 'ColorSpaceValue1',
+						title: '<var>I<sub>T</sub></var>',
+						align: 'left'
+					}, {
+						field: 'ColorDifference',
+						title: 'Δ',
+						align: 'left'
+					}],
+					data: ProtocolData,
+					idField: 'id',
+					toolbar: '#ProtocolTableToolbar',
+					showColumns: true,
+					showToggle: true,
+					showColumnsToggleAll: true,
+					showFullscreen: true,
+					showExport: true,
+					treeShowField: 'Timestamp',
+					parentIdField: 'pid',
+					onPostBody: function() {
+						var columns = $('#ProtocolTable').bootstrapTable('getOptions').columns
+						if (columns && columns[0][1].visible) {
+							$('#ProtocolTable').treegrid({
+								initialState: 'collapsed',
+								treeColumn: 0,
+							})
+						}
+					}
+				});
+				$('#ProtocolTableButtonReset').click(function () {
+					$('#ProtocolTable').bootstrapTable('removeAll');
+				});
+				function AppendProtocolData() {
+					ProtocolID = ++ProtocolID;
+					var ProtocolPID = ProtocolID;
+					ProtocolData = [{
+							'id': ProtocolPID,
+							'pid': 0,
+							'Timestamp': new Date().toLocaleString()
+					}];
+					$('#ProtocolTable').bootstrapTable('append', ProtocolData);
+					for (i = 4; i < 11; i++) {
+						ProtocolID = ++ProtocolID;
+						ProtocolData = [{
+								'id': ProtocolID,
+								'pid': ProtocolPID,
+								'Light': ReadingData[i]['Light'],
+								'Wavelength': ReadingData[i]['Wavelength'],
+								'BeamAngle': ReadingData[i]['BeamAngle'],
+								'Thickness': ReadingData[i]['Thickness'],
+								'ColorSpace': ReadingData[i]['ColorSpace'],
+								'ColorSpaceReference': ReadingData[i]['ColorSpaceReference'],
+								'ColorSpaceValue01': ReadingData[i]['ColorSpaceValue01'],
+								'ColorSpaceValue1': ReadingData[i]['ColorSpaceValue1'],
+								'ColorDifference': ReadingData[i]['ColorDifference']
+						}];
+						$('#ProtocolTable').bootstrapTable('append', ProtocolData);
+					};
+				};
+				$('#LogTableButtonBuild').click(function () {
+					$('#LogTable').bootstrapTable({
+						columns: [{
+							field: 'Timestamp',
+							title: 'Timestamp',
+							sortable: true,
+							align: 'left'
+						}, {
+							field: 'LED',
+							title: 'LED',
+							align: 'left'
+						}, {
+							field: 'R',
+							title: 'R',
+							align: 'right'
+						}, {
+							field: 'G',
+							title: 'G',
+							align: 'right'
+						}, {
+							field: 'B',
+							title: 'B',
+							align: 'right'
+						}, {
+							field: 'CCT',
+							title: 'CCT',
+							align: 'right'
+						}],
+						data: LogData,
+						toolbar: '#LogTableToolbar',
+						showColumns: true,
+						showToggle: true,
+						showColumnsToggleAll: true,
+						showFullscreen: true,
+						showExport: true
+					});
+				});
+				$('#LogTableButtonReset').click(function () {
+					$('#LogTable').bootstrapTable('removeAll');
+				});
+				$('#LogTableButtonDestroy').click(function () {
+					$('#LogTable').bootstrapTable('destroy');
+				});
+				function AppendLogData() {
+					LogData = [{
+							'Timestamp': new Date().toLocaleString(),
+							'LED': $('#switch_4').prop('checked'),
+							'R': SensorData[0]['Intensity'],
+							'G': SensorData[1]['Intensity'],
+							'B': SensorData[2]['Intensity'],
+							'CCT': SensorData[3]['Intensity']
+					}];
+					$('#LogTable').bootstrapTable('append', LogData);
+				};
+				window.onbeforeunload = function() {
+					return "Dude, are you sure you want to leave? Think of the kittens!";
+				}
+				function printObject(obj) {
+					var result = '';
+					var objValue;
+					for (var i in obj) {
+						if (obj.hasOwnProperty(i)) {
+							objValue=`${obj[i]}`;
+							var x = parseFloat(objValue).toFixed(4); 
+							if (isNaN(x)) {
+								var x;
+							} else {
+								objValue=x;
+							}
+							result += `${i}`+': '+objValue+'</br>';
+						}
+					}
+					return result;
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<a class="navbar-brand"><img src="/logo.png" width="40" height="30" class="" alt=""> smartColorimeter</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="/dashboard.esp" target="_blank">Dashboard</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarSystem" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">System</a>
+							<div class="dropdown-menu" aria-labelledby="navbarSystem">
+								<a class="dropdown-item" href="/" target="_blank">System Info and Settings</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/json?view=sensorupdate" target="_blank">Sensor Status</a>
+								<a class="dropdown-item" href="/json" target="_blank">System Configuration</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarHelp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+							<div class="dropdown-menu" aria-labelledby="navbarHelp">
+								<a class="dropdown-item" href="#AboutModal" data-toggle="modal" data-target="#AboutModal">About</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#HelpModal" data-toggle="modal" data-target="#HelpModal">Help</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="modal fade" id="AboutModal" tabindex="-1" aria-labelledby="AboutModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="AboutModalLabel">About</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+
+							<h5><a href="#" id="AboutModalBanner" target="_blank"><img class="img-fluid" alt="" src="/banner.png"></a></h5>
+
+							<h5>Firmware build</h5>
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;">
+								ESPEasy (mega), ESP_Easy_mega_20201103_custom_ESP32_4M316k
+							</div>
+							<h5>Release</h5>
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;" id="AboutRelease"></div>
+							<h5>HTML, CSS, and JavaScript framework</h5>
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;">
+								Bootstrap 4 CSS - https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css
+								<br>jQuery - https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+								<br>Bootstrap 4 JS bundle - https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js
+								<br>Bootstrap 4 Toggle CSS - https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css
+								<br>Bootstrap 4 Toggle JS - https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js
+								<br>Bootstrap 4 Tables CSS - https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/bootstrap-table.min.css
+								<br>Bootstrap 4 Tables JS - https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/bootstrap-table.min.js
+								<br>Bootstrap 4 Tables treegrid - https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/extensions/treegrid/bootstrap-table-treegrid.min.js
+								<br>Bootstrap 4 Tables editable - https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/extensions/editable/bootstrap-table-editable.min.js
+								<br>Bootstrap 4 Tables export - https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.0/dist/extensions/export/bootstrap-table-export.min.js
+								<br>Bootstrap 4 x-editable CSS - https://cdn.jsdelivr.net/gh/Talv/x-editable@develop/dist/bootstrap4-editable/css/bootstrap-editable.css
+								<br>Bootstrap 4 x-editable JS - https://cdn.jsdelivr.net/gh/Talv/x-editable@develop/dist/bootstrap4-editable/js/bootstrap-editable.min.js
+								<br>jQuery TimeCircles CSS - https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.css
+								<br>jQuery TimeCircles JS - https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.js
+								<br>jQuery treegrid CSS - https://cdn.jsdelivr.net/npm/jquery-treegrid@0.3.0/css/jquery.treegrid.css
+								<br>jQuery treegrid JS - https://cdn.jsdelivr.net/npm/jquery-treegrid@0.3.0/js/jquery.treegrid.min.js
+								<br>jQuery tableExport - https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js
+								<br>Font Awesome CSS - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css
+								<br>Font Awesome JS - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/fontawesome.min.js
+							</div>
+							<h5>Support and documentation</h5>
+
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;">
+								<samp>
+									GitHub: <a href="#" id="AboutSupport" target="_blank"></a>
+								</samp>
+							</div>
+
+							<h5>Development</h5>
+
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;">
+								<samp>
+									GitHub: <a href="#" id="AboutRepository" target="_blank"></a>
+								</samp>
+							</div>
+
+							<h5>Copyrights</h5>
+
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;">
+								<samp>
+									smartColorimeter - <a href="#" id="AboutCopyright" target="_blank"></a> by <a href="#" id="AboutOwner" target="_blank"></a>. All Rights Reserved. Licensed under <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">GNU GPL v3 or higher</a>.
+								</samp>
+							</div>
+								
+							<h5>Licenses</h5>
+
+							<p>All of the source code to this project is available under licenses which are both <a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">free</a> and <a href="http://www.opensource.org/docs/definition.php" target="_blank">open source</a>.<br>
+							Most of it is available under <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">GNU GPL</a> and <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
+
+							<p>The remainder of the software which is not under the GNU GPL is available under one of a variety of other licenses. Those that require reproduction of the license text in the distribution are given below.<br>
+							(Note: Your copy of this product may not contain code covered by one or more of the licenses listed here, depending on the exact product and version you choose.)</p>
+
+							<div class="card p-3 bg-light" style="margin: 0.5em 0em 1.5em;">
+								<samp>
+									ESPEasy - <a href="https://github.com/letscontrolit/ESPEasy/blob/mega/License.txt" target="_blank">Copyright © letscontrolit</a>. Licensed under <a href="https://github.com/letscontrolit/ESPEasy/blob/mega/License.txt" target="_blank">GNU GPL v3 or higher</a>.
+									<br>Bootstrap - <a href="https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE" target="_blank">Copyright © 2011-2020 Twitter, Inc</a>. Licensed under <a href="https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE" target="_blank">MIT License</a>.
+									<br>jQuery - <a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt" target="_blank">Copyright © OpenJS Foundation and other contributors</a>. Licensed under <a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt" target="_blank">MIT License</a>.
+									<br>Bootstrap 4 Toggle - <a href="https://github.com/gitbrent/bootstrap4-toggle/blob/master/LICENSE" target="_blank">Copyright © 2018 by Brent Ely</a>. Licensed under <a href="https://github.com/gitbrent/bootstrap4-toggle/blob/master/LICENSE" target="_blank">MIT License</a>.
+									<br>Bootstrap 4 Tables - <a href="https://github.com/wenzhixin/bootstrap-table/blob/master/LICENSE" target="_blank">Copyright © 2012-2019 by Zhixin Wen</a>. Licensed under <a href="https://github.com/wenzhixin/bootstrap-table/blob/master/LICENSE" target="_blank">MIT License</a>.
+									<br>jQuery TimeCircles - <a href="https://github.com/wimbarelds/TimeCircles/blob/master/MIT.txt" target="_blank">Copyright © 2013 by Wim Barelds</a>. Licensed under <a href="https://github.com/wimbarelds/TimeCircles/blob/master/MIT.txt" target="_blank">MIT License</a>.
+									<br>jQuery treegrid - <a href="https://github.com/maxazan/jquery-treegrid/blob/master/LICENSE" target="_blank">Copyright © 2013 by Maksym Pomazan</a>. Licensed under <a href="https://github.com/maxazan/jquery-treegrid/blob/master/LICENSE" target="_blank">MIT License</a>.
+									<br>jQuery tableExport - <a href="https://github.com/hhurz/tableExport.jquery.plugin/blob/master/LICENSE" target="_blank">Copyright © 2015-2020 by hhurz</a>. Licensed under <a href="https://github.com/hhurz/tableExport.jquery.plugin/blob/master/LICENSE" target="_blank">MIT License</a>.
+									<br>Font Awesome - by <a href="https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt" target="_blank">Font Awesome</a>.
+								</samp>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="HelpModal" tabindex="-1" aria-labelledby="HelpModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="HelpModalLabel">Help</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+
+							<h5><a href="#" id="HelpModalBanner" target="_blank"><img class="img-fluid" alt="" src="/banner.png"></a></h5>
+
+							<h5 class="mt-4 mb-4">Legend</h5>
+							<dl class="row">
+								<dt class="col-sm-3">λ</dt>
+								<dd class="col-sm-9 text-truncate">Wavelength [nm]</dd>
+
+								<dt class="col-sm-3"><var>B<sup>o</sup></var></dt>
+								<dd class="col-sm-9 text-truncate">
+									Beam (measuring) angle [<var><sup>o</sup></var>]</br>
+									<var>180 <sup>o</sup>: Transmitted light measurement (Absorbance)</var></br>
+									<var>90 <sup>o</sup>: Nephelometric turbidity (scattered light) measurement</var>
+								</dd>
+
+								<dt class="col-sm-3"><var>I<sub>0</sub></var></dt>
+								<dd class="col-sm-9 text-truncate">Intensity of incident light [lux]</dd>
+
+								<dt class="col-sm-3"><var>I<sub>T</sub></var></dt>
+								<dd class="col-sm-9 text-truncate">Intensity of transmitted light [lux]</dd>
+
+								<dt class="col-sm-3">T = <var>I<sub>T</sub></var> / <var>I<sub>0</sub></var></dt>
+								<dd class="col-sm-9 text-truncate">
+									Transmission</br>
+									Energy passing through</br>
+									Range: 0.0 - 1.0
+								</dd>
+
+								<dt class="col-sm-3">A = 1 - T</dt>
+								<dd class="col-sm-9 text-truncate">
+									Absorption</br>
+									Energy lost
+								</dd>
+
+								<dt class="col-sm-3"><var>E<sub>λ</sub></var> = - log ( T ) = <var>ε<sub>λ</sub></var> * c * d</dt>
+								<dd class="col-sm-9 text-truncate">
+									Absorbance</br>
+									Attenuation</br>
+									Lambert-Beer law</br>
+									Optimum range: 0.1 – 1.0
+								</dd>
+
+								<dt class="col-sm-3"><var>SAC<sub>λ</sub></var> = <var>E<sub>λ</sub></var> / d * 100</dt>
+								<dd class="col-sm-9 text-truncate">Spectral Absorption Coefficient [<var>m<sup>-1</sup></var>]</dd>
+
+								<dt class="col-sm-3">c = <var>E<sub>λ</sub></var> / ( <var>ε<sub>λ</sub></var> * d ) = <var>E<sub>λ</sub></var> * F</dt>
+								<dd class="col-sm-9 text-truncate">Concentration of absorbing substance in the liquid [mol/l]</dd>
+
+								<dt class="col-sm-3">F = 1 / ( <var>ε<sub>λ</sub></var> * d )</dt>
+								<dd class="col-sm-9 text-truncate">
+									Factor</br>
+									Test specific
+								</dd>
+
+								<dt class="col-sm-3"><var>ε<sub>λ</sub></var></dt>
+								<dd class="col-sm-9 text-truncate">Molar decadic extinction coefficient [l/mol/cm]</dd>
+
+								<dt class="col-sm-3">d</dt>
+								<dd class="col-sm-9 text-truncate">Thickness of the solution layer [cm]</dd>
+
+								<dt class="col-sm-3">Turbidity</dt>
+								<dd class="col-sm-9 text-truncate">Opacity, clouding, haze</dd>
+
+								<dt class="col-sm-3">FNU</dt>
+								<dd class="col-sm-9 text-truncate">Formazine Nephelometric Unit</dd>
+
+								<dt class="col-sm-3">NTU</dt>
+								<dd class="col-sm-9 text-truncate">Nephelometric Turbidity Unit</dd>
+
+								<dt class="col-sm-3">FAU</dt>
+								<dd class="col-sm-9 text-truncate">Formazine Attenuation Unit</dd>
+							</dl>
+
+							<h5 class="mt-4 mb-4">Measurement methods</h5>
+							<dl class="row">
+								<dt class="col-sm-3">Photometry</dt>
+								<dd class="col-sm-9 text-truncate">
+									Absorbance measurement (transmitted light or absorption measurement)</br>
+									Recommended measuring range: 40–4000 FAU (DIN EN ISO 7027)</br>
+									Light source and detector are located on the same axis (180° angle).</br>
+									The reduced light intensity which remains after passing through the sample is measured
+								</dd>
+								<dt class="col-sm-3">Nephelometry</dt>
+								<dd class="col-sm-9 text-truncate">
+									Scattered light measurement</br>
+									Recommended measuring range: 0–40 FNU (DIN EN ISO 7027)</br>
+									Light source and detector are oriented at an angle of 90° relative to each other
+								</dd>
+							</dl>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				<div class="row">
+					<div class="col">
+						<input id="switch_2" type="checkbox" data-toggle="toggle" data-width="300" data-size="lg" data-on="Running</br>Do not touch" data-off="Empty&nbsp;Sample</br><var>I<sub>0</sub></var>" data-onstyle="secondary" data-offstyle="light">
+					</div>
+					<div class="col">
+						<input id="switch_3" type="checkbox" data-toggle="toggle" data-width="300" data-size="lg" data-on="Running</br>Do not touch" data-off="Sample</br><var>I<sub>T</sub></var>" data-onstyle="secondary" data-offstyle="light">
+					</div>
+				</div>
+			</p>
+			<p>
+			<div class="row">
+				<div class="col">
+					<input id="switch_4" type="checkbox" data-toggle="toggle" data-width="140" data-size="lg" data-onstyle="outline-dark" data-offstyle="outline-dark" data-on="On" data-off="Off">
+				</div>
+			</div>
+			</p>
+			<h4 class="mt-4 mb-4">Status</h4>
+			<table id="SensorTable"></table>
+
+			<h4 class="mt-4 mb-4">Readings</h4>
+			<div id="ReadingTableToolbar">
+				<button id="ReadingTableButtonReset" class="btn btn-secondary" style="width: 80px">Reset</button>
+			</div>
+			<table id="ReadingTable"></table>
+
+			<h4 class="mt-4 mb-4">Protocol</h4>
+			<div id="ProtocolTableToolbar">
+				<button id="ProtocolTableButtonReset" class="btn btn-secondary" style="width: 80px">Reset</button>
+			</div>
+			<table id="ProtocolTable"></table>
+
+			<h4 class="mt-4 mb-4">Logging</h4>
+			<div id="LogTableToolbar">
+				<button id="LogTableButtonBuild" class="btn btn-secondary" style="width: 80px">Enable</button>
+				<button id="LogTableButtonReset" class="btn btn-secondary" style="width: 80px">Reset</button>
+				<button id="LogTableButtonDestroy" class="btn btn-secondary" style="width: 80px">Disable</button>
+			</div>
+			<table id="LogTable"></table>
+			</br>
+			<footer id="sticky-footer" class="py-3 bg-primary text-white-50">
+				<div class="container text-center">
+					<a class="text-light" href="#" id="FooterRepository" target="_blank"></a> by
+					<a class="text-light" href="#" id="FooterOwner" target="_blank"></a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
