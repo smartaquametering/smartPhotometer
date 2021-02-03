@@ -107,6 +107,22 @@
  * to represent the company, product, or service to which they refer.**
 \*****************************************************************************************************************************/
 
+/*****************************************************************************************************************************\
+ * Color converting functions adapted from "CIE Color Calculator"
+ * --------------------------------------------------------------
+ * http://www.brucelindbloom.com/index.html?ColorCalculator.html
+ * http://www.brucelindbloom.com/javascript/ColorConv.js
+ * Copyright © 2001 - 2021 Bruce Justin Lindbloom. All Rights Reserved.
+\*****************************************************************************************************************************/
+
+/*****************************************************************************************************************************\
+ * Color delta functions adapted from "CIE-L*a*b* Color Difference Calculator"
+ * ---------------------------------------------------------------------------
+ * http://www.brucelindbloom.com/index.html?ColorDifferenceCalc.html
+ * http://www.brucelindbloom.com/javascript/ColorDiff.js
+ * Copyright © 2001 - 2021 Bruce Justin Lindbloom. All Rights Reserved.
+\*****************************************************************************************************************************/
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
