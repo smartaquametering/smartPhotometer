@@ -1,5 +1,5 @@
 /*****************************************************************************************************************************\
- * smartPhotometer © Copyright 2020 github.com/smartaquametering
+ * smartPhotometer © Copyright 2020-2021 github.com/smartaquametering
  *
  * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -7,7 +7,7 @@
  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  * You received a copy of the GNU General Public License along with this program in file 'LICENSE'.
  *
- * Additional information about licensing can be found at : http://www.gnu.org/licenses
+ * Additional information about licensing can be found at : www.gnu.org/licenses
 \*****************************************************************************************************************************/
 
  // This project incorporates work covered by the following copyrights and permission notices:
@@ -22,32 +22,45 @@
  * Arduino project "ESP Easy" © Copyright 2018-2020 github.com/letscontrolit
  * is licensed under the GNU General Public License v3.0
  *
- * Additional information about licensing can be found at : https://github.com/letscontrolit/ESPEasy/blob/mega/License.txt
+ * Additional information about licensing can be found at : github.com/letscontrolit/ESPEasy/blob/mega/License.txt
 \*****************************************************************************************************************************/
 
 /*****************************************************************************************************************************\
  * espressif/esptool is licensed under the
  * GNU General Public License v2.0
  *
- * Additional information about licensing can be found at : https://github.com/espressif/esptool/blob/master/LICENSE
+ * Additional information about licensing can be found at : github.com/espressif/esptool/blob/master/LICENSE
 \*****************************************************************************************************************************/
 
 /*****************************************************************************************************************************\
- * github.com/twbs/bootstrap                  © Copyright 2011-2020 Twitter, Inc.
- *                                            © Copyright 2011-2020 The Bootstrap Authors
+ * GoogleWebComponents/google-chart is licensed under the
+ * Apache License 2.0
  *
- * github.com/jquery/jquery                   © Copyright OpenJS Foundation and other contributors, https://openjsf.org/
+ * Additional information about licensing can be found at : github.com/GoogleWebComponents/google-chart/blob/master/LICENSE
+\*****************************************************************************************************************************/
+
+/*****************************************************************************************************************************\
+ * github.com/twbs/bootstrap                    © Copyright 2011-2020 Twitter, Inc.
+ *                                              © Copyright 2011-2020 The Bootstrap Authors
  *
- * github.com/gitbrent/bootstrap4-toggle      © Copyright 2011-2014 Min Hur, The New York Times Company
- *                                            © Copyright 2018 Brent Ely
+ * github.com/jquery/jquery                     © Copyright OpenJS Foundation and other contributors, openjsf.org/
  *
- * github.com/wenzhixin/bootstrap-table       © Copyright 2012-2019 Zhixin Wen <wenzhixin2010@gmail.com>
+ * github.com/gitbrent/bootstrap4-toggle        © Copyright 2011-2014 Min Hur, The New York Times Company
+ *                                              © Copyright 2018 Brent Ely
  *
- * github.com/wimbarelds/TimeCircles          © Copyright 2013 Wim Barelds
+ * github.com/wenzhixin/bootstrap-table         © Copyright 2012-2019 Zhixin Wen <wenzhixin2010@gmail.com>
  *
- * github.com/maxazan/jquery-treegrid         © Copyright 2013 Maksym Pomazan
+ * github.com/snapappointments/bootstrap-select © Copyright 2012-2018 SnapAppointments, LLC
  *
- * github.com/hhurz/tableExport.jquery.plugin © Copyright 2015-2020 hhurz, https://github.com/hhurz/
+ * github.com/Talv/x-editable/tree/develop/dist © Copyright 2012 Vitaliy Potapov
+ *
+ * github.com/wimbarelds/TimeCircles            © Copyright 2013 Wim Barelds
+ *
+ * github.com/maxazan/jquery-treegrid           © Copyright 2013 Maksym Pomazan
+ *
+ * github.com/hhurz/tableExport.jquery.plugin   © Copyright 2015-2020 hhurz, github.com/hhurz/
+ *
+ * github.com/Evercoder/culori                  © Copyright 2018 Dan Burzo
  *
  * The MIT License (MIT)
  *
@@ -69,7 +82,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
 \*****************************************************************************************************************************/
-
+  
 /*****************************************************************************************************************************\
  * Font Awesome Free License
  * -------------------------
@@ -105,6 +118,13 @@
  * trademarks does not indicate endorsement of the trademark holder by Font
  * Awesome, nor vice versa. **Please do not use brand logos for any purpose except
  * to represent the company, product, or service to which they refer.**
+\*****************************************************************************************************************************/
+
+/*****************************************************************************************************************************\
+ * www.brucelindbloom.com/javascript/ColorConv.js © Copyright 2001 - 2021 Bruce Justin Lindbloom. All Rights Reserved.
+ * www.brucelindbloom.com/javascript/ColorDiff.js © Copyright 2001 - 2021 Bruce Justin Lindbloom. All Rights Reserved.
+ *
+ * Color converting functions and Color delta functions, www.brucelindbloom.com
 \*****************************************************************************************************************************/
 
                     GNU GENERAL PUBLIC LICENSE
