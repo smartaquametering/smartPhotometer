@@ -19,6 +19,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
+		<!-- Bootstrap-select -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
 		<!-- Bootstrap 4 Toggle -->
 		<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
@@ -49,7 +53,15 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" integrity="sha256-rx5u3IdaOCszi7Jb18XD9HSn8bNiEgAqWJbdBvIYYyU=" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/fontawesome.min.js" integrity="sha256-TMRxGf3NaZhrxTfD8y/NGiyE4UXBA3udH1l+Co8JDVU=" crossorigin="anonymous"></script>
 
+		<!-- culori -->
 		<script src="https://cdn.jsdelivr.net/npm/culori@0.18.0/build/culori.umd.min.js"></script>
+		<script src="./mycolors.js"></script>
+
+		<!-- Google Chart -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!-- CIE Color Calculator by Bruce Justin Lindbloom -->
+		<script src="./ColorConv.js"></script>
 
 		<script defer="" type="text/JavaScript">
 
@@ -62,6 +74,11 @@
 			var Copyright='Copyright © 2020-2021'
 			var CopyrightPath='https://github.com/smartaquametering/smartPhotometer/blob/main/LICENSE';
 			var Release=Repository+' - '+VersionNumber+' ('+VersionDate+')';
+
+			var SelectedRefWhite;
+			var SelectedRGBModel;
+			var SelectedAdaptationMethod;
+			var SelectedColorScale;
 
 			$(function() {
 				document.getElementById('AboutModalBanner').href=RepositoryPath;
@@ -79,15 +96,15 @@
 				document.getElementById('FooterRepository').innerHTML=Repository+' - '+VersionNumber;
 				document.getElementById('FooterOwner').href=OwnerPath;
 				document.getElementById('FooterOwner').innerHTML=Owner;
-				var Cal_RGB = {mode:'rgb', R:null, G:null, B:null};
-				var Sample_RGB = {mode:'rgb', R:null, G:null, B:null};
-				var EmptySample_RGB = {mode:'rgb', R:null, G:null, B:null};
-				var Sample_sRGB = {mode:'rgb', r:null, g:null, b:null};
-				var EmptySample_sRGB = {mode:'rgb', r:null, g:null, b:null};
-				var Sample_sRGB_Gamma = {mode:'rgb', R:null, G:null, B:null};
-				var EmptySample_sRGB_Gamma = {mode:'rgb', R:null, G:null, B:null}
-				var Difference_sRGB = {mode:'rgb'};
-				var Difference_CIELAB = {mode:'lab65'};
+
+				var SensorXYZ = {};
+				var SensorxyY = {};
+				var SensorRGB = {};
+				var SensorCCT;
+
+				var SampleXYZ = {};
+				var EmptySampleXYZ = {};
+
 				var swaction=0;
 				var ProtocolID=0;
 				var ProtocolData=[];
@@ -102,7 +119,7 @@
 						ReadingData[3]['Switch']='Sample';
 						ReadingData[3]['GPIO']='16';
 					ReadingData[4]=new Array();
-						ReadingData[4]['ColorSpace']='RGB';
+						ReadingData[4]['ColorSpace']='-';
 						ReadingData[4]['ColorSpaceValue1']='';
 						ReadingData[4]['ColorSpaceValue01']='';
 						ReadingData[4]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
@@ -112,28 +129,29 @@
 						ReadingData[4]['BeamAngle']='180';
 						ReadingData[4]['Thickness']='1.4';
 					ReadingData[5]=new Array();
-						ReadingData[5]['ColorSpace']='srgb';
+						ReadingData[5]['ColorSpace']='CIE-XYZ';
 						ReadingData[5]['ColorSpaceValue1']='';
 						ReadingData[5]['ColorSpaceValue01']='';
-						ReadingData[5]['ColorDifference']='';
 						ReadingData[5]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
 					ReadingData[6]=new Array();
-						ReadingData[6]['ColorSpace']="R'G'B'";
+						ReadingData[6]['ColorSpace']='CIE-xyY';
 						ReadingData[6]['ColorSpaceValue1']='';
 						ReadingData[6]['ColorSpaceValue01']='';
 						ReadingData[6]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
 					ReadingData[7]=new Array();
-						ReadingData[7]['ColorSpace']='CIE-XYZ';
+						ReadingData[7]['ColorSpace']='CIE-L*a*b*';
 						ReadingData[7]['ColorSpaceValue1']='';
 						ReadingData[7]['ColorSpaceValue01']='';
+						ReadingData[7]['ColorDifference']='';
 						ReadingData[7]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
 					ReadingData[8]=new Array();
-						ReadingData[8]['ColorSpace']='CIE-xyz';
+						ReadingData[8]['ColorSpace']='CIE-L*u*v*';
 						ReadingData[8]['ColorSpaceValue1']='';
 						ReadingData[8]['ColorSpaceValue01']='';
+						ReadingData[8]['ColorDifference']='';
 						ReadingData[8]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
 					ReadingData[9]=new Array();
-						ReadingData[9]['ColorSpace']='CIE-L*a*b*';
+						ReadingData[9]['ColorSpace']='sRGB';
 						ReadingData[9]['ColorSpaceValue1']='';
 						ReadingData[9]['ColorSpaceValue01']='';
 						ReadingData[9]['ColorDifference']='';
@@ -143,19 +161,44 @@
 						ReadingData[10]['ColorSpaceValue1']='';
 						ReadingData[10]['ColorSpaceValue01']='';
 						ReadingData[10]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
+					ReadingData[11]=new Array();
+						ReadingData[11]['ColorSpace']='Dominant λ';
+						ReadingData[11]['ColorSpaceValue1']='';
+						ReadingData[11]['ColorSpaceValue01']='';
+						ReadingData[11]['ColorSpaceReference']='D65/<var>2<sup>o</sup></var>';
 				var SensorData=new Array();
 					SensorData[0]=new Array();
-						SensorData[0]['Parameter']='<b>R</b><var><sub>Linear</sub></var>';
-						SensorData[0]['Intensity']='';
+						SensorData[0]['Parameter']='<b>CIE-XYZ</b>';
+						SensorData[0]['MeasuredValue']='';
+						SensorData[0]['ScaledValue']='<input type="checkbox" id="ScaleXYZ">';
 					SensorData[1]=new Array();
-						SensorData[1]['Parameter']='<b>G</b><var><sub>Linear</sub></var>';
-						SensorData[1]['Intensity']='';
+						SensorData[1]['Parameter']='<b>CIE-xyY</b>';
+						SensorData[1]['MeasuredValue']='';
+						SensorData[1]['ScaledValue']='<input type="checkbox" id="ScalexyY">';
 					SensorData[2]=new Array();
-						SensorData[2]['Parameter']='<b>B</b><var><sub>Linear</sub></var>';
-						SensorData[2]['Intensity']='';
+						SensorData[2]['Parameter']='<b>CIE-L*a*b*</b>';
+						SensorData[2]['MeasuredValue']='';
+						SensorData[2]['ScaledValue']='';
 					SensorData[3]=new Array();
-						SensorData[3]['Parameter']='<b>CCT</b><var><sub>Correlated Color Temperature</sub></var>';
-						SensorData[3]['Intensity']='';
+						SensorData[3]['Parameter']='<b>CIE-L*u*v*</b>';
+						SensorData[3]['MeasuredValue']='';
+						SensorData[3]['ScaledValue']='';
+					SensorData[4]=new Array();
+						SensorData[4]['Parameter']='<b>RGB</b>';
+						SensorData[4]['MeasuredValue']='';
+						SensorData[4]['ScaledValue']='<input type="checkbox" id="ScaleRGB">';
+					SensorData[5]=new Array();
+						SensorData[5]['Parameter']='<b>CCT</b> [K]';
+						SensorData[5]['MeasuredValue']='';
+						SensorData[5]['ScaledValue']='';
+					SensorData[6]=new Array();
+						SensorData[6]['Parameter']='<b>Dominant λ</b> [nm]';
+						SensorData[6]['MeasuredValue']='';
+						SensorData[6]['ScaledValue']='';
+					SensorData[7]=new Array();
+						SensorData[7]['Parameter']='<b>Nearest color(s)</b>';
+						SensorData[7]['MeasuredValue']='';
+						SensorData[7]['ScaledValue']='';
 				function loopDeLoop(e,s){
 					var a,l,o=0;
 					isNaN(s)&&(s=1),null==e&&(e=1e3);
@@ -168,26 +211,35 @@
 											try{o=s.Sensors[a].TaskValues[l].Value}catch(e){o=e.name}finally{
 												if("TypeError"!==o){
 													tempValue=s.Sensors[a].TaskValues[l].Value;
-													if(s.Sensors[a].TaskNumber==1){
+													if(s.Sensors[a].TaskNumber<3){
 														decimalsValue=s.Sensors[a].TaskValues[l].NrDecimals;
 														tempValue=parseFloat(tempValue).toFixed(decimalsValue);
-														SensorData[(s.Sensors[a].TaskValues[l].ValueNumber-1)]['Intensity']=tempValue;
-														if ($('#switch_2').prop('checked')===true) {
+														if (s.Sensors[a].TaskNumber==1) {
+//															SensorData[(s.Sensors[a].TaskValues[l].ValueNumber-1)]['MeasuredValue']=tempValue;
 															if (s.Sensors[a].TaskValues[l].ValueNumber==1) {
-																EmptySample_RGB.R = parseFloat(tempValue);
+																SensorXYZ.X = parseFloat(tempValue);
 															} else if (s.Sensors[a].TaskValues[l].ValueNumber==2) {
-																EmptySample_RGB.G = parseFloat(tempValue);
+																SensorXYZ.Y = parseFloat(tempValue);
 															} else if (s.Sensors[a].TaskValues[l].ValueNumber==3) {
-																EmptySample_RGB.B = parseFloat(tempValue);
+																SensorXYZ.Z = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==4) {
+																SensorCCT = parseFloat(tempValue);
 															}
-														}
-														if ($('#switch_3').prop('checked')===true) {
+														} else if (s.Sensors[a].TaskNumber==2 && $('#switch_2').prop('checked')===true) {
 															if (s.Sensors[a].TaskValues[l].ValueNumber==1) {
-																Sample_RGB.R = parseFloat(tempValue);
+																EmptySampleXYZ.X = parseFloat(tempValue);
 															} else if (s.Sensors[a].TaskValues[l].ValueNumber==2) {
-																Sample_RGB.G = parseFloat(tempValue);
+																EmptySampleXYZ.Y = parseFloat(tempValue);
 															} else if (s.Sensors[a].TaskValues[l].ValueNumber==3) {
-																Sample_RGB.B = parseFloat(tempValue);
+																EmptySampleXYZ.Z = parseFloat(tempValue);
+															}
+														} else if (s.Sensors[a].TaskNumber==2 && $('#switch_3').prop('checked')===true) {
+															if (s.Sensors[a].TaskValues[l].ValueNumber==1) {
+																SampleXYZ.X = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==2) {
+																SampleXYZ.Y = parseFloat(tempValue);
+															} else if (s.Sensors[a].TaskValues[l].ValueNumber==3) {
+																SampleXYZ.Z = parseFloat(tempValue);
 															}
 														}
 													} else {
@@ -211,12 +263,11 @@
 											}
 											e=s.TTL,
 											clearInterval(n),
-											$('#SensorTable').bootstrapTable('load', SensorData),
+											UpdateSensorData(),
 											AppendLogData(),
 											loopDeLoop(e,0)
 							}):console.log("Looks like there was a problem. Status Code: "+s.status)
 						}).catch(function(s){
-							console.log(s.message),e=5e3,clearInterval(n),loopDeLoop(e,0)
 						}),o=1
 					)},e)
 				}loopDeLoop(1e3,0);
@@ -265,10 +316,13 @@
 				$('#SensorTable').bootstrapTable('destroy').bootstrapTable({
 					columns: [{
 						field: 'Parameter',
-						title: '<var>Sensor<sub> Color parameter</sub></var>'
+						title: 'Sensor'
 					}, {
-						field: 'Intensity',
+						field: 'MeasuredValue',
 						title: 'Values'
+					}, {
+						field: 'ScaledValue',
+						title: 'Scale'
 					}],
 					data: SensorData
 				});
@@ -318,7 +372,7 @@
 					showFullscreen: true
 				});
 				$('#ReadingTable').bootstrapTable('filterBy', {
-					ColorSpace: ['RGB','srgb','CIE-XYZ','CIE-xyz','CIE-L*a*b*','CCT',"R'G'B'"]
+					ColorSpace: ['-','sRGB','CIE-XYZ','CIE-xyY','CIE-L*a*b*','CCT','Dominant λ']
 				});
 				$('#ReadingTableButtonReset').click(function () {
 					ResetReadingData();
@@ -329,129 +383,12 @@
 						ReadingData[i]['ColorSpaceValue01']='';
 						ReadingData[i]['ColorDifference']='';
 					}
-					Sample_sRGB = {mode:'rgb', r:null, g:null, b:null};
-					EmptySample_sRGB = {mode:'rgb', r:null, g:null, b:null};
 					$('#ReadingTable').bootstrapTable('load', ReadingData);
 				};
 				function ResetTransmissionReadingData() {
 					for (i = 4; i < 11; i++) {
 						ReadingData[i]['ColorSpaceValue1']='';
 						ReadingData[i]['ColorDifference']='';
-					}
-					Sample_sRGB = {mode:'rgb', r:null, g:null, b:null};
-					$('#ReadingTable').bootstrapTable('load', ReadingData);
-				};
-				function UpdateReadingData() {
-
-					if (EmptySample_RGB.R !== null) {
-						ReadingData[4]['ColorSpaceValue01']=printObject(culori.rgb(EmptySample_RGB));
-
-						var EmptySample_RGB_Sum = EmptySample_RGB.R + EmptySample_RGB.G + EmptySample_RGB.B;
-						EmptySample_sRGB.r = EmptySample_RGB.R / EmptySample_RGB_Sum;
-						EmptySample_sRGB.g = EmptySample_RGB.G / EmptySample_RGB_Sum;
-						EmptySample_sRGB.b = EmptySample_RGB.B / EmptySample_RGB_Sum;
-						ReadingData[5]['ColorSpaceValue01']=printObject(culori.rgb(EmptySample_sRGB));
-
-						EmptySample_sRGB_Gamma.R = Math.pow(EmptySample_sRGB.r, 1/2.4) * 255;
-						EmptySample_sRGB_Gamma.G = Math.pow(EmptySample_sRGB.g, 1/2.4) * 255;
-						EmptySample_sRGB_Gamma.B = Math.pow(EmptySample_sRGB.b, 1/2.4) * 255;
-						ReadingData[6]['ColorSpaceValue01']=printObject(EmptySample_sRGB_Gamma);
-
-						let EmptySample_XYZ65 = culori.xyz65(EmptySample_sRGB);
-						EmptySample_XYZ65.x = EmptySample_XYZ65.x * 100;
-						EmptySample_XYZ65.y = EmptySample_XYZ65.y * 100;
-						EmptySample_XYZ65.z = EmptySample_XYZ65.z * 100;
-						ReadingData[7]['ColorSpaceValue01']=printObject(EmptySample_XYZ65);
-
-//						let EmptySample_XYZ65 = {mode:'xyz65'};
-
-//EmptySample_XYZ65.x = EmptySample_XYZ_LED_B2.x * 0.8652435 + EmptySample_XYZ_LED_B2.y * 0.0000000 + EmptySample_XYZ_LED_B2.z * 0.0000000;
-//EmptySample_XYZ65.y = EmptySample_XYZ_LED_B2.x * 0.0000000 + EmptySample_XYZ_LED_B2.y * 1.0000000 + EmptySample_XYZ_LED_B2.z * 0.0000000;
-//EmptySample_XYZ65.z = EmptySample_XYZ_LED_B2.x * 0.0000000 + EmptySample_XYZ_LED_B2.y * 0.0000000 + EmptySample_XYZ_LED_B2.z * 3.0598005;
-
-// Transformation from LED-B2 to D65 XYZ
-//EmptySample_XYZ65.x = EmptySample_sRGB.r * 0.733884076 + EmptySample_sRGB.g * 0.300467409 + EmptySample_sRGB.b * 0.051640515;
-//EmptySample_XYZ65.y = EmptySample_sRGB.r * 0.378408977 + EmptySample_sRGB.g * 0.600934817 + EmptySample_sRGB.b * 0.020656206;
-//EmptySample_XYZ65.z = EmptySample_sRGB.r * 0.034400816 + EmptySample_sRGB.g * 0.100155803 + EmptySample_sRGB.b * 0.271973381;
-
-						let EmptySample_xyz65 = {mode:'xyz65'};
-
-// Transformation from Sensor to XYZ coordinates
-//Sample_xyz65.x = Sample_sRGB.r * 0.582692 + Sample_sRGB.g * 0.283233 + Sample_sRGB.b * 0.144560;
-//Sample_xyz65.y = Sample_sRGB.r * 0.382919 + Sample_sRGB.g * 0.525670 + Sample_sRGB.b * 0.134175;
-//Sample_xyz65.z = 1 - Sample_xyz65.x - Sample_xyz65.y;
-
-						EmptySample_xyz65.x = EmptySample_XYZ65.x / (EmptySample_XYZ65.x + EmptySample_XYZ65.y + EmptySample_XYZ65.z);
-						EmptySample_xyz65.y = EmptySample_XYZ65.y / (EmptySample_XYZ65.x + EmptySample_XYZ65.y + EmptySample_XYZ65.z);
-						EmptySample_xyz65.z = EmptySample_XYZ65.z / (EmptySample_XYZ65.x + EmptySample_XYZ65.y + EmptySample_XYZ65.z);
-						ReadingData[8]['ColorSpaceValue01']=printObject(EmptySample_xyz65);
-
-						ReadingData[9]['ColorSpaceValue01']=printObject(culori.lab65(EmptySample_sRGB));
-
-						var n = (EmptySample_xyz65.x - 0.3320) / (0.1858 - EmptySample_xyz65.y);
-						var cct = (449.0 * Math.pow(n, 3)) + (3525.0 * Math.pow(n, 2)) + (6823.3 * n) + 5520.33;
-						ReadingData[10]['ColorSpaceValue01']=parseFloat(cct).toFixed(0);
-					}
-					if (Sample_RGB.R !== null) {
-
-// Calibration
-Cal_RGB.R = Sample_RGB.R * 0.998343 + Sample_RGB.G * 0.024902 + Sample_RGB.B * 0.122276;
-Cal_RGB.G = Sample_RGB.R * 0.068253  + Sample_RGB.G * 1.161278 + Sample_RGB.B * -0.120453;
-Cal_RGB.B = Sample_RGB.R * 0.093917 + Sample_RGB.G * 0.046894 + Sample_RGB.B * 0.938157;
-
-Sample_RGB.R = Cal_RGB.R;
-Sample_RGB.G = Cal_RGB.G;
-Sample_RGB.B = Cal_RGB.B;
-
-						ReadingData[4]['ColorSpaceValue1']=printObject(culori.rgb(Sample_RGB));
-
-						Sample_RGB_Sum = Sample_RGB.R + Sample_RGB.G + Sample_RGB.B;
-						Sample_sRGB.r = Sample_RGB.R / Sample_RGB_Sum;
-						Sample_sRGB.g = Sample_RGB.G / Sample_RGB_Sum;
-						Sample_sRGB.b = Sample_RGB.B / Sample_RGB_Sum;
-						ReadingData[5]['ColorSpaceValue1']=printObject(culori.rgb(Sample_sRGB));
-
-						Sample_sRGB_Gamma.R = Math.pow(Sample_sRGB.r, 1/2.4) * 255;
-						Sample_sRGB_Gamma.G = Math.pow(Sample_sRGB.g, 1/2.4) * 255;
-						Sample_sRGB_Gamma.B = Math.pow(Sample_sRGB.b, 1/2.4) * 255;
-						ReadingData[6]['ColorSpaceValue1']=printObject(Sample_sRGB_Gamma);
-
-						let Sample_XYZ65 = culori.xyz65(Sample_sRGB);
-						Sample_XYZ65.x = Sample_XYZ65.x * 100;
-						Sample_XYZ65.y = Sample_XYZ65.y * 100;
-						Sample_XYZ65.z = Sample_XYZ65.z * 100;
-						ReadingData[7]['ColorSpaceValue1']=printObject(Sample_XYZ65);
-
-						let Sample_xyz65 = {mode:'xyz65'};
-						Sample_xyz65.x = Sample_XYZ65.x / (Sample_XYZ65.x + Sample_XYZ65.y + Sample_XYZ65.z);
-						Sample_xyz65.y = Sample_XYZ65.y / (Sample_XYZ65.x + Sample_XYZ65.y + Sample_XYZ65.z);
-						Sample_xyz65.z = Sample_XYZ65.z / (Sample_XYZ65.x + Sample_XYZ65.y + Sample_XYZ65.z);
-						ReadingData[8]['ColorSpaceValue1']=printObject(Sample_xyz65);
-
-						ReadingData[9]['ColorSpaceValue1']=printObject(culori.lab65(Sample_sRGB));
-
-						ReadingData[8]['ColorSpaceValue1']=printObject(Sample_xyz65);
-
-						var n = (Sample_xyz65.x - 0.3320) / (0.1858 - Sample_xyz65.y);
-						var cct = (449.0 * Math.pow(n, 3)) + (3525.0 * Math.pow(n, 2)) + (6823.3 * n) + 5520.33;
-						ReadingData[10]['ColorSpaceValue1']=parseFloat(cct).toFixed(0);
-					}
-					if (EmptySample_sRGB.r !== null && Sample_sRGB.r !== null) {
-
-						let differencergb = culori.differenceEuclidean();
-						Difference_sRGB['ΔC'] = differencergb(EmptySample_sRGB, Sample_sRGB);
-
-						let differenceCie1976 = culori.differenceCie76();
-						Difference_CIELAB['<var>CIE1976 ΔE<sup>*</sup><sub>ab</sub></var>'] = differenceCie1976(EmptySample_sRGB, Sample_sRGB);
-
-						let differenceCie1994 = culori.differenceCie94();
-						Difference_CIELAB['<var>CIE1994 ΔE<sup>*</sup><sub>94</sub></var>'] = differenceCie1994(EmptySample_sRGB, Sample_sRGB);
-
-						let differenceCie2000 = culori.differenceCiede2000();
-						Difference_CIELAB['<var>CIE2000 ΔE<sup>*</sup><sub>00</sub></var>'] = differenceCie2000(EmptySample_sRGB, Sample_sRGB);
-
-						ReadingData[5]['ColorDifference']=printObject(Difference_sRGB);
-						ReadingData[9]['ColorDifference']=printObject(Difference_CIELAB);
 					}
 					$('#ReadingTable').bootstrapTable('load', ReadingData);
 				};
@@ -570,16 +507,16 @@ Sample_RGB.B = Cal_RGB.B;
 							title: 'LED',
 							align: 'left'
 						}, {
-							field: 'R',
-							title: 'R',
+							field: 'CIE-XYZ',
+							title: 'CIE-XYZ',
 							align: 'right'
 						}, {
-							field: 'G',
-							title: 'G',
+							field: 'CIE-xyY',
+							title: 'CIE-xyY',
 							align: 'right'
 						}, {
-							field: 'B',
-							title: 'B',
+							field: 'CIE-L*a*b*',
+							title: 'CIE-L*a*b*',
 							align: 'right'
 						}, {
 							field: 'CCT',
@@ -605,33 +542,307 @@ Sample_RGB.B = Cal_RGB.B;
 					LogData = [{
 							'Timestamp': new Date().toLocaleString(),
 							'LED': $('#switch_4').prop('checked'),
-							'R': SensorData[0]['Intensity'],
-							'G': SensorData[1]['Intensity'],
-							'B': SensorData[2]['Intensity'],
-							'CCT': SensorData[3]['Intensity']
+							'CIE-XYZ': SensorData[0]['MeasuredValue'],
+							'CIE-xyY': SensorData[1]['MeasuredValue'],
+							'CIE-L*a*b*': SensorData[2]['MeasuredValue'],
+							'CCT': SensorData[5]['MeasuredValue']
 					}];
 					$('#LogTable').bootstrapTable('append', LogData);
 				};
-				window.onbeforeunload = function() {
-					return "Dude, are you sure you want to leave? Think of the kittens!";
+
+
+				$(document).ready(function(){
+					$('#RefWhite').trigger('change');
+					$('#RGBModel').trigger('change');
+					$('#Adaptation').trigger('change');
+					$('#ColorScale').trigger('change');
+				});
+				$('#RefWhite').change(function() {
+					SelectedRefWhite = parseInt($(this).prop('value'));
+					GetRefWhite(SelectedRefWhite);
+				});
+				$('#RGBModel').change(function() {
+					SelectedRGBModel = parseInt($(this).prop('value'));
+					GetRGBModel(SelectedRGBModel);
+				});
+				$('#Adaptation').change(function() {
+					SelectedAdaptationMethod = parseInt($(this).prop('value'));
+					GetAdaptation(SelectedAdaptationMethod);
+				});
+				$('#ColorScale').change(function() {
+					SelectedColorScale = parseInt($(this).prop('value'));
+				});
+				function UpdateSensorData() {
+
+					SensorXYZ.Reference = RefWhite.Name;
+					SensorxyY = XYZ2xyY(SensorXYZ);
+					SensorRGB = XYZ2RGB(SensorXYZ);
+
+					SensorData[0]['MeasuredValue'] = printObject(ScaleXYZ(SensorXYZ));
+					SensorData[1]['MeasuredValue'] = printObject(ScalexyY(SensorxyY));
+					SensorData[2]['MeasuredValue'] = printObject(XYZ2Lab(SensorXYZ));
+					SensorData[3]['MeasuredValue'] = printObject(XYZ2Luv(SensorXYZ));
+					SensorData[4]['MeasuredValue'] = printObject(ScaleRGB(SensorRGB));
+					SensorData[5]['MeasuredValue'] = "<pre>Robertson<span style='white-space: pre'>: "+XYZ2CCT(SensorXYZ)+"</br>McCamy   : "+XYZ2CCT_McCamy(SensorXYZ)+"</pre>";
+					SensorData[6]['MeasuredValue'] = CalcDomWavelength(SensorXYZ);
+					SensorData[7]['MeasuredValue'] = IndexColors(IodineColorIndex)(ConvertXYZ(SensorXYZ), 2).map(item => item.name);
+
+					$('#SensorTable').bootstrapTable('load', SensorData);
+					DrawCharts();
+				};
+				function UpdateReadingData() {
+
+					if (EmptySampleXYZ.x !== '') {
+						EmptySampleXYZ.Reference = RefWhite.Name;
+
+						ReadingData[5]['ColorSpaceValue01'] = printObject(ScaleXYZ(EmptySampleXYZ));
+						ReadingData[6]['ColorSpaceValue01'] = printObject(ScalexyY(XYZ2xyY(EmptySampleXYZ)));
+						ReadingData[7]['ColorSpaceValue01'] = printObject(XYZ2Lab(EmptySampleXYZ));
+						ReadingData[8]['ColorSpaceValue01'] = printObject(XYZ2Luv(EmptySampleXYZ));
+						ReadingData[9]['ColorSpaceValue01'] = printObject(ScaleRGB(XYZ2RGB(EmptySampleXYZ)));
+						ReadingData[10]['ColorSpaceValue01'] = "<pre>Robertson<span style='white-space: pre'>: "+XYZ2CCT(EmptySampleXYZ)+"</br>McCamy   : "+XYZ2CCT_McCamy(EmptySampleXYZ)+"</pre>";
+						ReadingData[11]['ColorSpaceValue01'] = CalcDomWavelength(EmptySampleXYZ);
+//				SensorData[7]['MeasuredValue'] = IndexColors(IodineColorIndex)(ConvertXYZ(SensorXYZ), 2).map(item => item.name);
+					}
+					if (SampleXYZ.x !== '') {
+						SampleXYZ.Reference = RefWhite.Name;
+
+						ReadingData[5]['ColorSpaceValue1'] = printObject(ScaleXYZ(SampleXYZ));
+						ReadingData[6]['ColorSpaceValue1'] = printObject(ScalexyY(XYZ2xyY(SampleXYZ)));
+						ReadingData[7]['ColorSpaceValue1'] = printObject(XYZ2Lab(SampleXYZ));
+						ReadingData[8]['ColorSpaceValue1'] = printObject(XYZ2Luv(SampleXYZ));
+						ReadingData[9]['ColorSpaceValue1'] = printObject(ScaleRGB(XYZ2RGB(SampleXYZ)));
+						ReadingData[10]['ColorSpaceValue1'] = "<pre>Robertson<span style='white-space: pre'>: "+XYZ2CCT(SampleXYZ)+"</br>McCamy   : "+XYZ2CCT_McCamy(SampleXYZ)+"</pre>";
+						ReadingData[11]['ColorSpaceValue1'] = CalcDomWavelength(SampleXYZ);
+//				SensorData[7]['MeasuredValue'] = IndexColors(IodineColorIndex)(ConvertXYZ(SensorXYZ), 2).map(item => item.name);
+					}
+					if (EmptySampleXYZ.x !== '' && SampleXYZ.x !== '') {
+
+						let Difference_RGB = {mode:$('#RGBModel').prop('value')};
+						let Difference_CIELAB = {mode:'lab65'};
+
+						let differencergb = culori.differenceEuclidean();
+						Difference_RGB['ΔC'] = differencergb(EmptySampleXYZ, SampleXYZ);
+
+						let differenceCie1976 = culori.differenceCie76();
+						Difference_CIELAB['<var>CIE1976 ΔE<sup>*</sup><sub>ab</sub></var>'] = differenceCie1976(EmptySampleXYZ, SampleXYZ);
+
+						let differenceCie1994 = culori.differenceCie94();
+						Difference_CIELAB['<var>CIE1994 ΔE<sup>*</sup><sub>94</sub></var>'] = differenceCie1994(EmptySampleXYZ, SampleXYZ);
+
+						let differenceCie2000 = culori.differenceCiede2000();
+						Difference_CIELAB['<var>CIE2000 ΔE<sup>*</sup><sub>00</sub></var>'] = differenceCie2000(EmptySampleXYZ, SampleXYZ);
+
+						ReadingData[7]['ColorDifference']=printObject(Difference_CIELAB);
+						ReadingData[9]['ColorDifference']=printObject(Difference_RGB);
+					}
+					$('#ReadingTable').bootstrapTable('load', ReadingData);
+				};
+
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback();
+
+				function DrawCharts() {
+
+					var sRGBCanvas = document.getElementById("sRGBCanvas");
+					var sRGBctx = sRGBCanvas.getContext("2d");
+					sRGBctx.fillStyle = SensorRGB.HEX;
+					sRGBctx.fillRect(0,0,400,150);
+
+					var CIExyChartData = new google.visualization.DataTable();
+					CIExyChartData.addColumn('number', '');
+					CIExyChartData.addColumn('number', 'Sensor');
+					CIExyChartData.addColumn('number', 'White Point (' + RefWhite.Name + ")");
+					CIExyChartData.addColumn('number', RGBModel.Name);
+					CIExyChartData.addColumn('number', RGBModel.Name);
+					CIExyChartData.addColumn('number', 'Planckian locus');
+					CIExyChartData.addColumn({type:'number', role:'annotation'});
+					CIExyChartData.addColumn('number', 'Spectrum locus');
+					CIExyChartData.addColumn({type:'number', role:'annotation'});
+					CIExyChartData.addRows([
+						[SensorxyY.x, SensorxyY.y, null, null, null, null, null, null, null],
+						[RefWhite.x, null, RefWhite.y, null, null, null, null, null, null],
+						[RGBModel.xr, null, null, RGBModel.yr, null, null, null, null, null],
+						[RGBModel.xg, null, null, RGBModel.yg, null, null, null, null, null],
+						[RGBModel.xb, null, null, RGBModel.yb, null, null, null, null, null],
+						[RGBModel.xb, null, null, null, RGBModel.yb, null, null, null, null],
+						[RGBModel.xr, null, null, null, RGBModel.yr, null, null, null, null],
+						[0.6528, null, null, null, null, 0.3445, 1000, null, null],
+						[0.5857, null, null, null, null, 0.3931, null, null, null],
+						[0.5267, null, null, null, null, 0.4133, 2000, null, null],
+						[0.4770, null, null, null, null, 0.4137, null, null, null],
+						[0.4369, null, null, null, null, 0.4041, 3000, null, null],
+						[0.3946, null, null, null, null, 0.3851, null, null, null],
+						[0.3608, null, null, null, null, 0.3635, 4500, null, null],
+						[0.3324, null, null, null, null, 0.3410, null, null, null],
+						[0.3135, null, null, null, null, 0.3236, 6500, null, null],
+						[0.2952, null, null, null, null, 0.3048, null, null, null],
+						[0.2806, null, null, null, null, 0.2883, 10000, null, null],
+						[0.1741, null, null, null, null, null, null, 0.0050, 380],
+						[0.1440, null, null, null, null, null, null, 0.0297, 460],
+						[0.0913, null, null, null, null, null, null, 0.1327, 480],
+						[0.0454, null, null, null, null, null, null, 0.2950, 490],
+						[0.0082, null, null, null, null, null, null, 0.5384, 500],
+						[0.0139, null, null, null, null, null, null, 0.7502, 510],
+						[0.0743, null, null, null, null, null, null, 0.8338, 520],
+						[0.1547, null, null, null, null, null, null, 0.8059, 530],
+						[0.2296, null, null, null, null, null, null, 0.7543, 540],
+						[0.3016, null, null, null, null, null, null, 0.6923, 550],
+						[0.3731, null, null, null, null, null, null, 0.6245, 560],
+						[0.4441, null, null, null, null, null, null, 0.5547, 570],
+						[0.5125, null, null, null, null, null, null, 0.4866, 580],
+						[0.5752, null, null, null, null, null, null, 0.4242, 590],
+						[0.6270, null, null, null, null, null, null, 0.3725, 600],
+						[0.6915, null, null, null, null, null, null, 0.3083, 620],
+						[0.7347, null, null, null, null, null, null, 0.2653, 700]
+					]);
+
+					let CIExyChartOptions = {
+						hAxis: {title: 'x', minValue: 0, maxValue: 0.8},
+						vAxis: {title: 'y', minValue: 0, maxValue: 0.9},
+						width: 533,
+						height: 600,
+						title: 'CIE 1931 Chromaticity Diagram',
+						backgroundColor: 'none',
+						annotations: {
+							textStyle: {
+								fontSize: 11,
+								opacity: 0.6
+							}
+						},
+						series: {
+							0:{type: 'line', color: 'black', visibleInLegend: true, lineWidth: 0, pointShape: { type: 'star', sides: 5, dent: 0.2 }, pointSize: 18},
+							1:{type: 'line', color: 'grey', visibleInLegend: true, lineWidth: 0, pointSize: 6},
+							2:{type: 'line', color: 'grey', visibleInLegend: true, lineWidth: 1},
+							3:{type: 'line', color: 'grey', visibleInLegend: false}, lineWidth: 1,
+							4:{type: 'line', color: 'blue', visibleInLegend: true, curveType: 'function'},
+							5:{type: 'line', color: 'black', visibleInLegend: true, curveType: 'function', lineWidth: 0}
+						}
+					};
+					var CIExyChart = new google.visualization.LineChart(document.getElementById('CIExyChart'));
+					CIExyChart.draw(CIExyChartData, CIExyChartOptions);
+					// This two lines are the ones that do the magic to load the background image to the proper chart position
+					var boundingBox = CIExyChart.getChartLayoutInterface().getChartAreaBoundingBox(); 
+					$('#CIExyChartBackground').css('background-position', boundingBox.left + "px " + boundingBox.top + "px").css('background-size', boundingBox.width + "px " + boundingBox.height + "px");
 				}
+
+				function IndexColors(ColorIndex) {
+					let ReferenceColors = Object.entries(ColorIndex).map(entry => {
+						let name = entry[0];
+						let values = entry[1].split(/\s*,\s*/);
+						let color = culori.lab65({
+							l: +values[0],
+							a: +values[1],
+							b: +values[2]
+						});
+						return {
+							name,
+							color
+						};
+					});
+					let nearestReferenceColors = culori.nearest(ReferenceColors, culori.differenceCie76(), item => item.color);
+					return nearestReferenceColors;
+				}
+
+				function ConvertXYZ({mode, X, Y, Z}) {
+					let res = {
+						x: X,
+						y: Y,
+						z: Z
+					}
+					return res;
+				}
+
+				function ScaleXYZ({Reference, X, Y, Z}) {
+					var Scale = ($('#ScaleXYZ').prop('checked') == false) ? 1.0 : 100.0;
+					var Digits = ($('#ScaleXYZ').prop('checked') == false) ? 6 : 4;
+
+					if ($('#ScaleXYZ').prop('checked')===true) {
+						SensorData[0]['ScaledValue']='<input id="ScaleXYZ" type="checkbox" checked="checked">';
+					} else {
+						SensorData[0]['ScaledValue']='<input id="ScaleXYZ" type="checkbox">';
+					}
+					let res = {
+						X: (Scale * X).toFixed(Digits),
+						Y: (Scale * Y).toFixed(Digits),
+						Z: (Scale * Z).toFixed(Digits),
+						Reference: Reference,
+						Scale: Scale
+					}
+					return res;
+				}
+
+				function ScalexyY({Reference, x, y, Y}) {
+					var Scale = ($('#ScalexyY').prop('checked') == false) ? 1.0 : 100.0;
+					var Digits = ($('#ScalexyY').prop('checked') == false) ? 6 : 4;
+
+					if ($('#ScalexyY').prop('checked')===true) {
+						SensorData[1]['ScaledValue']='<input id="ScalexyY" type="checkbox" checked="checked">';
+					} else {
+						SensorData[1]['ScaledValue']='<input id="ScalexyY" type="checkbox">';
+					}
+
+					let res = {
+						x: (x).toFixed(6),
+						y: (y).toFixed(6),
+						Y: (Scale * Y).toFixed(Digits),
+						Reference: Reference,
+						Scale: Scale
+					}
+					return res;
+				}
+
+				function ScaleRGB({Model, Reference, Adaptation, Gamma, HEX, R, G, B}) {
+					var Scale = ($('#ScaleRGB').prop('checked') == false) ? 1.0 : 255.0;
+					var Digits = ($('#ScaleRGB').prop('checked') == false) ? 6 : 4;
+
+					if ($('#ScaleRGB').prop('checked')===true) {
+						SensorData[4]['ScaledValue']='<input id="ScaleRGB" type="checkbox" checked="checked">';
+					} else {
+						SensorData[4]['ScaledValue']='<input id="ScaleRGB" type="checkbox">';
+					}
+
+					let res = {
+						R: (Scale * R).toFixed(Digits),
+						G: (Scale * G).toFixed(Digits),
+						B: (Scale * B).toFixed(Digits),
+						HEX: HEX,
+						Model: Model,
+						Reference: Reference,
+						Adaptation: Adaptation,
+						Gamma: Gamma,
+						Scale: Scale
+					}
+					return res;
+				}
+
 				function printObject(obj) {
 					var result = '';
 					var objValue;
 					for (var i in obj) {
 						if (obj.hasOwnProperty(i)) {
 							objValue=`${obj[i]}`;
-							var x = parseFloat(objValue).toFixed(4); 
-							if (isNaN(x)) {
-								var x;
-							} else {
-								objValue=x;
-							}
+//							var x = parseFloat(objValue).toFixed(4); 
+//							if (isNaN(x)) {
+//								var x;
+//							} else {
+//								objValue=x;
+//							}
 							result += `${i}`+': '+objValue+'</br>';
 						}
 					}
 					return result;
 				}
+
+				window.onbeforeunload = function() {
+					return "Dude, are you sure you want to leave? Think of the kittens!";
+				}
+
+				jQuery.event.special.mousewheel = {
+					setup: function( _, ns, handle ) {
+						this.addEventListener('mousewheel', handle, { passive: !ns.includes('noPreventDefault') });
+					}
+				};
 			});
 		</script>
 	</head>
@@ -885,8 +1096,148 @@ Sample_RGB.B = Cal_RGB.B;
 				</div>
 			</div>
 			</p>
+
 			<h4 class="mt-4 mb-4">Status</h4>
 			<table id="SensorTable"></table>
+
+			<p>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="RefWhite">Reference white</label>
+					</div>
+					<select class="form-control selectpicker show-tick" data-live-search="true" data-size="5" id="RefWhite">
+						<optgroup label="Standard illuminants for the 2 degree field of view (1931)">
+							<option value="0" data-subtext="2856 K° - Incandescent (Tungsten)">A/2°</option>
+							<option value="1" data-subtext="4874 K° - Direct sunlight at noon (obsolete)">B/2°</option>
+							<option value="2" data-subtext="6774 K° - North sky daylight (average) (obsolete)">C/2°</option>
+							<option value="3" data-subtext="5003 K° - Horizon light / ICC profile PCS"selected>D50/2°</option>
+							<option value="4" data-subtext="5503 K° - Mid-morning / Mid-afternoon daylight">D55/2°</option>
+							<option value="5" data-subtext="6504 K° - Noon daylight / Television, sRGB color space">D65/2°</option>
+							<option value="6" data-subtext="7504 K° - North sky daylight">D75/2°</option>
+							<option value="7" data-subtext="5454 K° - Equal energy">E/2°</option>
+							<option value="8" data-subtext="6430 K° - Daylight (fluorescent)">F1/2°</option>
+							<option value="9" data-subtext="4230 K° - Cool white (fluorescent)">F2/2°</option>
+							<option value="10" data-subtext="3450 K° - White (fluorescent)">F3/2°</option>
+							<option value="11" data-subtext="2940 K° - Warm white (fluorescent)">F4/2°</option>
+							<option value="12" data-subtext="6350 K° - Daylight (fluorescent)">F5/2°</option>
+							<option value="13" data-subtext="4150 K° - Light white (fluorescent)">F6/2°</option>
+							<option value="14" data-subtext="6500 K° - Daylight / D65 (Simulator)">F7/2°</option>
+							<option value="15" data-subtext="5000 K° - D50 (Simulator) / Sylvania F40 Design 50">F8/2°</option>
+							<option value="16" data-subtext="4150 K° - Cool white deluxe (fluorescent)">F9/2°</option>
+							<option value="17" data-subtext="5000 K° - Philips TL85 / Ultralume 50">F10/2°</option>
+							<option value="18" data-subtext="4000 K° - Philips TL84 / Ultralume 40">F11/2°</option>
+							<option value="19" data-subtext="3000 K° - Philips TL83 / Ultralume 30">F12/2°</option>
+							<option value="20" data-subtext="2733 K° - Phosphor-converted blue">LED-B1/2°</option>
+							<option value="21" data-subtext="2998 K° - Phosphor-converted blue">LED-B2/2°</option>
+							<option value="22" data-subtext="4103 K° - Phosphor-converted blue">LED-B3/2°</option>
+							<option value="23" data-subtext="5109 K° - Phosphor-converted blue">LED-B4/2°</option>
+							<option value="24" data-subtext="6598 K° - Phosphor-converted blue">LED-B5/2°</option>
+							<option value="25" data-subtext="2851 K° - Mixing of phosphor-converted blue LED and red LED (blue-hybrid)">LED-BH1/2°</option>
+							<option value="26" data-subtext="2840 K° - Mixing of red, green, and blue LEDs">LED-RGB1/2°</option>
+							<option value="27" data-subtext="2724 K° - Phosphor-converted violet">LED-V1/2°</option>
+							<option value="28" data-subtext="4070 K° - Phosphor-converted violet">LED-V2/2°</option>
+						</optgroup>
+						<optgroup label="Standard illuminants for the 10 degree field of view (1964)">
+							<option value="30" data-subtext="2856 K° - Incandescent (Tungsten)">A/10°</option>
+							<option value="31" data-subtext="4874 K° - Direct sunlight at noon (obsolete)">B/10°</option>
+							<option value="32" data-subtext="6774 K° - North sky daylight (average) (obsolete)">C/10°</option>
+							<option value="33" data-subtext="5003 K° - Horizon light / ICC profile PCS">D50/10°</option>
+							<option value="34" data-subtext="5503 K° - Mid-morning / Mid-afternoon daylight">D55/10°</option>
+							<option value="35" data-subtext="6504 K° - Noon daylight / Television, sRGB color space">D65/10°</option>
+							<option value="36" data-subtext="7504 K° - North sky daylight">D75/10°</option>
+							<option value="37" data-subtext="5454 K° - Equal energy">E/10°</option>
+							<option value="38" data-subtext="6430 K° - Daylight (fluorescent)">F1/10°</option>
+							<option value="39" data-subtext="4230 K° - Cool white (fluorescent)">F2/10°</option>
+							<option value="40" data-subtext="3450 K° - White (fluorescent)">F3/10°</option>
+							<option value="41" data-subtext="2940 K° - Warm white ((fluorescent))">F4/10°</option>
+							<option value="42" data-subtext="6350 K° - Daylight (fluorescent)">F5/10°</option>
+							<option value="43" data-subtext="4150 K° - Light white (fluorescent)">F6/10°</option>
+							<option value="44" data-subtext="6500 K° - Daylight / D65 (Simulator)">F7/10°</option>
+							<option value="45" data-subtext="5000 K° - D50 (Simulator) / Sylvania F40 Design 50">F8/10°</option>
+							<option value="46" data-subtext="4150 K° - Cool white deluxe (fluorescent)">F9/10°</option>
+							<option value="47" data-subtext="5000 K° - Philips TL85 / Ultralume 50">F10/10°</option>
+							<option value="48" data-subtext="4000 K° - Philips TL84 / Ultralume 40">F11/10°</option>
+							<option value="49" data-subtext="3000 K° - Philips TL83 / Ultralume 30">F12/10°</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="Adaptation">Adaptation method</label>
+					</div>
+					<select class="form-control selectpicker show-tick" data-size="5" id="Adaptation">
+						<option value="0" selected>Bradford</option>
+						<option value="1">Von Kries</option>
+						<option value="2">XYZ Scaling</option>
+						<option value="3">None</option>
+					</select>
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="RGBModel">RGB model</label>
+					</div>
+					<select class="form-control selectpicker show-tick" data-size="5" id="RGBModel">
+						<option value="0">Adobe RGB (1998)</option>
+						<option value="1">AppleRGB</option>
+						<option value="2">Best RGB</option>
+						<option value="3">Beta RGB</option>
+						<option value="4">Bruce RGB</option>
+						<option value="5">CIE RGB</option>
+						<option value="6">ColorMatch RGB</option>
+						<option value="7">Don RGB 4</option>
+						<option value="8">ECI RGB v2</option>
+						<option value="9">Ekta Space PS5</option>
+						<option value="10">NTSC RGB</option>
+						<option value="11">PAL/SECAM RGB</option>
+						<option value="12">ProPhoto RGB</option>
+						<option value="13">SMPTE-C RGB </option>
+						<option value="14" selected>sRGB</option>
+						<option value="15">Wide Gamut RGB</option>
+					</select>
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="ColorScale">Color scale</label>
+					</div>
+					<select class="form-control selectpicker show-tick" data-size="5" id="ColorScale">
+						<option value="0" selected>None</option>
+						<option value="1">Iodine Color Number</option>
+						<option value="2">Hazen/APHA/PtCo Color Number</option>
+						<option value="3">Gardner Color Number</option>
+						<option value="4">Lovibond Color System</option>
+						<option value="5">European Pharmacopoeia (EP) Color Determination</option>
+						<option value="6">US Pharmacopoeia (USP) Color Determination</option>
+						<option value="7">Chinese Pharmacopoeia (CP) Color Determination</option>
+						<option value="8">Klett Color Number</option>
+						<option value="9">Hess-Ives Color Number</option>
+						<option value="10">Yellowness Index (ASTM D1925)</option>
+						<option value="11">ADMI Color Number</option>
+						<option value="12">Acid Wash Color Determination</option>
+						<option value="13">EBC Brewery Color Number</option>
+						<option value="14">ASBC Brewery Color Number</option>
+						<option value="15">ASTM-Farbzahl</option>
+						<option value="16">Saybolt-Farbzahl</option>
+						<option value="17">ICUMSA Zuckerfarbe</option>
+						<option value="18">SAC436</option>
+					</select>
+				</div>
+			</p>
+
+			<div class="row">
+				<div class="col-md-8 offset-md-2 text-center">
+					<canvas id="sRGBCanvas" width="400" height="150" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 offset-md-2 text-center">
+					<div id="CIExyChartBackground" style="background-image: url('CIE.png'); background-repeat:no-repeat;">
+						<div id="CIExyChart"></div>
+					</div>
+				</div>
+			</div>
 
 			<h4 class="mt-4 mb-4">Readings</h4>
 			<div id="ReadingTableToolbar">

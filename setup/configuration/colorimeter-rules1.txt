@@ -1,0 +1,55 @@
+On System#Boot do
+  Let,1,0
+  Let,3,0						// Loop counter reset
+  Let,5,0						// Average value
+  Let,6,0
+  Let,7,0
+  Let,10,16						// Sample Switch GPIO
+  Let,11,12						// LED
+  Pulse,[INT#11],1,1000
+endon
+
+on ResetReadings do
+  TaskValueSet,%eventvalue1%,1,0
+  TaskValueSet,%eventvalue1%,2,0
+  TaskValueSet,%eventvalue1%,3,0
+endon
+
+on UpdateReadings do
+  TaskValueSet,2,%eventvalue1%,%eventvalue2%		// Intensity
+  if %eventvalue1%=3
+    GPIO,[INT#10],0					// Sample finished
+  endif
+endon
+
+on Sample#State=1 do
+  GPIO,[INT#11],1					// LED on
+  asyncevent,ResetReadings=2
+  Let,3,1
+  TaskRun,1
+endon
+
+on TCS34725#X do
+  if [INT#3]>0
+    Let,1,[INT#1]+1					// Loop counter
+    if [INT#1]>1 and [INT#1]<6				// Skip value 1
+      Let,5,[VAR#5]+[TCS34725#X]
+      Let,6,[VAR#6]+[TCS34725#Y]
+      Let,7,[VAR#7]+[TCS34725#Z]
+    elseif [INT#1]=6
+      Let,5,([VAR#5]+[TCS34725#X])/5			// Average for value 2,3,4,5,6
+      Let,6,([VAR#6]+[TCS34725#Y])/5
+      Let,7,([VAR#7]+[TCS34725#Z])/5
+      asyncevent,UpdateReadings=1,[VAR#5]
+      asyncevent,UpdateReadings=2,[VAR#6]
+      asyncevent,UpdateReadings=3,[VAR#7]
+      GPIO,[INT#11],0					// LED off
+      Let,3,0						// Exit
+      Let,1,0						// Loop counter reset
+      Let,5,0						// Average value
+      Let,6,0
+      Let,7,0
+    endif
+    TaskRun,1						// Loop
+  endif
+endon
