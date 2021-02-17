@@ -1,4 +1,4 @@
-![Banner](https://smartaquametering.github.io/images/banner.png)
+![Banner](https://smartaquametering.github.io/assets/images/banner.png)
 
 # smartPhotometer
 
