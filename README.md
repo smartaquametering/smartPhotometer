@@ -42,8 +42,9 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 
 <table>
 <tr>
-  <td colspan=6 align="center"><img src="./assets/light-spectrum.png" alt="Light spectrum">
-                               <img src="./assets/photometrie-spectrum.png" alt="Photometrie spectrum">
+  <td colspan=6 align="center"><img src="./assets/photometrie-spectrum.png" alt="Photometrie spectrum">
+                               <img src="./assets/colorimetrie-spectrum.png" alt="Colorimetriemetrie spectrum">
+                               <img src="./assets/colorimetrie-spectrum-2.png" alt="Colorimetriemetrie spectrum">
 </tr>
 <tr>
   <td colspan=6><sub><b>Ultraviolet radiation</b>
