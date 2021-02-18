@@ -272,7 +272,7 @@ Color parameters:
 
 <table>
 <tr>
-    <td><img src="./assets/solution-colored.png" alt="Colored solution">
+    <td><img src="./assets/solution-colored-2.png" alt="Colored solution">
     <td><img src="./assets/colorimetrie-principles.png" alt="Principles of colorimetrie">
 </tr>
 <tr>
