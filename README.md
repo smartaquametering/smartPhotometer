@@ -2,9 +2,11 @@
 
 # smartPhotometer
 
-Easy-to-use OpenSource LED photometers for measurement of the absorption of light at given ranges of wavelengths of colored or not colored substances in solution.
+Easy-to-use OpenSource LED spectrophotometers for **measurement of the absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
 
 smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 up to 850 nm.
+
+smartColorimeter allows **CIE compliant measurements of colors** and their transformation into various color spaces and color systems including the determination of **colour differences to common color indices/references** according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
 
 **Turbidity – a source of error**</br>
 The turbidity of a sample is often underestimated, because often it is not possible to see it visually.</br>
@@ -268,8 +270,10 @@ Die Werte X, Y und Z werden Normfarbwerte oder auch Tristimulus-Werte genannt.
 A colorimeter is generally any tool that characterizes color samples to provide an objective measure of color characteristics.
 
 Color parameters:
-- Conversions of color index and display in color space
-- Measuring of color difference against quality control standards
+- Conversions of color scales/index and display in color space
+- Measuring of color distance/difference against quality control standards
+
+#### Color Spaces
 
 <table>
 <tr>
@@ -360,11 +364,15 @@ Used for the assessment of surface colors</td>
 </tr>
 </table>
 
+#### Color Distance
+
+To determine color differences according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
+
 #### Visual Color Scales
 
-Saybolt color number +30 ... -16      
-Mineral oil color number 0 to 8      
-ICUMSA color index full 
+Color scales/indices are common and simple methods to determine the color of a sample.
+
+The sample is compared with a series of colored standards/references. The result corresponds to the standard with the most similar colors.
 
 <table>
 <tr>
