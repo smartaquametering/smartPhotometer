@@ -270,10 +270,14 @@ Die Werte X, Y und Z werden Normfarbwerte oder auch Tristimulus-Werte genannt.
 A colorimeter is generally any tool that characterizes color samples to provide an objective measure of color characteristics.
 
 Color parameters:
-- Conversions of color scales/index and display in color space
-- Measuring of color distance/difference against quality control standards
+- Conversions of measured color into various color spaces
+- Measuring of color distance/difference against quality control standards (e.g. color scales/indices/references)
 
 #### Color Spaces
+
+Normally, color spaces are three dimensional spaces with a color component on every axis. The colour of an object is defined by combining these three elements.
+
+The following color spaces are supported:
 
 <table>
 <tr>
@@ -368,9 +372,9 @@ Used for the assessment of surface colors</td>
 
 To determine color differences according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
 
-#### Visual Color Scales
+#### Color Scales
 
-Color scales/indices are common and simple methods to determine the color of a sample.
+Color scales/indices/references are common and simple methods to determine the color of a sample.
 
 The sample is compared with a series of colored standards/references. The result corresponds to the standard with the most similar colors.
 
@@ -486,28 +490,28 @@ B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
 (Extinction per meter optical path lenght [Ext/m]).</td>
 <td><sub><var>E<sub>436</sub></var></td>
 </tr>
-<tr>
-    <td colspan=4><img src="./assets/cie-lab-iodine-hazen-gardner.png" alt="Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system"></td>
-</tr>
-<tr>
-    <td colspan=4><img src="./assets/cie-lab-admi-hazen.png" alt="ADMI and Hazen color scales in CIE-L*a*b* colorimetric system"></td>
-</tr>
-<tr>
-    <td colspan=4><img src="./assets/cie-lab-ph-eur-color.png" alt="European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system"></td>
-</tr>
-<tr>
-    <td colspan=4><img src="./assets/cie-lab-usp-color.png" alt="US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system"></td>
-</tr>
-<tr>
-    <td colspan=4><img src="./assets/cie-lab-pprc-color.png" alt="Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system"></td>
-</tr>
-<tr>
-    <td colspan=4><img src="./assets/cie-lab-acid-color.png" alt="Acid Wash color scales in CIE-L*a*b* colorimetric system"></td>
-</tr>
-<tr>
-    <td colspan=4><img src="./assets/color-system-transmission-comparison.png" alt="Comparison of visual color systems with the Z-transmittances"></td>
-</tr>
 </table>
+
+##### Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system
+<img src="./assets/cie-lab-iodine-hazen-gardner.png" alt="Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system"></td>
+
+##### ADMI and Hazen color scales in CIE-L*a*b* colorimetric system</br>
+<img src="./assets/cie-lab-admi-hazen.png" alt="ADMI and Hazen color scales in CIE-L*a*b* colorimetric system"></td>
+
+##### ADMI and Hazen color scales in CIE-L*a*b* colorimetric system</br>
+<img src="./assets/cie-lab-ph-eur-color.png" alt="European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system"></td>
+
+##### US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system</br>
+<img src="./assets/cie-lab-usp-color.png" alt="US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system"></td>
+
+##### Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system</br>
+<img src="./assets/cie-lab-pprc-color.png" alt="Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system"></td>
+
+##### Acid Wash color scales in CIE-L*a*b* colorimetric system</br>
+<img src="./assets/cie-lab-acid-color.png" alt="Acid Wash color scales in CIE-L*a*b* colorimetric system"></td>
+
+##### Comparison of visual color systems with the Z-transmittances</br>
+<img src="./assets/color-system-transmission-comparison.png" alt="Comparison of visual color systems with the Z-transmittances"></td>
 
 ### Turbidity measurement
 
