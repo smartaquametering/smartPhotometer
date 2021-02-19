@@ -351,16 +351,6 @@ C* = √( <var>a*<sup>2</sup></var> + <var>b*<sup>2</sup></var> )</br>
 <td><sub>CIE-L*a*b* colorimetric system</td>
 </tr>
 <tr>
-<td><sub>ΔE*</br>
-</br>
-ΔE*wp: Color difference between the sample and water</br>
-ΔE*ws: Color difference between the standard solution and water</br>
-</br>
-ΔE*wp < ΔE*ws
-</td>
-<td><sub>CIE-L*a*b* difference values</td>
-</tr>
-<tr>
 <td><sub>Calculated from standard tristimulus values X, Y and Z, but with different equations</br>
 The color space is related to the CIE-Lab space in purpose, but differs in implementation</td>
 <td><sub>Hunter-Lab-values</br>
@@ -371,6 +361,19 @@ Used for the assessment of surface colors</td>
 #### Color Distance
 
 To determine color differences according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
+
+<table>
+<tr>
+<td><sub>ΔE*</br>
+</br>
+ΔE*wp: Color difference between the sample and water</br>
+ΔE*ws: Color difference between the standard solution and water</br>
+</br>
+ΔE*wp < ΔE*ws
+</td>
+<td><sub>CIE-L*a*b* difference values</td>
+</tr>
+</table>
 
 #### Color Scales
 
