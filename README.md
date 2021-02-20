@@ -501,7 +501,7 @@ B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
 ##### ADMI and Hazen color scales in CIE-L*a*b* colorimetric system</br>
 <img src="./assets/cie-lab-admi-hazen.png" alt="ADMI and Hazen color scales in CIE-L*a*b* colorimetric system"></td>
 
-##### ADMI and Hazen color scales in CIE-L*a*b* colorimetric system</br>
+##### European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system</br>
 <img src="./assets/cie-lab-ph-eur-color.png" alt="European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system"></td>
 
 ##### US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system</br>
