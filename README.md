@@ -513,6 +513,11 @@ B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
 ##### Acid Wash color scales in CIE-L*a*b* colorimetric system</br>
 <img src="./assets/cie-lab-acid-color.png" alt="Acid Wash color scales in CIE-L*a*b* colorimetric system"></td>
 
+##### Comparison of ASTM D1500 and ASTM D156 (Saybolt) color</br>
+<img src="./assets/astm-d1500-color-scale.png" alt="ASTM D1500 color scale"></td>
+<img src="./assets/astm-d1500-d156-1.png" alt="Comparison of ASTM D1500 and ASTM D156 (Saybolt) color"></td>
+<img src="./assets/astm-d1500-d156-2.png" alt="Comparison of ASTM D1500 and ASTM D156 (Saybolt) color"></td>
+
 ##### Comparison of visual color systems with the Z-transmittances</br>
 <img src="./assets/color-system-transmission-comparison.png" alt="Comparison of visual color systems with the Z-transmittances"></td>
 
