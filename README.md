@@ -495,31 +495,40 @@ B = 22,89 * ( <var>E<sub>460</sub></var> + <var>E<sub>470</sub></var> ) / 2</td>
 </tr>
 </table>
 
-##### Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system
-<img src="./assets/cie-lab-iodine-hazen-gardner.png" alt="Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system"></td>
+##### European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system (C°2, d=5cm)
+<img src="./assets/cie-lab-ph-eur-color.png" alt="European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system">
 
-##### ADMI and Hazen color scales in CIE-L*a*b* colorimetric system</br>
-<img src="./assets/cie-lab-admi-hazen.png" alt="ADMI and Hazen color scales in CIE-L*a*b* colorimetric system"></td>
+##### US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system (C°2, d=5cm)
+<img src="./assets/cie-lab-usp-color.png" alt="US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system">
 
-##### European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system</br>
-<img src="./assets/cie-lab-ph-eur-color.png" alt="European Pharmacopoeia (EP) color scales in CIE-L*a*b* colorimetric system"></td>
+##### Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system (C°2, d=5cm)
+<img src="./assets/cie-lab-pprc-color.png" alt="Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system">
 
-##### US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system</br>
-<img src="./assets/cie-lab-usp-color.png" alt="US Pharmacopoeia (USP) color scales in CIE-L*a*b* colorimetric system"></td>
+##### Acid Wash color scales in CIE-L*a*b* colorimetric system (C°2, d=5cm)
+<img src="./assets/cie-lab-acid-color.png" alt="Acid Wash color scales in CIE-L*a*b* colorimetric system">
 
-##### Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system</br>
-<img src="./assets/cie-lab-pprc-color.png" alt="Chinese Pharmacopoeia (CP) color scales in CIE-L*a*b* colorimetric system"></td>
+##### Comparison of ASTM D1500 and ASTM D156 (Saybolt) color
+<img src="./assets/astm-d1500-color-scale.png" alt="ASTM D1500 color scale">
+<img src="./assets/astm-d1500-d156-1.png" alt="Comparison of ASTM D1500 and ASTM D156 (Saybolt) color">
+<img src="./assets/astm-d1500-d156-2.png" alt="Comparison of ASTM D1500 and ASTM D156 (Saybolt) color">
 
-##### Acid Wash color scales in CIE-L*a*b* colorimetric system</br>
-<img src="./assets/cie-lab-acid-color.png" alt="Acid Wash color scales in CIE-L*a*b* colorimetric system"></td>
+##### Comparison of visual color systems with the Z-transmittances (C°2, d=1cm)
+<img src="./assets/color-system-transmission-comparison.png" alt="Comparison of visual color systems with the Z-transmittances">
 
-##### Comparison of ASTM D1500 and ASTM D156 (Saybolt) color</br>
-<img src="./assets/astm-d1500-color-scale.png" alt="ASTM D1500 color scale"></td>
-<img src="./assets/astm-d1500-d156-1.png" alt="Comparison of ASTM D1500 and ASTM D156 (Saybolt) color"></td>
-<img src="./assets/astm-d1500-d156-2.png" alt="Comparison of ASTM D1500 and ASTM D156 (Saybolt) color"></td>
+##### Iodine color number (C°2, d=1cm)
+<img src="./assets/cie-xyY-iodine.png" alt="Iodine color number (C°2, d=1cm)">
 
-##### Comparison of visual color systems with the Z-transmittances</br>
-<img src="./assets/color-system-transmission-comparison.png" alt="Comparison of visual color systems with the Z-transmittances"></td>
+##### Hazen number (C°2, measured with d=5cm, calculated to d=1cm)
+<img src="./assets/cie-xyY-hazen.png" alt="Hazen number (C°2, measured with d=5cm, calculated to d=1cm)">
+
+##### Gardner color scale (C°2, d=1cm)
+<img src="./assets/cie-xyY-gardner.png" alt="Gardner color scale (C°2, d=1cm)">
+
+##### Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system (C°2, d=1cm)
+<img src="./assets/cie-lab-iodine-hazen-gardner.png" alt="Iodine, Hazen and Gardner color scales in CIE-L*a*b* colorimetric system (C°2, d=1cm)">
+
+##### ADMI and Hazen color scales in CIE-L*a*b* colorimetric system (C°2, d=1cm)
+<img src="./assets/cie-lab-admi-hazen.png" alt="ADMI and Hazen color scales in CIE-L*a*b* colorimetric system">
 
 ### Turbidity measurement
 
