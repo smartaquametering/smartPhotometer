@@ -679,6 +679,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub><b>Color</b>
   <td colspan=4><sub><b>VIS SAC / Turbidity</b>
   <td colspan=2><sub><b>Turbidity</b>
+  <td colspan=2><sub><b>Full Spectrum SAC / Turbidity</b>
 </tr>
 <tr>
   <td>
@@ -689,9 +690,11 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>850 nm
   <td><sub>850 nm
   <td><sub>850 nm
+  <td><sub>UVA,VIS, 436 nm, NIR
+  <td><sub>850 nm
 </tr>
 <tr>
-  <td colspan=12><sub><img src="./assets/light-spectrum.png" alt="Light spectrum">
+  <td colspan=14><sub><img src="./assets/light-spectrum.png" alt="Light spectrum">
 </tr>
 <tr>
   <td>
@@ -700,6 +703,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>
   <td colspan=4><sub>
   <td colspan=2><sub>
+  <td><sub>UVA
+  <td><sub>
 </tr>
 <tr>
   <td>
@@ -709,6 +714,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td colspan=3><sub>VIS
   <td><sub>
   <td colspan=2><sub>
+  <td><sub>VIS
+  <td><sub>
 </tr>
 <tr>
   <td>
@@ -719,6 +726,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>IR
   <td><sub>IR
   <td><sub>IR
+  <td><sub>NIR
+  <td><sub>IR
 </tr>
 <tr>
   <td colspan=2><sub><b>Device</b>
@@ -726,6 +735,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub><b>smart-Colorimeter</b>
   <td colspan=4><sub><b>smart-RGB-Photometer</b>
   <td colspan=2><sub><b>smart-IR-Turbidimeter</b>
+  <td colspan=2><sub><b>smart-Spectrometer</b>
 </tr>
 <tr>
   <td>
@@ -735,6 +745,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td colspan=3><sub>Absorbance
   <td><sub>Nephelometric turbidity
   <td><sub>Absorbance
+  <td><sub>Nephelometric turbidity
+  <td><sub>Absorbance, Color index
   <td><sub>Nephelometric turbidity
 </tr>
 <tr>
@@ -746,17 +758,20 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>90
   <td><sub>180
   <td><sub>90
+  <td><sub>180
+  <td><sub>90
 </tr>
 <tr>
   <td>
   <td><sub>LED(s) and Sensor chip mounting height [mm]
-  <td colspan=8><sub>20.0
+  <td colspan=10><sub>20.0
 </tr>
 <tr>
   <td colspan=2><sub><b>Readings</b>
   <td>
   <td>
   <td colspan=4>
+  <td colspan=2>
   <td colspan=2>
 </tr>
 
@@ -771,6 +786,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>X
   <td><sub>X
   <td><sub>X
+  <td><sub>X
+  <td><sub>X
 </tr>
 <tr>
   <td>
@@ -778,6 +795,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td>
   <td><sub>RGB
   <td colspan=4>
+  <td colspan=2>
   <td colspan=2>
 </tr>
 <tr>
@@ -787,6 +805,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>X
   <td colspan=4>
   <td colspan=2>
+  <td colspan=2>
 </tr>
 <tr>
   <td colspan=2><sub><b>LED(s)</b>
@@ -795,6 +814,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td colspan=3><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A500/LL-509RGBC2E-006.pdf'>LL-509RGBC2E-006</a>
   <td><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
   <td colspan=2><sub>2 x <a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
+  <td><sub><a href='https://www.lighting.philips.de/api/assets/v1/file/PhilipsLighting/content/fp923874510103-pss-de_de/923874510103_EU.de_DE.PROF.FP.pdf'>7387 10W G4 6V 1CT/10X10F</a>
+  <td><sub><a href='https://cdn-reichelt.de/documents/datenblatt/A501/HIR383C-L289_ENG_TDS.pdf'>HIR383C-L289</a>
 </tr>
 <tr>
   <td>
@@ -806,6 +827,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>Blue
   <td><sub>IR
   <td><sub>IR
+  <td><sub>IR
+  <td><sub>Warm White
   <td><sub>IR
 </tr>
 <tr>
@@ -819,6 +842,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>
   <td><sub>
   <td><sub>
+  <td><sub>100
+  <td><sub>
 </tr>
 <tr>
   <td>
@@ -831,6 +856,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>
   <td><sub>
   <td><sub>
+  <td><sub>3200
+  <td><sub>
 </tr>
 <tr>
   <td>
@@ -842,6 +869,8 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>
   <td><sub>
   <td><sub>
+  <td><sub>
+  <td><sub>Halogen
   <td><sub>
 </tr>
 <tr>
