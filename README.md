@@ -2,9 +2,9 @@
 
 # smartPhotometer
 
-Easy-to-use OpenSource LED spectrophotometers for **measurement of the absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
+Easy-to-use OpenSource smartPhotometer/smartSpectrometer for **measurement of the transmission/absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
 
-smartPhotometer for analytics of aqueous solutions works with ultraviolet, visible and infrared light ranges, by wavelengths around 375 up to 850 nm.
+smartPhotometer/smartSpectrometer for analytics of aqueous solutions works with ultraviolet, visible and near infrared light ranges, by wavelengths around 330 up to 940 nm.
 
 smartColorimeter allows **CIE compliant measurements of colors** and their transformation into various color spaces and color systems including the determination of **colour differences to common color indices/references** according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
 
@@ -12,7 +12,7 @@ smartColorimeter allows **CIE compliant measurements of colors** and their trans
 The turbidity of a sample is often underestimated, because often it is not possible to see it visually.</br>
 **The nephelometric turbidity of a sample is measured and displayed for every single measurement automatically.**
 
-Due to their wide range of application, their reliability and robustness, smartPhotometers **can be perfectly used as portable analytical instruments for outdoor analytics**.
+Due to their wide range of application, their reliability and robustness, smartPhotometers/smartSpectrometers **can be perfectly used as portable analytical instruments for outdoor analytics**.
 
 **Your insurance for secure measurement results.**
 
@@ -125,14 +125,14 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 <tr>
   <td>
   <td><sub>> 780 nm
-  <td><sub>Infrared
+  <td><sub>(Near) Infrared
   <td><sub>Black
   <td><sub>Nephelometric turbidity measurement
 </tr>
 </table>
 
 ## Reducing complexity
-- by using **RGB, UV and IR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
+- by using **RGB, UV and NIR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
 - by the integration of various **digital light sensors orchestrated by simple microcontrollers**.
 - by distributing different analysis methods **on multiple meshed photometers**.
 - by the strict **segregation of data acquisition, processing, transmission, analytics and their visualisation** on different layers and devices.
@@ -679,7 +679,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub><b>Color</b>
   <td colspan=4><sub><b>VIS SAC / Turbidity</b>
   <td colspan=2><sub><b>Turbidity</b>
-  <td colspan=2><sub><b>Full Spectrum SAC / Turbidity</b>
+  <td colspan=2><sub><b>Spectrum SAC / Turbidity</b>
 </tr>
 <tr>
   <td>
@@ -690,7 +690,7 @@ Don't reinvent the wheel and **rely on agile open source communities**.
   <td><sub>850 nm
   <td><sub>850 nm
   <td><sub>850 nm
-  <td><sub>UVA,VIS, 436 nm, NIR
+  <td><sub>UVA, VIS, 436 nm, NIR
   <td><sub>850 nm
 </tr>
 <tr>
