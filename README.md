@@ -35,6 +35,15 @@ Due to their wide range of application, their reliability and robustness
   <td align="center">X
 </tr>
 <tr>
+  <td><b>smartTurbidiMeter</b>
+  <td align="center">X
+  <td align="center">
+  <td align="center">X
+  <td align="center">
+  <td align="center">
+  <td align="center">X
+</tr>
+<tr>
   <td><b>smartColoriMeter</b>
   <td align="center">
   <td align="center">
@@ -80,6 +89,12 @@ Due to the evolution and availability of **various types of LEDs** it is easily 
 - For a blue solution, a wavelength range near to yellow should be used (green LED), while for a yellow solution a blue LED should be used, since always the complementary color is absorbed.
 - The more closely the absorption maximum of the substance to be detected is approached, the higher the performance of the photometer will be.
 - The smaller the spectral bandwidth of the LED (the range between lower and upper wavelength), the higher the photometer resolution.
+
+### smartTurbidiMeter
+
+The photometric determination of turbidity at a wavelength of 850 nm only to circumvent additional absorption of color in the visible region (following DIN EN ISO 7027).
+
+- Double-beam measurement by using two independant IR light sources and optical paths
 
 ### smartColoriMeter
 
@@ -811,10 +826,10 @@ Don't reinvent the wheel and **rely on agile open source communities**.
 <tr>
   <td colspan=2><sub><b>Device</b>
   <td><sub><b>smart-UV-Photometer</b>
-  <td><sub><b>smart-Colorimeter</b>
-  <td colspan=4><sub><b>smart-RGB-Photometer</b>
-  <td colspan=2><sub><b>smart-IR-Turbidimeter</b>
-  <td colspan=2><sub><b>smart-Spectrometer</b>
+  <td><sub><b>smartColoriMeter</b>
+  <td colspan=4><sub><b>smart-PhotoMeter</b>
+  <td colspan=2><sub><b>smartTurbidiMeter</b>
+  <td colspan=2><sub><b>smartSpectroMeter</b>
 </tr>
 <tr>
   <td>
