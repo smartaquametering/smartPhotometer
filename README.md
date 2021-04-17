@@ -1,18 +1,25 @@
 ![Banner](https://smartaquametering.github.io/assets/images/banner.png)
 
-# smartPhotometer
+# smartPhotoMeter, smartColoriMeter and smartSpectroMeter
 
-Easy-to-use OpenSource smartPhotometer/smartSpectrometer for **measurement of the transmission/absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
+Easy-to-use OpenSource devices for **measurement of transmission/absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
 
-smartPhotometer/smartSpectrometer for analytics of aqueous solutions works with ultraviolet, visible and near infrared light ranges, by wavelengths around 330 up to 940 nm.
+- For analytics of aqueous solutions.
+- Works with ultraviolet, visible and near infrared light ranges, by wavelengths around 320 up to 950 nm.
 
-smartColorimeter allows **CIE compliant measurements of colors** and their transformation into various color spaces and color systems including the determination of **colour differences to common color indices/references** according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
+Allows **CIE compliant measurements of colors** and their transformation into various color spaces and color systems including the determination of **colour differences to common color indices/references** according to classic as well as modern standards (ΔE CIE 1976, ΔE CIE 1994, ΔE CIE 2000, ΔE CMC(1:1), ΔE CMC(2:1), ΔE DIN99).
 
 **Turbidity – a source of error**</br>
 The turbidity of a sample is often underestimated, because often it is not possible to see it visually.</br>
 **The nephelometric turbidity of a sample is measured and displayed for every single measurement automatically.**
 
-Due to their wide range of application, their reliability and robustness, smartPhotometers/smartSpectrometers **can be perfectly used as portable analytical instruments for outdoor analytics**.
+Due to their wide range of application, their reliability and robustness
+
+- smartPhotoMeter,
+- smartColoriMeter,
+- smartSpectroMeter
+
+**can be perfectly used as portable analytical instruments for outdoor analytics**.
 
 **Your insurance for secure measurement results.**
 
@@ -77,7 +84,7 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>400–435 nm
   <td><sub>Violet
   <td><sub>Yellow-Green
-  <td rowspan=9><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
+  <td rowspan=8><sub>Normal glass (soda-lime glass) cuvette</br>> 350 nm
   <td rowspan=8><sub>Anorganic compounds</br>by using calibrated test
 </tr>
 <tr>
@@ -123,18 +130,31 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
   <td><sub>Cyan (Blue-Green)
 </tr>
 <tr>
+  <td colspan=6><sub><b>Infrared radiation</b>
+</tr>
+<tr>
   <td>
-  <td><sub>> 780 nm
-  <td><sub>(Near) Infrared
-  <td><sub>Black
-  <td><sub>Nephelometric turbidity measurement
+  <td><sub>780-1400 nm
+  <td colspan=2><sub>IR-A (NIR)
+  <td rowspan=3><sub>
+	  <td rowspan=3><sub>Nephelometric turbidity measurement</br>Biological samples</br>Sectroscopic analysis of aqueous solutions
+</tr>
+<tr>
+  <td>
+  <td><sub>1400-3000 nm
+  <td colspan=2><sub>IR-B (SWIR)
+</tr>
+<tr>
+  <td>
+  <td><sub>3000 nm - 1 mm
+  <td colspan=2><sub>IR-C (MWIR, LWIR, FIR)
 </tr>
 </table>
 
 ## Reducing complexity
-- by using **RGB, UV and NIR LEDs for the parallel measurement of absorption and nephelometric turbidity** at different wavelengths.
-- by the integration of various **digital light sensors orchestrated by simple microcontrollers**.
-- by distributing different analysis methods **on multiple meshed photometers**.
+- by using low-voltage **RGB, UVA and IR-A LEDs** and **quartz halogen capsule lamps** (Quartz-UV Open).
+- by the integration of various **digital light and spectral sensors orchestrated by simple microcontrollers**.
+- by distributing different analysis methods **on multiple meshed devices**.
 - by the strict **segregation of data acquisition, processing, transmission, analytics and their visualisation** on different layers and devices.
 
 ## Being Smart - The difference
