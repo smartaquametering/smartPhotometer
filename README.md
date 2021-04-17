@@ -2,7 +2,7 @@
 
 # smartPhotoMeter, smartColoriMeter and smartSpectroMeter
 
-Easy-to-use OpenSource devices for **measurement of transmission/absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
+Easy-to-use OpenSource devices for **measurement of transmission, emission and absorption of light** at given ranges of wavelengths of colored or not colored substances in solution.
 
 - For analytics of aqueous solutions.
 - Works with ultraviolet, visible and near infrared light ranges, by wavelengths around 320 up to 950 nm.
@@ -15,15 +15,50 @@ The turbidity of a sample is often underestimated, because often it is not possi
 
 Due to their wide range of application, their reliability and robustness
 
-- smartPhotoMeter,
-- smartColoriMeter,
-- smartSpectroMeter
+<table>
+<tr>
+  <td>
+  <td>Transmission
+  <td>Emission
+  <td>Absorbance
+  <td>Colorimetric</br>analysis
+  <td>Spectral</br>analysis
+  <td>Nephelometric</br>turbidity
+</tr>
+<tr>
+  <td><b>smartPhotoMeter</b>
+  <td align="center">X
+  <td align="center">
+  <td align="center">X
+  <td align="center">
+  <td align="center">
+  <td align="center">X
+</tr>
+<tr>
+  <td><b>smartColoriMeter</b>
+  <td align="center">
+  <td align="center">
+  <td align="center">
+  <td align="center">X
+  <td align="center">
+  <td align="center">
+</tr>
+<tr>
+  <td><b>smartSpectroMeter</b>
+  <td align="center">X
+  <td align="center">X
+  <td align="center">X
+  <td align="center">X
+  <td align="center">X
+  <td align="center">X
+</tr>
+</table>
 
-**can be perfectly used as portable analytical instruments for outdoor analytics**.
+they **can be perfectly used as portable analytical instruments for outdoor analytics**.
 
 **Your insurance for secure measurement results.**
 
-## Electromagnetic radiation used for photometric analysis
+## Electromagnetic radiation used for photometric and spectrum analysis
 
 In simple terms, photometry is a measurement method for determining the concentration of colored solutions with the aid of electromagnetic radiation (“light”).
 
@@ -33,8 +68,11 @@ The two most common types of photometers are:
 - Filter photometer
 
 In spectrophotometers a monochromator (with prism or with grating) is used to obtain monochromatic light of defined wavelengths. They can also be used to scan the spectrum of the absorbing substance.
+Spectrum scans can be used for additional colorimetric analysis at a wavelength range from 360 nm to 830 nm.
 
 In filter photometers, optical filters are used to give the monochromatic light.
+
+### smartPhotoMeter
 
 Due to the evolution and availability of **various types of LEDs** it is easily possible **to obtain nearly monochromatic light with specific wavelength ranges** for respective measurements, but without the need to setup an complex and sensitive monochromator or filter mechanismn.
 
@@ -43,11 +81,32 @@ Due to the evolution and availability of **various types of LEDs** it is easily 
 - The more closely the absorption maximum of the substance to be detected is approached, the higher the performance of the photometer will be.
 - The smaller the spectral bandwidth of the LED (the range between lower and upper wavelength), the higher the photometer resolution.
 
+### smartColoriMeter
+
+An RGB sensor with **color sensing photodiodes** (red, green, blue) can be used **for colorimetric analysis**.
+
+An IR blocking filter, integrated on-chip and localized to the color sensing photodiodes, minimizes the IR spectral component of the incoming light and allows color measurements to be made accurately.
+
+### smartSpectroMeter
+
+Due to the evolution and availability of **various types of spectral sensors** it is easily possible **to measure the intensity of light at a specific wavelength range**, but without the need to setup an complex and sensitive monochromator or filter mechanismn.
+
+By using a low-voltage **quartz halogen capsule lamp** (Quartz-UV Open) and an **array of spectral sensors** a spectrum for the range of UVA, VIS and IR-A light can be obtained accurately.
+
+These spectral sensors have **20 independent on-device optical filters** whose spectral response is defined in a range **from 330 nm to 940 nm** with a Full Width Half
+Max (FWHM) of 20 nm.
+
+Spectrum scans can be used **for qualitative, quantitative and colorimetric analysis** at a wavelength range from 360 nm to 830 nm.
+
+### Cuvette
+
 The selection of an appropriate cuvette for each measurement is crucial. The material (depending on the wavelength) and size of the cuvette are the two key factors.
 
 - High-quality materials such as quartz are used in rectangular standard cuvettes for measurements in the UV range.
 - In addition to round and rectangular cuvettes, there are also special cuvettes, such as flow-through cuvettes, where the sample solution is passed into and out of the cuvette by a pump.
 - The size of the cuvette is directly related to the layer thickness that is effective in the Lambert-Beer law. Generally speaking, the larger the cuvette and the sample volume, the greater the layer thickness, and the more sensitive the measurement can be.
+
+### Setup options
 
 <table>
 <tr>
@@ -158,11 +217,11 @@ The selection of an appropriate cuvette for each measurement is crucial. The mat
 - by the strict **segregation of data acquisition, processing, transmission, analytics and their visualisation** on different layers and devices.
 
 ## Being Smart - The difference
-Connect the smartPhotometers microcontrollers (including their connected LED fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
+Connect all devices (Microcontroller including their connected LED/Halogen fireworks and light sensors) via WiFi to your internal network and orchestrate them by using simple web- or MQTT-based APIs.
 
 ![Networking](./assets/networking.png)
 
-Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the smartPhotometers.
+Any device (e.g. PC, Laptop, Tablet, smartPhone, ...) with a standard web browser can be used to access a simple web page on the microcontroller (MC).
 
 A Javascript application will start within your browser and is triggering and managing all analytis, evaluation of measured values and their visualisation.
 
