@@ -1,8 +1,14 @@
 # DIY Spectroscope with USB Webcam and Grating
 
-Origional Project: https://cults3d.com/en/3d-model/various/diy-spectroscope-with-usb-webcam-and-grating
+Origional Project:
 
-Design author:	Quas7 (https://cults3d.com/en/users/Quas7)
+- https://www.thingiverse.com/thing:3351995/comments
+- https://cults3d.com/en/3d-model/various/diy-spectroscope-with-usb-webcam-and-grating
+
+Design author: Quas7
+
+- https://www.thingiverse.com/Quas7/designs
+- https://cults3d.com/en/users/Quas7
 
 This is an optical spectroscope for near-UV to near-IR spectroscopy based on a CMOS webcam in conjunction with an optical grating (i.e. 1000 lines grating).
 It works with free software (for non-commercial use), like the very sophisticated SpectraGryph and the less complex Theremino Spectrometer v2.7 or with Public Lab online via spectralworkbench.org.
