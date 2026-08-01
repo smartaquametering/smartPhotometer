@@ -56,19 +56,19 @@ This provides full control over the 3D modelling process and enables the change 
   <td><sub><a href='./3d-printing/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Case.stl'>grating-Spectrometer-Case.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Case-Lid.stl'>grating-Spectrometer-Case-Lid.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Grating-Holder.stl'>grating-Spectrometer-Grating-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Lightslit-Holder.stl'>grating-Spectrometer-Lightslit-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-USB-Camera-Holder-AUSDOM1080p.stl'>grating-Spectrometer-USB-Camera-Holder-AUSDOM1080p.stl</a>
 </tr>
 </table>
 </br>
