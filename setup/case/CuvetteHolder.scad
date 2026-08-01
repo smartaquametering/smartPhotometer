@@ -44,13 +44,13 @@ Version history
 // smart-UV-Photometer
 // -------------------------------------------------------------------------
 // - UV-LED beam angle		: 180 Degree (Absorbance measurement)
-// - UV-Sensor              : VEML6070
+// - UV-Sensor						: VEML6070
 
-//sysmode = 1;									// UV-LED Photometer
-	sys11 = "UV-LED";							// Labeling back side
+//sysmode = 1;																// UV-LED Photometer
+	sys11 = "UV-LED";														// Labeling back side
 	sys12 = "Photometer";
 	sys13 = "Transmitted light";
-	sys14 = "";                                 // Labeling left side
+	sys14 = "";																	// Labeling left side
 	sys15 = "";
 	sys16 = "";
 
@@ -58,13 +58,13 @@ Version history
 // smart-Colorimeter
 // -------------------------------------------------------------------------
 // - RGB-LED beam angle		: 180 Degree (Absorbance measurement)
-// - RGB-Sensor             : Adafruit TCS34725
+// - RGB-Sensor						: Adafruit TCS34725
 
-//sysmode = 2;									// Colorimeter
-	sys21 = "RGB-LED";							// Labeling back side
+//sysmode = 2;																// Colorimeter
+	sys21 = "RGB-LED";													// Labeling back side
 	sys22 = "Photometer";
 	sys23 = "Transmitted light";
-	sys24 = "";                                 // Labeling left side
+	sys24 = "";																	// Labeling left side
 	sys25 = "";
 	sys26 = "";
 
@@ -72,14 +72,14 @@ Version history
 // smart-RGB-Photometer
 // -------------------------------------------------------------------------
 // - RGB-LED beam angle		: 180 Degree (Absorbance measurement)
-// - IR-LED beam angle		:  90 Degree (Nephelometric turbidity measurement)
+// - IR-LED beam angle		: 90 Degree (Nephelometric turbidity measurement)
 // - VIS and IR Sensor		: Adafruit TSL2591
 
-//sysmode = 3;									// RGB-LED Photometer
-	sys31 = "RGB-LED";							// Labeling back side
+//sysmode = 3;																// RGB-LED Photometer
+	sys31 = "RGB-LED";													// Labeling back side
 	sys32 = "Photometer";
 	sys33 = "Transmitted light";
-	sys34 = "IR-LED";							// Labeling left side
+	sys34 = "IR-LED";														// Labeling left side
 	sys35 = "Turbidimeter";
 	sys36 = "Scattered light";
 
@@ -87,212 +87,212 @@ Version history
 // smart-IR-Turbidimeter
 // -------------------------------------------------------------------------
 // - IR-LED beam angle		: 180 Degree (Absorbance measurement)
-// - IR-LED beam angle		:  90 Degree (Nephelometric turbidity measurement)
-// - IR Sensor              : Adafruit TSL2591
+// - IR-LED beam angle		: 90 Degree (Nephelometric turbidity measurement)
+// - IR Sensor						: Adafruit TSL2591
 
-//sysmode = 4;									// IR-LED Turbidimeter
-	sys41 = "IR-LED";							// Labeling back side
+//sysmode = 4;																// IR-LED Turbidimeter
+	sys41 = "IR-LED";														// Labeling back side
 	sys42 = "Photometer";
 	sys43 = "Transmitted light";
-	sys44 = "IR-LED";							// Labeling left side
+	sys44 = "IR-LED";														// Labeling left side
 	sys45 = "Turbidimeter";
 	sys46 = "Scattered light";
 
 // -------------------------------------------------------------------------
 // smart-Cuvette-Holder
 // -------------------------------------------------------------------------
-// - Beam angle             : 180 Degree (Absorbance measurement)
+// - Beam angle						: 180 Degree (Absorbance measurement)
 // - Toslink connectors		: 2x
 
-//sysmode = 5;									// Cuvette Holder
-	sys51 = "";							        // Labeling back side
+//sysmode = 5;																// Cuvette Holder
+	sys51 = "";																	// Labeling back side
 	sys52 = "";
 	sys53 = "";
-	sys54 = "";							        // Labeling left side
+	sys54 = "";																	// Labeling left side
 	sys55 = "";
 	sys56 = "";
     
 // -------------------------------------------------------------------------
 // smartPhotometer-Case-Lid
 // -------------------------------------------------------------------------
-//sysmode = 11;									// Case lid
+//sysmode = 11;																// Case lid
 
 // -------------------------------------------------------------------------
 // smartPhotometer-Cover-for-square-Cuvette
 // -------------------------------------------------------------------------
-//sysmode = 12;									// Cover for square cuvette
+//sysmode = 12;																// Cover for square cuvette
 
 // -------------------------------------------------------------------------
 // smartPhotometer-Cover-for-round-Cuvette
 // -------------------------------------------------------------------------
-//sysmode = 13;								    // Cover for round cuvette
+//sysmode = 13;																// Cover for round cuvette
 
 // -------------------------------------------------------------------------
 // smartSpectrometer-Grating-Holder
 // -------------------------------------------------------------------------
-//sysmode = 14;								    // Holder for grating
+//sysmode = 14;																// Holder for grating
 
 // -------------------------------------------------------------------------
 // smartSpectrometer-USB-Camera-Holder
 // -------------------------------------------------------------------------
-//sysmode = 15;								    // Holder for USB camera
+//sysmode = 15;																// Holder for USB camera
 
 // -------------------------------------------------------------------------
 // smartSpectrometer-Light-Slit-Holder
 // -------------------------------------------------------------------------
-//sysmode = 16;								    // Holder for light slit
+//sysmode = 16;																// Holder for light slit
 
 // -------------------------------------------------------------------------
 // smartSpectrometer-Case
 // -------------------------------------------------------------------------
-//sysmode = 17;								    // Case part 1
-//sysmode = 18;								    // Case part 2
+//sysmode = 17;																// Case part 1
+//sysmode = 18;																// Case part 2
 
 // -------------------------------------------------------------------------
 // smartLED-Array
 // -------------------------------------------------------------------------
-//sysmode = 21;								    // LED-Case part 1
-//sysmode = 22;								    // LED-Case part 2
-//sysmode = 23;								    // LED-Case part 3
-//sysmode = 24;								    // LED-Case part 4
-//sysmode = 25;								    // LED-Case part 5
-sysmode = 26;								    // LED-Case part 6
+//sysmode = 21;																// LED-Case part 1
+//sysmode = 22;																// LED-Case part 2
+//sysmode = 23;																// LED-Case part 3
+//sysmode = 24;																// LED-Case part 4
+//sysmode = 25;																// LED-Case part 5
+//sysmode = 26;																// LED-Case part 6
 
 // -------------------------------------------------------------------------
 // smartPhotometer-Case
 // -------------------------------------------------------------------------
-//casemode = 1;                                 // Case + Cuvette holder
-//casemode = 2;                                 // Cuvette holder only
+//casemode = 1;																// Case + Cuvette holder
+//casemode = 2;																// Cuvette holder only
 
 // -------------------------------------------------------------------------
 // Microcontroller
 // -------------------------------------------------------------------------
 
-mcbs	= "ESP32-WROOM-32 NodeMCU WLAN/WiFi";   // Labeling front side
-mcip	= "192.168.4.1";                        // Labeling case lid
+mcbs	= "ESP32-WROOM-32 NodeMCU WLAN/WiFi";		// Labeling front side
+mcip	= "192.168.4.1";												// Labeling case lid
 
 // -------------------------------------------------------------------------
 // Copyright
 // -------------------------------------------------------------------------
 
-cr1     = "Open Source";                        // Labeling right side
+cr1     = "Open Source";											// Labeling right side
 cr2     = "Smart, simple and easy";
 cr3     = "Made in Germany";
 
 // -------------------------------------------------------------------------
 
 // Cuvette
-cvmode	= 0;				    // 0:= Square cuvette , 1:= Round cuvette
-cvow	= 13.0;				    // Outer edge length		(X,Y)
-cvh     = 45.0;                 // Height                   (Z)
-//cvow	= 16.0;				    // Outer diameter           (X,Y)
-//cvh	= 160.0;                // Height                   (Z)
-cvoe	=  0.9;				    // Extra outer edge length / diameter
-cvhw    =  4.8;                 // Wall thickness cuvette holder
+cvmode	= 0;										// 0:= Square cuvette , 1:= Round cuvette
+cvow	= 13.0;										// Outer edge length		(X,Y)
+cvh     = 45.0;									// Height                   (Z)
+//cvow	= 16.0;									// Outer diameter           (X,Y)
+//cvh	= 160.0;									// Height                   (Z)
+cvoe	=  0.9;										// Extra outer edge length / diameter
+cvhw    =  4.8;									// Wall thickness cuvette holder
 
-cvw	= cvow+cvoe;			    // Total outer edge length / diameter
-cvhh     = cvh-7.5;             // Holder height            (Z)
+cvw	= cvow+cvoe;								// Total outer edge length / diameter
+cvhh     = cvh-7.5;							// Holder height            (Z)
 
 // Microcontroller
-mch     = 50.0;				    // Height (board, plugs and cables)	(X)
-mcl     = 55.0;				    // Length				(Y)
-mcw     = 28.0;				    // Width				(Z)
-mcbh	=  6.0;				    // Height (MC board only)		(Y)
-mcbhl	=  2.0;				    // Length of board holder
-mcbbh	=  4.0;			        // Height of board base (height adjustment)
+mch     = 50.0;									// Height (board, plugs and cables)	(X)
+mcl     = 55.0;									// Length				(Y)
+mcw     = 28.0;									// Width				(Z)
+mcbh	=  6.0;										// Height (MC board only)		(Y)
+mcbhl	=  2.0;										// Length of board holder
+mcbbh	=  4.0;										// Height of board base (height adjustment)
 
 // USB port
-usbw	=  8.0;				    // Width	(X)
-usbh	= 11.0;				    // Height	(Z)
-usbd	=  0.4;				    // Depth	(Y)
+usbw	=  8.0;										// Width	(X)
+usbh	= 11.0;										// Height	(Z)
+usbd	=  0.4;										// Depth	(Y)
 
 // Sensors
-sbid	= 20.0;				    // Installation depth of sensor board (incl. board, plugs and cables)	(Y)
+sbid	= 20.0;										// Installation depth of sensor board (incl. board, plugs and cables)	(Y)
 
 // Sensor - Adafruit TSL2591
-sbh1	= 16.5;				    // Height of sensor board - measured from bottom edge			(X)
-sbw1	= 19.0;				    // Width of sensor board - measured from side edge			(Z)
-sbd1	=  3.5;				    // Depth of sensor board						(Y)
-scb1	=  9.4;				    // Distance between center of sensor chip and board bottom edge		(X)
-scr1	=  9.4;				    // Distance between center of sensor chip and board right side edge	(Z)
-scd1	=  4.0;				    // Pinhole diameter for sensor chip
+sbh1	= 16.5;										// Height of sensor board - measured from bottom edge			(X)
+sbw1	= 19.0;										// Width of sensor board - measured from side edge			(Z)
+sbd1	=  3.5;										// Depth of sensor board						(Y)
+scb1	=  9.4;										// Distance between center of sensor chip and board bottom edge		(X)
+scr1	=  9.4;										// Distance between center of sensor chip and board right side edge	(Z)
+scd1	=  4.0;										// Pinhole diameter for sensor chip
 
-sb11	= "Sensor";			    // Labeling front side
+sb11	= "Sensor";			 					// Labeling front side
 sb12	= "TSL2591";
 
 // Sensor - Adafruit TCS34725
-sbh2	= 20.3;				    // Height of sensor board - measured from bottom edge			(X)
-sbw2	= 20.3;				    // Width of sensor board - measured from side edge			(Z)
-sbd2	=  3.0;				    // Depth of sensor board						(Y)
-scb2	=  9.4;				    // Distance between center of sensor chip and board bottom edge		(X)
-scr2	= 11.5;				    // Distance between center of sensor chip and board right side edge	(Z)
-scd2	=  4.0;				    // Pinhole diameter for sensor chip
+sbh2	= 20.3;										// Height of sensor board - measured from bottom edge			(X)
+sbw2	= 20.3;										// Width of sensor board - measured from side edge			(Z)
+sbd2	=  3.0;										// Depth of sensor board						(Y)
+scb2	=  9.4;										// Distance between center of sensor chip and board bottom edge		(X)
+scr2	= 11.5;										// Distance between center of sensor chip and board right side edge	(Z)
+scd2	=  4.0;										// Pinhole diameter for sensor chip
 
-sb21	= "Sensor";			    // Labeling front side
+sb21	= "Sensor";								// Labeling front side
 sb22	= "TCS34725";
 
 // Sensor - VEML6070
-sbh3	= 12.0;				    // Height of sensor board - measured from bottom edge			(X)
-sbw3	= 13.0;				    // Width of sensor board - measured from side edge			(Z)
-sbd3	=  2.9;				    // Depth of sensor board						(Y)
-scb3	=  5.0;				    // Distance between center of sensor chip and board bottom edge		(X)
-scr3	=  6.5;				    // Distance between center of sensor chip and board right side edge	(Z)
-scd3	=  4.0;				    // Pinhole diameter for sensor chip
+sbh3	= 12.0;										// Height of sensor board - measured from bottom edge			(X)
+sbw3	= 13.0;										// Width of sensor board - measured from side edge			(Z)
+sbd3	=  2.9;										// Depth of sensor board						(Y)
+scb3	=  5.0;										// Distance between center of sensor chip and board bottom edge		(X)
+scr3	=  6.5;										// Distance between center of sensor chip and board right side edge	(Z)
+scd3	=  4.0;										// Pinhole diameter for sensor chip
 
-sb31	= "Sensor";			    // Labeling front side
+sb31	= "Sensor";								// Labeling front side
 sb32	= "VEML6070";
 
 // LEDs
-ledh	= 20.0;				    // Installation height
+ledh	= 20.0;										// Installation height
 
-led1l	=  8.5;				    // Length
-led1w	=  5.4;				    // Width (Diameter)
-led1p	= 13.5;				    // Length plugs
-led1t	= led1l+led1p;          // Length total (incl. plugs)
-led1m	= led1l+led1t;          // Mounting depth
+led1l	=  8.5;										// Length
+led1w	=  5.4;										// Width (Diameter)
+led1p	= 13.5;										// Length plugs
+led1t	= led1l+led1p;						// Length total (incl. plugs)
+led1m	= led1l+led1t;						// Mounting depth
 
-led2l	=  8.5;				    // Length
-led2w	=  5.6;				    // Width (Diameter)
-led2p	= 13.5;				    // Length plugs
-led2t	= led2l+led2p;          // Length total (incl. plugs)
-led2m	= led2l+led2t;          // Mounting depth
+led2l	=  8.5;										// Length
+led2w	=  5.6;										// Width (Diameter)
+led2p	= 13.5;										// Length plugs
+led2t	= led2l+led2p;						// Length total (incl. plugs)
+led2m	= led2l+led2t;						// Mounting depth
 
 // Toslink connector
-tfy     = 2.25;                 // Fiber length                 [Y]
-tfd     = 2.5 + 0.1;            // Fiber diameter               [X, Y, Z]
+tfy     = 2.25;									// Fiber length                 [Y]
+tfd     = 2.5 + 0.1;						// Fiber diameter               [X, Y, Z]
 
-tcy     = 7.25;                 // Connector width              [Y]
-tcz     = 6.0 + 0.1;            // Connector height             [Z]
-tcx     = 6.5 + 0.1;            // Connector length             [X]
-tch     = tcy+1.2;              // Toslink connector height
+tcy     = 7.25;									// Connector width              [Y]
+tcz     = 6.0 + 0.1;						// Connector height             [Z]
+tcx     = 6.5 + 0.1;						// Connector length             [X]
+tch     = tcy+1.2;							// Toslink connector height
 
-tce     = tcz/4;                // Connector edge
+tce     = tcz/4;								// Connector edge
 
-tcs     = 1.5;                  // Connector snapper (radius)
+tcs     = 1.5;									// Connector snapper (radius)
 
 // smartSpectrometer - Holder for light slit
-lshx    = 43.0;                 // Light slit holder            [X]
-lshy    =  2.2;                 // Light slit holder            [Y]
-lshz    = 43.0;                 // Light slit holder            [Z]
+lshx    = 43.0;									// Light slit holder            [X]
+lshy    =  2.2;									// Light slit holder            [Y]
+lshz    = 43.0;									// Light slit holder            [Z]
 
-lsfx    =  5.8;                 // Light slit frame length      [X]
-lsfy    =  4.0;                 // Light slit frame width       [Y]
+lsfx    =  5.8;									// Light slit frame length      [X]
+lsfy    =  4.0;									// Light slit frame width       [Y]
 
-lspx    = lshx/2;               // Light slit focus position    [X]
-lspy    = lshy+lsfy+cvhw+cvw/2; // Light slit focus position    [Y]
-lspz    = lshz/2;               // Light slit focus position    [Z]
+lspx    = lshx/2;								// Light slit focus position    [X]
+lspy    = lshy+lsfy+cvhw+cvw/2;	// Light slit focus position    [Y]
+lspz    = lshz/2;								// Light slit focus position    [Z]
 
 // Screw connection for grating and USB camera holders
-hscd    = 2.75;                 // Screw diameter
+hscd    = 2.75;									// Screw diameter
 
 // Grating holder
-gix     = 36.0;                 // Grating inlet length         [X]
-giz     = 25.0;                 // Grating inlet high           [Z]
+gix     = 36.0;									// Grating inlet length         [X]
+giz     = 25.0;									// Grating inlet high           [Z]
 
-gfx     = 51.0;                 // Grating frame length         [X]
-gfy     =  1.75;                // Grating frame width          [Y]
-//gfz     = 51.0;               // Grating frame high           [Z]
-gfz     = 41.0;                 // Grating frame high           [Z]
+gfx     = 51.0;									// Grating frame length         [X]
+gfy     =  1.75;								// Grating frame width          [Y]
+//gfz     = 51.0;								// Grating frame high           [Z]
+gfz     = 41.0;									// Grating frame high           [Z]
 
 ghx     = gfx+4*gfy;            // Grating holder               [X]
 ghy     = 5*gfy;                // Grating holder               [Y]
@@ -1420,67 +1420,65 @@ for (i = [0:number-1]) {
 		translate([i*(wo+cw+wo+3),0*(wo+cl+wo+3),0]) case(sbid,sbd1,sbh1,sbw1,scb1,scr1,scd1,sys41,sys42,sys43,sb11,sb12,mcbs,sys44,sys45,sys46,cr1,cr2,cr3);
 	}
 	if (sysmode==5) {
-        // Cuvette-Holder - Beam angle 180 Degree (Absorbance measurement)
-        // - Cover for square cuvette
-        // - Toslink connectors		: 2x
-        cuvetteholdertoslink();
+		// Cuvette-Holder - Beam angle 180 Degree (Absorbance measurement)
+		// - Cover for square cuvette
+		// - Toslink connectors		: 2x
+		cuvetteholdertoslink();
 	}
 	if (sysmode==11) {
 		// smartPhotometer - Case lid
-        translate([i*(wo+cw+wo+3),1*(wo+cl+wo+3),0]) lid(mcip);
+		translate([i*(wo+cw+wo+3),1*(wo+cl+wo+3),0]) lid(mcip);
 	}
 	if (sysmode==12) {
 		// smartPhotometer - Cover for square cuvette
-        translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoversquare(cctw, ccwi, cchi);
+		translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoversquare(cctw, ccwi, cchi);
 	}
 	if (sysmode==13) {
 		// smartPhotometer - Cover for round cuvette
-        //translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoverround(cctw, ccwi, cchi);
+		//translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoverround(cctw, ccwi, cchi);
 	}
 	if (sysmode==14) {
 		// smartSpectrometer - Holder for grating
-        translate([0,0,0]) gratingholder();
+		translate([0,0,0]) gratingholder();
 	}
 	if (sysmode==15) {
 		// smartSpectrometer - Holder for USB camera
-        translate([0,0,0]) cameraholder();
+		translate([0,0,0]) cameraholder();
 	}
 	if (sysmode==16) {
 		// smartSpectrometer - Holder for light slit
-        translate([0,0,0]) lightslitholder();
+		translate([0,0,0]) lightslitholder();
 	}
  	if (sysmode==17) {
 		// smartSpectrometer - Case part 1
-        translate([0,0,0]) spectrometercasepart1();
+		translate([0,0,0]) spectrometercasepart1();
 	}
 	if (sysmode==18) {
 		// smartSpectrometer - Case part 2
-        translate([0,0,0]) spectrometercasepart2();
+		translate([0,0,0]) spectrometercasepart2();
 	}
-    if (sysmode==21) {
+	if (sysmode==21) {
 		// smartSpectrometer - LED Case part 1
-        translate([0,0,0]) spectrometerledcasepart1();
+		translate([0,0,0]) spectrometerledcasepart1();
 	}
-    if (sysmode==22) {
+	if (sysmode==22) {
 		// smartSpectrometer - LED Case part 2
-        translate([0,0,0]) spectrometerledcasepart2();
+		translate([0,0,0]) spectrometerledcasepart2();
 	}
-    if (sysmode==23) {
+	if (sysmode==23) {
 		// smartSpectrometer - LED Case part 3
-        translate([0,0,0]) spectrometerledcasepart3();
+		translate([0,0,0]) spectrometerledcasepart3();
 	}
     if (sysmode==24) {
 		// smartSpectrometer - LED Case part 4
         translate([0,0,0]) spectrometerledcasepart4();
 	}
-    if (sysmode==25) {
+	if (sysmode==25) {
 		// smartSpectrometer - LED Case part 5
-        translate([0,0,0]) spectrometerledcasepart5();
+		translate([0,0,0]) spectrometerledcasepart5();
 	}
-    if (sysmode==26) {
+	if (sysmode==26) {
 		// smartSpectrometer - LED Case part 6
-        translate([0,0,0]) spectrometerledcasepart6();
+		translate([0,0,0]) spectrometerledcasepart6();
 	}
 }
-
-
