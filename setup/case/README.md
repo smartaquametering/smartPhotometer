@@ -35,8 +35,8 @@ This provides full control over the 3D modelling process and enables the change 
   <td colspan=8><sub>0.2
 </tr>
 <tr>
-  <td rowspan=11>
-  <td rowspan=11><sub>STL exports
+  <td rowspan=13>
+  <td rowspan=13><sub>STL exports
   <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
   <td colspan=2><sub><a href='./3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
@@ -62,13 +62,19 @@ This provides full control over the 3D modelling process and enables the change 
   <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Case-Lid.stl'>grating-Spectrometer-Case-Lid.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Grating-Holder.stl'>grating-Spectrometer-Grating-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer-Lightslit-Holder.stl'>grating-Spectrometer-Lightslit-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-Lightslit-Holder.stl'>grating-Spectrometer-Lightslit-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Grating-Holder.stl'>smart-Spectrometer-Grating-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/grating-Spectrometer-USB-Camera-Holder-AUSDOM1080p.stl'>grating-Spectrometer-USB-Camera-Holder-AUSDOM1080p.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Lightslit-Cuvette-Holder.stl'>smart-Spectrometer-Lightslit-Cuvette-Holder.stl.stl</a>
+</tr>
+<tr>
+  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-USB-Camera-Holder.stl'>smart-Spectrometer-USB-Camera-Holder.stl</a>
+</tr>
+<tr>
+  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Lightslit-Holder.stl'>smart-Spectrometer-Lightslit-Holder.stl</a>
 </tr>
 
 <tr>
