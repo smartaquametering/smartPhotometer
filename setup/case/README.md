@@ -37,7 +37,7 @@ This provides full control over the 3D modelling process and enables the change 
 <tr>
   <td rowspan=5>
   <td rowspan=5><sub>STL exports
-  <td colspan=5><sub><a href='./3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
+  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
   <td colspan=2><sub><a href='./3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
   <td><sub><a href='./3d-printing/smart-Colorimeter-Case.stl'>smart-Colorimeter-Case.stl</a>
