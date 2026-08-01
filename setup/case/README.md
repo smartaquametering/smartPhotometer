@@ -35,8 +35,8 @@ This provides full control over the 3D modelling process and enables the change 
   <td colspan=8><sub>0.2
 </tr>
 <tr>
-  <td rowspan=5>
-  <td rowspan=5><sub>STL exports
+  <td rowspan=9>
+  <td rowspan=9><sub>STL exports
   <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
   <td colspan=2><sub><a href='./3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
@@ -56,19 +56,19 @@ This provides full control over the 3D modelling process and enables the change 
   <td><sub><a href='./3d-printing/smart-Colorimeter-Cuvette-Holder.stl'>smart-Colorimeter-Cuvette-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-RGB-Photometer-Cuvette-Holder.stl'>smart-RGB-Photometer-Cuvette-Holder.stl</a>
 </tr>
 </table>
 </br>
