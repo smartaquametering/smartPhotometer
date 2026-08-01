@@ -35,8 +35,8 @@ This provides full control over the 3D modelling process and enables the change 
   <td colspan=8><sub>0.2
 </tr>
 <tr>
-  <td rowspan=13>
-  <td rowspan=13><sub>STL exports
+  <td rowspan=14>
+  <td rowspan=14><sub>STL exports
   <td colspan=4><sub><a href='./3d-printing/smart-RGB-Photometer-Case.stl'>smart-RGB-Photometer-Case.stl</a>
   <td><sub><a href='./3d-printing/smart-UV-Photometer-Case.stl'>smart-UV-Photometer-Case.stl</a>
   <td colspan=2><sub><a href='./3d-printing/smart-IR-Turbidimeter-Case.stl'>smart-IR-Turbidimeter-Case.stl</a>
@@ -68,7 +68,10 @@ This provides full control over the 3D modelling process and enables the change 
   <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Grating-Holder.stl'>smart-Spectrometer-Grating-Holder.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Lightslit-Cuvette-Holder.stl'>smart-Spectrometer-Lightslit-Cuvette-Holder.stl.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Lightslit-Cuvette-Holder.stl'>smart-Spectrometer-Lightslit-Cuvette-Holder.stl</a>
+</tr>
+<tr>
+  <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-Cover-for-square-Cuvette.stl'>smart-Spectrometer-Cover-for-square-Cuvette.stl</a>
 </tr>
 <tr>
   <td colspan=8><sub><a href='./3d-printing/smart-Spectrometer-USB-Camera-Holder.stl'>smart-Spectrometer-USB-Camera-Holder.stl</a>
@@ -76,14 +79,12 @@ This provides full control over the 3D modelling process and enables the change 
 <tr>
   <td colspan=8><sub><a href='./3d-printing/smart-Cuvette-Holder-Toslink-Connectors.stl'>smart-Cuvette-Holder-Toslink-Connectors.stl</a>
 </tr>
-
 <tr>
   <td colspan=8><sub><a href='./3d-printing/smart-LED-Array-Case-12x12cm.stl'>smart-LED-Array-Case-12x12cm.stl</a>
 </tr>
 <tr>
   <td colspan=8><sub><a href='./3d-printing/smart-LED-Array-LED-Holder-for-12x12cm-Case.stl'>smart-LED-Array-LED-Holder-for-12x12cm-Case.stl</a>
 </tr>
-
 </table>
 </br>
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">smartPhotometer</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/smartaquametering" property="cc:attributionName" rel="cc:attributionURL">smartAquaMetering</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/smartaquametering/smartPhotometer" rel="dct:source">https://github.com/smartaquametering/smartPhotometer</a>.<br />For permissions beyond the scope of this license see <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/smartaquametering/smartPhotometer/blob/main/LICENSE" rel="cc:morePermissions">https://github.com/smartaquametering/smartPhotometer/blob/main/LICENSE</a>.
