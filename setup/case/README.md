@@ -72,10 +72,14 @@ This provides full control over the 3D modelling process and enables the change 
 </tr>
 
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/smart-LED-Array-Case-12x12cm.stl'>smart-LED-Array-Case-12x12cm.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-Cuvette-Holder-Toslink-Connectors.stl'>smart-Cuvette-Holder-Toslink-Connectors.stl</a>
+</tr>
+
+<tr>
+  <td colspan=8><sub><a href='./3d-printing/smart-LED-Array-Case-12x12cm.stl'>smart-LED-Array-Case-12x12cm.stl</a>
 </tr>
 <tr>
-  <td colspan=8><sub><a href='./3d-printing/grating-Spectrometer/smart-LED-Array-LED-Holder-for-12x12cm-Case.stl'>smart-LED-Array-LED-Holder-for-12x12cm-Case.stl</a>
+  <td colspan=8><sub><a href='./3d-printing/smart-LED-Array-LED-Holder-for-12x12cm-Case.stl'>smart-LED-Array-LED-Holder-for-12x12cm-Case.stl</a>
 </tr>
 
 </table>
