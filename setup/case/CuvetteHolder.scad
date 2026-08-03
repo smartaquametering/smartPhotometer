@@ -1,7 +1,7 @@
 /*
 
 smart-LED-Array
-smart-Spectrometer
+smart-Grating-Spectrometer
 smart-UV-Photometer
 smart-Colorimeter
 smart-RGB-Photometer
@@ -10,18 +10,18 @@ smart-IR-Turbidimeter
 OpenSCAD 3D model
 Version 0.3
 
-smart-LED-Array © Copyright 2020 by smartAquaMetering. All Rights Reserved.
-smart-Spectrometer © Copyright 2020 by smartAquaMetering. All Rights Reserved.
-smart-UV-Photometer © Copyright 2020 by smartAquaMetering. All Rights Reserved.
-smart-Colorimeter © Copyright 2020 by smartAquaMetering. All Rights Reserved.
-smart-RGB-Photometer © Copyright 2020 by smartAquaMetering. All Rights Reserved.
-smart-IR-Turbidimeter © Copyright 2020 by smartAquaMetering. All Rights Reserved.
+smart-LED-Array © Copyright 2020 - 2026 by smartAquaMetering. All Rights Reserved.
+smart-Grating-Spectrometer © Copyright 2020 - 2026 by smartAquaMetering. All Rights Reserved.
+smart-UV-Photometer © Copyright 2020 - 2026 by smartAquaMetering. All Rights Reserved.
+smart-Colorimeter © Copyright 2020 - 2026 by smartAquaMetering. All Rights Reserved.
+smart-RGB-Photometer © Copyright 2020 - 2026 by smartAquaMetering. All Rights Reserved.
+smart-IR-Turbidimeter © Copyright 2020 - 2026 by smartAquaMetering. All Rights Reserved.
 
 https://github.com/smartaquametering
 https://github.com/smartaquametering/smartPhotometer
 
 smart-LED-Array by smartAquaMetering is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-smart-Spectrometer by smartAquaMetering is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+smart-Grating-Spectrometer by smartAquaMetering is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 smart-UV-Photometer by smartAquaMetering is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 smart-Colorimeter by smartAquaMetering is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 smart-RGB-Photometer by smartAquaMetering is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
@@ -44,10 +44,11 @@ Version history
 // -------------------------------------------------------------------------------------------------------------------
 // smart-UV-Photometer
 // -------------------------------------------------------------------------------------------------------------------
+// - smartAquaMetering-Case + Cuvette, LED(s) and sensor holder
 // - UV-LED beam angle		: 180 Degree (Absorbance measurement)
 // - UV-Sensor						: VEML6070
 
-sysmode  = 1;																	// smart-UV-Photometer-Case
+//sysmode  = 1;																	// smart-UV-Photometer-Case
 	sys11    = "UV-LED";													// Labeling back side
 	sys12    = "Photometer";
 	sys13    = "Transmitted light";
@@ -58,6 +59,7 @@ sysmode  = 1;																	// smart-UV-Photometer-Case
 // -------------------------------------------------------------------------------------------------------------------
 // smart-Colorimeter
 // -------------------------------------------------------------------------------------------------------------------
+// - smartAquaMetering-Case + MC, Cuvette, LED(s) and sensor holders
 // - RGB-LED beam angle		: 180 Degree (Absorbance measurement)
 // - RGB-Sensor						: Adafruit TCS34725
 
@@ -72,11 +74,12 @@ sysmode  = 1;																	// smart-UV-Photometer-Case
 // -------------------------------------------------------------------------------------------------------------------
 // smart-RGB-Photometer
 // -------------------------------------------------------------------------------------------------------------------
+// - smartAquaMetering-Case + MC, Cuvette, LED(s) and sensor holders
 // - RGB-LED beam angle		: 180 Degree (Absorbance measurement)
 // - IR-LED beam angle		: 90 Degree (Nephelometric turbidity measurement)
 // - VIS and IR Sensor		: Adafruit TSL2591
 
-//sysmode  = 3;																	// smart-RGB-Photometer-Case
+sysmode  = 3;																	// smart-RGB-Photometer-Case
 	sys31    = "RGB-LED";													// Labeling back side
 	sys32    = "Photometer";
 	sys33    = "Transmitted light";
@@ -87,6 +90,7 @@ sysmode  = 1;																	// smart-UV-Photometer-Case
 // -------------------------------------------------------------------------------------------------------------------
 // smart-IR-Turbidimeter
 // -------------------------------------------------------------------------------------------------------------------
+// - smartAquaMetering-Case + MC, Cuvette, LED(s) and sensor holders
 // - IR-LED beam angle		: 180 Degree (Absorbance measurement)
 // - IR-LED beam angle		: 90 Degree (Nephelometric turbidity measurement)
 // - IR Sensor						: Adafruit TSL2591
@@ -119,35 +123,35 @@ sysmode  = 1;																	// smart-UV-Photometer-Case
 //sysmode  = 11;																// smartAquaMetering-Case-Lid
 
 // -------------------------------------------------------------------------------------------------------------------
-// smart-Photometer-Cover-for-square-Cuvette
+// smartAquaMetering-Cover-for-square-Cuvette
 // -------------------------------------------------------------------------------------------------------------------
 //sysmode  = 12;																// smart-Photometer-Cover-for-square-Cuvette
 
 // -------------------------------------------------------------------------------------------------------------------
-// smart-Photometer-Cover-for-round-Cuvette
+// smartAquaMetering-Cover-for-round-Cuvette
 // -------------------------------------------------------------------------------------------------------------------
 //sysmode  = 13;																// smart-Photometer-Cover-for-round-Cuvette
 
 // -------------------------------------------------------------------------------------------------------------------
-// smart-Spectrometer-Grating-Holder
+// smart-Grating-Spectrometer-Grating-Holder
 // -------------------------------------------------------------------------------------------------------------------
-//sysmode  = 14;																// smart-Spectrometer-Grating-Holder
+//sysmode  = 14;																// smart-Grating-Spectrometer-Grating-Holder
 
 // -------------------------------------------------------------------------------------------------------------------
-// smart-Spectrometer-USB-Camera-Holder
+// smart-Grating-Spectrometer-USB-Camera-Holder
 // -------------------------------------------------------------------------------------------------------------------
-//sysmode  = 15;																// smart-Spectrometer-USB-Camera-Holder
+//sysmode  = 15;																// smart-Grating-Spectrometer-USB-Camera-Holder
 
 // -------------------------------------------------------------------------------------------------------------------
-// smart-Spectrometer-Lightslit-Cuvette-Holder
+// smart-Grating-Spectrometer-Lightslit-Cuvette-Holder
 // -------------------------------------------------------------------------------------------------------------------
-//sysmode  = 16;																// smart-Spectrometer-Lightslit-Cuvette-Holder
+//sysmode  = 16;																// smart-Grating-Spectrometer-Lightslit-Cuvette-Holder
 
 // -------------------------------------------------------------------------------------------------------------------
-// smart-Spectrometer-Case
+// smart-Grating-Spectrometer-Case
 // -------------------------------------------------------------------------------------------------------------------
-//sysmode  = 17;																// smart-Spectrometer-Case Part 1
-//sysmode  = 18;																// smart-Spectrometer-Case Part 2
+//sysmode  = 17;																// smart-Grating-Spectrometer-Case Part 1
+//sysmode  = 18;																// smart-Grating-Spectrometer-Case Part 2
 
 // -------------------------------------------------------------------------------------------------------------------
 // smart-LED-Array
@@ -171,14 +175,14 @@ casemode = 1;																	// smartAquaMetering-Case + Cuvette holder
 //casemode = 2;																	// Cuvette holder only
 
 // -------------------------------------------------------------------------------------------------------------------
-// Microcontroller
+// smartAquaMetering-Case-Labeling-Microcontroller
 // -------------------------------------------------------------------------------------------------------------------
 
 mcbs       = "ESP32-WROOM-32 NodeMCU WLAN/WiFi";// Labeling front side
 mcip       = "192.168.4.1";											// Labeling case lid
 
 // -------------------------------------------------------------------------------------------------------------------
-// Copyright
+// smartAquaMetering-Case-Labeling-Copyright
 // -------------------------------------------------------------------------------------------------------------------
 
 cr1        = "Open Source";											// Labeling right side
@@ -229,7 +233,7 @@ sb12       = "TSL2591";
 // Sensor - Adafruit TCS34725
 sbh2       = 20.3;															// Height of sensor board - measured from bottom edge                 [X]
 sbw2       = 20.3;															// Width of sensor board - measured from side edge                    [Z]
-sbd2       =  3.0;															// Depth of sensor board						[Y]
+sbd2       =  3.0;															// Depth of sensor board																							[Y]
 scb2       =  9.4;															// Distance between center of sensor chip and board bottom edge       [X]
 scr2       = 11.5;															// Distance between center of sensor chip and board right side edge   [Z]
 scd2       =  4.0;															// Pinhole diameter for sensor chip
@@ -276,7 +280,7 @@ tce        = tcz/4;															// Connector edge
 
 tcs        = 1.5;																// Connector snapper (radius)
 
-// smart-Spectrometer - Holder for light slit
+// smart-Grating-Spectrometer - Holder for light slit
 lshx       = 43.0;															// Light slit holder                    [X]
 lshy       =  2.2;															// Light slit holder                    [Y]
 lshz       = 43.0;															// Light slit holder                    [Z]
@@ -288,10 +292,10 @@ lspx       = lshx/2;														// Light slit focus position            [X]
 lspy       = lshy+lsfy+cvhw+cvw/2;							// Light slit focus position            [Y]
 lspz       = lshz/2;														// Light slit focus position            [Z]
 
-// Screw connection for grating and USB camera holders
+// Screw connection for Grating and USB camera Holders
 hscd       = 2.75;															// Screw diameter
 
-// smart-Spectrometer - Grating-Holder
+// smart-Grating-Spectrometer - Grating-Holder
 gix        = 36.0;															// Grating inlet length                 [X]
 giz        = 25.0;															// Grating inlet high                   [Z]
 
@@ -312,7 +316,7 @@ gpx        = ghx/2;															// Grating focus position               [X]
 gpy        = 0;																	//                                      [Y]
 gpz        = lspz;															//                                      [Z]
 
-// smart-Spectrometer - USB-Camera-Holder
+// smart-Grating-Spectrometer - USB-Camera-Holder
 cambox     = 36.0;															// USB camera board length              [X]
 camboy     =  1.5;															// USB camera board width               [Y]
 camboz     = 36.0;															// USB camera board high                [Z]
@@ -580,7 +584,7 @@ module boardholder(){
 
 
 // smartAquaMetering-Case
-// - Cuvette, LED and sensor holder
+// - Cuvette, LED(s) and sensor holder
 //
 module cuvetteholder(sbid,sbd,sbh,sbw,scb,scr,scd){
 
@@ -820,7 +824,7 @@ module cuvettecoversquare(tw, wi, hi){
 	}
 }
 
-// smart-Spectrometer - Holder for grating
+// smart-Grating-Spectrometer - Holder for Grating
 module gratingholder(){
 	
     // Grating holder
@@ -857,7 +861,7 @@ module gratingholder(){
     }
 }
 
-// smart-Spectrometer - Holder for USB camera
+// smart-Grating-Spectrometer - Holder for USB camera
 module cameraholder(){
 
 	union(){
@@ -903,7 +907,7 @@ module cameraholder(){
     }
 }
 
-// smart-Spectrometer - Holder for light slit
+// smart-Grating-Spectrometer - Holder for light slit
 module lightslitholder(){
 
     difference(){
@@ -1010,7 +1014,7 @@ module lightslitholder(){
     }
 }
 
-// smart-Spectrometer - Case part 1
+// smart-Grating-Spectrometer - Case part 1
 module spectrometercasepart1(){
 
     // Case dimensions
@@ -1071,7 +1075,7 @@ module spectrometercasepart1(){
     ccwi	= cvw+1.0;			// Width inside
     cchi	= cvh-wo-ch+15.0;   // Height inside
 
-    // smart-Spectrometer - Case part 1
+    // smart-Grating-Spectrometer - Case part 1
     difference(){
         // Outer case
         translate([ px1,0,0]) cube([wo+cw1+wo,wo+cl+wo,wo+ch]);
@@ -1107,7 +1111,7 @@ module spectrometercasepart1(){
         translate([cvx4,cvy4,cvz4]) cube (size = [wo,cvw4,cvh4]);
     }
 
-    // smart-Spectrometer - Case part 2
+    // smart-Grating-Spectrometer - Case part 2
     difference(){
         // Outer case
         translate([px2,0,0]) cube([wo+cw2+wo,wo+cl+wo,wo+ch]);
@@ -1120,7 +1124,7 @@ module spectrometercasepart1(){
     }
 }
 
-// smart-Spectrometer - Case part 2
+// smart-Grating-Spectrometer - Case part 2
 module spectrometercasepart2(){
 }
 
@@ -1173,7 +1177,7 @@ module ledarraypart1(){
     }
 }
 
-// smart-Spectrometer - LED Case part 2 (Toslink Connector Patchpanel)
+// smart-Grating-Spectrometer - LED Case part 2 (Toslink Connector Patchpanel)
 module ledarraypart2(){
 
     difference(){
@@ -1545,23 +1549,23 @@ for (i = [0:number-1]) {
 		//translate([i*(wo+cw+wo+3),2*(wo+cl+wo+3),0]) cuvettecoverround(cctw, ccwi, cchi);
 	}
 	if (sysmode==14) {
-		// smart-Spectrometer - Holder for grating
+		// smart-Grating-Spectrometer - Holder for Grating
 		translate([0,0,0]) gratingholder();
 	}
 	if (sysmode==15) {
-		// smart-Spectrometer - Holder for USB camera
+		// smart-Grating-Spectrometer - Holder for USB camera
 		translate([0,0,0]) cameraholder();
 	}
 	if (sysmode==16) {
-		// smart-Spectrometer - Holder for light slit
+		// smart-Grating-Spectrometer - Holder for light slit
 		translate([0,0,0]) lightslitholder();
 	}
 	if (sysmode==17) {
-		// smart-Spectrometer - Case part 1
+		// smart-Grating-Spectrometer - Case part 1
 		translate([0,0,0]) spectrometercasepart1();
 	}
 	if (sysmode==18) {
-		// smart-Spectrometer - Case part 2
+		// smart-Grating-Spectrometer - Case part 2
 		translate([0,0,0]) spectrometercasepart2();
 	}
 	if (sysmode==21) {
