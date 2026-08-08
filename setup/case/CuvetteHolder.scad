@@ -109,7 +109,7 @@ Version history
 // - Beam angle           : 180 Degree (Absorbance measurement)
 // - Toslink connectors   : 2x
 
-sysmode  = 5;                                 // smart-Cuvette-Holder
+//sysmode  = 5;                                 // smart-Cuvette-Holder
   sys51    = "";                                // Labeling back side
   sys52    = "";
   sys53    = "";
@@ -166,7 +166,7 @@ sysmode  = 5;                                 // smart-Cuvette-Holder
 
 //sysmode  = 26;                                // smart-LED-Array Part 6 (Case)
 //sysmode  = 27;                                // smart-LED-Array Part 7 (LED Holder)
-//sysmode  = 28;                                // smart-LED-Array Part 8 (Case Lid)
+sysmode  = 28;                                // smart-LED-Array Part 8 (Case Lid)
 
 // ---------------------------------------------------------------------------------------------------------------------------
 // smartAquaMetering-Case
@@ -1251,174 +1251,174 @@ module toslinkconnector(x,y,z){
  
 // smart-LED-Array Part 3 (LWL Cabel Concentrator)
 module ledarraypart3(){
-    chw = 19;
-    chl = 25;
-    bw  = 3 * chw;
-    bh  = 3;
-    bl  = chl;
-    cd  = 2.2;
-    cdd = cd+0.2;
-    ch0x = 0;
-    ch0y = bw/2+cd/4;
-    ch0z = bh+chw/2;   
-    ch1x = 0;
-    ch1y = ch0y-cd/2;
-    ch1z = ch0z-cd+0.25;
-    ch2x = 0;
-    ch2y = ch1y;
-    ch2z = ch0z+cd-0.25;
-    ch3x = 0;
-    ch3y = ch0y;
-    ch3z = ch1z-cd+0.25;
-    ch4x = 0;
-    ch4y = ch0y;
-    ch4z = ch2z+cd-0.25;
- 
-    difference(){
-        union(){
-            translate([0,0,0]) cube([bl,bw,bh]);
-            translate([0,(bw-chw)/2,bh]) cube([chl,chw,chw]);
-        }
-        translate([ch0x,ch0y     ,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch0x,ch0y-cd  ,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch0x,ch0y+cd  ,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch0x,ch0y-2*cd,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch0x,ch0y+2*cd,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        
-        translate([ch1x,ch1y     ,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch1x,ch1y-cd  ,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch1x,ch1y+cd  ,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch1x,ch1y-2*cd,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch1x,ch1y+2*cd,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+  chw = 19;
+  chl = 25;
+  bw  = 3 * chw;
+  bh  = 3;
+  bl  = chl;
+  cd  = 2.2;
+  cdd = cd+0.2;
+  ch0x = 0;
+  ch0y = bw/2+cd/4;
+  ch0z = bh+chw/2;   
+  ch1x = 0;
+  ch1y = ch0y-cd/2;
+  ch1z = ch0z-cd+0.25;
+  ch2x = 0;
+  ch2y = ch1y;
+  ch2z = ch0z+cd-0.25;
+  ch3x = 0;
+  ch3y = ch0y;
+  ch3z = ch1z-cd+0.25;
+  ch4x = 0;
+  ch4y = ch0y;
+  ch4z = ch2z+cd-0.25;
 
-        translate([ch2x,ch2y     ,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch2x,ch2y-cd  ,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch2x,ch2y+cd  ,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch2x,ch2y-2*cd,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch2x,ch2y+2*cd,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-
-        translate([ch3x,ch3y     ,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch3x,ch3y-cd  ,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch3x,ch3y+cd  ,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch3x,ch3y-2*cd,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch3x,ch3y+2*cd,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-
-        translate([ch4x,ch4y     ,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch4x,ch4y-cd  ,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch4x,ch4y+cd  ,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch4x,ch4y-2*cd,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        translate([ch4x,ch4y+2*cd,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
-        
-        translate([0,ch0y-2.1*cd,ch0z-2.1*cd]) cube([chl,4.0*cd,4.0*cd]);
+  difference(){
+    union(){
+      translate([0,0,0]) cube([bl,bw,bh]);
+      translate([0,(bw-chw)/2,bh]) cube([chl,chw,chw]);
     }
+    translate([ch0x,ch0y     ,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch0x,ch0y-cd  ,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch0x,ch0y+cd  ,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch0x,ch0y-2*cd,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch0x,ch0y+2*cd,ch0z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    
+    translate([ch1x,ch1y     ,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch1x,ch1y-cd  ,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch1x,ch1y+cd  ,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch1x,ch1y-2*cd,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch1x,ch1y+2*cd,ch1z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+
+    translate([ch2x,ch2y     ,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch2x,ch2y-cd  ,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch2x,ch2y+cd  ,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch2x,ch2y-2*cd,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch2x,ch2y+2*cd,ch2z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+
+    translate([ch3x,ch3y     ,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch3x,ch3y-cd  ,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch3x,ch3y+cd  ,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch3x,ch3y-2*cd,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch3x,ch3y+2*cd,ch3z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+
+    translate([ch4x,ch4y     ,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch4x,ch4y-cd  ,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch4x,ch4y+cd  ,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch4x,ch4y-2*cd,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    translate([ch4x,ch4y+2*cd,ch4z]) rotate([0,90,0]) cylinder(d=cdd,h=chl,$fn=cfn);
+    
+    translate([0,ch0y-2.1*cd,ch0z-2.1*cd]) cube([chl,4.0*cd,4.0*cd]);
+  }
 }
 
 // smart-LED-Array Part 4 (Pyramid Holder)
 module ledarraypart4(){
-    chw = 19;
-    chl = 73;
-    b1 = 15.0;
-    b2 = 6.0;
-    db1 = (2*b1^2)^(1/2);
-    db2 = (2*b2^2)^(1/2);
-    bw  = 3 * chw;
-    bh  = 3;
-    bl  = chl;
+  chw = 19;
+  chl = 73;
+  b1 = 15.0;
+  b2 = 6.0;
+  db1 = (2*b1^2)^(1/2);
+  db2 = (2*b2^2)^(1/2);
+  bw  = 3 * chw;
+  bh  = 3;
+  bl  = chl;
 
-    cfn = 4;
- 
-    difference(){
-        union(){
-            translate([0,0,0]) cube([bl,bw,bh]);
-            translate([0,(bw-chw)/2,bh]) cube([chl,chw,chw]);
-        }
-            translate([0,bw/2,bh+chw/2]) rotate([90,45,90]) cylinder(d1=db1, d2=db2, h=chl, $fn=cfn);
+  cfn = 4;
+
+  difference(){
+    union(){
+        translate([0,0,0]) cube([bl,bw,bh]);
+        translate([0,(bw-chw)/2,bh]) cube([chl,chw,chw]);
     }
+    translate([0,bw/2,bh+chw/2]) rotate([90,45,90]) cylinder(d1=db1, d2=db2, h=chl, $fn=cfn);
+  }
 }
 
 // smart-LED-Array Part 5 (Pyramid sanding Guide)
 module ledarraypart5(){
-    translate([0,0,0]) rotate([0,0,45])
-    import("C:/Users/A410882/Downloads/F0SFBRWJSUOZQ4Q (2)/assets/pyramid sanding guide.stl");
+  translate([0,0,0]) rotate([0,0,45])
+  import("C:/Users/A410882/Downloads/F0SFBRWJSUOZQ4Q (2)/assets/pyramid sanding guide.stl");
 }
 
 // smart-LED-Array Part 6 (Case)
 module ledarraypart6(){
 
-    difference() {
-        union(){
-            difference(){
-            // Outer case
-            translate([ 0, 0, 0]) cube([ledcwo+ledcx+ledcwo,ledcwo+ledcy+ledcwo,ledcwo+ledcz]);
-            // Inner space
-            translate([ledcwo,ledcwo,ledcwo]) cube([ledcx,ledcy,ledcz]);
-            }
-            // Toslink connector block
-            translate([0,ledcwo,ledcwo]) cube([tch,ledcy,70]);
-        }
-
-        // Toslink connector - drilling holes
-        // Fiber Row 1
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*2,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*2,0);
-        // Fiber Row 2
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*3,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*3,0);
-        // Fiber Row 3
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*4,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*4,0);
-        // Fiber Row 4
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*5,0);
-        rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*5,0);
+  difference() {
+    union(){
+      difference(){
+        // Outer case
+        translate([ 0, 0, 0]) cube([ledcwo+ledcx+ledcwo,ledcwo+ledcy+ledcwo,ledcwo+ledcz]);
+        // Inner space
+        translate([ledcwo,ledcwo,ledcwo]) cube([ledcx,ledcy,ledcz]);
+      }
+      // Toslink connector block
+      translate([0,ledcwo,ledcwo]) cube([tch,ledcy,70]);
     }
 
-    ledhpx1 = led1l-(ledbz/2)+tch;
-    ledarrayboardholders(ledhpx1,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+    // Toslink connector - drilling holes
+    // Fiber Row 1
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*2,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*2,0);
+    // Fiber Row 2
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*3,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*3,0);
+    // Fiber Row 3
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*4,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*4,0);
+    // Fiber Row 4
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*1,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*2,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*3,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*4,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*5,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*6,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*7,ledby/6*5,0);
+    rotate([90,0,90]) toslinkconnector((ledcy-ledbx)/2+ledcwo+ledbx/9*8,ledby/6*5,0);
+  }
 
-    ledhpx2 = ledhpx1+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx2,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx1 = led1l-(ledbz/2)+tch;
+  ledarrayboardholders(ledhpx1,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 
-    ledhpx3 = ledhpx2+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx3,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx2 = ledhpx1+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx2,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 
-    ledhpx4 = ledhpx3+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx4,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx3 = ledhpx2+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx3,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 
-    ledhpx5 = ledhpx4+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx5,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx4 = ledhpx3+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx4,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 
-    ledhpx6 = ledhpx5+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx6,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx5 = ledhpx4+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx5,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 
-    ledhpx7 = ledhpx6+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx7,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx6 = ledhpx5+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx6,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 
-    ledhpx8 = ledhpx7+2*ledhx+ledhbt+ledhdx;
-    ledarrayboardholders(ledhpx8,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+  ledhpx7 = ledhpx6+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx7,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
+
+  ledhpx8 = ledhpx7+2*ledhx+ledhbt+ledhdx;
+  ledarrayboardholders(ledhpx8,ledcwo,ledcy,ledhbt,ledhx,ledhy,ledhz);
 }
 
 // smart-LED-Array - Board holders
@@ -1486,16 +1486,16 @@ module ledarraypart8(){
   // ledcz = Case dimensions - Height inside                        [Z]
   ledlz = 3*ledcwo;
 
-    union(){
-      // Lid
-      translate([ 0, 0, 0]) cube([ledcwo+ledcx+ledcwo,ledcwo+ledcy+ledcwo,ledcwo]);
-      difference(){
-        // Outer case
-        translate([ledcwo,ledcwo,ledcwo]) cube([ledcx,ledcy,ledcwo*2]);
-        // Inner space
-        translate([ledcwo*2,ledcwo*2,ledcwo]) cube([ledcx-ledcwo*2,ledcy-ledcwo*2,ledlz]);
-      }
+  union(){
+    // Lid
+    translate([ 0, 0, 0]) cube([ledcwo+ledcx+ledcwo,ledcwo+ledcy+ledcwo,ledcwo]);
+    difference(){
+      // Outer case
+      translate([ledcwo+0.3,ledcwo+0.3,ledcwo]) cube([ledcx-0.3,ledcy-0.3,ledcwo*2]);
+      // Inner space
+      translate([ledcwo*2,ledcwo*2,ledcwo]) cube([ledcx-ledcwo*2,ledcy-ledcwo*2,ledlz]);
     }
+  }
 }
 
 // ********************************************************************************************************
